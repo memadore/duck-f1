@@ -1,0 +1,31 @@
+---
+url: "http://ergast.com/downloads/f1db_csv.zip"
+tables:
+  - file: circuits.csv
+    table: circuits
+  - file: constructor_results.csv
+    table: constructor_results
+  - file: constructor_standings.csv
+    table: constructor_standings
+  - file: constructors.csv
+    table: constructors
+  - file: driver_standings.csv
+    table: driver_standings
+  - file: drivers.csv
+    table: drivers
+  - file: lap_times.csv
+    table: lap_times
+  - file: pit_stops.csv
+    table: pit_stops
+  - file: qualifying.csv
+    table: qualifying
+  - file: races.csv
+    table: races
+  - file: results.csv
+    table: results
+  - file: seasons.csv
+    table: seasons
+  - file: sprint_results.csv
+    table: sprint_results
+  - file: status.csv
+    table: status
