@@ -2,8 +2,8 @@
 name = "duck-f1"
 version = "0.1.0"
 description = "Formula 1 historical and telemetry datasets with DuckDB"
-authors = ["Marc-Etienne Madore <marc-etienne.madore@cleo.eco>"]
-license = "GPL-3.0-only"
+authors = ["Marc-Etienne Madore <memadore@duck.com>"]
+license = "GPL-3.0-or-later"
 readme = "README.md"
 packages = [{include = "duck_f1"}]
 
