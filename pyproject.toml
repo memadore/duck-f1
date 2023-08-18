@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "duck-f1"
+version = "0.1.0"
+description = "Formula 1 historical and telemetry datasets with DuckDB"
+authors = ["Marc-Etienne Madore <marc-etienne.madore@cleo.eco>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+packages = [{include = "duck_f1"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
