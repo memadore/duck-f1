@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: stg_ergast__results
+    description: '{{ doc("tbl_ergast__results") }}'

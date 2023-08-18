@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: stg_ergast__constructor_standings
+    description: '{{ doc("tbl_ergast__constructor_standings") }}'

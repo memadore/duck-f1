@@ -1,0 +1,8 @@
+---
+dbt_duck_f1:
+  outputs:
+    dev:
+      type: duckdb
+      schema: dbt
+      path: "{{ env_var('DUCK_DB_PATH', '../../dist/data/f1.duckdb') }}"
+  target: dev

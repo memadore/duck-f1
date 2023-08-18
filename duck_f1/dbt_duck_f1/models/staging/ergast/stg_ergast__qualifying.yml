@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: stg_ergast__qualifying
+    description: '{{ doc("tbl_ergast__qualifying") }}'
