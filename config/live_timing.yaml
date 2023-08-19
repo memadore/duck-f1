@@ -1,0 +1,3172 @@
+datasets:
+  - file: ArchiveStatus.json
+    table: archive_status
+  - file: AudioStreams.jsonStream
+    table: audio_streams
+  - file: CarData.z.jsonStream
+    table: car_data
+  - file: ChampionshipPrediction.jsonStream
+    table: championship_prediction
+  - file: ContentStreams.jsonStream
+    table: content_streams
+  - file: CurrentTyres.jsonStream
+    table: current_tyres
+  - file: DriverList.jsonStream
+    table: driver_list
+  - file: DriverRaceInfo.jsonStream
+    table: driver_race_info
+  - file: DriverScore.jsonStream
+    table: driver_score
+  - file: ExtrapolatedClock.jsonStream
+    table: extrapolated_clock
+  - file: Heartbeat.jsonStream
+    table: heartbeat
+  - file: Index.json
+    table: index
+  - file: LapCount.jsonStream
+    table: lap_count
+  - file: LapSeries.jsonStream
+    table: lap_series
+  - file: PitLaneTimeCollection.jsonStream
+    table: pit_lane_time_collection
+  - file: Position.z.jsonStream
+    table: position
+  - file: RaceControlMessages.jsonStream
+    table: race_control_messages
+  - file: SessionData.json
+    table: session_data
+  - file: SessionInfo.json
+    table: session_info
+  - file: SessionStatus.jsonStream
+    table: session_status
+  - file: SPFeed.jsonStream
+    table: sp_feed
+  - file: TeamRadio.jsonStream
+    table: team_radio
+  - file: TimingAppData.jsonStream
+    table: timing_app_data
+  - file: TimingData.jsonStream
+    table: timing_data
+  - file: TimingDataF1.jsonStream
+    table: timing_data_f1
+  - file: TimingStats.jsonStream
+    table: timing_stats
+  - file: TlaRcm.jsonStream
+    table: tla_rcm
+  - file: TopThree.jsonStream
+    table: top_three
+  - file: TrackStatus.jsonStream
+    table: track_status
+  - file: TyreStintSeries.jsonStream
+    table: tyre_stint_series
+  - file: WeatherData.jsonStream
+    table: weather_data
+  - file: WeatherDataSeries.jsonStream
+    table: weather_data_series
+events:
+  - country: Australia
+    date: 2018-03-25 18:10:00
+    gmt_offset: "+11:00"
+    location: Melbourne
+    name: Australian Grand Prix
+    official_event_name: FORMULA 1 2018 ROLEX AUSTRALIAN GRAND PRIX
+    round_number: 1
+    sessions:
+      - date: 2018-03-23 12:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-03-23 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-03-24 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-03-24 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-03-25 16:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Bahrain
+    date: 2018-04-08 20:10:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 2018 GULF AIR BAHRAIN GRAND PRIX
+    round_number: 2
+    sessions:
+      - date: 2018-04-06 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-04-06 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-04-07 15:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-04-07 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-04-08 18:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: China
+    date: 2018-04-15 16:10:00
+    gmt_offset: +08:00
+    location: Shanghai
+    name: Chinese Grand Prix
+    official_event_name: FORMULA 1 2018 HEINEKEN CHINESE GRAND PRIX
+    round_number: 3
+    sessions:
+      - date: 2018-04-13 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-04-13 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-04-14 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-04-14 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-04-15 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Azerbaijan
+    date: 2018-04-29 18:10:00
+    gmt_offset: +04:00
+    location: Baku
+    name: Azerbaijan Grand Prix
+    official_event_name: FORMULA 1 2018 AZERBAIJAN GRAND PRIX
+    round_number: 4
+    sessions:
+      - date: 2018-04-27 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-04-27 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-04-28 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-04-28 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-04-29 16:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2018-05-13 17:10:00
+    gmt_offset: +02:00
+    location: Barcelona
+    name: Spanish Grand Prix
+    official_event_name: "FORMULA 1 GRAN PREMIO DE ESPA\xD1A EMIRATES 2018"
+    round_number: 5
+    sessions:
+      - date: 2018-05-11 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-05-11 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-05-12 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-05-12 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-05-13 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Monaco
+    date: 2018-05-27 17:10:00
+    gmt_offset: +02:00
+    location: Monte Carlo
+    name: Monaco Grand Prix
+    official_event_name: FORMULA 1 GRAND PRIX DE MONACO 2018
+    round_number: 6
+    sessions:
+      - date: 2018-05-24 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-05-24 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-05-26 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-05-26 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-05-27 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Canada
+    date: 2018-06-10 16:10:00
+    gmt_offset: -04:00
+    location: "Montr\xE9al"
+    name: Canadian Grand Prix
+    official_event_name: FORMULA 1 GRAND PRIX HEINEKEN DU CANADA 2018
+    round_number: 7
+    sessions:
+      - date: 2018-06-08 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-06-08 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-06-09 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-06-09 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-06-10 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: France
+    date: 2018-06-24 18:10:00
+    gmt_offset: +02:00
+    location: Le Castellet
+    name: French Grand Prix
+    official_event_name: FORMULA 1 PIRELLI GRAND PRIX DE FRANCE 2018
+    round_number: 8
+    sessions:
+      - date: 2018-06-22 12:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-06-22 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-06-23 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-06-23 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-06-24 16:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2018-07-01 17:10:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Austrian Grand Prix
+    official_event_name: "FORMULA 1 EYETIME GROSSER PREIS VON \xD6STERREICH 2018"
+    round_number: 9
+    sessions:
+      - date: 2018-06-29 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-06-29 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-06-30 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-06-30 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-07-01 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Great Britain
+    date: 2018-07-08 16:10:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: British Grand Prix
+    official_event_name: FORMULA 1 2018 ROLEX BRITISH GRAND PRIX
+    round_number: 10
+    sessions:
+      - date: 2018-07-06 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-07-06 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-07-07 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-07-07 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-07-08 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Germany
+    date: 2018-07-22 17:10:00
+    gmt_offset: +02:00
+    location: Hockenheim
+    name: German Grand Prix
+    official_event_name: FORMULA 1 EMIRATES GROSSER PREIS VON DEUTSCHLAND 2018
+    round_number: 11
+    sessions:
+      - date: 2018-07-20 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-07-20 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-07-21 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-07-21 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-07-22 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Hungary
+    date: 2018-07-29 17:10:00
+    gmt_offset: +02:00
+    location: Budapest
+    name: Hungarian Grand Prix
+    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYD\xCDJ 2018"
+    round_number: 12
+    sessions:
+      - date: 2018-07-27 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-07-27 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-07-28 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-07-28 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-07-29 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Belgium
+    date: 2018-08-26 17:10:00
+    gmt_offset: +02:00
+    location: Spa-Francorchamps
+    name: Belgian Grand Prix
+    official_event_name: FORMULA 1 2018 JOHNNIE WALKER BELGIAN GRAND PRIX
+    round_number: 13
+    sessions:
+      - date: 2018-08-24 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-08-24 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-08-25 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-08-25 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-08-26 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2018-09-02 17:10:00
+    gmt_offset: +02:00
+    location: Monza
+    name: Italian Grand Prix
+    official_event_name: FORMULA 1 GRAN PREMIO HEINEKEN D'ITALIA 2018
+    round_number: 14
+    sessions:
+      - date: 2018-08-31 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-08-31 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-09-01 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-09-01 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-09-02 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Singapore
+    date: 2018-09-16 22:10:00
+    gmt_offset: +08:00
+    location: Singapore
+    name: Singapore Grand Prix
+    official_event_name: FORMULA 1 2018 SINGAPORE AIRLINES SINGAPORE GRAND PRIX
+    round_number: 15
+    sessions:
+      - date: 2018-09-14 16:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-09-14 20:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-09-15 18:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-09-15 21:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-09-16 20:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Russia
+    date: 2018-09-30 16:10:00
+    gmt_offset: +03:00
+    location: Sochi
+    name: Russian Grand Prix
+    official_event_name: FORMULA 1 2018 VTB RUSSIAN GRAND PRIX
+    round_number: 16
+    sessions:
+      - date: 2018-09-28 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-09-28 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-09-29 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-09-29 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-09-30 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Japan
+    date: 2018-10-07 16:10:00
+    gmt_offset: +09:00
+    location: Suzuka
+    name: Japanese Grand Prix
+    official_event_name: FORMULA 1 2018 HONDA JAPANESE GRAND PRIX
+    round_number: 17
+    sessions:
+      - date: 2018-10-05 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-10-05 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-10-06 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-10-06 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-10-07 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: United States
+    date: 2018-10-21 15:10:00
+    gmt_offset: -05:00
+    location: Austin
+    name: United States Grand Prix
+    official_event_name: FORMULA 1 PIRELLI 2018 UNITED STATES GRAND PRIX
+    round_number: 18
+    sessions:
+      - date: 2018-10-19 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-10-19 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-10-20 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-10-20 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-10-21 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Mexico
+    date: 2018-10-28 15:10:00
+    gmt_offset: -06:00
+    location: Mexico City
+    name: Mexican Grand Prix
+    official_event_name: "FORMULA 1 GRAN PREMIO DE M\xC9XICO 2018"
+    round_number: 19
+    sessions:
+      - date: 2018-10-26 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-10-26 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-10-27 10:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-10-27 13:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-10-28 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Brazil
+    date: 2018-11-11 17:10:00
+    gmt_offset: -02:00
+    location: "S\xE3o Paulo"
+    name: Brazilian Grand Prix
+    official_event_name: "FORMULA 1 GRANDE PR\xCAMIO HEINEKEN DO BRASIL 2018"
+    round_number: 20
+    sessions:
+      - date: 2018-11-09 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-11-09 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-11-10 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-11-10 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-11-11 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: United Arab Emirates
+    date: 2018-11-25 19:10:00
+    gmt_offset: +04:00
+    location: Yas Marina
+    name: Abu Dhabi Grand Prix
+    official_event_name: FORMULA 1 2018 ETIHAD AIRWAYS ABU DHABI GRAND PRIX
+    round_number: 21
+    sessions:
+      - date: 2018-11-23 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-11-23 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-11-24 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-11-24 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-11-25 17:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Australia
+    date: 2019-03-17 18:10:00
+    gmt_offset: "+11:00"
+    location: Melbourne
+    name: Australian Grand Prix
+    official_event_name: FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2019
+    round_number: 1
+    sessions:
+      - date: 2019-03-15 12:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-03-15 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-03-16 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-03-16 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-03-17 16:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Bahrain
+    date: 2019-03-31 20:10:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2019
+    round_number: 2
+    sessions:
+      - date: 2019-03-29 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-03-29 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-03-30 15:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-03-30 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-03-31 18:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: China
+    date: 2019-04-14 16:10:00
+    gmt_offset: +08:00
+    location: Shanghai
+    name: Chinese Grand Prix
+    official_event_name: FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2019
+    round_number: 3
+    sessions:
+      - date: 2019-04-12 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-04-12 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-04-13 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-04-13 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-04-14 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Azerbaijan
+    date: 2019-04-28 18:10:00
+    gmt_offset: +04:00
+    location: Baku
+    name: Azerbaijan Grand Prix
+    official_event_name: FORMULA 1 SOCAR AZERBAIJAN GRAND PRIX 2019
+    round_number: 4
+    sessions:
+      - date: 2019-04-26 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-04-26 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-04-27 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-04-27 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-04-28 16:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2019-05-12 17:10:00
+    gmt_offset: +02:00
+    location: Barcelona
+    name: Spanish Grand Prix
+    official_event_name: "FORMULA 1 EMIRATES GRAN PREMIO DE ESPA\xD1A 2019"
+    round_number: 5
+    sessions:
+      - date: 2019-05-10 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-05-10 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-05-11 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-05-11 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-05-12 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Monaco
+    date: 2019-05-26 17:10:00
+    gmt_offset: +02:00
+    location: Monte Carlo
+    name: Monaco Grand Prix
+    official_event_name: FORMULA 1 GRAND PRIX DE MONACO 2019
+    round_number: 6
+    sessions:
+      - date: 2019-05-23 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-05-23 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-05-25 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-05-25 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-05-26 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Canada
+    date: 2019-06-09 16:10:00
+    gmt_offset: -04:00
+    location: "Montr\xE9al"
+    name: Canadian Grand Prix
+    official_event_name: FORMULA 1 PIRELLI GRAND PRIX DU CANADA 2019
+    round_number: 7
+    sessions:
+      - date: 2019-06-07 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-06-07 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-06-08 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-06-08 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-06-09 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: France
+    date: 2019-06-23 17:10:00
+    gmt_offset: +02:00
+    location: Le Castellet
+    name: French Grand Prix
+    official_event_name: FORMULA 1 PIRELLI GRAND PRIX DE FRANCE 2019
+    round_number: 8
+    sessions:
+      - date: 2019-06-21 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-06-21 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-06-22 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-06-22 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-06-23 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2019-06-30 17:10:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Austrian Grand Prix
+    official_event_name: "FORMULA 1 MYWORLD GROSSER PREIS VON \xD6STERREICH 2019"
+    round_number: 9
+    sessions:
+      - date: 2019-06-28 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-06-28 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-06-29 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-06-29 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-06-30 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Great Britain
+    date: 2019-07-14 16:10:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: British Grand Prix
+    official_event_name: FORMULA 1 ROLEX BRITISH GRAND PRIX 2019
+    round_number: 10
+    sessions:
+      - date: 2019-07-12 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-07-12 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-07-13 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-07-13 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-07-14 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Germany
+    date: 2019-07-28 17:10:00
+    gmt_offset: +02:00
+    location: Hockenheim
+    name: German Grand Prix
+    official_event_name: FORMULA 1 MERCEDES-BENZ GROSSER PREIS VON DEUTSCHLAND 2019
+    round_number: 11
+    sessions:
+      - date: 2019-07-26 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-07-26 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-07-27 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-07-27 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-07-28 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Hungary
+    date: 2019-08-04 17:10:00
+    gmt_offset: +02:00
+    location: Budapest
+    name: Hungarian Grand Prix
+    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYD\xCDJ 2019"
+    round_number: 12
+    sessions:
+      - date: 2019-08-02 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-08-02 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-08-03 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-08-03 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-08-04 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Belgium
+    date: 2019-09-01 17:10:00
+    gmt_offset: +02:00
+    location: Spa-Francorchamps
+    name: Belgian Grand Prix
+    official_event_name: FORMULA 1 JOHNNIE WALKER BELGIAN GRAND PRIX 2019
+    round_number: 13
+    sessions:
+      - date: 2019-08-30 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-08-30 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-08-31 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-08-31 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-09-01 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2019-09-08 17:10:00
+    gmt_offset: +02:00
+    location: Monza
+    name: Italian Grand Prix
+    official_event_name: FORMULA 1 GRAN PREMIO HEINEKEN D'ITALIA 2019
+    round_number: 14
+    sessions:
+      - date: 2019-09-06 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-09-06 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-09-07 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-09-07 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-09-08 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Singapore
+    date: 2019-09-22 22:10:00
+    gmt_offset: +08:00
+    location: Singapore
+    name: Singapore Grand Prix
+    official_event_name: FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2019
+    round_number: 15
+    sessions:
+      - date: 2019-09-20 16:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-09-20 20:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-09-21 18:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-09-21 21:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-09-22 20:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Russia
+    date: 2019-09-29 16:10:00
+    gmt_offset: +03:00
+    location: Sochi
+    name: Russian Grand Prix
+    official_event_name: FORMULA 1 VTB RUSSIAN GRAND PRIX 2019
+    round_number: 16
+    sessions:
+      - date: 2019-09-27 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-09-27 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-09-28 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-09-28 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-09-29 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Japan
+    date: 2019-10-13 16:10:00
+    gmt_offset: +09:00
+    location: Suzuka
+    name: Japanese Grand Prix
+    official_event_name: FORMULA 1 JAPANESE GRAND PRIX 2019
+    round_number: 17
+    sessions:
+      - date: 2019-10-11 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-10-11 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-10-12 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-10-13 10:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-10-13 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Mexico
+    date: 2019-10-27 15:10:00
+    gmt_offset: -06:00
+    location: Mexico City
+    name: Mexican Grand Prix
+    official_event_name: "FORMULA 1 GRAN PREMIO DE M\xC9XICO 2019"
+    round_number: 18
+    sessions:
+      - date: 2019-10-25 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-10-25 14:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-10-26 10:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-10-26 13:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-10-27 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: United States
+    date: 2019-11-03 15:10:00
+    gmt_offset: -06:00
+    location: Austin
+    name: United States Grand Prix
+    official_event_name: FORMULA 1 EMIRATES UNITED STATES GRAND PRIX 2019
+    round_number: 19
+    sessions:
+      - date: 2019-11-01 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-11-01 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-11-02 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-11-02 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-11-03 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Brazil
+    date: 2019-11-17 16:10:00
+    gmt_offset: -03:00
+    location: "S\xE3o Paulo"
+    name: Brazilian Grand Prix
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xCAMIO DO BRASIL 2019"
+    round_number: 20
+    sessions:
+      - date: 2019-11-15 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-11-15 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-11-16 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-11-16 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-11-17 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Abu Dhabi
+    date: 2019-12-01 19:10:00
+    gmt_offset: +04:00
+    location: Yas Island
+    name: Abu Dhabi Grand Prix
+    official_event_name: FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2019
+    round_number: 21
+    sessions:
+      - date: 2019-11-29 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2019-11-29 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2019-11-30 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2019-11-30 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2019-12-01 17:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2020-02-21 18:00:00
+    gmt_offset: +01:00
+    location: Barcelona
+    name: Pre-Season Test 1
+    official_event_name: FORMULA 1 PRE-SEASON TESTING 2020
+    round_number: 0
+    sessions:
+      - date: 2020-02-19 09:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-02-20 09:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-02-21 09:00:00
+        name: Practice 3
+        type: practice_3
+    weekend_format: testing
+  - country: Spain
+    date: 2020-02-28 18:00:00
+    gmt_offset: +01:00
+    location: Barcelona
+    name: Pre-Season Test 2
+    official_event_name: FORMULA 1 PRE-SEASON TESTING 2020
+    round_number: 0
+    sessions:
+      - date: 2020-02-26 09:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-02-27 09:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-02-28 09:00:00
+        name: Practice 3
+        type: practice_3
+    weekend_format: testing
+  - country: Austria
+    date: 2020-07-05 17:10:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Austrian Grand Prix
+    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON \xD6STERREICH 2020"
+    round_number: 1
+    sessions:
+      - date: 2020-07-03 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-07-03 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-07-04 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-07-04 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-07-05 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2020-07-12 17:10:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Styrian Grand Prix
+    official_event_name: FORMULA 1 PIRELLI GROSSER PREIS DER STEIERMARK 2020
+    round_number: 2
+    sessions:
+      - date: 2020-07-10 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-07-10 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-07-11 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-07-11 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-07-12 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Hungary
+    date: 2020-07-19 17:10:00
+    gmt_offset: +02:00
+    location: Budapest
+    name: Hungarian Grand Prix
+    official_event_name: "FORMULA 1 ARAMCO MAGYAR NAGYD\xCDJ 2020"
+    round_number: 3
+    sessions:
+      - date: 2020-07-17 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-07-17 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-07-18 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-07-18 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-07-19 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Great Britain
+    date: 2020-08-02 16:10:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: British Grand Prix
+    official_event_name: FORMULA 1 PIRELLI BRITISH GRAND PRIX 2020
+    round_number: 4
+    sessions:
+      - date: 2020-07-31 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-07-31 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-08-01 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-08-01 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-08-02 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Great Britain
+    date: 2020-08-09 16:10:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: 70th Anniversary Grand Prix
+    official_event_name: EMIRATES FORMULA 1 70TH ANNIVERSARY GRAND PRIX 2020
+    round_number: 5
+    sessions:
+      - date: 2020-08-07 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-08-07 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-08-08 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-08-08 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-08-09 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2020-08-16 17:10:00
+    gmt_offset: +02:00
+    location: Barcelona
+    name: Spanish Grand Prix
+    official_event_name: "FORMULA 1 ARAMCO GRAN PREMIO DE ESPA\xD1A 2020"
+    round_number: 6
+    sessions:
+      - date: 2020-08-14 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-08-14 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-08-15 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-08-15 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-08-16 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Belgium
+    date: 2020-08-30 17:10:00
+    gmt_offset: +02:00
+    location: Spa-Francorchamps
+    name: Belgian Grand Prix
+    official_event_name: FORMULA 1 ROLEX BELGIAN GRAND PRIX 2020
+    round_number: 7
+    sessions:
+      - date: 2020-08-28 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-08-28 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-08-29 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-08-29 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-08-30 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2020-09-06 17:10:00
+    gmt_offset: +02:00
+    location: Monza
+    name: Italian Grand Prix
+    official_event_name: "FORMULA 1 GRAN PREMIO HEINEKEN D\u2019ITALIA 2020"
+    round_number: 8
+    sessions:
+      - date: 2020-09-04 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-09-04 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-09-05 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-09-05 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-09-06 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2020-09-13 17:10:00
+    gmt_offset: +02:00
+    location: Mugello
+    name: Tuscan Grand Prix
+    official_event_name: FORMULA 1 PIRELLI GRAN PREMIO DELLA TOSCANA FERRARI 1000 2020
+    round_number: 9
+    sessions:
+      - date: 2020-09-11 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-09-11 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-09-12 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-09-12 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-09-13 15:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Russia
+    date: 2020-09-27 16:10:00
+    gmt_offset: +03:00
+    location: Sochi
+    name: Russian Grand Prix
+    official_event_name: FORMULA 1 VTB RUSSIAN GRAND PRIX 2020
+    round_number: 10
+    sessions:
+      - date: 2020-09-25 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-09-25 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-09-26 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-09-26 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-09-27 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Germany
+    date: 2020-10-11 16:10:00
+    gmt_offset: +02:00
+    location: "N\xFCrburgring"
+    name: Eifel Grand Prix
+    official_event_name: FORMULA 1 ARAMCO GROSSER PREIS DER EIFEL 2020
+    round_number: 11
+    sessions:
+      - date: 2020-10-09 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-10-09 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-10-10 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-10-10 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-10-11 14:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Portugal
+    date: 2020-10-25 15:10:00
+    gmt_offset: +00:00
+    location: "Portim\xE3o"
+    name: Portuguese Grand Prix
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xC9MIO DE PORTUGAL 2020"
+    round_number: 12
+    sessions:
+      - date: 2020-10-23 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-10-23 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-10-24 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-10-24 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-10-25 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2020-11-01 15:10:00
+    gmt_offset: +01:00
+    location: Imola
+    name: Emilia Romagna Grand Prix
+    official_event_name: FORMULA 1 EMIRATES GRAN PREMIO DELL'EMILIA ROMAGNA 2020
+    round_number: 13
+    sessions:
+      - date: 2020-10-31 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-10-31 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-11-01 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Turkey
+    date: 2020-11-15 15:10:00
+    gmt_offset: +03:00
+    location: Istanbul
+    name: Turkish Grand Prix
+    official_event_name: FORMULA 1 DHL TURKISH GRAND PRIX 2020
+    round_number: 14
+    sessions:
+      - date: 2020-11-13 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-11-13 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-11-14 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-11-14 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-11-15 13:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Bahrain
+    date: 2020-11-29 19:10:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2020
+    round_number: 15
+    sessions:
+      - date: 2020-11-27 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-11-27 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-11-28 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-11-28 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-11-29 17:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Bahrain
+    date: 2020-12-06 22:10:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Sakhir Grand Prix
+    official_event_name: FORMULA 1 ROLEX SAKHIR GRAND PRIX 2020
+    round_number: 16
+    sessions:
+      - date: 2020-12-04 16:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-12-04 20:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-12-05 17:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-12-05 20:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-12-06 20:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Abu Dhabi
+    date: 2020-12-13 19:10:00
+    gmt_offset: +04:00
+    location: Yas Island
+    name: Abu Dhabi Grand Prix
+    official_event_name: FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2020
+    round_number: 17
+    sessions:
+      - date: 2020-12-11 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2020-12-11 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2020-12-12 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2020-12-12 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2020-12-13 17:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Bahrain
+    date: 2021-03-14 19:00:00
+    gmt_offset: +03:00
+    location: Bahrain
+    name: Pre-Season Test
+    official_event_name: FORMULA 1 ARAMCO PRE-SEASON TESTING 2021
+    round_number: 0
+    sessions:
+      - date: 2021-03-12 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-03-13 10:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-03-14 10:00:00
+        name: Practice 3
+        type: practice_3
+    weekend_format: testing
+  - country: Bahrain
+    date: 2021-03-28 20:00:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2021
+    round_number: 1
+    sessions:
+      - date: 2021-03-26 14:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-03-26 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-03-27 15:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-03-27 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-03-28 18:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2021-04-18 17:00:00
+    gmt_offset: +02:00
+    location: Imola
+    name: Emilia Romagna Grand Prix
+    official_event_name:
+      FORMULA 1 PIRELLI GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA
+      ROMAGNA 2021
+    round_number: 2
+    sessions:
+      - date: 2021-04-16 11:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-04-16 14:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-04-17 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-04-17 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-04-18 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Portugal
+    date: 2021-05-02 17:00:00
+    gmt_offset: +01:00
+    location: "Portim\xE3o"
+    name: Portuguese Grand Prix
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xC9MIO DE PORTUGAL 2021"
+    round_number: 3
+    sessions:
+      - date: 2021-04-30 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-04-30 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-05-01 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-05-01 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-05-02 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2021-05-09 17:00:00
+    gmt_offset: +02:00
+    location: Barcelona
+    name: Spanish Grand Prix
+    official_event_name: "FORMULA 1 ARAMCO GRAN PREMIO DE ESPA\xD1A 2021"
+    round_number: 4
+    sessions:
+      - date: 2021-05-07 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-05-07 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-05-08 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-05-08 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-05-09 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Monaco
+    date: 2021-05-23 17:00:00
+    gmt_offset: +02:00
+    location: Monte Carlo
+    name: Monaco Grand Prix
+    official_event_name: FORMULA 1 GRAND PRIX DE MONACO 2021
+    round_number: 5
+    sessions:
+      - date: 2021-05-20 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-05-20 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-05-22 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-05-22 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-05-23 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Azerbaijan
+    date: 2021-06-06 18:00:00
+    gmt_offset: +04:00
+    location: Baku
+    name: Azerbaijan Grand Prix
+    official_event_name: FORMULA 1 AZERBAIJAN GRAND PRIX 2021
+    round_number: 6
+    sessions:
+      - date: 2021-06-04 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-06-04 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-06-05 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-06-05 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-06-06 16:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: France
+    date: 2021-06-20 17:00:00
+    gmt_offset: +02:00
+    location: Le Castellet
+    name: French Grand Prix
+    official_event_name: FORMULA 1 EMIRATES GRAND PRIX DE FRANCE 2021
+    round_number: 7
+    sessions:
+      - date: 2021-06-18 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-06-18 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-06-19 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-06-19 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-06-20 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2021-06-27 17:00:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Styrian Grand Prix
+    official_event_name: FORMULA 1 BWT GROSSER PREIS DER STEIERMARK 2021
+    round_number: 8
+    sessions:
+      - date: 2021-06-25 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-06-25 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-06-26 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-06-26 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-06-27 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2021-07-04 17:00:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Austrian Grand Prix
+    official_event_name: "FORMULA 1 BWT GROSSER PREIS VON \xD6STERREICH 2021"
+    round_number: 9
+    sessions:
+      - date: 2021-07-02 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-07-02 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-07-03 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-07-03 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-07-04 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Great Britain
+    date: 2021-07-18 17:00:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: British Grand Prix
+    official_event_name: FORMULA 1 PIRELLI BRITISH GRAND PRIX 2021
+    round_number: 10
+    sessions:
+      - date: 2021-07-16 14:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-07-16 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-07-17 12:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-07-17 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2021-07-18 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint
+  - country: Hungary
+    date: 2021-08-01 17:00:00
+    gmt_offset: +02:00
+    location: Budapest
+    name: Hungarian Grand Prix
+    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYD\xCDJ 2021"
+    round_number: 11
+    sessions:
+      - date: 2021-07-30 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-07-30 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-07-31 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-07-31 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-08-01 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Belgium
+    date: 2021-08-29 17:00:00
+    gmt_offset: +02:00
+    location: Spa-Francorchamps
+    name: Belgian Grand Prix
+    official_event_name: FORMULA 1 ROLEX BELGIAN GRAND PRIX 2021
+    round_number: 12
+    sessions:
+      - date: 2021-08-27 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-08-27 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-08-28 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-08-28 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-08-29 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Netherlands
+    date: 2021-09-05 17:00:00
+    gmt_offset: +02:00
+    location: Zandvoort
+    name: Dutch Grand Prix
+    official_event_name: FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2021
+    round_number: 13
+    sessions:
+      - date: 2021-09-03 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-09-03 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-09-04 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-09-04 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-09-05 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2021-09-12 17:00:00
+    gmt_offset: +02:00
+    location: Monza
+    name: Italian Grand Prix
+    official_event_name: "FORMULA 1 HEINEKEN GRAN PREMIO D\u2019ITALIA 2021"
+    round_number: 14
+    sessions:
+      - date: 2021-09-10 14:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-09-10 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-09-11 12:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-09-11 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2021-09-12 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint
+  - country: Russia
+    date: 2021-09-26 17:00:00
+    gmt_offset: +03:00
+    location: Sochi
+    name: Russian Grand Prix
+    official_event_name: FORMULA 1 VTB RUSSIAN GRAND PRIX 2021
+    round_number: 15
+    sessions:
+      - date: 2021-09-24 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-09-24 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-09-25 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-09-25 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-09-26 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Turkey
+    date: 2021-10-10 17:00:00
+    gmt_offset: +03:00
+    location: Istanbul
+    name: Turkish Grand Prix
+    official_event_name: FORMULA 1 ROLEX TURKISH GRAND PRIX 2021
+    round_number: 16
+    sessions:
+      - date: 2021-10-08 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-10-08 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-10-09 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-10-09 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-10-10 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: United States
+    date: 2021-10-24 16:00:00
+    gmt_offset: -05:00
+    location: Austin
+    name: United States Grand Prix
+    official_event_name: FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2021
+    round_number: 17
+    sessions:
+      - date: 2021-10-22 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-10-22 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-10-23 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-10-23 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-10-24 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Mexico
+    date: 2021-11-07 15:00:00
+    gmt_offset: -06:00
+    location: Mexico City
+    name: Mexico City Grand Prix
+    official_event_name: "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE M\xC9XICO 2021"
+    round_number: 18
+    sessions:
+      - date: 2021-11-05 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-11-05 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-11-06 11:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-11-06 14:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-11-07 13:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Brazil
+    date: 2021-11-14 16:00:00
+    gmt_offset: -03:00
+    location: "S\xE3o Paulo"
+    name: "S\xE3o Paulo Grand Prix"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xCAMIO DE S\xC3O PAULO 2021"
+    round_number: 19
+    sessions:
+      - date: 2021-11-12 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-11-12 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-11-13 12:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-11-13 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2021-11-14 14:00:00
+        name: Race
+        type: race
+    weekend_format: sprint
+  - country: Qatar
+    date: 2021-11-21 19:00:00
+    gmt_offset: +03:00
+    location: Lusail
+    name: Qatar Grand Prix
+    official_event_name: FORMULA 1 OOREDOO QATAR GRAND PRIX 2021
+    round_number: 20
+    sessions:
+      - date: 2021-11-19 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-11-19 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-11-20 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-11-20 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-11-21 17:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Saudi Arabia
+    date: 2021-12-05 22:30:00
+    gmt_offset: +03:00
+    location: Jeddah
+    name: Saudi Arabian Grand Prix
+    official_event_name: FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2021
+    round_number: 21
+    sessions:
+      - date: 2021-12-03 16:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-12-03 20:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-12-04 17:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-12-04 20:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-12-05 20:30:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Abu Dhabi
+    date: 2021-12-12 19:00:00
+    gmt_offset: +04:00
+    location: Yas Island
+    name: Abu Dhabi Grand Prix
+    official_event_name: FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2021
+    round_number: 22
+    sessions:
+      - date: 2021-12-10 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2021-12-10 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2021-12-11 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2021-12-11 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2021-12-12 17:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2022-02-25 18:00:00
+    gmt_offset: +01:00
+    location: Spain
+    name: Pre-Season Track Session
+    official_event_name: FORMULA 1 PRE-SEASON TRACK SESSION 2022
+    round_number: 0
+    sessions:
+      - date: 2022-02-23 09:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-02-24 09:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-02-25 09:00:00
+        name: Practice 3
+        type: practice_3
+    weekend_format: testing
+  - country: Bahrain
+    date: 2022-03-12 19:00:00
+    gmt_offset: +03:00
+    location: Bahrain
+    name: Pre-Season Test
+    official_event_name: FORMULA 1 ARAMCO PRE-SEASON TESTING 2022
+    round_number: 0
+    sessions:
+      - date: 2022-03-10 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-03-11 10:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-03-12 10:00:00
+        name: Practice 3
+        type: practice_3
+    weekend_format: testing
+  - country: Bahrain
+    date: 2022-03-20 20:00:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2022
+    round_number: 1
+    sessions:
+      - date: 2022-03-18 15:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-03-18 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-03-19 15:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-03-19 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-03-20 18:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Saudi Arabia
+    date: 2022-03-27 22:00:00
+    gmt_offset: +03:00
+    location: Jeddah
+    name: Saudi Arabian Grand Prix
+    official_event_name: FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2022
+    round_number: 2
+    sessions:
+      - date: 2022-03-25 17:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-03-25 20:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-03-26 17:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-03-26 20:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-03-27 20:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Australia
+    date: 2022-04-10 17:00:00
+    gmt_offset: "+10:00"
+    location: Melbourne
+    name: Australian Grand Prix
+    official_event_name: FORMULA 1 HEINEKEN AUSTRALIAN GRAND PRIX 2022
+    round_number: 3
+    sessions:
+      - date: 2022-04-08 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-04-08 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-04-09 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-04-09 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-04-10 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2022-04-24 17:00:00
+    gmt_offset: +02:00
+    location: Imola
+    name: Emilia Romagna Grand Prix
+    official_event_name:
+      FORMULA 1 ROLEX GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA-ROMAGNA
+      2022
+    round_number: 4
+    sessions:
+      - date: 2022-04-22 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-04-22 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-04-23 12:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-04-23 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2022-04-24 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint
+  - country: United States
+    date: 2022-05-08 17:30:00
+    gmt_offset: -04:00
+    location: Miami
+    name: Miami Grand Prix
+    official_event_name: FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2022
+    round_number: 5
+    sessions:
+      - date: 2022-05-06 14:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-05-06 17:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-05-07 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-05-07 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-05-08 15:30:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2022-05-22 17:00:00
+    gmt_offset: +02:00
+    location: Barcelona
+    name: Spanish Grand Prix
+    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO DE ESPA\xD1A 2022"
+    round_number: 6
+    sessions:
+      - date: 2022-05-20 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-05-20 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-05-21 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-05-21 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-05-22 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Monaco
+    date: 2022-05-29 17:00:00
+    gmt_offset: +02:00
+    location: Monaco
+    name: Monaco Grand Prix
+    official_event_name: FORMULA 1 GRAND PRIX DE MONACO 2022
+    round_number: 7
+    sessions:
+      - date: 2022-05-27 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-05-27 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-05-28 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-05-28 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-05-29 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Azerbaijan
+    date: 2022-06-12 17:00:00
+    gmt_offset: +04:00
+    location: Baku
+    name: Azerbaijan Grand Prix
+    official_event_name: FORMULA 1 AZERBAIJAN GRAND PRIX 2022
+    round_number: 8
+    sessions:
+      - date: 2022-06-10 15:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-06-10 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-06-11 15:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-06-11 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-06-12 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Canada
+    date: 2022-06-19 16:00:00
+    gmt_offset: -04:00
+    location: "Montr\xE9al"
+    name: Canadian Grand Prix
+    official_event_name: FORMULA 1 AWS GRAND PRIX DU CANADA 2022
+    round_number: 9
+    sessions:
+      - date: 2022-06-17 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-06-17 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-06-18 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-06-18 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-06-19 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Great Britain
+    date: 2022-07-03 17:00:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: British Grand Prix
+    official_event_name: FORMULA 1 LENOVO BRITISH GRAND PRIX 2022
+    round_number: 10
+    sessions:
+      - date: 2022-07-01 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-07-01 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-07-02 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-07-02 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-07-03 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2022-07-10 17:00:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Austrian Grand Prix
+    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON \xD6STERREICH 2022"
+    round_number: 11
+    sessions:
+      - date: 2022-07-08 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-07-08 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-07-09 12:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-07-09 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2022-07-10 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint
+  - country: France
+    date: 2022-07-24 17:00:00
+    gmt_offset: +02:00
+    location: Le Castellet
+    name: French Grand Prix
+    official_event_name: FORMULA 1 LENOVO GRAND PRIX DE FRANCE 2022
+    round_number: 12
+    sessions:
+      - date: 2022-07-22 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-07-22 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-07-23 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-07-23 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-07-24 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Hungary
+    date: 2022-07-31 17:00:00
+    gmt_offset: +02:00
+    location: Budapest
+    name: Hungarian Grand Prix
+    official_event_name: "FORMULA 1 ARAMCO MAGYAR NAGYD\xCDJ 2022"
+    round_number: 13
+    sessions:
+      - date: 2022-07-29 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-07-29 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-07-30 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-07-30 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-07-31 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Belgium
+    date: 2022-08-28 17:00:00
+    gmt_offset: +02:00
+    location: Spa-Francorchamps
+    name: Belgian Grand Prix
+    official_event_name: FORMULA 1 ROLEX BELGIAN GRAND PRIX 2022
+    round_number: 14
+    sessions:
+      - date: 2022-08-26 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-08-26 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-08-27 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-08-27 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-08-28 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Netherlands
+    date: 2022-09-04 17:00:00
+    gmt_offset: +02:00
+    location: Zandvoort
+    name: Dutch Grand Prix
+    official_event_name: FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2022
+    round_number: 15
+    sessions:
+      - date: 2022-09-02 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-09-02 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-09-03 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-09-03 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-09-04 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2022-09-11 17:00:00
+    gmt_offset: +02:00
+    location: Monza
+    name: Italian Grand Prix
+    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO D\u2019ITALIA 2022"
+    round_number: 16
+    sessions:
+      - date: 2022-09-09 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-09-09 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-09-10 13:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-09-10 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-09-11 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Singapore
+    date: 2022-10-02 22:00:00
+    gmt_offset: +08:00
+    location: Marina Bay
+    name: Singapore Grand Prix
+    official_event_name: FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2022
+    round_number: 17
+    sessions:
+      - date: 2022-09-30 18:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-09-30 21:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-10-01 18:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-10-01 21:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-10-02 20:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Japan
+    date: 2022-10-09 16:00:00
+    gmt_offset: +09:00
+    location: Suzuka
+    name: Japanese Grand Prix
+    official_event_name: FORMULA 1 HONDA JAPANESE GRAND PRIX 2022
+    round_number: 18
+    sessions:
+      - date: 2022-10-07 12:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-10-07 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-10-08 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-10-08 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-10-09 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: United States
+    date: 2022-10-23 16:00:00
+    gmt_offset: -05:00
+    location: Austin
+    name: United States Grand Prix
+    official_event_name: FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022
+    round_number: 19
+    sessions:
+      - date: 2022-10-21 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-10-21 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-10-22 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-10-22 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-10-23 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Mexico
+    date: 2022-10-30 16:00:00
+    gmt_offset: -06:00
+    location: Mexico City
+    name: Mexico City Grand Prix
+    official_event_name: "FORMULA 1 HEINEKEN GRAN PREMIO DE LA CIUDAD DE M\xC9XICO 2022"
+    round_number: 20
+    sessions:
+      - date: 2022-10-28 13:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-10-28 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-10-29 12:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-10-29 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-10-30 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Brazil
+    date: 2022-11-13 17:00:00
+    gmt_offset: -03:00
+    location: "S\xE3o Paulo"
+    name: "S\xE3o Paulo Grand Prix"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xCAMIO DE S\xC3O PAULO 2022"
+    round_number: 21
+    sessions:
+      - date: 2022-11-11 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-11-11 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-11-12 12:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-11-12 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2022-11-13 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint
+  - country: Abu Dhabi
+    date: 2022-11-20 19:00:00
+    gmt_offset: +04:00
+    location: Yas Island
+    name: Abu Dhabi Grand Prix
+    official_event_name: FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2022
+    round_number: 22
+    sessions:
+      - date: 2022-11-18 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2022-11-18 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2022-11-19 14:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2022-11-19 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2022-11-20 17:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Bahrain
+    date: 2023-02-25 19:30:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Pre-Season Testing
+    official_event_name: FORMULA 1 ARAMCO PRE-SEASON TESTING 2023
+    round_number: 0
+    sessions:
+      - date: 2023-02-23 10:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-02-24 10:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-02-25 10:00:00
+        name: Practice 3
+        type: practice_3
+    weekend_format: testing
+  - country: Bahrain
+    date: 2023-03-05 20:00:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2023
+    round_number: 1
+    sessions:
+      - date: 2023-03-03 14:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-03-03 18:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-03-04 14:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-03-04 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-03-05 18:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Saudi Arabia
+    date: 2023-03-19 22:00:00
+    gmt_offset: +03:00
+    location: Jeddah
+    name: Saudi Arabian Grand Prix
+    official_event_name: FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2023
+    round_number: 2
+    sessions:
+      - date: 2023-03-17 16:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-03-17 20:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-03-18 16:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-03-18 20:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-03-19 20:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Australia
+    date: 2023-04-02 17:00:00
+    gmt_offset: "+10:00"
+    location: Melbourne
+    name: Australian Grand Prix
+    official_event_name: FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2023
+    round_number: 3
+    sessions:
+      - date: 2023-03-31 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-03-31 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-04-01 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-04-01 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-04-02 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Azerbaijan
+    date: 2023-04-30 17:00:00
+    gmt_offset: +04:00
+    location: Baku
+    name: Azerbaijan Grand Prix
+    official_event_name: FORMULA 1 AZERBAIJAN GRAND PRIX 2023
+    round_number: 4
+    sessions:
+      - date: 2023-04-28 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-04-28 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-04-29 12:30:00
+        name: Sprint Shootout
+        type: sprint_shootout
+      - date: 2023-04-29 17:30:00
+        name: Sprint
+        type: sprint
+      - date: 2023-04-30 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint_shootout
+  - country: United States
+    date: 2023-05-07 17:30:00
+    gmt_offset: -04:00
+    location: Miami
+    name: Miami Grand Prix
+    official_event_name: FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2023
+    round_number: 5
+    sessions:
+      - date: 2023-05-05 14:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-05-05 17:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-05-06 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-05-06 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-05-07 15:30:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Monaco
+    date: 2023-05-28 17:00:00
+    gmt_offset: +02:00
+    location: Monaco
+    name: Monaco Grand Prix
+    official_event_name: FORMULA 1 GRAND PRIX DE MONACO 2023
+    round_number: 6
+    sessions:
+      - date: 2023-05-26 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-05-26 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-05-27 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-05-27 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-05-28 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Spain
+    date: 2023-06-04 17:00:00
+    gmt_offset: +02:00
+    location: Barcelona
+    name: Spanish Grand Prix
+    official_event_name: "FORMULA 1 AWS GRAN PREMIO DE ESPA\xD1A 2023"
+    round_number: 7
+    sessions:
+      - date: 2023-06-02 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-06-02 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-06-03 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-06-03 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-06-04 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Canada
+    date: 2023-06-18 16:00:00
+    gmt_offset: -04:00
+    location: "Montr\xE9al"
+    name: Canadian Grand Prix
+    official_event_name: FORMULA 1 PIRELLI GRAND PRIX DU CANADA 2023
+    round_number: 8
+    sessions:
+      - date: 2023-06-16 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-06-16 16:30:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-06-17 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-06-17 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-06-18 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Austria
+    date: 2023-07-02 17:00:00
+    gmt_offset: +02:00
+    location: Spielberg
+    name: Austrian Grand Prix
+    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON \xD6STERREICH 2023"
+    round_number: 9
+    sessions:
+      - date: 2023-06-30 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-06-30 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-07-01 12:00:00
+        name: Sprint Shootout
+        type: sprint_shootout
+      - date: 2023-07-01 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2023-07-02 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint_shootout
+  - country: Great Britain
+    date: 2023-07-09 17:00:00
+    gmt_offset: +01:00
+    location: Silverstone
+    name: British Grand Prix
+    official_event_name: FORMULA 1 ARAMCO BRITISH GRAND PRIX 2023
+    round_number: 10
+    sessions:
+      - date: 2023-07-07 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-07-07 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-07-08 11:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-07-08 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-07-09 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Hungary
+    date: 2023-07-23 17:00:00
+    gmt_offset: +02:00
+    location: Budapest
+    name: Hungarian Grand Prix
+    official_event_name: FORMULA 1 QATAR AIRWAYS HUNGARIAN GRAND PRIX 2023
+    round_number: 11
+    sessions:
+      - date: 2023-07-21 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-07-21 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-07-22 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-07-22 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-07-23 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Belgium
+    date: 2023-07-30 17:00:00
+    gmt_offset: +02:00
+    location: Spa-Francorchamps
+    name: Belgian Grand Prix
+    official_event_name: FORMULA 1 MSC CRUISES BELGIAN GRAND PRIX 2023
+    round_number: 12
+    sessions:
+      - date: 2023-07-28 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-07-28 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-07-29 12:00:00
+        name: Sprint Shootout
+        type: sprint_shootout
+      - date: 2023-07-29 16:30:00
+        name: Sprint
+        type: sprint
+      - date: 2023-07-30 15:00:00
+        name: Race
+        type: race
+    weekend_format: sprint_shootout
+  - country: Netherlands
+    date: 2023-08-27 17:00:00
+    gmt_offset: +02:00
+    location: Zandvoort
+    name: Dutch Grand Prix
+    official_event_name: FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2023
+    round_number: 13
+    sessions:
+      - date: 2023-08-25 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-08-25 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-08-26 11:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-08-26 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-08-27 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Italy
+    date: 2023-09-03 17:00:00
+    gmt_offset: +02:00
+    location: Monza
+    name: Italian Grand Prix
+    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO D\u2019ITALIA 2023 "
+    round_number: 14
+    sessions:
+      - date: 2023-09-01 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-09-01 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-09-02 12:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-09-02 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-09-03 15:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Singapore
+    date: 2023-09-17 22:00:00
+    gmt_offset: +08:00
+    location: Marina Bay
+    name: Singapore Grand Prix
+    official_event_name: "FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2023 "
+    round_number: 15
+    sessions:
+      - date: 2023-09-15 17:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-09-15 21:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-09-16 17:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-09-16 21:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-09-17 20:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Japan
+    date: 2023-09-24 16:00:00
+    gmt_offset: +09:00
+    location: Suzuka
+    name: Japanese Grand Prix
+    official_event_name: "FORMULA 1 LENOVO JAPANESE GRAND PRIX 2023 "
+    round_number: 16
+    sessions:
+      - date: 2023-09-22 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-09-22 15:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-09-23 11:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-09-23 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-09-24 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Qatar
+    date: 2023-10-08 22:00:00
+    gmt_offset: +03:00
+    location: Lusail
+    name: Qatar Grand Prix
+    official_event_name: FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2023
+    round_number: 17
+    sessions:
+      - date: 2023-10-06 16:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-10-06 20:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-10-07 16:00:00
+        name: Sprint Shootout
+        type: sprint_shootout
+      - date: 2023-10-07 20:30:00
+        name: Sprint
+        type: sprint
+      - date: 2023-10-08 20:00:00
+        name: Race
+        type: race
+    weekend_format: sprint_shootout
+  - country: United States
+    date: 2023-10-22 16:00:00
+    gmt_offset: -05:00
+    location: Austin
+    name: United States Grand Prix
+    official_event_name: FORMULA 1 LENOVO UNITED STATES GRAND PRIX 2023
+    round_number: 18
+    sessions:
+      - date: 2023-10-20 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-10-20 16:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-10-21 12:30:00
+        name: Sprint Shootout
+        type: sprint_shootout
+      - date: 2023-10-21 17:00:00
+        name: Sprint
+        type: sprint
+      - date: 2023-10-22 14:00:00
+        name: Race
+        type: race
+    weekend_format: sprint_shootout
+  - country: Mexico
+    date: 2023-10-29 16:00:00
+    gmt_offset: -06:00
+    location: Mexico City
+    name: Mexico City Grand Prix
+    official_event_name: "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE M\xC9XICO 2023"
+    round_number: 19
+    sessions:
+      - date: 2023-10-27 12:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-10-27 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-10-28 11:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-10-28 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-10-29 14:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Brazil
+    date: 2023-11-05 16:00:00
+    gmt_offset: -03:00
+    location: "S\xE3o Paulo"
+    name: "S\xE3o Paulo Grand Prix"
+    official_event_name: "FORMULA 1 ROLEX GRANDE PR\xCAMIO DE S\xC3O PAULO 2023"
+    round_number: 20
+    sessions:
+      - date: 2023-11-03 11:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-11-03 15:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-11-04 11:00:00
+        name: Sprint Shootout
+        type: sprint_shootout
+      - date: 2023-11-04 15:30:00
+        name: Sprint
+        type: sprint
+      - date: 2023-11-05 14:00:00
+        name: Race
+        type: race
+    weekend_format: sprint_shootout
+  - country: United States
+    date: 2023-11-18 23:59:59
+    gmt_offset: -08:00
+    location: Las Vegas
+    name: Las Vegas Grand Prix
+    official_event_name: FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2023
+    round_number: 21
+    sessions:
+      - date: 2023-11-16 20:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-11-17 00:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-11-17 20:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-11-18 00:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-11-18 22:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
+  - country: Abu Dhabi
+    date: 2023-11-26 19:00:00
+    gmt_offset: +04:00
+    location: Yas Island
+    name: Abu Dhabi Grand Prix
+    official_event_name: "FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2023 "
+    round_number: 22
+    sessions:
+      - date: 2023-11-24 13:30:00
+        name: Practice 1
+        type: practice_1
+      - date: 2023-11-24 17:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2023-11-25 14:30:00
+        name: Practice 3
+        type: practice_3
+      - date: 2023-11-25 18:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2023-11-26 17:00:00
+        name: Race
+        type: race
+    weekend_format: conventional
