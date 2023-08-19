@@ -1,0 +1,10 @@
+---
+version: 2
+
+sources:
+  - name: live_timing
+    database: f1
+    schema: live_timing
+    tables:
+      - name: weather_data
+        description: '{{ doc("tbl_live_timing__weather_data") }}'
