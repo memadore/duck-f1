@@ -22,7 +22,7 @@ ergast_assets = {i["table"]: AssetOut(**json_asset_config) for i in CONFIG["tabl
     outs=ergast_assets,
     can_subset=True,
     group_name="ergast",
-    compute_kind="pyarrow",
+    compute_kind="python",
 )
 def ergast_tables(context: OpExecutionContext) -> io.BytesIO:
     with urllib.request.urlopen(CONFIG["url"]) as dl_file:
