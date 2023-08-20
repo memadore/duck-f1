@@ -12,6 +12,7 @@
     - python --version ; pip --version # For debugging
     - pip install poetry==$POETRY_VERSION
     - poetry config virtualenvs.in-project true
+    - poetry config installer.max-workers 4
     - poetry --version
 
 stages:
