@@ -77,8 +77,12 @@ class LiveTimingApi:
 
     def get_dataset(self, event_key: str, dataset: str) -> dict:
         path = "/".join(["static", event_key, dataset])
-        response = self._api_request(path)
         file_processor = self._file_processor_builder(dataset)
+        response = self._api_request(path)
+
+        if response is None:
+            return
+
         return file_processor(response)
 
 
