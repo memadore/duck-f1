@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__car_data
+    description: '{{ doc("tbl_live_timing__car_data") }}'
