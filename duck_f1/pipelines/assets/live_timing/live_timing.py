@@ -89,6 +89,8 @@ class LiveTimingApi:
 def live_timing_files(
     partition_manager: LiveTimingPartitionManager, datasets: List[LiveTimingDataset]
 ):
+    processor_builder = LiveTimingProcessorBuilder()
+
     def parquet_file_factory(dataset: LiveTimingDataset):
         @asset(
             name=dataset.table,
@@ -99,11 +101,11 @@ def live_timing_files(
             partitions_def=partition_manager.dagster_partitions,
         )
         def live_timing_asset(context: OpExecutionContext) -> pa.Table:
-            processor_builder = LiveTimingProcessorBuilder(context)
             api_client = LiveTimingApi(context)
 
             partition = partition_manager.get_partition(context.partition_key)
-            processor = processor_builder.build(dataset.table, partition.metadata)
+            processor = processor_builder.build(dataset.table, partition.metadata, context)
+
             data = api_client.get_dataset(partition.event_key, dataset.file)
 
             return processor.run(data)
@@ -112,7 +114,7 @@ def live_timing_files(
 
     out = []
     for dataset in datasets:
-        if dataset.table == "weather_data":
+        if dataset.table in processor_builder.processors:
             out.append(parquet_file_factory(dataset))
 
     return out

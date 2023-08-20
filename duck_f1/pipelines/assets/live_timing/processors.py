@@ -1,6 +1,7 @@
 import io
 from abc import ABC, abstractmethod
 from datetime import datetime
+from typing import List
 
 import pyarrow as pa
 from dagster import OpExecutionContext
@@ -62,13 +63,73 @@ class WeatherDataProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class CarDataProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _explode(capture_ts: str, car_number: str, channel_data: dict):
+        out = []
+        for channel, value in channel_data.items():
+            out.append(
+                {
+                    "capture_ts": capture_ts,
+                    "car_number": car_number,
+                    "channel": channel,
+                    "value": value,
+                }
+            )
+        return out
+
+    @staticmethod
+    def _entry_transformer(entry: dict) -> List[dict]:
+        out = []
+        capture_ts = entry["Utc"]
+        for car_number, car_data in entry["Cars"].items():
+            records = CarDataProcessor._explode(
+                capture_ts=capture_ts, car_number=car_number, channel_data=car_data["Channels"]
+            )
+            out.extend(records)
+
+        return out
+
+    @staticmethod
+    def _row_processor(ts: str, entries: List[dict]) -> List[dict]:
+        out = []
+        for entry in entries:
+            out.extend(CarDataProcessor._entry_transformer(entry))
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("capture_ts", pa.string()),
+                ("car_number", pa.int16()),
+                ("channel", pa.int16()),
+                # ("value", pa.decimal128(5, 2)),
+                ("value", pa.int16()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(CarDataProcessor._row_processor(ts=i["ts"], entries=i["Entries"]))
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class LiveTimingProcessorBuilder:
-    def __init__(self, context: OpExecutionContext):
-        self.context = context
+    def __init__(self):
+        self._processors = {"car_data": CarDataProcessor, "weather_data": WeatherDataProcessor}
+
+    @property
+    def processors(self) -> List[str]:
+        return self._processors.keys()
 
     def build(
-        self, table: str, metadata: LiveTimingPartitionMetadata
+        self, table: str, metadata: LiveTimingPartitionMetadata, context: OpExecutionContext
     ) -> AbstractLiveTimingProcessor:
-        processors = {"weather_data": WeatherDataProcessor}
-        processor = processors.get(table, None)
-        return processor(self.context, metadata)
+        processor = self._processors.get(table, None)
+        return processor(context, metadata)
