@@ -39,3 +39,30 @@ class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
             "WindSpeed",
         ]
         self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingCarDataProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("car_data")
+        processor = processors.CarDataProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_weather_data_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["Entries"])
+
+        self.assertEqual(shape, (rows * 20 * 6, 5))  # 20 drivers, 6 channels
+
+    def test_live_timing_weather_data_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "capture_ts",
+            "car_number",
+            "channel",
+            "value",
+            "ts",
+        ]
+        self.assertCountEqual(columns, expected_columns)
