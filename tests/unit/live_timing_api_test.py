@@ -6,7 +6,9 @@ from duck_f1.pipelines.assets.live_timing.live_timing import LiveTimingApi
 
 
 class TestLiveTimingApiFileBuilder(unittest.TestCase):
-    api_client = LiveTimingApi(MagicMock())
+    @classmethod
+    def setUpClass(cls):
+        cls.api_client = LiveTimingApi(MagicMock())
 
     def test_file_processor_builder_json(self):
         file = {"file_name": "test.json", "expected_functions": self.api_client._json_processor}
