@@ -15,22 +15,27 @@ from .processors import LiveTimingProcessorBuilder
 
 
 class LiveTimingApi:
+    BASE_URL = "https://livetiming.formula1.com"
+
     def __init__(self, context: OpExecutionContext) -> None:
         self.context = context
 
-    def _json_processor(self, buffer: io.BytesIO) -> List[dict]:
+    @staticmethod
+    def _json_processor(buffer: io.BytesIO) -> List[dict]:
         raw_txt = buffer.read().decode("utf-8-sig")
         out = "[" + raw_txt + "]"
         return json.loads(out)
 
-    def _zlib_decompress(self, data: str) -> str:
+    @staticmethod
+    def _zlib_decompress(data: str) -> str:
         data = data[12:].strip('"')
         data = base64.b64decode(data)
         data = zlib.decompress(data, -zlib.MAX_WBITS)
         return data.decode("utf-8-sig")[1:]  # remove the first {
 
+    @staticmethod
     def _json_stream_processor(
-        self, buffer: io.BytesIO, data_post_process: Callable = None
+        buffer: io.BytesIO, data_post_process: Callable = None
     ) -> List[dict]:
         raw_txt = buffer.read().decode("utf-8-sig")
         txt = []
@@ -46,7 +51,7 @@ class LiveTimingApi:
         out = "[" + ",".join(txt) + "]"
         return json.loads(out)
 
-    def _file_processor_builder(self, file: str):
+    def _file_processor_builder(self, file: str) -> callable:
         processor = {
             "json": self._json_processor,
             "jsonStream": self._json_stream_processor,
@@ -58,17 +63,23 @@ class LiveTimingApi:
         file_encoding = ".".join(file_parts[1:])
         return processor[file_encoding]
 
-    def get_dataset(self, event_key: str, dataset: str) -> io.BytesIO:
-        BASE_URL = "https://livetiming.formula1.com"
-        url = "/".join([BASE_URL, "static", event_key, dataset])
-        self.context.log.info("api path: %s", url)
-        file_processor = self._file_processor_builder(dataset)
+    def _api_request(self, path: str) -> io.BytesIO:
+        url = "/".join([self.BASE_URL, path])
+
+        self.context.log.info("Making request to: %s", url)
         try:
-            with urllib.request.urlopen(url) as file:
-                stream = io.BytesIO(file.read())
-                return file_processor(stream)
+            with urllib.request.urlopen(url) as response:
+                stream = io.BytesIO(response.read())
+                return stream
         except HTTPError:
-            print("File not found")
+            self.context.log.warn("File not found")
+            return None
+
+    def get_dataset(self, event_key: str, dataset: str) -> dict:
+        path = "/".join(["static", event_key, dataset])
+        response = self._api_request(path)
+        file_processor = self._file_processor_builder(dataset)
+        return file_processor(response)
 
 
 def live_timing_files(
