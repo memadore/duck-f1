@@ -1,0 +1,46 @@
+---
+.python-default:
+  image: python:$PYTHON_VERSION-slim
+  tags:
+    - linux
+  variables:
+    POETRY_VERSION: "1.5"
+    PYTHON_VERSION: "3.11"
+
+.snippets:
+  install_poetry:
+    - python --version ; pip --version # For debugging
+    - pip install poetry==$POETRY_VERSION
+    - poetry config virtualenvs.in-project true
+    - poetry --version
+
+stages:
+  - test
+
+linting:
+  extends: .python-default
+  stage: test
+  allow_failure: true
+  before_script:
+    - !reference [.snippets, install_poetry]
+    - poetry install
+  script:
+    - poetry run flake8 duck_f1 --max-line-length=100
+
+tests::unit:
+  extends: .python-default
+  stage: test
+  before_script:
+    - !reference [.snippets, install_poetry]
+    - poetry install
+  script:
+    - poetry run coverage run -m pytest tests -v --junitxml=report.xml
+    - poetry run coverage xml
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    when: always
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+      junit: report.xml

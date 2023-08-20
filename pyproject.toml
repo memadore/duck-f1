@@ -20,10 +20,12 @@ pandas = "^2.0.3"
 dagster-webserver = "^1.4.6"
 sqlfmt = "^0.0.3"
 harlequin = "^0.0.25"
+flake8 = "^6.1.0"
+pytest = "^7.4.0"
+coverage = "^7.3.0"
 
 [tool.black]
 line-length = 100
-
 
 [build-system]
 requires = ["poetry-core"]
