@@ -117,9 +117,9 @@ class LiveTimingPartitionManager:
     @staticmethod
     def _create_partitions_key(event: LiveTimingEvent, session: LiveTimingSession) -> str:
         year = str(event.date.year)
-        month = str(event.date.month)
-        day = str(event.date.day)
-        session = session.type
+        month = f"{event.date.month:02d}"
+        day = f"{event.date.day:02d}"
+        session = session.type.lower()
         key = "/".join([year, month, day, session])
         fmt_key = key.replace(" ", "_")
         return fmt_key

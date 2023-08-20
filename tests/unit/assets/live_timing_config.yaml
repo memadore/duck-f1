@@ -1,0 +1,29 @@
+---
+datasets:
+  - file: test.jsonStream
+    table: test_table
+events:
+  - country: Australia
+    date: 2018-03-25 18:10:00
+    gmt_offset: "+11:00"
+    location: Melbourne
+    name: Australian Grand Prix
+    official_event_name: FORMULA 1 2018 ROLEX AUSTRALIAN GRAND PRIX
+    round_number: 1
+    sessions:
+      - date: 2018-03-23 12:00:00
+        name: Practice 1
+        type: practice_1
+      - date: 2018-03-23 16:00:00
+        name: Practice 2
+        type: practice_2
+      - date: 2018-03-24 14:00:00
+        name: Practice 3
+        type: practice_3
+      - date: 2018-03-24 17:00:00
+        name: Qualifying
+        type: qualifying
+      - date: 2018-03-25 16:10:00
+        name: Race
+        type: race
+    weekend_format: conventional
