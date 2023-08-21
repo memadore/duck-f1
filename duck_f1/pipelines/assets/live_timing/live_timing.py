@@ -3,7 +3,7 @@ import io
 import json
 import zlib
 from functools import partial
-from typing import Callable, List
+from typing import Callable, List, Union
 
 import pyarrow as pa
 import requests
@@ -76,7 +76,7 @@ class LiveTimingApi:
         stream = io.BytesIO(response.content)
         return stream
 
-    def get_dataset(self, event_key: str, dataset: str) -> dict:
+    def get_dataset(self, event_key: str, dataset: str) -> Union[dict, None]:
         path = "/".join(["static", event_key, dataset])
         file_processor = self._file_processor_builder(dataset)
         response = self._api_request(path)
@@ -108,7 +108,6 @@ def live_timing_files(
             processor = processor_builder.build(dataset.table, partition.metadata, context)
 
             data = api_client.get_dataset(partition.event_key, dataset.file)
-
             return processor.run(data)
 
         return live_timing_asset
