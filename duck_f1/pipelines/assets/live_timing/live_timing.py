@@ -1,13 +1,12 @@
 import base64
 import io
 import json
-import urllib.request
 import zlib
 from functools import partial
 from typing import Callable, List
-from urllib.error import HTTPError
 
 import pyarrow as pa
+import requests
 from dagster import OpExecutionContext, asset
 
 from .partitions import LiveTimingDataset, LiveTimingPartitionManager
@@ -67,13 +66,15 @@ class LiveTimingApi:
         url = "/".join([self.BASE_URL, path])
 
         self.context.log.info("Making request to: %s", url)
-        try:
-            with urllib.request.urlopen(url) as response:
-                stream = io.BytesIO(response.read())
-                return stream
-        except HTTPError:
+
+        response = requests.get(url, timeout=10)
+
+        if response.status_code != 200:
             self.context.log.warn("File not found")
             return None
+
+        stream = io.BytesIO(response.content)
+        return stream
 
     def get_dataset(self, event_key: str, dataset: str) -> dict:
         path = "/".join(["static", event_key, dataset])
