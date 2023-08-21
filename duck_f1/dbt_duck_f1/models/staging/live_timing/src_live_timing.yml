@@ -6,6 +6,8 @@ sources:
     database: f1
     schema: live_timing
     tables:
+      - name: archive_status
+        description: '{{ doc("tbl_live_timing__archive_status") }}'
       - name: car_data
         description: '{{ doc("tbl_live_timing__car_data") }}'
       - name: weather_data

@@ -44,20 +44,9 @@ class AbstractLiveTimingProcessor(ABC):
         return table
 
 
-class WeatherDataProcessor(AbstractLiveTimingProcessor):
+class ArchiveStatusProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
-        schema = pa.schema(
-            [
-                ("ts", pa.string()),
-                ("AirTemp", pa.decimal128(5, 2)),
-                ("Humidity", pa.decimal128(5, 2)),
-                ("Pressure", pa.decimal128(6, 2)),
-                ("Rainfall", pa.decimal128(5, 2)),
-                ("TrackTemp", pa.decimal128(5, 2)),
-                ("WindDirection", pa.int16()),
-                ("WindSpeed", pa.decimal128(5, 2)),
-            ]
-        )
+        schema = pa.schema([("Status", pa.string())])
 
         table = pa.Table.from_pylist(data).cast(schema)
         return table
@@ -120,9 +109,32 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class WeatherDataProcessor(AbstractLiveTimingProcessor):
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("ts", pa.string()),
+                ("AirTemp", pa.decimal128(5, 2)),
+                ("Humidity", pa.decimal128(5, 2)),
+                ("Pressure", pa.decimal128(6, 2)),
+                ("Rainfall", pa.decimal128(5, 2)),
+                ("TrackTemp", pa.decimal128(5, 2)),
+                ("WindDirection", pa.int16()),
+                ("WindSpeed", pa.decimal128(5, 2)),
+            ]
+        )
+
+        table = pa.Table.from_pylist(data).cast(schema)
+        return table
+
+
 class LiveTimingProcessorBuilder:
     def __init__(self):
-        self._processors = {"car_data": CarDataProcessor, "weather_data": WeatherDataProcessor}
+        self._processors = {
+            "archive_status": ArchiveStatusProcessor,
+            "car_data": CarDataProcessor,
+            "weather_data": WeatherDataProcessor,
+        }
 
     @property
     def processors(self) -> List[str]:

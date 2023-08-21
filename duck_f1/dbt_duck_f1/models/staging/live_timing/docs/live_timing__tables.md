@@ -1,6 +1,11 @@
+{% docs tbl_live_timing__archive_status %}
+Status for the archives of the Live Timing data assets
+{% enddocs %}
+---
 {% docs tbl_live_timing__car_data %}
 Car telemetry channels
 {% enddocs %}
+---
 {% docs tbl_live_timing__weather_data %}
 Weather data collected during the session
 {% enddocs %}
