@@ -8,6 +8,8 @@ sources:
     tables:
       - name: archive_status
         description: '{{ doc("tbl_live_timing__archive_status") }}'
+      - name: audio_streams
+        description: '{{ doc("tbl_live_timing__audio_streams") }}'
       - name: car_data
         description: '{{ doc("tbl_live_timing__car_data") }}'
       - name: weather_data

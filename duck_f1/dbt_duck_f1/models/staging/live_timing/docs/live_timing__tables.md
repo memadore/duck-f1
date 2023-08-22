@@ -2,6 +2,10 @@
 Status for the archives of the Live Timing data assets
 {% enddocs %}
 ---
+{% docs tbl_live_timing__audio_streams %}
+Audio assets for the session
+{% enddocs %}
+---
 {% docs tbl_live_timing__car_data %}
 Car telemetry channels
 {% enddocs %}
