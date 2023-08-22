@@ -15,7 +15,7 @@ json_asset_config = {
     "io_manager_key": "pyarrow_parquet_io_manager",
 }
 
-ergast_assets = {i["table"]: AssetOut(**json_asset_config) for i in CONFIG["tables"]}
+ergast_assets = dict([(i["table"], AssetOut(**json_asset_config)) for i in CONFIG["tables"]])
 
 
 @multi_asset(
