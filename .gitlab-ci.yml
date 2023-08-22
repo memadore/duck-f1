@@ -37,6 +37,7 @@ tests::unit:
   script:
     - poetry run coverage run -m pytest tests -v --junitxml=report.xml
     - poetry run coverage xml
+    - poetry run coverage report --show-missing --precision=2
   coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
   artifacts:
     when: always
