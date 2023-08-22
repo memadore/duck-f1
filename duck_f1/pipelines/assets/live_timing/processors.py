@@ -52,6 +52,35 @@ class ArchiveStatusProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class AudioStreamsProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _row_processor(ts: str, streams: List[dict]) -> List[dict]:
+        out = list(map(lambda item: dict(item, ts=ts), streams))
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("Name", pa.string()),
+                ("Language", pa.string()),
+                ("Uri", pa.string()),
+                ("Path", pa.string()),
+                ("Utc", pa.string()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                AudioStreamsProcessor._row_processor(ts=i["ts"], streams=i["Streams"])
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class CarDataProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _explode(capture_ts: str, car_number: str, channel_data: dict):
@@ -132,6 +161,7 @@ class LiveTimingProcessorBuilder:
     def __init__(self):
         self._processors = {
             "archive_status": ArchiveStatusProcessor,
+            "audio_streams": AudioStreamsProcessor,
             "car_data": CarDataProcessor,
             "weather_data": WeatherDataProcessor,
         }
