@@ -15,6 +15,76 @@ def get_json_data(key: str) -> dict:
     return data
 
 
+class TestLiveTimingArchiveStatusProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = get_json_data("archive_status")
+        processor = processors.ArchiveStatusProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(data)
+
+    def test_live_timing_archive_status_shape(self):
+        shape = self.output.shape
+        self.assertEqual(shape, (1, 1))
+
+    def test_live_timing_archive_status_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["Status"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingAudioStreamsProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = get_json_data("audio_streams")
+        processor = processors.AudioStreamsProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(data)
+
+    def test_live_timing_audio_streams_shape(self):
+        shape = self.output.shape
+        self.assertEqual(shape, (1, 6))
+
+    def test_live_timing_audio_streams_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "Name",
+            "Language",
+            "Uri",
+            "Path",
+            "Utc",
+            "ts",
+        ]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingCarDataProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("car_data")
+        processor = processors.CarDataProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_car_data_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["Entries"])
+
+        self.assertEqual(shape, (rows * 20 * 6, 5))  # 20 drivers, 6 channels
+
+    def test_live_timing_car_data_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "capture_ts",
+            "car_number",
+            "channel",
+            "value",
+            "ts",
+        ]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -37,32 +107,5 @@ class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
             "TrackTemp",
             "WindDirection",
             "WindSpeed",
-        ]
-        self.assertCountEqual(columns, expected_columns)
-
-
-class TestLiveTimingCarDataProcessor(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.data = get_json_data("car_data")
-        processor = processors.CarDataProcessor(MagicMock(), MagicMock())
-        cls.output = processor._processor(cls.data)
-
-    def test_live_timing_weather_data_shape(self):
-        shape = self.output.shape
-        rows = 0
-        for row in self.data:
-            rows += len(row["Entries"])
-
-        self.assertEqual(shape, (rows * 20 * 6, 5))  # 20 drivers, 6 channels
-
-    def test_live_timing_weather_data_columns(self):
-        columns = self.output.column_names
-        expected_columns = [
-            "capture_ts",
-            "car_number",
-            "channel",
-            "value",
-            "ts",
         ]
         self.assertCountEqual(columns, expected_columns)
