@@ -1,0 +1,295 @@
+[
+  {
+    "ts": "00:00:00.000",
+    "Drivers": {},
+    "Teams": {}
+  },
+  {
+    "ts": "00:00:04.347",
+    "Drivers": {
+      "44": {
+        "RacingNumber": "44",
+        "CurrentPosition": 1,
+        "PredictedPosition": 1,
+        "CurrentPoints": 307.0,
+        "PredictedPoints": 307.0
+      },
+      "77": {
+        "RacingNumber": "77",
+        "CurrentPosition": 2,
+        "PredictedPosition": 2,
+        "CurrentPoints": 197.0,
+        "PredictedPoints": 197.0
+      },
+      "33": {
+        "RacingNumber": "33",
+        "CurrentPosition": 3,
+        "PredictedPosition": 3,
+        "CurrentPoints": 170.0,
+        "PredictedPoints": 170.0
+      },
+      "11": {
+        "RacingNumber": "11",
+        "CurrentPosition": 4,
+        "PredictedPosition": 4,
+        "CurrentPoints": 100.0,
+        "PredictedPoints": 100.0
+      },
+      "16": {
+        "RacingNumber": "16",
+        "CurrentPosition": 5,
+        "PredictedPosition": 5,
+        "CurrentPoints": 97.0,
+        "PredictedPoints": 97.0
+      },
+      "3": {
+        "RacingNumber": "3",
+        "CurrentPosition": 6,
+        "PredictedPosition": 6,
+        "CurrentPoints": 96.0,
+        "PredictedPoints": 96.0
+      },
+      "55": {
+        "RacingNumber": "55",
+        "CurrentPosition": 7,
+        "PredictedPosition": 7,
+        "CurrentPoints": 75.0,
+        "PredictedPoints": 75.0
+      },
+      "4": {
+        "RacingNumber": "4",
+        "CurrentPosition": 8,
+        "PredictedPosition": 8,
+        "CurrentPoints": 74.0,
+        "PredictedPoints": 74.0
+      },
+      "23": {
+        "RacingNumber": "23",
+        "CurrentPosition": 9,
+        "PredictedPosition": 9,
+        "CurrentPoints": 70.0,
+        "PredictedPoints": 70.0
+      },
+      "10": {
+        "RacingNumber": "10",
+        "CurrentPosition": 10,
+        "PredictedPosition": 10,
+        "CurrentPoints": 63.0,
+        "PredictedPoints": 63.0
+      },
+      "18": {
+        "RacingNumber": "18",
+        "CurrentPosition": 11,
+        "PredictedPosition": 11,
+        "CurrentPoints": 59.0,
+        "PredictedPoints": 59.0
+      },
+      "31": {
+        "RacingNumber": "31",
+        "CurrentPosition": 12,
+        "PredictedPosition": 12,
+        "CurrentPoints": 40.0,
+        "PredictedPoints": 40.0
+      },
+      "5": {
+        "RacingNumber": "5",
+        "CurrentPosition": 13,
+        "PredictedPosition": 13,
+        "CurrentPoints": 33.0,
+        "PredictedPoints": 33.0
+      },
+      "26": {
+        "RacingNumber": "26",
+        "CurrentPosition": 14,
+        "PredictedPosition": 14,
+        "CurrentPoints": 26.0,
+        "PredictedPoints": 26.0
+      },
+      "": {
+        "RacingNumber": "",
+        "CurrentPosition": 15,
+        "PredictedPosition": 15,
+        "CurrentPoints": 10.0,
+        "PredictedPoints": 10.0
+      },
+      "7": {
+        "RacingNumber": "7",
+        "CurrentPosition": 16,
+        "PredictedPosition": 16,
+        "CurrentPoints": 4.0,
+        "PredictedPoints": 4.0
+      },
+      "99": {
+        "RacingNumber": "99",
+        "CurrentPosition": 17,
+        "PredictedPosition": 17,
+        "CurrentPoints": 4.0,
+        "PredictedPoints": 4.0
+      },
+      "8": {
+        "RacingNumber": "8",
+        "CurrentPosition": 18,
+        "PredictedPosition": 18,
+        "CurrentPoints": 2.0,
+        "PredictedPoints": 2.0
+      },
+      "20": {
+        "RacingNumber": "20",
+        "CurrentPosition": 19,
+        "PredictedPosition": 19,
+        "CurrentPoints": 1.0,
+        "PredictedPoints": 1.0
+      },
+      "6": {
+        "RacingNumber": "6",
+        "CurrentPosition": 20,
+        "PredictedPosition": 20,
+        "CurrentPoints": 0.0,
+        "PredictedPoints": 0.0
+      },
+      "63": {
+        "RacingNumber": "63",
+        "CurrentPosition": 21,
+        "PredictedPosition": 21,
+        "CurrentPoints": 0.0,
+        "PredictedPoints": 0.0
+      }
+    },
+    "Teams": {
+      "Mercedes": {
+        "TeamName": "Mercedes",
+        "CurrentPosition": 1,
+        "PredictedPosition": 1,
+        "CurrentPoints": 504.0,
+        "PredictedPoints": 504.0
+      },
+      "Red Bull Racing Honda": {
+        "TeamName": "Red Bull Racing",
+        "CurrentPosition": 2,
+        "PredictedPosition": 2,
+        "CurrentPoints": 240.0,
+        "PredictedPoints": 240.0
+      },
+      "Racing Point BWT Mercedes": {
+        "TeamName": "Racing Point",
+        "CurrentPosition": 3,
+        "PredictedPosition": 3,
+        "CurrentPoints": 154.0,
+        "PredictedPoints": 154.0
+      },
+      "McLaren Renault": {
+        "TeamName": "McLaren",
+        "CurrentPosition": 4,
+        "PredictedPosition": 4,
+        "CurrentPoints": 149.0,
+        "PredictedPoints": 149.0
+      },
+      "Renault": {
+        "TeamName": "Renault",
+        "CurrentPosition": 5,
+        "PredictedPosition": 5,
+        "CurrentPoints": 136.0,
+        "PredictedPoints": 136.0
+      },
+      "Ferrari": {
+        "TeamName": "Ferrari",
+        "CurrentPosition": 6,
+        "PredictedPosition": 6,
+        "CurrentPoints": 130.0,
+        "PredictedPoints": 130.0
+      },
+      "AlphaTauri Honda": {
+        "TeamName": "AlphaTauri",
+        "CurrentPosition": 7,
+        "PredictedPosition": 7,
+        "CurrentPoints": 89.0,
+        "PredictedPoints": 89.0
+      },
+      "Alfa Romeo Racing Ferrari": {
+        "TeamName": "Alfa Romeo Racing",
+        "CurrentPosition": 8,
+        "PredictedPosition": 8,
+        "CurrentPoints": 8.0,
+        "PredictedPoints": 8.0
+      },
+      "Haas Ferrari": {
+        "TeamName": "Haas F1 Team",
+        "CurrentPosition": 9,
+        "PredictedPosition": 9,
+        "CurrentPoints": 3.0,
+        "PredictedPoints": 3.0
+      },
+      "Williams Mercedes": {
+        "TeamName": "Williams",
+        "CurrentPosition": 10,
+        "PredictedPosition": 10,
+        "CurrentPoints": 0.0,
+        "PredictedPoints": 0.0
+      }
+    }
+  },
+  {
+    "ts": "00:33:43.835",
+    "Drivers": {
+      "16": {
+        "PredictedPosition": 6
+      },
+      "3": {
+        "PredictedPosition": 7
+      },
+      "55": {
+        "PredictedPosition": 8
+      },
+      "4": {
+        "PredictedPosition": 5,
+        "PredictedPoints": 99.0
+      }
+    },
+    "Teams": {
+      "Racing Point BWT Mercedes": {
+        "PredictedPosition": 4
+      },
+      "McLaren Renault": {
+        "PredictedPosition": 3,
+        "PredictedPoints": 174.0
+      }
+    }
+  },
+  {
+    "ts": "00:33:43.957",
+    "Drivers": {
+      "31": {
+        "PredictedPoints": 58.0
+      }
+    },
+    "Teams": {
+      "Racing Point BWT Mercedes": {
+        "PredictedPosition": 5
+      },
+      "Renault": {
+        "PredictedPosition": 4,
+        "PredictedPoints": 154.0
+      }
+    }
+  },
+  {
+    "ts": "00:33:44.007",
+    "Drivers": {
+      "55": {
+        "PredictedPosition": 9
+      },
+      "23": {
+        "PredictedPosition": 10
+      },
+      "10": {
+        "PredictedPosition": 8,
+        "PredictedPoints": 78.0
+      }
+    },
+    "Teams": {
+      "AlphaTauri Honda": {
+        "PredictedPoints": 104.0
+      }
+    }
+  }
+]

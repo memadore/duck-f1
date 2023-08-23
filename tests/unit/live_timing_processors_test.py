@@ -85,6 +85,30 @@ class TestLiveTimingCarDataProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingChampionshipPredictionProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = get_json_data("championship_prediction")
+        processor = processors.ChampionshipPredictionProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(data)
+
+    def test_live_timing_audio_streams_shape(self):
+        shape = self.output.shape
+        self.assertEqual(shape, (137, 5))
+
+    def test_live_timing_audio_streams_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "entity",
+            "identifier",
+            "metric",
+            "value",
+            "ts",
+        ]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
