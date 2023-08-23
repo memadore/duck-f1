@@ -138,6 +138,71 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _explode(entity: str, identifier: str, metrics: dict) -> List[dict]:
+        out = []
+        wanted_metrics = [
+            "CurrentPosition",
+            "PredictedPosition",
+            "CurrentPoints",
+            "PredictedPoints",
+        ]
+        for key, value in metrics.items():
+            if key not in wanted_metrics:
+                continue
+
+            out.append(
+                {
+                    "entity": entity,
+                    "identifier": identifier,
+                    "metric": key,
+                    "value": value,
+                }
+            )
+
+        return out
+
+    @staticmethod
+    def _row_processor(ts: str, entity: str, data: dict) -> List[dict]:
+        out = []
+        for key, value in data.items():
+            if len(key) == 0:
+                continue
+            out.extend(ChampionshipPredictionProcessor._explode(entity, key, value))
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("entity", pa.string()),
+                ("identifier", pa.string()),
+                ("metric", pa.string()),
+                ("value", pa.decimal128(5, 2)),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                ChampionshipPredictionProcessor._row_processor(
+                    ts=i["ts"], entity="driver", data=i["Drivers"]
+                )
+            )
+            processed_data.extend(
+                ChampionshipPredictionProcessor._row_processor(
+                    ts=i["ts"], entity="team", data=i["Teams"]
+                )
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class WeatherDataProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -163,6 +228,7 @@ class LiveTimingProcessorBuilder:
             "archive_status": ArchiveStatusProcessor,
             "audio_streams": AudioStreamsProcessor,
             "car_data": CarDataProcessor,
+            "championship_prediction": ChampionshipPredictionProcessor,
             "weather_data": WeatherDataProcessor,
         }
 
