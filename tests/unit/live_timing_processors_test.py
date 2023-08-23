@@ -109,6 +109,35 @@ class TestLiveTimingChampionshipPredictionProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingPositionProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("position")
+        processor = processors.PositionProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_position_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["Position"])
+
+        self.assertEqual(shape, (rows * 20, 7))  # 20 drivers
+
+    def test_live_timing_position_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "Timestamp",
+            "Driver",
+            "Status",
+            "X",
+            "Y",
+            "Z",
+            "ts",
+        ]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

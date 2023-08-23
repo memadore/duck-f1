@@ -203,6 +203,49 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class PositionProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _entry_transformer(entry: dict) -> List[dict]:
+        out = []
+        capture_ts = entry["Timestamp"]
+        for driver_number, position_data in entry["Entries"].items():
+            out.append({"Timestamp": capture_ts, "Driver": driver_number, **position_data})
+
+        return out
+
+    @staticmethod
+    def _row_processor(ts: str, positions: List[dict]) -> List[dict]:
+        out = []
+        for i in positions:
+            out.extend(PositionProcessor._entry_transformer(i))
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("Timestamp", pa.string()),
+                ("Driver", pa.string()),
+                ("Status", pa.string()),
+                ("X", pa.int16()),
+                ("Y", pa.int16()),
+                ("Z", pa.int16()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                PositionProcessor._row_processor(ts=i["ts"], positions=i["Position"])
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class WeatherDataProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -229,6 +272,7 @@ class LiveTimingProcessorBuilder:
             "audio_streams": AudioStreamsProcessor,
             "car_data": CarDataProcessor,
             "championship_prediction": ChampionshipPredictionProcessor,
+            "position": PositionProcessor,
             "weather_data": WeatherDataProcessor,
         }
 
