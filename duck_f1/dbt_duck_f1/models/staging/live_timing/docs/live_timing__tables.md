@@ -10,6 +10,10 @@ Audio assets for the session
 Car telemetry channels
 {% enddocs %}
 ---
+{% docs tbl_live_timing__championship_prediction %}
+In-Race championship predictions for both teams and drivers
+{% enddocs %}
+---
 {% docs tbl_live_timing__weather_data %}
 Weather data collected during the session
 {% enddocs %}
