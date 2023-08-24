@@ -14,6 +14,10 @@ Car telemetry channels
 In-Race championship predictions for both teams and drivers
 {% enddocs %}
 ---
+{% docs tbl_live_timing__current_tyres %}
+Observed tyres on the cars
+{% enddocs %}s
+---
 {% docs tbl_live_timing__position %}
 Car position and status
 {% enddocs %}

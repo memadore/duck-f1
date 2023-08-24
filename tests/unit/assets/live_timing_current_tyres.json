@@ -1,0 +1,114 @@
+[
+  {
+    "ts": "00:27:10.403",
+    "Tyres": {
+      "4": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "44": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "77": {
+        "Compound": "MEDIUM",
+        "New": false
+      }
+    }
+  },
+  {
+    "ts": "00:27:15.598",
+    "Tyres": {
+      "3": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "5": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "6": {
+        "Compound": "HARD",
+        "New": true
+      },
+      "8": {
+        "Compound": "HARD",
+        "New": true
+      },
+      "10": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "11": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "16": {
+        "Compound": "HARD",
+        "New": true
+      },
+      "18": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "20": {
+        "Compound": "MEDIUM",
+        "New": true
+      },
+      "23": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "26": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "31": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "33": {
+        "Compound": "MEDIUM",
+        "New": false
+      },
+      "63": {
+        "Compound": "MEDIUM",
+        "New": true
+      }
+    }
+  },
+  {
+    "ts": "00:27:20.652",
+    "Tyres": {
+      "7": {
+        "Compound": "MEDIUM",
+        "New": true
+      },
+      "55": {
+        "Compound": "SOFT",
+        "New": true
+      },
+      "99": {
+        "Compound": "MEDIUM",
+        "New": true
+      }
+    }
+  },
+  {
+    "ts": "01:55:25.865",
+    "Tyres": {
+      "10": {
+        "Compound": "HARD",
+        "New": true
+      }
+    }
+  },
+  {
+    "ts": "01:55:30.902",
+    "Tyres": {
+      "16": {
+        "Compound": "UNKNOWN"
+      }
+    }
+  }
+]

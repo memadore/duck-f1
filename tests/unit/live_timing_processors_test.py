@@ -92,17 +92,44 @@ class TestLiveTimingChampionshipPredictionProcessor(unittest.TestCase):
         processor = processors.ChampionshipPredictionProcessor(MagicMock(), MagicMock())
         cls.output = processor._processor(data)
 
-    def test_live_timing_audio_streams_shape(self):
+    def test_live_timing_championship_prediction_shape(self):
         shape = self.output.shape
         self.assertEqual(shape, (137, 5))
 
-    def test_live_timing_audio_streams_columns(self):
+    def test_live_timing_championship_prediction_columns(self):
         columns = self.output.column_names
         expected_columns = [
             "entity",
             "identifier",
             "metric",
             "value",
+            "ts",
+        ]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingCurrentTyresProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("current_tyres")
+        processor = processors.CurrentTyresProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_current_tyres_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["Tyres"])
+
+        self.assertEqual(shape, (rows, 4))
+
+    def test_live_timing_current_tyres_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "Driver",
+            "Compound",
+            "New",
             "ts",
         ]
 
