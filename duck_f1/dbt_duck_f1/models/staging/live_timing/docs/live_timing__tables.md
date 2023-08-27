@@ -22,6 +22,10 @@ Observed tyres on the cars
 Driver's timing and race statistics
 {% enddocs %}s
 ---
+{% docs tbl_live_timing__extrapolated_clock %}
+Sync between the timing clock and the UTC time
+{% enddocs %}s
+---
 {% docs tbl_live_timing__heartbeat %}
 Live timing heartbeat 
 {% enddocs %}s
