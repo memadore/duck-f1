@@ -188,6 +188,25 @@ class TestLiveTimingExtrapolatedClockProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingHeartbeatProcessorProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("heartbeat")
+        processor = processors.HeartbeatProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_heartbeat_shape(self):
+        shape = self.output.shape
+
+        self.assertEqual(shape, (len(self.data), 2))
+
+    def test_live_timing_heartbeat_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["ts", "Utc"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingPositionProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

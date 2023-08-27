@@ -308,6 +308,14 @@ class ExtrapolatedClockProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class HeartbeatProcessor(AbstractLiveTimingProcessor):
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema([("ts", pa.string()), ("Utc", pa.string())])
+
+        table = pa.Table.from_pylist(data).cast(schema)
+        return table
+
+
 class PositionProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _entry_transformer(entry: dict) -> List[dict]:
@@ -380,6 +388,7 @@ class LiveTimingProcessorBuilder:
             "current_tyres": CurrentTyresProcessor,
             "drive_race_info": DriverRaceInfoProcessor,
             "extrapolated_clock": ExtrapolatedClockProcessor,
+            "heartbeat": HeartbeatProcessor,
             "position": PositionProcessor,
             "weather_data": WeatherDataProcessor,
         }
