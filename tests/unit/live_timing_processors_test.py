@@ -1,3 +1,4 @@
+import copy
 import json
 import unittest
 from unittest.mock import MagicMock
@@ -130,6 +131,38 @@ class TestLiveTimingCurrentTyresProcessor(unittest.TestCase):
             "Driver",
             "Compound",
             "New",
+            "ts",
+        ]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingDriverRaceInfoProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("driver_race_info")
+        processor = processors.DriverRaceInfoProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_driver_race_info_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row) - 1
+
+        self.assertEqual(shape, (rows, 9))
+
+    def test_live_timing_driver_race_info_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "Driver",
+            "Position",
+            "Gap",
+            "Interval",
+            "PitStops",
+            "Catching",
+            "OvertakeState",
+            "IsOut",
             "ts",
         ]
 

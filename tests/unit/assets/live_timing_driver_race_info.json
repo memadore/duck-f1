@@ -1,0 +1,229 @@
+[
+  {
+    "ts": "00:00:05.743",
+    "44": {
+      "RacingNumber": "44",
+      "Position": "1",
+      "Gap": "LAP 1",
+      "Interval": "LAP 1",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "77": {
+      "RacingNumber": "77",
+      "Position": "2",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "33": {
+      "RacingNumber": "33",
+      "Position": "3",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "23": {
+      "RacingNumber": "23",
+      "Position": "4",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "11": {
+      "RacingNumber": "11",
+      "Position": "5",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "3": {
+      "RacingNumber": "3",
+      "Position": "6",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "31": {
+      "RacingNumber": "31",
+      "Position": "7",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "10": {
+      "RacingNumber": "10",
+      "Position": "8",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "4": {
+      "RacingNumber": "4",
+      "Position": "9",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "26": {
+      "RacingNumber": "26",
+      "Position": "10",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "5": {
+      "RacingNumber": "5",
+      "Position": "11",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "16": {
+      "RacingNumber": "16",
+      "Position": "12",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "18": {
+      "RacingNumber": "18",
+      "Position": "13",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "63": {
+      "RacingNumber": "63",
+      "Position": "14",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "55": {
+      "RacingNumber": "55",
+      "Position": "15",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "99": {
+      "RacingNumber": "99",
+      "Position": "16",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "7": {
+      "RacingNumber": "7",
+      "Position": "17",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "20": {
+      "RacingNumber": "20",
+      "Position": "18",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "8": {
+      "RacingNumber": "8",
+      "Position": "19",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    },
+    "6": {
+      "RacingNumber": "6",
+      "Position": "20",
+      "Gap": "",
+      "Interval": "",
+      "PitStops": 0,
+      "Catching": 1,
+      "OvertakeState": 1,
+      "IsOut": false
+    }
+  },
+  {
+    "ts": "00:33:39.049",
+    "10": {
+      "Interval": "+0.767"
+    }
+  },
+  {
+    "ts": "00:33:39.405",
+    "4": {
+      "Interval": "+0.478"
+    }
+  },
+  {
+    "ts": "00:33:39.859",
+    "26": {
+      "Interval": "+0.458"
+    }
+  },
+  {
+    "ts": "00:33:40.150",
+    "5": {
+      "Interval": "+0.254"
+    }
+  }
+]

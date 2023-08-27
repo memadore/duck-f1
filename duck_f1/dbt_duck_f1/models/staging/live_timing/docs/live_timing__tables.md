@@ -18,6 +18,10 @@ In-Race championship predictions for both teams and drivers
 Observed tyres on the cars
 {% enddocs %}s
 ---
+{% docs tbl_live_timing__driver_race_info %}
+Driver's timing and race statistics
+{% enddocs %}s
+---
 {% docs tbl_live_timing__position %}
 Car position and status
 {% enddocs %}
