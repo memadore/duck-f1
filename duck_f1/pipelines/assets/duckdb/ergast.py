@@ -11,8 +11,9 @@ with open("./config/ergast.yaml", "r", encoding="UTF-8") as stream:
 @asset(
     group_name="duckdb",
     compute_kind="duckdb",
+    key_prefix=["duckdb", "ergast"],
 )
-def ergast_schema(duckdb: DuckDBResource) -> None:
+def schema(duckdb: DuckDBResource) -> None:
     with duckdb.get_connection() as conn:
         conn.execute("CREATE SCHEMA IF NOT EXISTS ergast;")
 
@@ -22,8 +23,8 @@ def ergast_tables():
         @asset(
             name=table,
             group_name="duckdb",
-            deps=[SourceAsset(["ergast", table]), ergast_schema],
-            key_prefix=["duck-db", "ergast"],
+            deps=[SourceAsset(["ergast", table]), schema],
+            key_prefix=["duckdb", "ergast"],
             compute_kind="duckdb",
         )
         def duck_db_asset(context: OpExecutionContext, duckdb: DuckDBResource) -> None:

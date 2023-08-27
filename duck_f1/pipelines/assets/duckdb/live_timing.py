@@ -4,24 +4,28 @@ from dagster import OpExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
 
 from ..live_timing import config_manager
+from ..live_timing.processors import LiveTimingProcessorBuilder
 
 
 @asset(
     group_name="duckdb",
     compute_kind="duckdb",
+    key_prefix=["duckdb", "live_timing"],
 )
-def living_timing_schema(duckdb: DuckDBResource) -> None:
+def schema(duckdb: DuckDBResource) -> None:
     with duckdb.get_connection() as conn:
         conn.execute("CREATE SCHEMA IF NOT EXISTS live_timing;")
 
 
 def living_timing_tables():
+    processor_builder = LiveTimingProcessorBuilder()
+
     def table_factory(table):
         @asset(
             name=table,
             group_name="duckdb",
-            deps=[SourceAsset(["live_timing", table]), living_timing_schema],
-            key_prefix=["duck-db", "live_timing"],
+            deps=[SourceAsset(["live_timing", table]), schema],
+            key_prefix=["duckdb", "live_timing"],
             compute_kind="duckdb",
         )
         def duck_db_asset(context: OpExecutionContext, duckdb: DuckDBResource) -> None:
@@ -38,7 +42,8 @@ def living_timing_tables():
         return duck_db_asset
 
     out = []
-    for t in config_manager.datasets:
-        out.append(table_factory(t.table))
+    for dataset in config_manager.datasets:
+        if dataset.table in processor_builder.processors:
+            out.append(table_factory(dataset.table))
 
     return out
