@@ -1,0 +1,32 @@
+[
+  {
+    "ts": "00:00:04.182",
+    "Utc": "2020-11-29T13:40:04.233Z",
+    "Remaining": "02:00:00",
+    "Extrapolating": false
+  },
+  {
+    "ts": "00:33:37.185",
+    "Utc": "2020-11-29T14:13:37.236Z",
+    "Remaining": "01:59:59",
+    "Extrapolating": true
+  },
+  {
+    "ts": "00:36:49.194",
+    "Utc": "2020-11-29T14:16:49.245Z",
+    "Remaining": "01:59:24",
+    "Extrapolating": false
+  },
+  {
+    "ts": "01:55:01.170",
+    "Utc": "2020-11-29T15:35:01.221Z",
+    "Remaining": "01:59:23",
+    "Extrapolating": true
+  },
+  {
+    "ts": "02:37:06.294",
+    "Utc": "2020-11-29T16:17:06.345Z",
+    "Remaining": "01:17:19",
+    "Extrapolating": false
+  }
+]

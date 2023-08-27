@@ -169,6 +169,25 @@ class TestLiveTimingDriverRaceInfoProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingExtrapolatedClockProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("extrapolated_clock")
+        processor = processors.ExtrapolatedClockProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_extrapolated_clock_shape(self):
+        shape = self.output.shape
+
+        self.assertEqual(shape, (len(self.data), 4))
+
+    def test_live_timing_extrapolated_clock_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["ts", "Utc", "Remaining", "Extrapolating"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingPositionProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
