@@ -389,7 +389,7 @@ class LiveTimingProcessorBuilder:
             "car_data": CarDataProcessor,
             "championship_prediction": ChampionshipPredictionProcessor,
             "current_tyres": CurrentTyresProcessor,
-            "drive_race_info": DriverRaceInfoProcessor,
+            "driver_race_info": DriverRaceInfoProcessor,
             "extrapolated_clock": ExtrapolatedClockProcessor,
             "heartbeat": HeartbeatProcessor,
             "position": PositionProcessor,
