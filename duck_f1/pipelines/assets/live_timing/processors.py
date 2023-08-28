@@ -188,16 +188,19 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
         processed_data = []
 
         for i in data:
-            processed_data.extend(
-                ChampionshipPredictionProcessor._row_processor(
-                    ts=i["ts"], entity="driver", data=i["Drivers"]
+            if "Drivers" in i:
+                processed_data.extend(
+                    ChampionshipPredictionProcessor._row_processor(
+                        ts=i["ts"], entity="driver", data=i["Drivers"]
+                    )
                 )
-            )
-            processed_data.extend(
-                ChampionshipPredictionProcessor._row_processor(
-                    ts=i["ts"], entity="team", data=i["Teams"]
+
+            if "Teams" in i:
+                processed_data.extend(
+                    ChampionshipPredictionProcessor._row_processor(
+                        ts=i["ts"], entity="team", data=i["Teams"]
+                    )
                 )
-            )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
         return table
