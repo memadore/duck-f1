@@ -16,5 +16,13 @@ sources:
         description: '{{ doc("tbl_live_timing__championship_prediction") }}'
       - name: current_tyres
         description: '{{ doc("tbl_live_timing__current_tyres") }}'
+      - name: driver_race_info
+        description: '{{ doc("tbl_live_timing__driver_race_info") }}'
+      - name: extrapolated_clock
+        description: '{{ doc("tbl_live_timing__extrapolated_clock") }}'
+      - name: heartbeat
+        description: '{{ doc("tbl_live_timing__heartbeat") }}'
+      - name: position
+        description: '{{ doc("tbl_live_timing__position") }}'
       - name: weather_data
         description: '{{ doc("tbl_live_timing__weather_data") }}'
