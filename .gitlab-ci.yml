@@ -22,6 +22,7 @@
 stages:
   - test
   - dbt
+  - deploy
 
 linting:
   extends: .python-default
@@ -71,6 +72,7 @@ build:
 
 pages:
   extends: .python-default
+  stage: deploy
   variables:
     DAGSTER_HOME: /tmp/.dagster
     ENV: dev
@@ -83,9 +85,11 @@ pages:
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/dbt_duck_f1
   script:
+    - poetry run dbt build
     - poetry run dbt docs generate
   artifacts:
     paths:
       - duck_f1/dbt_duck_f1/target
+  publish: duck_f1/dbt_duck_f1/target
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
