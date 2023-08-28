@@ -14,6 +14,10 @@
     - poetry config virtualenvs.in-project true
     - poetry config installer.max-workers 4
     - poetry --version
+  run_dagster_jobs:
+    - poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
+    - poetry run dagster job backfill -d duck_f1 -m pipelines -j live_timing --partitions "2020/11/29/race" --noprompt
+    - sleep 90
 
 stages:
   - test
@@ -60,9 +64,28 @@ build:
     - !reference [.snippets, install_poetry]
     - poetry install --without dev
     - mkdir /tmp/.dagster
-    - poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
-    - poetry run dagster job backfill -d duck_f1 -m pipelines -j live_timing --partitions "2020/11/29/race" --noprompt
-    - sleep 90
+    - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/dbt_duck_f1
   script:
     - poetry run dbt build
+
+pages:
+  extends: .python-default
+  variables:
+    DAGSTER_HOME: /tmp/.dagster
+    ENV: dev
+    OUTPUT_DIR: /tmp/data
+    DUCK_DB_PATH: /tmp/data/f1.duckdb
+  before_script:
+    - !reference [.snippets, install_poetry]
+    - poetry install --without dev
+    - mkdir /tmp/.dagster
+    - !reference [.snippets, run_dagster_jobs]
+    - cd duck_f1/dbt_duck_f1
+  script:
+    - poetry run dbt docs generate
+  artifacts:
+    paths:
+      - duck_f1/dbt_duck_f1/target
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
