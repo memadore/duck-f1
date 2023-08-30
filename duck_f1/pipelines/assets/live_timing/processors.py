@@ -269,7 +269,6 @@ class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
                 }
             )
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
         return out
 
     def _processor(self, data: dict) -> pa.Table:
