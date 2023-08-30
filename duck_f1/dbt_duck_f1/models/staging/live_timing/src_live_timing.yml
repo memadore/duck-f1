@@ -22,6 +22,8 @@ sources:
         description: '{{ doc("tbl_live_timing__extrapolated_clock") }}'
       - name: heartbeat
         description: '{{ doc("tbl_live_timing__heartbeat") }}'
+      - name: index
+        description: '{{ doc("tbl_live_timing__index") }}'
       - name: position
         description: '{{ doc("tbl_live_timing__position") }}'
       - name: weather_data

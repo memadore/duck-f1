@@ -30,6 +30,10 @@ Sync between the timing clock and the UTC time
 Live timing heartbeat 
 {% enddocs %}s
 ---
+{% docs tbl_live_timing__index %}
+List of available datasets for this session
+{% enddocs %}s
+---
 {% docs tbl_live_timing__position %}
 Car position and status
 {% enddocs %}

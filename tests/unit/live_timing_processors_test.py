@@ -207,6 +207,28 @@ class TestLiveTimingHeartbeatProcessorProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingIndexProcessorProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("index")
+        processor = processors.IndexProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_index_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["Feeds"])
+
+        self.assertEqual(shape, (rows, 2))
+
+    def test_live_timing_index_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["KeyFramePath", "StreamPath"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingPositionProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

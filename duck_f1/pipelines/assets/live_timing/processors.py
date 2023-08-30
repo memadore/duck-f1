@@ -319,6 +319,27 @@ class HeartbeatProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class IndexProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _feed_processor(feeds: [dict]) -> List[dict]:
+        out = []
+        for _, value in feeds.items():
+            out.append(value)
+
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema([("KeyFramePath", pa.string()), ("StreamPath", pa.string())])
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(IndexProcessor._feed_processor(feeds=i["Feeds"]))
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class PositionProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _entry_transformer(entry: dict) -> List[dict]:
@@ -392,6 +413,7 @@ class LiveTimingProcessorBuilder:
             "driver_race_info": DriverRaceInfoProcessor,
             "extrapolated_clock": ExtrapolatedClockProcessor,
             "heartbeat": HeartbeatProcessor,
+            "index": IndexProcessor,
             "position": PositionProcessor,
             "weather_data": WeatherDataProcessor,
         }
