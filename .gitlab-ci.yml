@@ -17,7 +17,7 @@
   run_dagster_jobs:
     - poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
     - poetry run dagster job backfill -d duck_f1 -m pipelines -j live_timing --partitions "2020/11/29/race" --noprompt
-    - sleep 90
+    - sleep 120
 
 stages:
   - test
