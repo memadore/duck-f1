@@ -229,6 +229,28 @@ class TestLiveTimingIndexProcessorProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingLapCountProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("lap_count")
+        processor = processors.LapCountProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_lap_count_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row) - 1
+
+        self.assertEqual(shape, (rows, 3))
+
+    def test_live_timing_lap_count_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["ts", "metric", "value"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingPositionProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

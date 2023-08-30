@@ -34,6 +34,10 @@ Live timing heartbeat
 List of available datasets for this session
 {% enddocs %}s
 ---
+{% docs tbl_live_timing__lap_count %}
+Stream time delta for each lap
+{% enddocs %}s
+---
 {% docs tbl_live_timing__position %}
 Car position and status
 {% enddocs %}

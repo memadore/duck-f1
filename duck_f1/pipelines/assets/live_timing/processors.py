@@ -340,6 +340,38 @@ class IndexProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class LapCountProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _row_processor(data: dict) -> List[dict]:
+        out = []
+        ts = data.pop("ts")
+        for key, value in data.items():
+            if len(key) == 0:
+                continue
+
+            out.append({"ts": ts, "metric": key, "value": value})
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("ts", pa.string()),
+                ("metric", pa.string()),
+                ("value", pa.int16()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(LapCountProcessor._row_processor(i))
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class PositionProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _entry_transformer(entry: dict) -> List[dict]:
@@ -414,6 +446,7 @@ class LiveTimingProcessorBuilder:
             "extrapolated_clock": ExtrapolatedClockProcessor,
             "heartbeat": HeartbeatProcessor,
             "index": IndexProcessor,
+            "lap_count": LapCountProcessor,
             "position": PositionProcessor,
             "weather_data": WeatherDataProcessor,
         }
