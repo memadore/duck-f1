@@ -188,7 +188,7 @@ class TestLiveTimingExtrapolatedClockProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
-class TestLiveTimingHeartbeatProcessorProcessor(unittest.TestCase):
+class TestLiveTimingHeartbeatProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = get_json_data("heartbeat")
@@ -247,6 +247,28 @@ class TestLiveTimingLapCountProcessor(unittest.TestCase):
     def test_live_timing_lap_count_columns(self):
         columns = self.output.column_names
         expected_columns = ["ts", "metric", "value"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingLapSeriesProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("lap_series")
+        processor = processors.LapSeriesProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_lap_series_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row) - 1
+
+        self.assertEqual(shape, (rows, 4))
+
+    def test_live_timing_lap_series_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["driver_number", "lap_number", "lap_position", "ts"]
 
         self.assertCountEqual(columns, expected_columns)
 

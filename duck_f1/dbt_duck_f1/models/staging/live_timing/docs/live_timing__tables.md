@@ -16,27 +16,31 @@ In-Race championship predictions for both teams and drivers
 ---
 {% docs tbl_live_timing__current_tyres %}
 Observed tyres on the cars
-{% enddocs %}s
+{% enddocs %}
 ---
 {% docs tbl_live_timing__driver_race_info %}
 Driver's timing and race statistics
-{% enddocs %}s
+{% enddocs %}
 ---
 {% docs tbl_live_timing__extrapolated_clock %}
 Sync between the timing clock and the UTC time
-{% enddocs %}s
+{% enddocs %}
 ---
 {% docs tbl_live_timing__heartbeat %}
 Live timing heartbeat 
-{% enddocs %}s
+{% enddocs %}
 ---
 {% docs tbl_live_timing__index %}
 List of available datasets for this session
-{% enddocs %}s
+{% enddocs %}
 ---
 {% docs tbl_live_timing__lap_count %}
 Stream time delta for each lap
-{% enddocs %}s
+{% enddocs %}
+---
+{% docs tbl_live_timing__lap_series %}
+Position of the drivers at the end of each lap
+{% enddocs %}
 ---
 {% docs tbl_live_timing__position %}
 Car position and status

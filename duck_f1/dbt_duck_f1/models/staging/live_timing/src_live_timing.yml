@@ -26,6 +26,8 @@ sources:
         description: '{{ doc("tbl_live_timing__index") }}'
       - name: lap_count
         description: '{{ doc("tbl_live_timing__lap_count") }}'
+      - name: lap_series
+        description: '{{ doc("tbl_live_timing__lap_series") }}'
       - name: position
         description: '{{ doc("tbl_live_timing__position") }}'
       - name: weather_data

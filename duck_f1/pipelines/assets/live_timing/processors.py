@@ -371,6 +371,64 @@ class LapCountProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class LapSeriesProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _explode(driver_number: int, position_data) -> List[dict]:
+        out = []
+        match position_data:
+            case list():
+                out.append(
+                    {
+                        "driver_number": int(driver_number),
+                        "lap_number": 0,
+                        "lap_position": int(position_data[0]),
+                    }
+                )
+            case _:
+                for lap, position in position_data.items():
+                    out.append(
+                        {
+                            "driver_number": int(driver_number),
+                            "lap_number": int(lap),
+                            "lap_position": int(position),
+                        }
+                    )
+
+        return out
+
+    @staticmethod
+    def _row_processor(data: dict) -> List[dict]:
+        out = []
+
+        ts = data.pop("ts")
+        for driver, value in data.items():
+            if len(driver) == 0:
+                continue
+
+            out.extend(LapSeriesProcessor._explode(driver, value["LapPosition"]))
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("driver_number", pa.int16()),
+                ("lap_number", pa.int16()),
+                ("lap_position", pa.int16()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(LapSeriesProcessor._row_processor(i))
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class PositionProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _entry_transformer(entry: dict) -> List[dict]:
@@ -446,6 +504,7 @@ class LiveTimingProcessorBuilder:
             "heartbeat": HeartbeatProcessor,
             "index": IndexProcessor,
             "lap_count": LapCountProcessor,
+            "lap_series": LapSeriesProcessor,
             "position": PositionProcessor,
             "weather_data": WeatherDataProcessor,
         }
