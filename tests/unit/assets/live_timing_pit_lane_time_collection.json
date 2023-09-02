@@ -1,0 +1,60 @@
+[
+  {
+    "ts": "01:55:07.195",
+    "PitTimes": {
+      "44": {
+        "RacingNumber": "44",
+        "Duration": "4763.9",
+        "Lap": "1"
+      }
+    }
+  },
+  {
+    "ts": "01:55:09.703",
+    "PitTimes": {
+      "33": {
+        "RacingNumber": "33",
+        "Duration": "4764.5",
+        "Lap": "1"
+      }
+    }
+  },
+  {
+    "ts": "01:55:10.922",
+    "PitTimes": {
+      "11": {
+        "RacingNumber": "11",
+        "Duration": "4763.4",
+        "Lap": "1"
+      }
+    }
+  },
+  {
+    "ts": "01:55:13.479",
+    "PitTimes": {
+      "23": {
+        "RacingNumber": "23",
+        "Duration": "4761.6",
+        "Lap": "1"
+      }
+    }
+  },
+  {
+    "ts": "01:55:16.397",
+    "PitTimes": {
+      "3": {
+        "RacingNumber": "3",
+        "Duration": "4759.7",
+        "Lap": "1"
+      }
+    }
+  },
+  {
+    "ts": "01:56:03.151",
+    "PitTimes": {
+      "_deleted": [
+        "44"
+      ]
+    }
+  }
+]

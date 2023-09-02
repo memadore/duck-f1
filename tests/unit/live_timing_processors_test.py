@@ -273,6 +273,28 @@ class TestLiveTimingLapSeriesProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class PitLaneTimeCollectionProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("pit_lane_time_collection")
+        processor = processors.PitLaneTimeCollectionProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_pit_lane_time_collection_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["PitTimes"])
+
+        self.assertEqual(shape, (rows - 1, 4))
+
+    def test_live_timing_pit_lane_time_collection_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["Driver", "Duration", "Lap", "ts"]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingPositionProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

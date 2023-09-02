@@ -28,6 +28,8 @@ sources:
         description: '{{ doc("tbl_live_timing__lap_count") }}'
       - name: lap_series
         description: '{{ doc("tbl_live_timing__lap_series") }}'
+      - name: pit_lane_time_collection
+        description: '{{ doc("tbl_live_timing__pit_lane_time_collection") }}'
       - name: position
         description: '{{ doc("tbl_live_timing__position") }}'
       - name: weather_data

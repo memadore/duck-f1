@@ -429,6 +429,40 @@ class LapSeriesProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _row_processor(ts: str, pit_times: dict) -> List[dict]:
+        out = []
+        for driver, data in pit_times.items():
+            if driver == "_deleted":
+                continue
+
+            out.append({"Driver": driver, "Duration": data["Duration"], "Lap": data["Lap"]})
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("Driver", pa.string()),
+                ("Duration", pa.string()),
+                ("Lap", pa.int16()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                PitLaneTimeCollectionProcessor._row_processor(ts=i["ts"], pit_times=i["PitTimes"])
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class PositionProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _entry_transformer(entry: dict) -> List[dict]:
@@ -505,6 +539,7 @@ class LiveTimingProcessorBuilder:
             "index": IndexProcessor,
             "lap_count": LapCountProcessor,
             "lap_series": LapSeriesProcessor,
+            "pit_lane_time_collection": PitLaneTimeCollectionProcessor,
             "position": PositionProcessor,
             "weather_data": WeatherDataProcessor,
         }

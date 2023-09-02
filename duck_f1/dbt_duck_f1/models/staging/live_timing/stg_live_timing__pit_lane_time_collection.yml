@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__pit_lane_time_collection
+    description: '{{ doc("tbl_live_timing__pit_lane_time_collection") }}'

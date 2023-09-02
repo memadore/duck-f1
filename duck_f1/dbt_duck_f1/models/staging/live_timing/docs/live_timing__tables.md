@@ -42,6 +42,10 @@ Stream time delta for each lap
 Position of the drivers at the end of each lap
 {% enddocs %}
 ---
+{% docs tbl_live_timing__pit_lane_time_collection %}
+Time spent in the pit lane for each driver
+{% enddocs %}
+---
 {% docs tbl_live_timing__position %}
 Car position and status
 {% enddocs %}
