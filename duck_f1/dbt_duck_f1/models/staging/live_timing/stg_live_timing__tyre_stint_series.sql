@@ -1,15 +1,17 @@
 with
-    raw_race_control_messages as (select * from {{ source('live_timing', 'race_control_messages') }}),
+    raw_tyre_stint_series as (select * from {{ source('live_timing', 'tyre_stint_series') }}),
     formatted as (
         select
+            Driver as driver_number,
+            Stint as stint_id,
+            Compound as tyre_compound,
+            New as is_new,
+            TyresNotChanged as tyres_not_changed,
+            TotalLaps as total_laps,
+            StartLaps as start_laps,
             ts as ts,
-            MessageId as message_id,
-            Utc as utc_ts,
-            Lap as lap_number,
-            Category as message_category,
-            MessageData as message_data,
             {{ live_timing__metadata_raw_columns() }}
-        from raw_race_control_messages
+        from raw_tyre_stint_series
     )
 select *
 from formatted
