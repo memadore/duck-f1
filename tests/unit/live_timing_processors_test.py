@@ -352,6 +352,40 @@ class TestLiveTimingRaceControlMessagesProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingTyreStintSeriesProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("tyre_stint_series")
+        processor = processors.TyreStintSeriesProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_tyre_stint_series_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            for stints in row["Stints"].values():
+                if isinstance(stints, list):
+                    continue
+
+                rows += len(stints)
+
+        self.assertEqual(shape, (rows, 8))
+
+    def test_live_timing_tyre_stint_series_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "Driver",
+            "Stint",
+            "Compound",
+            "New",
+            "TyresNotChanged",
+            "TotalLaps",
+            "StartLaps",
+            "ts",
+        ]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

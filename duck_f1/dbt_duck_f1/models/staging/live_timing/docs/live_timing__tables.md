@@ -54,6 +54,10 @@ Car position and status
 Messages published by race control during the session
 {% enddocs %}
 ---
+{% docs tbl_live_timing__tyre_stint_series %}
+Tyre utilization by the drivers
+{% enddocs %}
+---
 {% docs tbl_live_timing__weather_data %}
 Weather data collected during the session
 {% enddocs %}

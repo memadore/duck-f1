@@ -1,0 +1,232 @@
+[
+  {
+    "ts": "00:00:05.274",
+    "Stints": {
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "10": [],
+      "11": [],
+      "16": [],
+      "18": [],
+      "20": [],
+      "23": [],
+      "26": [],
+      "31": [],
+      "33": [],
+      "44": [],
+      "55": [],
+      "63": [],
+      "77": [],
+      "99": []
+    }
+  },
+  {
+    "ts": "00:27:10.403",
+    "Stints": {
+      "4": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "44": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "77": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      }
+    }
+  },
+  {
+    "ts": "00:27:15.598",
+    "Stints": {
+      "3": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "5": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 2,
+          "StartLaps": 2
+        }
+      },
+      "6": {
+        "0": {
+          "Compound": "HARD",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      },
+      "8": {
+        "0": {
+          "Compound": "HARD",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      },
+      "10": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "11": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "16": {
+        "0": {
+          "Compound": "HARD",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      },
+      "18": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "20": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      },
+      "23": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "26": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "31": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "33": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "false",
+          "TyresNotChanged": "0",
+          "TotalLaps": 3,
+          "StartLaps": 3
+        }
+      },
+      "63": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      }
+    }
+  },
+  {
+    "ts": "00:27:20.652",
+    "Stints": {
+      "7": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      },
+      "55": {
+        "0": {
+          "Compound": "SOFT",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      },
+      "99": {
+        "0": {
+          "Compound": "MEDIUM",
+          "New": "true",
+          "TyresNotChanged": "0",
+          "TotalLaps": 0,
+          "StartLaps": 0
+        }
+      }
+    }
+  },
+  {
+    "ts": "00:35:45.648",
+    "Stints": {
+      "44": {
+        "0": {
+          "TotalLaps": 4
+        }
+      }
+    }
+  }
+]

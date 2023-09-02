@@ -563,6 +563,70 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _entry_transformer(driver: int, driver_stints: dict) -> List[dict]:
+        out = []
+        for stint, data in driver_stints.items():
+            new = data["New"].lower() in ("true") if "New" in data else None
+            tyres_not_changed = (
+                bool(int(data["TyresNotChanged"])) if "TyresNotChanged" in data else None
+            )
+
+            out.append(
+                {
+                    "Driver": driver,
+                    "Stint": stint,
+                    "Compound": data.get("Compound", None),
+                    "New": new,
+                    "TyresNotChanged": tyres_not_changed,
+                    "TotalLaps": data.get("TotalLaps", None),
+                    "StartLaps": data.get("StartLaps", None),
+                }
+            )
+
+        return out
+
+    @staticmethod
+    def _row_processor(ts: str, stints: dict) -> List[dict]:
+        out = []
+
+        for driver, stint in stints.items():
+            if isinstance(stint, list):
+                # empty list at the start
+                continue
+
+            out.extend(TyreStintSeriesProcessor._entry_transformer(driver, stint))
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("Driver", pa.int16()),
+                ("Stint", pa.int16()),
+                ("Compound", pa.string()),
+                ("New", pa.bool_()),
+                ("TyresNotChanged", pa.bool_()),
+                ("TotalLaps", pa.int16()),
+                ("StartLaps", pa.int16()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                TyreStintSeriesProcessor._row_processor(ts=i["ts"], stints=i["Stints"])
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class WeatherDataProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -599,6 +663,7 @@ class LiveTimingProcessorBuilder:
             "pit_lane_time_collection": PitLaneTimeCollectionProcessor,
             "position": PositionProcessor,
             "race_control_messages": RaceControlMessagesProcessor,
+            "tyre_stint_series": TyreStintSeriesProcessor,
             "weather_data": WeatherDataProcessor,
         }
 
