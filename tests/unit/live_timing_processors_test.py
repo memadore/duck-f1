@@ -352,6 +352,23 @@ class TestLiveTimingRaceControlMessagesProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingTrackStatusProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = get_json_data("track_status")
+        processor = processors.TrackStatusProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(data)
+
+    def test_live_timing_weather_data_shape(self):
+        shape = self.output.shape
+        self.assertEqual(shape, (5, 3))
+
+    def test_live_timing_weather_data_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["ts", "Status", "Message"]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingTyreStintSeriesProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

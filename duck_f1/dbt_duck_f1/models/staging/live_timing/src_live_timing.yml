@@ -34,6 +34,8 @@ sources:
         description: '{{ doc("tbl_live_timing__position") }}'
       - name: race_control_messages
         description: '{{ doc("tbl_live_timing__race_control_messages") }}'
+      - name: track_status
+        description: '{{ doc("tbl_live_timing__track_status") }}'
       - name: tyre_stint_series
         description: '{{ doc("tbl_live_timing__tyre_stint_series") }}'
       - name: weather_data

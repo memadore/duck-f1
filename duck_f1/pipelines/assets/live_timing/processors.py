@@ -563,6 +563,20 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class TrackStatusProcessor(AbstractLiveTimingProcessor):
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("ts", pa.string()),
+                ("Status", pa.string()),
+                ("Message", pa.string()),
+            ]
+        )
+
+        table = pa.Table.from_pylist(data).cast(schema)
+        return table
+
+
 class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _entry_transformer(driver: int, driver_stints: dict) -> List[dict]:
@@ -663,6 +677,7 @@ class LiveTimingProcessorBuilder:
             "pit_lane_time_collection": PitLaneTimeCollectionProcessor,
             "position": PositionProcessor,
             "race_control_messages": RaceControlMessagesProcessor,
+            "track_status": TrackStatusProcessor,
             "tyre_stint_series": TyreStintSeriesProcessor,
             "weather_data": WeatherDataProcessor,
         }

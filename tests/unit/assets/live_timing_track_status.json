@@ -1,0 +1,27 @@
+[
+  {
+    "ts": "00:00:00.000",
+    "Status": "2",
+    "Message": "Yellow"
+  },
+  {
+    "ts": "00:00:25.693",
+    "Status": "1",
+    "Message": "AllClear"
+  },
+  {
+    "ts": "00:34:07.560",
+    "Status": "5",
+    "Message": "Red"
+  },
+  {
+    "ts": "01:50:00.706",
+    "Status": "1",
+    "Message": "AllClear"
+  },
+  {
+    "ts": "02:00:12.487",
+    "Status": "2",
+    "Message": "Yellow"
+  }
+]
