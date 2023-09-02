@@ -1,0 +1,63 @@
+[
+  {
+    "ts": "00:00:25.771",
+    "Messages": [
+      {
+        "Utc": "2020-11-29T13:40:25",
+        "Lap": 1,
+        "Category": "Other",
+        "Message": "DRS ENABLED IN ZONE 3"
+      }
+    ]
+  },
+  {
+    "ts": "00:00:25.775",
+    "Messages": {
+      "1": {
+        "Utc": "2020-11-29T13:40:25",
+        "Lap": 1,
+        "Category": "Flag",
+        "Flag": "CLEAR",
+        "Scope": "Sector",
+        "Sector": 2,
+        "Message": "CLEAR IN TRACK SECTOR 2"
+      }
+    }
+  },
+  {
+    "ts": "00:15:02.383",
+    "Messages": {
+      "2": {
+        "Utc": "2020-11-29T13:55:02",
+        "Lap": 1,
+        "Category": "Other",
+        "Message": "RISK OF RAIN FOR F1 RACE IS 20%"
+      }
+    }
+  },
+  {
+    "ts": "00:27:04.963",
+    "Messages": {
+      "3": {
+        "Utc": "2020-11-29T14:07:05",
+        "Lap": 1,
+        "Category": "Drs",
+        "Status": "DISABLED",
+        "Message": "DRS DISABLED"
+      }
+    }
+  },
+  {
+    "ts": "00:33:37.122",
+    "Messages": {
+      "4": {
+        "Utc": "2020-11-29T14:13:37",
+        "Lap": 1,
+        "Category": "Flag",
+        "Flag": "GREEN",
+        "Scope": "Track",
+        "Message": "GREEN LIGHT - PIT EXIT OPEN"
+      }
+    }
+  }
+]

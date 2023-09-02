@@ -32,5 +32,7 @@ sources:
         description: '{{ doc("tbl_live_timing__pit_lane_time_collection") }}'
       - name: position
         description: '{{ doc("tbl_live_timing__position") }}'
+      - name: race_control_messages
+        description: '{{ doc("tbl_live_timing__race_control_messages") }}'
       - name: weather_data
         description: '{{ doc("tbl_live_timing__weather_data") }}'

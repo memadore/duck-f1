@@ -50,6 +50,10 @@ Time spent in the pit lane for each driver
 Car position and status
 {% enddocs %}
 ---
+{% docs tbl_live_timing__race_control_messages %}
+Messages published by race control during the session
+{% enddocs %}
+---
 {% docs tbl_live_timing__weather_data %}
 Weather data collected during the session
 {% enddocs %}

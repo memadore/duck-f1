@@ -1,4 +1,6 @@
+import base64
 import io
+import json
 from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import List
@@ -506,6 +508,61 @@ class PositionProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _entry_transformer(message_id: int, message: dict) -> List[dict]:
+        header = {
+            "MessageId": int(message_id) if message_id is not None else None,
+            "Utc": message.pop("Utc"),
+            "Lap": message.pop("Lap"),
+            "Category": message.pop("Category"),
+        }
+
+        data = base64.urlsafe_b64encode(json.dumps(message).encode()).decode()
+
+        return {**header, "MessageData": data}
+
+    @staticmethod
+    def _row_processor(ts: str, messages) -> List[dict]:
+        out = []
+
+        match messages:
+            case list():
+                for i in messages:
+                    out.append(RaceControlMessagesProcessor._entry_transformer(None, i))
+            case dict():
+                for message_id, data in messages.items():
+                    out.append(RaceControlMessagesProcessor._entry_transformer(message_id, data))
+            case _:
+                return
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("MessageId", pa.int16()),
+                ("Utc", pa.string()),
+                ("Lap", pa.int16()),
+                ("Category", pa.string()),
+                ("MessageData", pa.string()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                RaceControlMessagesProcessor._row_processor(ts=i["ts"], messages=i["Messages"])
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class WeatherDataProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -541,6 +598,7 @@ class LiveTimingProcessorBuilder:
             "lap_series": LapSeriesProcessor,
             "pit_lane_time_collection": PitLaneTimeCollectionProcessor,
             "position": PositionProcessor,
+            "race_control_messages": RaceControlMessagesProcessor,
             "weather_data": WeatherDataProcessor,
         }
 
