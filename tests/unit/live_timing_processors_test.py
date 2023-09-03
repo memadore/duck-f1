@@ -308,7 +308,7 @@ class TestLiveTimingLapSeriesProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
-class PitLaneTimeCollectionProcessor(unittest.TestCase):
+class TestLiveTimingPitLaneTimeCollectionProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = get_json_data("pit_lane_time_collection")
@@ -394,7 +394,7 @@ class TestLiveTimingSessionDataProcessor(unittest.TestCase):
         processor = processors.SessionDataProcessor(MagicMock(), MagicMock())
         cls.output = processor._processor(copy.deepcopy(cls.data))
 
-    def test_live_timing_weather_data_shape(self):
+    def test_live_timing_session_data_shape(self):
         shape = self.output.shape
         rows = 0
         for row in self.data:
@@ -402,7 +402,7 @@ class TestLiveTimingSessionDataProcessor(unittest.TestCase):
 
         self.assertEqual(shape, (rows, 4))
 
-    def test_live_timing_weather_data_columns(self):
+    def test_live_timing_session_data_columns(self):
         columns = self.output.column_names
         expected_columns = [
             "Key",
@@ -413,7 +413,7 @@ class TestLiveTimingSessionDataProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
-class TestLiveTlaRcmProcessor(unittest.TestCase):
+class TestLiveTimingTlaRcmProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         data = get_json_data("tla_rcm")
@@ -437,11 +437,11 @@ class TestLiveTimingTrackStatusProcessor(unittest.TestCase):
         processor = processors.TrackStatusProcessor(MagicMock(), MagicMock())
         cls.output = processor._processor(data)
 
-    def test_live_timing_weather_data_shape(self):
+    def test_live_timing_track_status_shape(self):
         shape = self.output.shape
         self.assertEqual(shape, (5, 3))
 
-    def test_live_timing_weather_data_columns(self):
+    def test_live_timing_track_status_columns(self):
         columns = self.output.column_names
         expected_columns = ["ts", "Status", "Message"]
         self.assertCountEqual(columns, expected_columns)
