@@ -465,6 +465,28 @@ class TestLiveTimingSessionStatusProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingTimingStatsProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("timing_stats")
+        processor = processors.TimingStatsProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(cls.data)
+
+    def test_live_timing_timing_stats_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            for driver, metrics in row["Lines"].items():
+                rows += 0 if "Withheld" in row else len(metrics)
+
+        self.assertEqual(shape, (rows, 6))
+
+    def test_live_timing_timing_stats_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["Driver", "MetricName", "MetricKey", "MetricValue", "Position", "ts"]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingTlaRcmProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

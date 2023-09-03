@@ -1,0 +1,724 @@
+[
+  {
+    "ts": "00:00:03.569",
+    "Withheld": false,
+    "Lines": {
+      "3": {
+        "Line": 1,
+        "RacingNumber": "3",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "4": {
+        "Line": 2,
+        "RacingNumber": "4",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "5": {
+        "Line": 3,
+        "RacingNumber": "5",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "6": {
+        "Line": 4,
+        "RacingNumber": "6",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "7": {
+        "Line": 5,
+        "RacingNumber": "7",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "8": {
+        "Line": 6,
+        "RacingNumber": "8",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "10": {
+        "Line": 7,
+        "RacingNumber": "10",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "11": {
+        "Line": 8,
+        "RacingNumber": "11",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "16": {
+        "Line": 9,
+        "RacingNumber": "16",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "18": {
+        "Line": 10,
+        "RacingNumber": "18",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "20": {
+        "Line": 11,
+        "RacingNumber": "20",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "23": {
+        "Line": 12,
+        "RacingNumber": "23",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "26": {
+        "Line": 13,
+        "RacingNumber": "26",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "31": {
+        "Line": 14,
+        "RacingNumber": "31",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "33": {
+        "Line": 15,
+        "RacingNumber": "33",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "44": {
+        "Line": 16,
+        "RacingNumber": "44",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "55": {
+        "Line": 17,
+        "RacingNumber": "55",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "63": {
+        "Line": 18,
+        "RacingNumber": "63",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "77": {
+        "Line": 19,
+        "RacingNumber": "77",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      },
+      "99": {
+        "Line": 20,
+        "RacingNumber": "99",
+        "PersonalBestLapTime": {
+          "Value": ""
+        },
+        "BestSectors": [
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          },
+          {
+            "Value": ""
+          }
+        ],
+        "BestSpeeds": {
+          "I1": {
+            "Value": ""
+          },
+          "I2": {
+            "Value": ""
+          },
+          "FL": {
+            "Value": ""
+          },
+          "ST": {
+            "Value": ""
+          }
+        }
+      }
+    },
+    "SessionType": "Race"
+  },
+  {
+    "ts": "00:33:45.511",
+    "Lines": {
+      "44": {
+        "BestSpeeds": {
+          "ST": {
+            "Position": 1,
+            "Value": "252"
+          }
+        }
+      }
+    }
+  },
+  {
+    "ts": "00:33:45.740",
+    "Lines": {
+      "33": {
+        "BestSpeeds": {
+          "ST": {
+            "Position": 1,
+            "Value": "259"
+          }
+        }
+      }
+    }
+  },
+  {
+    "ts": "00:33:45.740",
+    "Lines": {
+      "44": {
+        "BestSpeeds": {
+          "ST": {
+            "Position": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "ts": "00:33:45.810",
+    "Lines": {
+      "11": {
+        "BestSpeeds": {
+          "ST": {
+            "Position": 1,
+            "Value": "262"
+          }
+        }
+      },
+      "33": {
+        "BestSpeeds": {
+          "ST": {
+            "Position": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "ts": "03:14:48.562",
+    "Lines": {
+      "55": {
+        "PersonalBestLapTime": {
+          "Lap": 46,
+          "Value": "1:33.411"
+        },
+        "BestSectors": {
+          "2": {
+            "Position": 6,
+            "Value": "23.076"
+          }
+        }
+      }
+    }
+  }
+]

@@ -684,6 +684,71 @@ class SessionStatusProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class TimingStatsProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _entry_transformer(driver: int, metrics: dict) -> List[dict]:
+        out = []
+        for metric_name, data in metrics.items():
+            match metric_name:
+                case "PersonalBestLapTime":
+                    out.append(
+                        {
+                            "Driver": int(driver),
+                            "MetricName": metric_name,
+                            "MetricKey": str(data.get("Lap", None)),
+                            "MetricValue": data.get("Value", None),
+                            "Position": data.get("Position", None),
+                        }
+                    )
+                case _:  # BestSectors, BestSpeeds
+                    for metric_key, metric_data in data.items():
+                        out.append(
+                            {
+                                "Driver": int(driver),
+                                "MetricName": metric_name,
+                                "MetricKey": metric_key,
+                                "MetricValue": metric_data.get("Value", None),
+                                "Position": metric_data.get("Position", None),
+                            }
+                        )
+
+        return out
+
+    @staticmethod
+    def _row_processor(ts: str, lines: dict) -> List[dict]:
+        out = []
+
+        for driver, metrics in lines.items():
+            out.extend(TimingStatsProcessor._entry_transformer(driver, metrics))
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
+
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("Driver", pa.int16()),
+                ("MetricName", pa.string()),
+                ("MetricKey", pa.string()),
+                ("MetricValue", pa.string()),
+                ("Position", pa.int16()),
+                ("ts", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            if "Withheld" in i:  # first empty element
+                continue
+
+            processed_data.extend(TimingStatsProcessor._row_processor(ts=i["ts"], lines=i["Lines"]))
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class TlaRcmProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -816,6 +881,7 @@ class LiveTimingProcessorBuilder:
             "session_data": SessionDataProcessor,
             "session_info": SessionInfoProcessor,
             "session_status": SessionStatusProcessor,
+            "timing_stats": TimingStatsProcessor,
             "tla_rcm": TlaRcmProcessor,
             "track_status": TrackStatusProcessor,
             "tyre_stint_series": TyreStintSeriesProcessor,

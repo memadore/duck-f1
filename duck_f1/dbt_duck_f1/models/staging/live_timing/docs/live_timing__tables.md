@@ -70,6 +70,10 @@ Session information
 Session status timeline
 {% enddocs %}
 ---
+{% docs tbl_live_timing__timing_stats %}
+Timing Statistics for personal best laps, sector times and sector speeds.
+{% enddocs %}
+---
 {% docs tbl_live_timing__tla_rcm %}
 Messages published by race control
 {% enddocs %}
