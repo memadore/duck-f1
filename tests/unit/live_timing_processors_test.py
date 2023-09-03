@@ -352,6 +352,32 @@ class TestLiveTimingRaceControlMessagesProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingSessionDataProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("session_data")
+        processor = processors.SessionDataProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_weather_data_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data:
+            rows += len(row["Series"]) + len(row["StatusSeries"])
+
+        self.assertEqual(shape, (rows, 4))
+
+    def test_live_timing_weather_data_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "Key",
+            "Utc",
+            "MetricName",
+            "MetricValue",
+        ]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTlaRcmProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

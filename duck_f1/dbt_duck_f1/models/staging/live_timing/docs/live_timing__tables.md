@@ -54,6 +54,10 @@ Car position and status
 Messages published by race control during the session
 {% enddocs %}
 ---
+{% docs tbl_live_timing__session_data %}
+Series of events that occurred during the session. Available series: Series and StatusSeries
+{% enddocs %}
+---
 {% docs tbl_live_timing__tla_rcm %}
 Messages published by race control
 {% enddocs %}

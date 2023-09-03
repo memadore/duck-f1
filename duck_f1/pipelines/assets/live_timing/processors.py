@@ -563,6 +563,45 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class SessionDataProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _row_processor(key: str, data: List[dict]) -> List[dict]:
+        out = []
+        for i in data:
+            measure = {"Key": key, "Utc": i.pop("Utc")}
+
+            for metric_name, metric_value in i.items():
+                measure.update({"MetricName": metric_name, "MetricValue": str(metric_value)})
+
+            out.append(measure)
+
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("Key", pa.string()),
+                ("Utc", pa.string()),
+                ("MetricName", pa.string()),
+                ("MetricValue", pa.string()),
+            ]
+        )
+
+        processed_data = []
+
+        for i in data:
+            processed_data.extend(
+                SessionDataProcessor._row_processor(key="Series", data=i["Series"])
+            )
+
+            processed_data.extend(
+                SessionDataProcessor._row_processor(key="StatusSeries", data=i["StatusSeries"])
+            )
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class TlaRcmProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -691,6 +730,7 @@ class LiveTimingProcessorBuilder:
             "pit_lane_time_collection": PitLaneTimeCollectionProcessor,
             "position": PositionProcessor,
             "race_control_messages": RaceControlMessagesProcessor,
+            "session_data": SessionDataProcessor,
             "tla_rcm": TlaRcmProcessor,
             "track_status": TrackStatusProcessor,
             "tyre_stint_series": TyreStintSeriesProcessor,

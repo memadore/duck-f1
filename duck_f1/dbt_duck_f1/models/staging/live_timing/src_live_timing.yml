@@ -34,6 +34,8 @@ sources:
         description: '{{ doc("tbl_live_timing__position") }}'
       - name: race_control_messages
         description: '{{ doc("tbl_live_timing__race_control_messages") }}'
+      - name: session_data
+        description: '{{ doc("tbl_live_timing__session_data") }}'
       - name: tla_rcm
         description: '{{ doc("tbl_live_timing__tla_rcm") }}'
       - name: track_status
