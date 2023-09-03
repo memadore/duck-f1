@@ -137,6 +137,41 @@ class TestLiveTimingCurrentTyresProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingDriverListProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("driver_list")
+        processor = processors.DriverListProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_driver_list_shape(self):
+        shape = self.output.shape
+        rows = 0
+        for row in self.data[:1]:
+            rows += len(row) - 1
+
+        self.assertEqual(shape, (rows, 12))
+
+    def test_live_timing_driver_list_columns(self):
+        columns = self.output.column_names
+        expected_columns = [
+            "ts",
+            "RacingNumber",
+            "BroadcastName",
+            "FullName",
+            "Tla",
+            "Line",
+            "TeamName",
+            "TeamColour",
+            "FirstName",
+            "LastName",
+            "Reference",
+            "HeadshotUrl",
+        ]
+
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingDriverRaceInfoProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

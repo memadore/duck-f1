@@ -18,6 +18,10 @@ In-Race championship predictions for both teams and drivers
 Observed tyres on the cars
 {% enddocs %}
 ---
+{% docs tbl_live_timing__driver_list %}
+List of drivers participating to the session
+{% enddocs %}
+---
 {% docs tbl_live_timing__driver_race_info %}
 Driver's timing and race statistics
 {% enddocs %}

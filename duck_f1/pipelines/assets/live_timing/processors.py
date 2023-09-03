@@ -248,6 +248,40 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class DriverListProcessor(AbstractLiveTimingProcessor):
+    @staticmethod
+    def _row_processor(data: dict) -> List[dict]:
+        out = []
+        ts = data.pop("ts")
+        for driver, driver_info in data.items():
+            out.append({"ts": ts, **driver_info})
+
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("ts", pa.string()),
+                ("RacingNumber", pa.string()),
+                ("BroadcastName", pa.string()),
+                ("FullName", pa.string()),
+                ("Tla", pa.string()),
+                ("Line", pa.int16()),
+                ("TeamName", pa.string()),
+                ("TeamColour", pa.string()),
+                ("FirstName", pa.string()),
+                ("LastName", pa.string()),
+                ("Reference", pa.string()),
+                ("HeadshotUrl", pa.string()),
+            ]
+        )
+
+        processed_data = DriverListProcessor._row_processor(data[0])
+
+        table = pa.Table.from_pylist(processed_data).cast(schema)
+        return table
+
+
 class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
@@ -721,6 +755,7 @@ class LiveTimingProcessorBuilder:
             "car_data": CarDataProcessor,
             "championship_prediction": ChampionshipPredictionProcessor,
             "current_tyres": CurrentTyresProcessor,
+            "driver_list": DriverListProcessor,
             "driver_race_info": DriverRaceInfoProcessor,
             "extrapolated_clock": ExtrapolatedClockProcessor,
             "heartbeat": HeartbeatProcessor,
