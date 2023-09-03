@@ -352,6 +352,23 @@ class TestLiveTimingRaceControlMessagesProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTlaRcmProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = get_json_data("tla_rcm")
+        processor = processors.TlaRcmProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(data)
+
+    def test_live_timing_tla_rcm_shape(self):
+        shape = self.output.shape
+        self.assertEqual(shape, (5, 3))
+
+    def test_live_timing_tla_rcm_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["ts", "Timestamp", "Message"]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingTrackStatusProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

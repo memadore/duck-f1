@@ -1,0 +1,27 @@
+[
+  {
+    "ts": "00:00:25.771",
+    "Timestamp": "2020-11-29T16:40:25",
+    "Message": "DRS ENABLED IN ZONE 3"
+  },
+  {
+    "ts": "00:00:25.775",
+    "Timestamp": "2020-11-29T16:40:25",
+    "Message": "CLEAR IN TRACK SECTOR 2"
+  },
+  {
+    "ts": "00:15:02.383",
+    "Timestamp": "2020-11-29T16:55:02",
+    "Message": "RISK OF RAIN FOR F1 RACE IS 20%"
+  },
+  {
+    "ts": "00:27:04.963",
+    "Timestamp": "2020-11-29T17:07:05",
+    "Message": "DRS DISABLED"
+  },
+  {
+    "ts": "00:33:37.122",
+    "Timestamp": "2020-11-29T17:13:37",
+    "Message": "GREEN LIGHT - PIT EXIT OPEN"
+  }
+]

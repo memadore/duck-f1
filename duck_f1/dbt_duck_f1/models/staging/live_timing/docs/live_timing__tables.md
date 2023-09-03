@@ -54,6 +54,10 @@ Car position and status
 Messages published by race control during the session
 {% enddocs %}
 ---
+{% docs tbl_live_timing__tla_rcm %}
+Messages published by race control
+{% enddocs %}
+---
 {% docs tbl_live_timing__track_status %}
 Status of the track
 {% enddocs %}
