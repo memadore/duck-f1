@@ -448,6 +448,23 @@ class TestLiveTimingSessionInfoProcessor(unittest.TestCase):
         self.assertCountEqual(columns, expected_columns)
 
 
+class TestLiveTimingSessionStatusProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = get_json_data("session_status")
+        processor = processors.SessionStatusProcessor(MagicMock(), MagicMock())
+        cls.output = processor._processor(data)
+
+    def test_live_timing_tla_rcm_shape(self):
+        shape = self.output.shape
+        self.assertEqual(shape, (5, 2))
+
+    def test_live_timing_tla_rcm_columns(self):
+        columns = self.output.column_names
+        expected_columns = ["ts", "Status"]
+        self.assertCountEqual(columns, expected_columns)
+
+
 class TestLiveTimingTlaRcmProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

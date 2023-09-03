@@ -676,6 +676,14 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class SessionStatusProcessor(AbstractLiveTimingProcessor):
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema([("ts", pa.string()), ("Status", pa.string())])
+
+        table = pa.Table.from_pylist(data).cast(schema)
+        return table
+
+
 class TlaRcmProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -807,6 +815,7 @@ class LiveTimingProcessorBuilder:
             "race_control_messages": RaceControlMessagesProcessor,
             "session_data": SessionDataProcessor,
             "session_info": SessionInfoProcessor,
+            "session_status": SessionStatusProcessor,
             "tla_rcm": TlaRcmProcessor,
             "track_status": TrackStatusProcessor,
             "tyre_stint_series": TyreStintSeriesProcessor,
