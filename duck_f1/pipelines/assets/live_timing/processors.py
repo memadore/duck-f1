@@ -636,6 +636,46 @@ class SessionDataProcessor(AbstractLiveTimingProcessor):
         return table
 
 
+class SessionInfoProcessor(AbstractLiveTimingProcessor):
+    def _row_processor(data: dict, prefix: str = None) -> dict:
+        out = {}
+        for key, value in data.items():
+            fmt_key = key if prefix is None else f"{prefix}{key}"
+            if isinstance(value, dict):
+                out.update(SessionInfoProcessor._row_processor(value, fmt_key))
+            else:
+                out.update({fmt_key: value})
+
+        return out
+
+    def _processor(self, data: dict) -> pa.Table:
+        schema = pa.schema(
+            [
+                ("MeetingKey", pa.string()),
+                ("MeetingName", pa.string()),
+                ("MeetingLocation", pa.string()),
+                ("MeetingCountryKey", pa.string()),
+                ("MeetingCountryCode", pa.string()),
+                ("MeetingCountryName", pa.string()),
+                ("MeetingCircuitKey", pa.string()),
+                ("MeetingCircuitShortName", pa.string()),
+                ("ArchiveStatusStatus", pa.string()),
+                ("Key", pa.string()),
+                ("Type", pa.string()),
+                ("Name", pa.string()),
+                ("StartDate", pa.string()),
+                ("EndDate", pa.string()),
+                ("GmtOffset", pa.string()),
+                ("Path", pa.string()),
+            ]
+        )
+
+        processed_data = SessionInfoProcessor._row_processor(data[0])
+
+        table = pa.Table.from_pylist([processed_data]).cast(schema)
+        return table
+
+
 class TlaRcmProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> pa.Table:
         schema = pa.schema(
@@ -766,6 +806,7 @@ class LiveTimingProcessorBuilder:
             "position": PositionProcessor,
             "race_control_messages": RaceControlMessagesProcessor,
             "session_data": SessionDataProcessor,
+            "session_info": SessionInfoProcessor,
             "tla_rcm": TlaRcmProcessor,
             "track_status": TrackStatusProcessor,
             "tyre_stint_series": TyreStintSeriesProcessor,

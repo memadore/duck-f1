@@ -1,0 +1,28 @@
+[
+  {
+    "Meeting": {
+      "Key": 1059,
+      "Name": "Bahrain Grand Prix",
+      "Location": "Sakhir",
+      "Country": {
+        "Key": 36,
+        "Code": "BRN",
+        "Name": "Bahrain"
+      },
+      "Circuit": {
+        "Key": 63,
+        "ShortName": "Sakhir"
+      }
+    },
+    "ArchiveStatus": {
+      "Status": "Complete"
+    },
+    "Key": 5918,
+    "Type": "Race",
+    "Name": "Race",
+    "StartDate": "2020-11-29T17:10:00",
+    "EndDate": "2020-11-29T19:10:00",
+    "GmtOffset": "03:00:00",
+    "Path": "2020/2020-11-29_Bahrain_Grand_Prix/2020-11-29_Race/"
+  }
+]
