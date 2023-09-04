@@ -74,6 +74,34 @@ Session status timeline
 Timing Statistics for personal best laps, sector times and sector speeds.
 {% enddocs %}
 ---
+{% docs tbl_live_timing__timing_data_best_lap %}
+Driver best lap
+{% enddocs %}
+---
+{% docs tbl_live_timing__timing_data_interval %}
+interval to the next car
+{% enddocs %}
+---
+{% docs tbl_live_timing__timing_data_last_lap %}
+Previous lap time
+{% enddocs %}
+---
+{% docs tbl_live_timing__timing_data_sector_segments %}
+Sector segments
+{% enddocs %}
+---
+{% docs tbl_live_timing__timing_data_sectors %}
+Sector times
+{% enddocs %}
+---
+{% docs tbl_live_timing__timing_data_speeds %}
+Speed traps
+{% enddocs %}
+---
+{% docs tbl_live_timing__timing_data_status %}
+Various status from the telemetry feed
+{% enddocs %}
+---
 {% docs tbl_live_timing__tla_rcm %}
 Messages published by race control
 {% enddocs %}

@@ -1,6 +1,7 @@
 import copy
 import json
 import unittest
+from typing import List
 from unittest.mock import MagicMock
 
 import duck_f1.pipelines.assets.live_timing.processors as processors
@@ -14,6 +15,14 @@ def get_json_data(key: str) -> dict:
         data = json.load(file)
 
     return data
+
+
+def get_output(key: str, outputs: List[processors.LiveTimingAsset]) -> processors.LiveTimingAsset:
+    for i in outputs:
+        if i.key == key:
+            return i
+
+    return None
 
 
 class TestLiveTimingArchiveStatusProcessor(unittest.TestCase):
@@ -588,6 +597,111 @@ class TestLiveTimingSessionStatusProcessor(unittest.TestCase):
     def test_live_timing_tla_rcm_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = ["ts", "Status"]
+        self.assertCountEqual(columns, expected_columns)
+
+
+class TestLiveTimingTimingDataProcessor(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = get_json_data("timing_data")
+        processor = processors.TimingDataProcessor(MagicMock(), MagicMock())
+        cls.outputs = processor._processor(copy.deepcopy(cls.data))
+
+    def test_live_timing_timing_stats_assets(self):
+        expected_output_keys = processors.TimingDataProcessor.materializing_assets
+
+        output_count = len(self.outputs)
+        output_keys = [i.key for i in self.outputs]
+
+        self.assertEqual(output_count, len(expected_output_keys))
+        self.assertCountEqual(output_keys, expected_output_keys)
+
+    def test_live_timing_timing_data_status_shape(self):
+        output = get_output("timing_data_status", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (11, 4))
+
+    def test_live_timing_timing_data_status_columns(self):
+        columns = get_output("timing_data_status", self.outputs).output.column_names
+        expected_columns = ["MetricName", "MetricValue", "Driver", "ts"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_data_interval_shape(self):
+        output = get_output("timing_data_interval", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (6, 4))
+
+    def test_live_timing_timing_data_interval_columns(self):
+        columns = get_output("timing_data_interval", self.outputs).output.column_names
+        expected_columns = ["Value", "Catching", "Driver", "ts"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_data_best_lap_shape(self):
+        output = get_output("timing_data_best_lap", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (2, 4))
+
+    def test_live_timing_timing_data_best_lap_columns(self):
+        columns = get_output("timing_data_best_lap", self.outputs).output.column_names
+        expected_columns = ["Value", "Lap", "Driver", "ts"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_data_last_lap_shape(self):
+        output = get_output("timing_data_last_lap", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (2, 6))
+
+    def test_live_timing_timing_data_last_lap_columns(self):
+        columns = get_output("timing_data_last_lap", self.outputs).output.column_names
+        expected_columns = ["Value", "Status", "OverallFastest", "PersonalFastest", "Driver", "ts"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_data_sectors_shape(self):
+        output = get_output("timing_data_sectors", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (72, 9))
+
+    def test_live_timing_timing_data_sectors_columns(self):
+        columns = get_output("timing_data_sectors", self.outputs).output.column_names
+        expected_columns = [
+            "SectorKey",
+            "Stopped",
+            "Value",
+            "PreviousValue",
+            "Status",
+            "OverallFastest",
+            "PersonalFastest",
+            "Driver",
+            "ts",
+        ]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_data_sector_segments_shape(self):
+        output = get_output("timing_data_sector_segments", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (33, 5))
+
+    def test_live_timing_timing_data_sector_segments_columns(self):
+        columns = get_output("timing_data_sector_segments", self.outputs).output.column_names
+        expected_columns = ["SectorKey", "SegmentKey", "Status", "Driver", "ts"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_data_speeds_shape(self):
+        output = get_output("timing_data_speeds", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (5, 7))
+
+    def test_live_timing_timing_data_speeds_columns(self):
+        columns = get_output("timing_data_speeds", self.outputs).output.column_names
+        expected_columns = [
+            "SpeedKey",
+            "Value",
+            "Status",
+            "OverallFastest",
+            "PersonalFastest",
+            "Driver",
+            "ts",
+        ]
         self.assertCountEqual(columns, expected_columns)
 
 

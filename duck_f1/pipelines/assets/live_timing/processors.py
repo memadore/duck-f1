@@ -2,6 +2,7 @@ import base64
 import io
 import json
 from abc import ABC, abstractmethod
+from collections import defaultdict
 from datetime import datetime
 from typing import Dict, List
 
@@ -762,6 +763,251 @@ class SessionStatusProcessor(AbstractLiveTimingProcessor):
         return [LiveTimingAsset(key="session_status", output=table)]
 
 
+class TimingDataProcessor(AbstractLiveTimingProcessor):
+    source_asset = "timing_data"
+    materializing_assets = [
+        "timing_data_best_lap",
+        "timing_data_interval",
+        "timing_data_last_lap",
+        "timing_data_sector_segments",
+        "timing_data_sectors",
+        "timing_data_speeds",
+        "timing_data_status",
+    ]
+
+    @staticmethod
+    def _stack_dicts(data: List[dict]) -> dict:
+        out = defaultdict(list)
+        for i in data:
+            for k, v in i.items():
+                out[k].extend(v)
+
+        return out
+
+    @staticmethod
+    def _best_lap_transformer(data: dict) -> dict:
+        return {
+            "Value": data.get("Value", None),
+            "Lap": data.get("Lap", None),
+        }
+
+    @staticmethod
+    def _interval_transformer(data: dict) -> dict:
+        return {
+            "Value": data.get("Value", None),
+            "Catching": data.get("Catching", None),
+        }
+
+    @staticmethod
+    def _last_lap_transformer(data: dict) -> dict:
+        return {
+            "Value": data.get("Value", None),
+            "Status": data.get("Status", None),
+            "OverallFastest": data.get("OverallFastest", None),
+            "PersonalFastest": data.get("PersonalFastest", None),
+        }
+
+    @staticmethod
+    def _sector_segments_transformer(sector_key: str, segments: dict) -> List[dict]:
+        out = []
+        for segment_key, segment_data in segments.items():
+            out.append(
+                {
+                    "SectorKey": sector_key,
+                    "SegmentKey": segment_key,
+                    "Status": segment_data.get("Status", None),
+                }
+            )
+
+        return out
+
+    @staticmethod
+    def _sectors_transformer(data: dict) -> dict:
+        out = {"sectors": [], "sector_segments": []}
+
+        for sector_key, sector_data in data.items():
+            if "Segments" in sector_data:
+                segments = sector_data.pop("Segments")
+                if not isinstance(segments, list):  # skip if list
+                    out["sector_segments"].extend(
+                        TimingDataProcessor._sector_segments_transformer(sector_key, segments)
+                    )
+
+            out["sectors"].append(
+                {
+                    "SectorKey": sector_key,
+                    "Stopped": sector_data.get("Stopped", None),
+                    "Value": sector_data.get("Value", None),
+                    "PreviousValue": sector_data.get("PreviousValue", None),
+                    "Status": sector_data.get("Status", None),
+                    "OverallFastest": sector_data.get("OverallFastest", None),
+                    "PersonalFastest": sector_data.get("PersonalFastest", None),
+                }
+            )
+
+        return out
+
+    @staticmethod
+    def _speeds_transformer(data: dict) -> dict:
+        out = []
+
+        for speed_key, speed_data in data.items():
+            out.append(
+                {
+                    "SpeedKey": speed_key,
+                    "Value": speed_data.get("Value", None),
+                    "Status": speed_data.get("Status", None),
+                    "OverallFastest": speed_data.get("OverallFastest", None),
+                    "PersonalFastest": speed_data.get("PersonalFastest", None),
+                }
+            )
+
+        return out
+
+    @staticmethod
+    def _status_transformer(metric_name: str, metric_value: str) -> List[dict]:
+        return {
+            "MetricName": metric_name,
+            "MetricValue": str(metric_value),
+        }
+
+    @staticmethod
+    def _entry_transformer(driver: int, metrics: dict) -> dict:
+        out = defaultdict(list)
+
+        for metric, data in metrics.items():
+            match metric:
+                case "IntervalToPositionAhead":
+                    out["timing_data_interval"].append(
+                        TimingDataProcessor._interval_transformer(data)
+                    )
+                case "BestLapTime":
+                    out["timing_data_best_lap"].append(
+                        TimingDataProcessor._best_lap_transformer(data)
+                    )
+                case "LastLapTime":
+                    out["timing_data_last_lap"].append(
+                        TimingDataProcessor._last_lap_transformer(data)
+                    )
+                case "Sectors":
+                    transformer_output = TimingDataProcessor._sectors_transformer(data)
+                    out["timing_data_sectors"].extend(transformer_output["sectors"])
+                    out["timing_data_sector_segments"].extend(transformer_output["sector_segments"])
+                case "Speeds":
+                    out["timing_data_speeds"].extend(TimingDataProcessor._speeds_transformer(data))
+                case _:
+                    out["timing_data_status"].append(
+                        TimingDataProcessor._status_transformer(metric, data)
+                    )
+
+        for k, v in out.items():  # add driver key
+            out[k] = list(map(lambda item: dict(item, Driver=driver), v))
+
+        return out
+
+    @staticmethod
+    def _row_processor(ts: str, lines: dict) -> List[dict]:
+        output = []
+
+        for driver, metrics in lines.items():
+            output.append(TimingDataProcessor._entry_transformer(int(driver), metrics))
+
+        out = TimingDataProcessor._stack_dicts(output)
+
+        for k, v in out.items():  # add ts key
+            out[k] = list(map(lambda item: dict(item, ts=ts), v))
+
+        return out
+
+    def _processor(self, data: List[dict]) -> pa.Table:
+        schemas = {
+            "timing_data_best_lap": pa.schema(
+                [
+                    ("Value", pa.string()),
+                    ("Lap", pa.string()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+            "timing_data_interval": pa.schema(
+                [
+                    ("Value", pa.string()),
+                    ("Catching", pa.string()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+            "timing_data_last_lap": pa.schema(
+                [
+                    ("Value", pa.string()),
+                    ("Status", pa.int16()),
+                    ("OverallFastest", pa.bool_()),
+                    ("PersonalFastest", pa.bool_()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+            "timing_data_sector_segments": pa.schema(
+                [
+                    ("SectorKey", pa.string()),
+                    ("SegmentKey", pa.string()),
+                    ("Status", pa.int16()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+            "timing_data_sectors": pa.schema(
+                [
+                    ("SectorKey", pa.string()),
+                    ("Stopped", pa.string()),
+                    ("Value", pa.string()),
+                    ("PreviousValue", pa.string()),
+                    ("Status", pa.int16()),
+                    ("OverallFastest", pa.bool_()),
+                    ("PersonalFastest", pa.bool_()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+            "timing_data_speeds": pa.schema(
+                [
+                    ("SpeedKey", pa.string()),
+                    ("Value", pa.string()),
+                    ("Status", pa.int16()),
+                    ("OverallFastest", pa.bool_()),
+                    ("PersonalFastest", pa.bool_()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+            "timing_data_status": pa.schema(
+                [
+                    ("MetricName", pa.string()),
+                    ("MetricValue", pa.string()),
+                    ("Driver", pa.int16()),
+                    ("ts", pa.string()),
+                ]
+            ),
+        }
+
+        processed_data = []
+
+        for i in data:
+            if "Withheld" in i:  # first empty element
+                continue
+
+            processed_data.append(TimingDataProcessor._row_processor(ts=i["ts"], lines=i["Lines"]))
+
+        tables = TimingDataProcessor._stack_dicts(processed_data)
+
+        out = []
+        for k, v in tables.items():
+            table = pa.Table.from_pylist(v).cast(schemas[k])
+            out.append(LiveTimingAsset(key=k, output=table))
+
+        return out
+
+
 class TimingStatsProcessor(AbstractLiveTimingProcessor):
     source_asset = "timing_stats"
     materializing_assets = ["timing_stats"]
@@ -974,6 +1220,7 @@ class LiveTimingProcessorBuilder:
             "session_data": SessionDataProcessor,
             "session_info": SessionInfoProcessor,
             "session_status": SessionStatusProcessor,
+            "timing_data": TimingDataProcessor,
             "timing_stats": TimingStatsProcessor,
             "tla_rcm": TlaRcmProcessor,
             "track_status": TrackStatusProcessor,

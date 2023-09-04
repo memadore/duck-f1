@@ -42,6 +42,20 @@ sources:
         description: '{{ doc("tbl_live_timing__session_info") }}'
       - name: session_status
         description: '{{ doc("tbl_live_timing__session_status") }}'
+      - name: timing_data_best_lap
+        description: '{{ doc("tbl_live_timing__timing_data_best_lap") }}'
+      - name: timing_data_interval
+        description: '{{ doc("tbl_live_timing__timing_data_interval") }}'
+      - name: timing_data_last_lap
+        description: '{{ doc("tbl_live_timing__timing_data_last_lap") }}'
+      - name: timing_data_sector_segments
+        description: '{{ doc("tbl_live_timing__timing_data_sector_segments") }}'
+      - name: timing_data_sectors
+        description: '{{ doc("tbl_live_timing__timing_data_sectors") }}'
+      - name: timing_data_speeds
+        description: '{{ doc("tbl_live_timing__timing_data_speeds") }}'
+      - name: timing_data_status
+        description: '{{ doc("tbl_live_timing__timing_data_status") }}'
       - name: timing_stats
         description: '{{ doc("tbl_live_timing__timing_stats") }}'
       - name: tla_rcm
