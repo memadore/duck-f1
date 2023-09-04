@@ -3,7 +3,6 @@ import os
 from dagster import OpExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
 
-from ..live_timing import config_manager
 from ..live_timing.processors import LiveTimingProcessorBuilder
 
 
@@ -42,8 +41,8 @@ def living_timing_tables():
         return duck_db_asset
 
     out = []
-    for dataset in config_manager.datasets:
-        if dataset.table in processor_builder.processors:
-            out.append(table_factory(dataset.table))
+
+    for i in processor_builder.assets:
+        out.append(table_factory(i))
 
     return out

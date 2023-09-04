@@ -7,7 +7,7 @@ from typing import Callable, List, Union
 
 import pyarrow as pa
 import requests
-from dagster import OpExecutionContext, asset
+from dagster import OpExecutionContext, multi_asset
 
 from .partitions import LiveTimingDataset, LiveTimingPartitionManager
 from .processors import LiveTimingProcessorBuilder
@@ -92,13 +92,12 @@ def live_timing_files(
 ):
     processor_builder = LiveTimingProcessorBuilder()
 
-    def parquet_file_factory(dataset: LiveTimingDataset):
-        @asset(
+    def parquet_file_factory(dataset: LiveTimingDataset, output_assets):
+        @multi_asset(
+            outs=output_assets,
             name=dataset.table,
             group_name="live_timing",
-            key_prefix=["live_timing"],
             compute_kind="python",
-            io_manager_key="pyarrow_parquet_io_manager",
             partitions_def=partition_manager.dagster_partitions,
         )
         def live_timing_asset(context: OpExecutionContext) -> pa.Table:
@@ -108,13 +107,21 @@ def live_timing_files(
             processor = processor_builder.build(dataset.table, partition.metadata, context)
 
             data = api_client.get_dataset(partition.event_key, dataset.file)
-            return processor.run(data)
+            assets = processor.run(data)
+            for i in assets:
+                yield i
 
         return live_timing_asset
 
     out = []
     for dataset in datasets:
         if dataset.table in processor_builder.processors:
-            out.append(parquet_file_factory(dataset))
+            asset_config = {
+                "key_prefix": ["live_timing"],
+                "io_manager_key": "pyarrow_parquet_io_manager",
+            }
+
+            output_assets = processor_builder.assets_definition(dataset.table, **asset_config)
+            out.append(parquet_file_factory(dataset, output_assets))
 
     return out

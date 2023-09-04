@@ -3,21 +3,41 @@ import io
 import json
 from abc import ABC, abstractmethod
 from datetime import datetime
-from typing import List
+from typing import Dict, List
 
 import pyarrow as pa
-from dagster import OpExecutionContext
+from dagster import AssetOut, OpExecutionContext, Output
+from pydantic import BaseModel
 
 from .partitions import LiveTimingPartitionMetadata
 
 
+class LiveTimingAsset(BaseModel):
+    key: str
+    output: pa.Table
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
 class AbstractLiveTimingProcessor(ABC):
+    source_asset: str
+    materializing_assets: List[str]
+
     def __init__(self, context: OpExecutionContext, metadata: LiveTimingPartitionMetadata) -> None:
         self.context = context
         self.metadata = metadata
 
+    @property
+    def materializing_assets(self) -> List[str]:
+        return self.materializing_assets
+
+    @property
+    def source_asset(self) -> str:
+        return self.source_asset
+
     @abstractmethod
-    def _processor(self, data: io.BytesIO) -> pa.Table:
+    def _processor(self, data: io.BytesIO) -> List[LiveTimingAsset]:
         pass
 
     def _add_metadata(self, table: pa.Table) -> pa.Table:
@@ -40,27 +60,37 @@ class AbstractLiveTimingProcessor(ABC):
 
         return table
 
-    def run(self, data: io.BytesIO) -> pa.Table:
-        table = self._processor(data)
-        table = self._add_metadata(table)
-        return table
+    def run(self, data: io.BytesIO) -> List[Output]:
+        out = []
+        assets = self._processor(data)
+        for i in assets:
+            i.output = self._add_metadata(i.output)
+            out.append(Output(value=i.output, output_name=i.key))
+
+        return out
 
 
 class ArchiveStatusProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "archive_status"
+    materializing_assets = ["archive_status"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema([("Status", pa.string())])
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="archive_status", output=table)]
 
 
 class AudioStreamsProcessor(AbstractLiveTimingProcessor):
+    source_asset = "audio_streams"
+    materializing_assets = ["audio_streams"]
+
     @staticmethod
     def _row_processor(ts: str, streams: List[dict]) -> List[dict]:
         out = list(map(lambda item: dict(item, ts=ts), streams))
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("Name", pa.string()),
@@ -80,10 +110,13 @@ class AudioStreamsProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="audio_streams", output=table)]
 
 
 class CarDataProcessor(AbstractLiveTimingProcessor):
+    source_asset = "car_data"
+    materializing_assets = ["car_data"]
+
     @staticmethod
     def _explode(capture_ts: str, car_number: str, channel_data: dict):
         out = []
@@ -137,10 +170,13 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
             processed_data.extend(CarDataProcessor._row_processor(ts=i["ts"], entries=i["Entries"]))
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="car_data", output=table)]
 
 
 class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
+    source_asset = "championship_prediction"
+    materializing_assets = ["championship_prediction"]
+
     @staticmethod
     def _explode(entity: str, identifier: str, metrics: dict) -> List[dict]:
         out = []
@@ -176,7 +212,7 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
         out = list(map(lambda item: dict(item, ts=ts), out))
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("entity", pa.string()),
@@ -205,10 +241,13 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
                 )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="championship_prediction", output=table)]
 
 
 class CurrentTyresProcessor(AbstractLiveTimingProcessor):
+    source_asset = "current_tyres"
+    materializing_assets = ["current_tyres"]
+
     @staticmethod
     def _row_processor(ts: str, tyres: List[dict]) -> List[dict]:
         out = []
@@ -227,7 +266,7 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
         out = list(map(lambda item: dict(item, ts=ts), out))
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("Driver", pa.string()),
@@ -245,10 +284,13 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="current_tyres", output=table)]
 
 
 class DriverListProcessor(AbstractLiveTimingProcessor):
+    source_asset = "driver_list"
+    materializing_assets = ["driver_list"]
+
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
         out = []
@@ -258,7 +300,7 @@ class DriverListProcessor(AbstractLiveTimingProcessor):
 
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("ts", pa.string()),
@@ -279,10 +321,13 @@ class DriverListProcessor(AbstractLiveTimingProcessor):
         processed_data = DriverListProcessor._row_processor(data[0])
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="driver_list", output=table)]
 
 
 class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
+    source_asset = "driver_race_info"
+    materializing_assets = ["driver_race_info"]
+
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
         out = []
@@ -307,7 +352,7 @@ class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
 
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("Driver", pa.int16()),
@@ -328,11 +373,14 @@ class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
             processed_data.extend(DriverRaceInfoProcessor._row_processor(i))
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="driver_race_info", output=table)]
 
 
 class ExtrapolatedClockProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "extrapolated_clock"
+    materializing_assets = ["extrapolated_clock"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("ts", pa.string()),
@@ -343,18 +391,24 @@ class ExtrapolatedClockProcessor(AbstractLiveTimingProcessor):
         )
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="extrapolated_clock", output=table)]
 
 
 class HeartbeatProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "heartbeat"
+    materializing_assets = ["heartbeat"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema([("ts", pa.string()), ("Utc", pa.string())])
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="heartbeat", output=table)]
 
 
 class IndexProcessor(AbstractLiveTimingProcessor):
+    source_asset = "index"
+    materializing_assets = ["index"]
+
     @staticmethod
     def _feed_processor(feeds: [dict]) -> List[dict]:
         out = []
@@ -363,7 +417,7 @@ class IndexProcessor(AbstractLiveTimingProcessor):
 
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema([("KeyFramePath", pa.string()), ("StreamPath", pa.string())])
 
         processed_data = []
@@ -372,10 +426,13 @@ class IndexProcessor(AbstractLiveTimingProcessor):
             processed_data.extend(IndexProcessor._feed_processor(feeds=i["Feeds"]))
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="index", output=table)]
 
 
 class LapCountProcessor(AbstractLiveTimingProcessor):
+    source_asset = "lap_count"
+    materializing_assets = ["lap_count"]
+
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
         out = []
@@ -389,7 +446,7 @@ class LapCountProcessor(AbstractLiveTimingProcessor):
         out = list(map(lambda item: dict(item, ts=ts), out))
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("ts", pa.string()),
@@ -404,10 +461,13 @@ class LapCountProcessor(AbstractLiveTimingProcessor):
             processed_data.extend(LapCountProcessor._row_processor(i))
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="lap_count", output=table)]
 
 
 class LapSeriesProcessor(AbstractLiveTimingProcessor):
+    source_asset = "lap_series"
+    materializing_assets = ["lap_series"]
+
     @staticmethod
     def _explode(driver_number: int, position_data) -> List[dict]:
         out = []
@@ -462,10 +522,13 @@ class LapSeriesProcessor(AbstractLiveTimingProcessor):
             processed_data.extend(LapSeriesProcessor._row_processor(i))
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="lap_series", output=table)]
 
 
 class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
+    source_asset = "pit_lane_time_collection"
+    materializing_assets = ["pit_lane_time_collection"]
+
     @staticmethod
     def _row_processor(ts: str, pit_times: dict) -> List[dict]:
         out = []
@@ -496,10 +559,13 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="pit_lane_time_collection", output=table)]
 
 
 class PositionProcessor(AbstractLiveTimingProcessor):
+    source_asset = "position"
+    materializing_assets = ["position"]
+
     @staticmethod
     def _entry_transformer(entry: dict) -> List[dict]:
         out = []
@@ -539,10 +605,13 @@ class PositionProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="position", output=table)]
 
 
 class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
+    source_asset = "race_control_messages"
+    materializing_assets = ["race_control_messages"]
+
     @staticmethod
     def _entry_transformer(message_id: int, message: dict) -> List[dict]:
         header = {
@@ -594,10 +663,13 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="race_control_messages", output=table)]
 
 
 class SessionDataProcessor(AbstractLiveTimingProcessor):
+    source_asset = "session_data"
+    materializing_assets = ["session_data"]
+
     @staticmethod
     def _row_processor(key: str, data: List[dict]) -> List[dict]:
         out = []
@@ -611,7 +683,7 @@ class SessionDataProcessor(AbstractLiveTimingProcessor):
 
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("Key", pa.string()),
@@ -633,10 +705,13 @@ class SessionDataProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="session_data", output=table)]
 
 
 class SessionInfoProcessor(AbstractLiveTimingProcessor):
+    source_asset = "session_info"
+    materializing_assets = ["session_info"]
+
     def _row_processor(data: dict, prefix: str = None) -> dict:
         out = {}
         for key, value in data.items():
@@ -648,7 +723,7 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
 
         return out
 
-    def _processor(self, data: dict) -> pa.Table:
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("MeetingKey", pa.string()),
@@ -673,18 +748,24 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
         processed_data = SessionInfoProcessor._row_processor(data[0])
 
         table = pa.Table.from_pylist([processed_data]).cast(schema)
-        return table
+        return [LiveTimingAsset(key="session_info", output=table)]
 
 
 class SessionStatusProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "session_status"
+    materializing_assets = ["session_status"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema([("ts", pa.string()), ("Status", pa.string())])
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="session_status", output=table)]
 
 
 class TimingStatsProcessor(AbstractLiveTimingProcessor):
+    source_asset = "timing_stats"
+    materializing_assets = ["timing_stats"]
+
     @staticmethod
     def _entry_transformer(driver: int, metrics: dict) -> List[dict]:
         out = []
@@ -746,11 +827,14 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
             processed_data.extend(TimingStatsProcessor._row_processor(ts=i["ts"], lines=i["Lines"]))
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="timing_stats", output=table)]
 
 
 class TlaRcmProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "tla_rcm"
+    materializing_assets = ["tla_rcm"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("ts", pa.string()),
@@ -760,11 +844,14 @@ class TlaRcmProcessor(AbstractLiveTimingProcessor):
         )
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="tla_rcm", output=table)]
 
 
 class TrackStatusProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "track_status"
+    materializing_assets = ["track_status"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("ts", pa.string()),
@@ -774,10 +861,13 @@ class TrackStatusProcessor(AbstractLiveTimingProcessor):
         )
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="track_status", output=table)]
 
 
 class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
+    source_asset = "tyre_stint_series"
+    materializing_assets = ["tyre_stint_series"]
+
     @staticmethod
     def _entry_transformer(driver: int, driver_stints: dict) -> List[dict]:
         out = []
@@ -838,11 +928,14 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="tyre_stint_series", output=table)]
 
 
 class WeatherDataProcessor(AbstractLiveTimingProcessor):
-    def _processor(self, data: dict) -> pa.Table:
+    source_asset = "weather_data"
+    materializing_assets = ["weather_data"]
+
+    def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
                 ("ts", pa.string()),
@@ -857,12 +950,12 @@ class WeatherDataProcessor(AbstractLiveTimingProcessor):
         )
 
         table = pa.Table.from_pylist(data).cast(schema)
-        return table
+        return [LiveTimingAsset(key="weather_data", output=table)]
 
 
 class LiveTimingProcessorBuilder:
     def __init__(self):
-        self._processors = {
+        self._processors: Dict[str, AbstractLiveTimingProcessor] = {
             "archive_status": ArchiveStatusProcessor,
             "audio_streams": AudioStreamsProcessor,
             "car_data": CarDataProcessor,
@@ -891,6 +984,18 @@ class LiveTimingProcessorBuilder:
     @property
     def processors(self) -> List[str]:
         return self._processors.keys()
+
+    @property
+    def assets(self) -> List[str]:
+        out = []
+        for i in self._processors.values():
+            out.extend(i.materializing_assets)
+        return out
+
+    def assets_definition(self, table: str, **kwargs):
+        processor = self._processors.get(table)
+        assets = dict([(i, AssetOut(**kwargs)) for i in processor.materializing_assets])
+        return assets
 
     def build(
         self, table: str, metadata: LiveTimingPartitionMetadata, context: OpExecutionContext
