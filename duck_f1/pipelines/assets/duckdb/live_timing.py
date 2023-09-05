@@ -1,8 +1,10 @@
 import os
 
+import pyarrow as pa
 from dagster import OpExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
 
+from ..live_timing.partitions import LiveTimingConfigManager
 from ..live_timing.processors import LiveTimingProcessorBuilder
 
 
@@ -14,6 +16,34 @@ from ..live_timing.processors import LiveTimingProcessorBuilder
 def schema(duckdb: DuckDBResource) -> None:
     with duckdb.get_connection() as conn:
         conn.execute("CREATE SCHEMA IF NOT EXISTS live_timing;")
+
+
+@asset(
+    group_name="duckdb",
+    compute_kind="duckdb",
+    deps=[schema],
+    key_prefix=["duckdb", "live_timing"],
+)
+def sessions(duckdb: DuckDBResource) -> None:
+    config_manager = LiveTimingConfigManager("./config/live_timing.yaml")
+    events = config_manager.events
+    out = []
+    for event in events:
+        for session in event.sessions:
+            event_data = {f"event_{k}": v for k, v in event.dict().items()}
+            session_data = {f"session_{k}": v for k, v in session.dict().items()}
+            out.append({**event_data, **session_data})
+
+    table = pa.Table.from_pylist(out)
+
+    with duckdb.get_connection() as conn:
+        conn.register("tmp_table", table)
+        conn.execute(
+            """
+                    CREATE OR REPLACE TABLE live_timing.sessions AS
+                    SELECT * FROM tmp_table
+            """
+        )
 
 
 def living_timing_tables():

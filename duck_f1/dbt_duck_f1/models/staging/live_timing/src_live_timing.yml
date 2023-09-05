@@ -42,6 +42,8 @@ sources:
         description: '{{ doc("tbl_live_timing__session_info") }}'
       - name: session_status
         description: '{{ doc("tbl_live_timing__session_status") }}'
+      - name: sessions
+        description: '{{ doc("tbl_live_timing__sessions") }}'
       - name: timing_data_best_lap
         description: '{{ doc("tbl_live_timing__timing_data_best_lap") }}'
       - name: timing_data_interval
