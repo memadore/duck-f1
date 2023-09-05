@@ -109,6 +109,7 @@ def live_timing_files(
 
             data = api_client.get_dataset(partition.event_path, dataset.file)
             assets = processor.run(data)
+
             for i in assets:
                 yield i
 

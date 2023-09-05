@@ -63,6 +63,10 @@ class AbstractLiveTimingProcessor(ABC):
 
     def run(self, data: io.BytesIO) -> List[Output]:
         out = []
+
+        if data is None:
+            return out
+
         assets = self._processor(data)
         for i in assets:
             i.output = self._add_metadata(i.output)
