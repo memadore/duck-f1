@@ -98,6 +98,7 @@ def live_timing_files(
             name=dataset.table,
             group_name="live_timing",
             compute_kind="python",
+            can_subset=True,
             partitions_def=partition_manager.dagster_partitions,
         )
         def live_timing_asset(context: OpExecutionContext) -> pa.Table:
@@ -118,6 +119,7 @@ def live_timing_files(
         if dataset.table in processor_builder.processors:
             asset_config = {
                 "key_prefix": ["live_timing"],
+                "is_required": False,
                 "io_manager_key": "pyarrow_parquet_io_manager",
             }
 
