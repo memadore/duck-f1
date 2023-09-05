@@ -12,6 +12,7 @@ class LiveTimingDataset(BaseModel):
 
 
 class LiveTimingSession(BaseModel):
+    key: str
     date: datetime
     name: str
     type: str
@@ -20,6 +21,7 @@ class LiveTimingSession(BaseModel):
 class LiveTimingEvent(BaseModel):
     country: str
     date: datetime
+    key: str
     gmt_offset: str
     location: str
     name: str
@@ -35,16 +37,18 @@ class LiveTimingConfig(BaseModel):
 
 class LiveTimingPartitionMetadata(BaseModel):
     season_round: int
+    event_key: str
     event_country: str
     event_date: datetime
     event_name: str
+    session_key: str
     session_type: str
     session_date: datetime
 
 
 class LiveTimingPartition(BaseModel):
     partition_key: str
-    event_key: str
+    event_path: str
     metadata: LiveTimingPartitionMetadata
 
 
@@ -83,12 +87,14 @@ class LiveTimingPartitionManager:
                 out.append(
                     LiveTimingPartition(
                         partition_key=self._create_partitions_key(event, session),
-                        event_key=self._create_event_key(event, session),
+                        event_path=self._create_event_path(event, session),
                         metadata=LiveTimingPartitionMetadata(
                             season_round=event.round_number,
+                            event_key=event.key,
                             event_country=event.country,
                             event_date=event.date,
                             event_name=event.name,
+                            session_key=session.key,
                             session_type=session.type,
                             session_date=session.date,
                         ),
@@ -125,7 +131,7 @@ class LiveTimingPartitionManager:
         return fmt_key
 
     @staticmethod
-    def _create_event_key(event: LiveTimingEvent, session: LiveTimingSession) -> str:
+    def _create_event_path(event: LiveTimingEvent, session: LiveTimingSession) -> str:
         year = str(event.date.year)
         event = f"{event.date.strftime('%Y-%m-%d')}_{event.name}"
         session = f"{session.date.strftime('%Y-%m-%d')}_{session.name}"

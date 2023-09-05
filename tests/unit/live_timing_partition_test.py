@@ -11,8 +11,11 @@ from duck_f1.pipelines.assets.live_timing.partitions import (
 
 
 class TestLiveTimingKeyGenerators(unittest.TestCase):
-    SESSION = LiveTimingSession(date=datetime(2018, 3, 6, 12), name="Practice 1", type="Practice_1")
+    SESSION = LiveTimingSession(
+        key="684e2b65", date=datetime(2018, 3, 6, 12), name="Practice 1", type="Practice_1"
+    )
     EVENT = LiveTimingEvent(
+        key="d7abca72",
         country="Australia",
         date=datetime(2018, 3, 8, 18, 10),
         gmt_offset="+11:00",
@@ -23,8 +26,8 @@ class TestLiveTimingKeyGenerators(unittest.TestCase):
         sessions=[SESSION],
     )
 
-    def test_live_timing_event_key(self):
-        key = LiveTimingPartitionManager._create_event_key(self.EVENT, self.SESSION)
+    def test_live_timing_event_path(self):
+        key = LiveTimingPartitionManager._create_event_path(self.EVENT, self.SESSION)
         expected = "2018/2018-03-08_Australian_Grand_Prix/2018-03-06_Practice_1"
         self.assertEqual(key, expected)
 

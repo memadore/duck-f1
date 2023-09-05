@@ -76,8 +76,8 @@ class LiveTimingApi:
         stream = io.BytesIO(response.content)
         return stream
 
-    def get_dataset(self, event_key: str, dataset: str) -> Union[dict, None]:
-        path = "/".join(["static", event_key, dataset])
+    def get_dataset(self, event_path: str, dataset: str) -> Union[dict, None]:
+        path = "/".join(["static", event_path, dataset])
         file_processor = self._file_processor_builder(dataset)
         response = self._api_request(path)
 
@@ -106,7 +106,7 @@ def live_timing_files(
             partition = partition_manager.get_partition(context.partition_key)
             processor = processor_builder.build(dataset.table, partition.metadata, context)
 
-            data = api_client.get_dataset(partition.event_key, dataset.file)
+            data = api_client.get_dataset(partition.event_path, dataset.file)
             assets = processor.run(data)
             for i in assets:
                 yield i
