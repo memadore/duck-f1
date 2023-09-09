@@ -92,7 +92,19 @@ class AudioStreamsProcessor(AbstractLiveTimingProcessor):
 
     @staticmethod
     def _row_processor(ts: str, streams: List[dict]) -> List[dict]:
-        out = list(map(lambda item: dict(item, ts=ts), streams))
+        out = []
+        for i in streams:
+            out.append(
+                {
+                    "Name": i.get("Name", None),
+                    "Language": i.get("Language", None),
+                    "Uri": i.get("Uri", None),
+                    "Path": i.get("Path", None),
+                    "Utc": i.get("Utc", None),
+                }
+            )
+
+        out = list(map(lambda item: dict(item, ts=ts), out))
         return out
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
@@ -301,7 +313,22 @@ class DriverListProcessor(AbstractLiveTimingProcessor):
         out = []
         ts = data.pop("ts")
         for driver, driver_info in data.items():
-            out.append({"ts": ts, **driver_info})
+            out.append(
+                {
+                    "ts": ts,
+                    "RacingNumber": driver_info.get("RacingNumber", None),
+                    "BroadcastName": driver_info.get("BroadcastName", None),
+                    "FullName": driver_info.get("FullName", None),
+                    "Tla": driver_info.get("Tla", None),
+                    "Line": driver_info.get("Line", None),
+                    "TeamName": driver_info.get("TeamName", None),
+                    "TeamColour": driver_info.get("TeamColour", None),
+                    "FirstName": driver_info.get("FirstName", None),
+                    "LastName": driver_info.get("LastName", None),
+                    "Reference": driver_info.get("Reference", None),
+                    "HeadshotUrl": driver_info.get("HeadshotUrl", None),
+                }
+            )
 
         return out
 
@@ -622,7 +649,7 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
         header = {
             "MessageId": int(message_id) if message_id is not None else None,
             "Utc": message.pop("Utc"),
-            "Lap": message.pop("Lap"),
+            "Lap": message.pop("Lap") if "Lap" in message else None,
             "Category": message.pop("Category"),
         }
 
@@ -718,7 +745,26 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["session_info"]
 
     def _row_processor(data: dict, prefix: str = None) -> dict:
-        out = {}
+        out = {
+            "MeetingKey": None,
+            "MeetingName": None,
+            "MeetingLocation": None,
+            "MeetingCountryKey": None,
+            "MeetingCountryCode": None,
+            "MeetingCountryName": None,
+            "MeetingCircuitKey": None,
+            "MeetingCircuitShortName": None,
+            "ArchiveStatusStatus": None,
+            "Key": None,
+            "Type": None,
+            "Name": None,
+            "StartDate": None,
+            "EndDate": None,
+            "GmtOffset": None,
+            "Path": None,
+            "Number": None,
+        }
+
         for key, value in data.items():
             fmt_key = key if prefix is None else f"{prefix}{key}"
             if isinstance(value, dict):
@@ -747,6 +793,7 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
                 ("EndDate", pa.string()),
                 ("GmtOffset", pa.string()),
                 ("Path", pa.string()),
+                ("Number", pa.string()),
             ]
         )
 
@@ -1006,6 +1053,9 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
 
         out = []
         for k, v in tables.items():
+            if len(v) == 0:
+                continue
+
             table = pa.Table.from_pylist(v).cast(schemas[k])
             out.append(LiveTimingAsset(key=k, output=table))
 
