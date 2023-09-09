@@ -4,6 +4,7 @@ import pyarrow as pa
 from dagster import OpExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
 
+from ..live_timing import partition_manager
 from ..live_timing.partitions import LiveTimingConfigManager
 from ..live_timing.processors import LiveTimingProcessorBuilder
 
@@ -56,17 +57,40 @@ def living_timing_tables():
             deps=[SourceAsset(["live_timing", table]), schema],
             key_prefix=["duckdb", "live_timing"],
             compute_kind="duckdb",
+            partitions_def=partition_manager.dagster_partitions,
+            op_tags={"backend": "duckdb"},
         )
         def duck_db_asset(context: OpExecutionContext, duckdb: DuckDBResource) -> None:
             OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./data")
+            pk = context.partition_key
+            filename = f"{OUTPUT_DIR}/live_timing/{table}/{pk}.parquet"
 
             with duckdb.get_connection() as conn:
-                conn.execute(
-                    f"""
-                    CREATE OR REPLACE TABLE live_timing.{table} AS
-                    SELECT * FROM read_parquet('{OUTPUT_DIR}/live_timing/{table}/**/*.parquet')
-                    """
-                )
+                db_tables = conn.sql("USE live_timing; SHOW TABLES;")
+                if db_tables is None:
+                    db_tables = []
+                else:
+                    db_tables = ["".join(i) for i in db_tables.fetchall()]
+
+                context.log.info(db_tables)
+
+                if f"{table}" in db_tables:
+                    context.log.info("Table exists. Appending new data.")
+                    conn.execute(
+                        f"""
+                        DELETE FROM live_timing.{table} WHERE filename='{filename}';
+                        INSERT INTO live_timing.{table}
+                        SELECT * FROM read_parquet('{filename}', filename=true)
+                        """
+                    )
+                else:
+                    context.log.info("Table not found. Creating new table and inserting data.")
+                    conn.execute(
+                        f"""
+                        CREATE TABLE live_timing.{table} AS
+                        SELECT * FROM read_parquet('{filename}', filename=true)
+                        """
+                    )
 
         return duck_db_asset
 
