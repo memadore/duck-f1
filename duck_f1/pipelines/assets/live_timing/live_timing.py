@@ -23,6 +23,7 @@ class LiveTimingApi:
     def _json_processor(buffer: io.BytesIO) -> List[dict]:
         raw_txt = buffer.read().decode("utf-8-sig")
         out = "[" + raw_txt + "]"
+        out = out.replace('"ts"', '"_StreamTimestamp"')
         return json.loads(out)
 
     @staticmethod
@@ -48,6 +49,7 @@ class LiveTimingApi:
             txt.append(record)
 
         out = "[" + ",".join(txt) + "]"
+        out = out.replace('"ts"', '"_StreamTimestamp"')
         return json.loads(out)
 
     def _file_processor_builder(self, file: str) -> callable:

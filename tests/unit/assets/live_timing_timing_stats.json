@@ -1,6 +1,6 @@
 [
   {
-    "ts": "00:00:03.569",
+    "_StreamTimestamp": "00:00:03.569",
     "Withheld": false,
     "Lines": {
       "3": {
@@ -647,7 +647,7 @@
     "SessionType": "Race"
   },
   {
-    "ts": "00:33:45.511",
+    "_StreamTimestamp": "00:33:45.511",
     "Lines": {
       "44": {
         "BestSpeeds": {
@@ -660,7 +660,7 @@
     }
   },
   {
-    "ts": "00:33:45.740",
+    "_StreamTimestamp": "00:33:45.740",
     "Lines": {
       "33": {
         "BestSpeeds": {
@@ -673,7 +673,7 @@
     }
   },
   {
-    "ts": "00:33:45.740",
+    "_StreamTimestamp": "00:33:45.740",
     "Lines": {
       "44": {
         "BestSpeeds": {
@@ -685,7 +685,7 @@
     }
   },
   {
-    "ts": "00:33:45.810",
+    "_StreamTimestamp": "00:33:45.810",
     "Lines": {
       "11": {
         "BestSpeeds": {
@@ -705,7 +705,7 @@
     }
   },
   {
-    "ts": "03:14:48.562",
+    "_StreamTimestamp": "03:14:48.562",
     "Lines": {
       "55": {
         "PersonalBestLapTime": {

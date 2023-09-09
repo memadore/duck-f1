@@ -1,6 +1,6 @@
 [
   {
-    "ts": "00:00:57.060",
+    "_StreamTimestamp": "00:00:57.060",
     "AirTemp": "24.1",
     "Humidity": "36.2",
     "Pressure": "997.1",
@@ -10,7 +10,7 @@
     "WindSpeed": "3.0"
   },
   {
-    "ts": "00:01:57.078",
+    "_StreamTimestamp": "00:01:57.078",
     "AirTemp": "24.0",
     "Humidity": "36.3",
     "Pressure": "997.1",
@@ -20,7 +20,7 @@
     "WindSpeed": "1.4"
   },
   {
-    "ts": "00:02:57.090",
+    "_StreamTimestamp": "00:02:57.090",
     "AirTemp": "24.0",
     "Humidity": "36.3",
     "Pressure": "997.1",
@@ -30,7 +30,7 @@
     "WindSpeed": "1.4"
   },
   {
-    "ts": "00:03:57.106",
+    "_StreamTimestamp": "00:03:57.106",
     "AirTemp": "23.9",
     "Humidity": "37.2",
     "Pressure": "997.0",
@@ -40,7 +40,7 @@
     "WindSpeed": "2.3"
   },
   {
-    "ts": "00:04:57.121",
+    "_StreamTimestamp": "00:04:57.121",
     "AirTemp": "24.2",
     "Humidity": "35.8",
     "Pressure": "997.1",

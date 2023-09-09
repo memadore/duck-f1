@@ -7,7 +7,7 @@ with
             MetricKey as metric_key,
             MetricValue as metric_value,
             Position as metric_position,
-            ts as ts,
+            _StreamTimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_timing_stats
     )

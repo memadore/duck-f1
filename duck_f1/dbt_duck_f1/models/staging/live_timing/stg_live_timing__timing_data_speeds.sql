@@ -8,7 +8,7 @@ with
             OverallFastest as is_overall_fastest,
             PersonalFastest as is_personal_fastest,
             Driver as driver,
-            ts as ts,
+            _StreamTimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_timing_data_speeds
     )

@@ -1,6 +1,6 @@
 [
   {
-    "ts": "01:55:07.195",
+    "_StreamTimestamp": "01:55:07.195",
     "PitTimes": {
       "44": {
         "RacingNumber": "44",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "ts": "01:55:09.703",
+    "_StreamTimestamp": "01:55:09.703",
     "PitTimes": {
       "33": {
         "RacingNumber": "33",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "ts": "01:55:10.922",
+    "_StreamTimestamp": "01:55:10.922",
     "PitTimes": {
       "11": {
         "RacingNumber": "11",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "ts": "01:55:13.479",
+    "_StreamTimestamp": "01:55:13.479",
     "PitTimes": {
       "23": {
         "RacingNumber": "23",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "ts": "01:55:16.397",
+    "_StreamTimestamp": "01:55:16.397",
     "PitTimes": {
       "3": {
         "RacingNumber": "3",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "ts": "01:56:03.151",
+    "_StreamTimestamp": "01:56:03.151",
     "PitTimes": {
       "_deleted": [
         "44"

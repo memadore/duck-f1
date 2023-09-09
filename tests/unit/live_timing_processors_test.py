@@ -76,7 +76,7 @@ class TestLiveTimingAudioStreamsProcessor(unittest.TestCase):
             "Uri",
             "Path",
             "Utc",
-            "ts",
+            "_StreamTimestamp",
         ]
 
         self.assertCountEqual(columns, expected_columns)
@@ -107,11 +107,11 @@ class TestLiveTimingCarDataProcessor(unittest.TestCase):
     def test_live_timing_car_data_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = [
-            "capture_ts",
-            "car_number",
-            "channel",
-            "value",
-            "ts",
+            "CaptureTimestamp",
+            "CarNumber",
+            "Channel",
+            "Value",
+            "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
 
@@ -137,11 +137,11 @@ class TestLiveTimingChampionshipPredictionProcessor(unittest.TestCase):
     def test_live_timing_championship_prediction_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = [
-            "entity",
-            "identifier",
-            "metric",
-            "value",
-            "ts",
+            "Entity",
+            "Identifier",
+            "Metric",
+            "Value",
+            "_StreamTimestamp",
         ]
 
         self.assertCountEqual(columns, expected_columns)
@@ -175,7 +175,7 @@ class TestLiveTimingCurrentTyresProcessor(unittest.TestCase):
             "Driver",
             "Compound",
             "New",
-            "ts",
+            "_StreamTimestamp",
         ]
 
         self.assertCountEqual(columns, expected_columns)
@@ -206,7 +206,7 @@ class TestLiveTimingDriverListProcessor(unittest.TestCase):
     def test_live_timing_driver_list_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = [
-            "ts",
+            "_StreamTimestamp",
             "RacingNumber",
             "BroadcastName",
             "FullName",
@@ -256,7 +256,7 @@ class TestLiveTimingDriverRaceInfoProcessor(unittest.TestCase):
             "Catching",
             "OvertakeState",
             "IsOut",
-            "ts",
+            "_StreamTimestamp",
         ]
 
         self.assertCountEqual(columns, expected_columns)
@@ -283,7 +283,7 @@ class TestLiveTimingExtrapolatedClockProcessor(unittest.TestCase):
 
     def test_live_timing_extrapolated_clock_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["ts", "Utc", "Remaining", "Extrapolating"]
+        expected_columns = ["_StreamTimestamp", "Utc", "Remaining", "Extrapolating"]
 
         self.assertCountEqual(columns, expected_columns)
 
@@ -309,7 +309,7 @@ class TestLiveTimingHeartbeatProcessor(unittest.TestCase):
 
     def test_live_timing_heartbeat_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["ts", "Utc"]
+        expected_columns = ["_StreamTimestamp", "Utc"]
 
         self.assertCountEqual(columns, expected_columns)
 
@@ -367,7 +367,7 @@ class TestLiveTimingLapCountProcessor(unittest.TestCase):
 
     def test_live_timing_lap_count_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["ts", "metric", "value"]
+        expected_columns = ["_StreamTimestamp", "Metric", "Value"]
 
         self.assertCountEqual(columns, expected_columns)
 
@@ -396,7 +396,7 @@ class TestLiveTimingLapSeriesProcessor(unittest.TestCase):
 
     def test_live_timing_lap_series_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["driver_number", "lap_number", "lap_position", "ts"]
+        expected_columns = ["DriverNumber", "LapNumber", "LapPosition", "_StreamTimestamp"]
 
         self.assertCountEqual(columns, expected_columns)
 
@@ -425,7 +425,7 @@ class TestLiveTimingPitLaneTimeCollectionProcessor(unittest.TestCase):
 
     def test_live_timing_pit_lane_time_collection_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["Driver", "Duration", "Lap", "ts"]
+        expected_columns = ["Driver", "Duration", "Lap", "_StreamTimestamp"]
 
         self.assertCountEqual(columns, expected_columns)
 
@@ -461,7 +461,7 @@ class TestLiveTimingPositionProcessor(unittest.TestCase):
             "X",
             "Y",
             "Z",
-            "ts",
+            "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
 
@@ -496,7 +496,7 @@ class TestLiveTimingRaceControlMessagesProcessor(unittest.TestCase):
             "Lap",
             "Category",
             "MessageData",
-            "ts",
+            "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
 
@@ -597,7 +597,7 @@ class TestLiveTimingSessionStatusProcessor(unittest.TestCase):
 
     def test_live_timing_tla_rcm_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["ts", "Status"]
+        expected_columns = ["_StreamTimestamp", "Status"]
         self.assertCountEqual(columns, expected_columns)
 
 
@@ -624,7 +624,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
 
     def test_live_timing_timing_data_status_columns(self):
         columns = get_output("timing_data_status", self.outputs).output.column_names
-        expected_columns = ["MetricName", "MetricValue", "Driver", "ts"]
+        expected_columns = ["MetricName", "MetricValue", "Driver", "_StreamTimestamp"]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_data_interval_shape(self):
@@ -634,7 +634,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
 
     def test_live_timing_timing_data_interval_columns(self):
         columns = get_output("timing_data_interval", self.outputs).output.column_names
-        expected_columns = ["Value", "Catching", "Driver", "ts"]
+        expected_columns = ["Value", "Catching", "Driver", "_StreamTimestamp"]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_data_best_lap_shape(self):
@@ -644,7 +644,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
 
     def test_live_timing_timing_data_best_lap_columns(self):
         columns = get_output("timing_data_best_lap", self.outputs).output.column_names
-        expected_columns = ["Value", "Lap", "Driver", "ts"]
+        expected_columns = ["Value", "Lap", "Driver", "_StreamTimestamp"]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_data_last_lap_shape(self):
@@ -654,7 +654,14 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
 
     def test_live_timing_timing_data_last_lap_columns(self):
         columns = get_output("timing_data_last_lap", self.outputs).output.column_names
-        expected_columns = ["Value", "Status", "OverallFastest", "PersonalFastest", "Driver", "ts"]
+        expected_columns = [
+            "Value",
+            "Status",
+            "OverallFastest",
+            "PersonalFastest",
+            "Driver",
+            "_StreamTimestamp",
+        ]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_data_sectors_shape(self):
@@ -673,7 +680,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
             "OverallFastest",
             "PersonalFastest",
             "Driver",
-            "ts",
+            "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
 
@@ -684,7 +691,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
 
     def test_live_timing_timing_data_sector_segments_columns(self):
         columns = get_output("timing_data_sector_segments", self.outputs).output.column_names
-        expected_columns = ["SectorKey", "SegmentKey", "Status", "Driver", "ts"]
+        expected_columns = ["SectorKey", "SegmentKey", "Status", "Driver", "_StreamTimestamp"]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_data_speeds_shape(self):
@@ -701,7 +708,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
             "OverallFastest",
             "PersonalFastest",
             "Driver",
-            "ts",
+            "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
 
@@ -731,7 +738,14 @@ class TestLiveTimingTimingStatsProcessor(unittest.TestCase):
 
     def test_live_timing_timing_stats_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["Driver", "MetricName", "MetricKey", "MetricValue", "Position", "ts"]
+        expected_columns = [
+            "Driver",
+            "MetricName",
+            "MetricKey",
+            "MetricValue",
+            "Position",
+            "_StreamTimestamp",
+        ]
         self.assertCountEqual(columns, expected_columns)
 
 
@@ -755,7 +769,7 @@ class TestLiveTimingTlaRcmProcessor(unittest.TestCase):
 
     def test_live_timing_tla_rcm_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["ts", "Timestamp", "Message"]
+        expected_columns = ["_StreamTimestamp", "Timestamp", "Message"]
         self.assertCountEqual(columns, expected_columns)
 
 
@@ -779,7 +793,7 @@ class TestLiveTimingTrackStatusProcessor(unittest.TestCase):
 
     def test_live_timing_track_status_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["ts", "Status", "Message"]
+        expected_columns = ["_StreamTimestamp", "Status", "Message"]
         self.assertCountEqual(columns, expected_columns)
 
 
@@ -819,7 +833,7 @@ class TestLiveTimingTyreStintSeriesProcessor(unittest.TestCase):
             "TyresNotChanged",
             "TotalLaps",
             "StartLaps",
-            "ts",
+            "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
 
@@ -845,7 +859,7 @@ class TestLiveTimingWeatherDataProcessor(unittest.TestCase):
     def test_live_timing_weather_data_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = [
-            "ts",
+            "_StreamTimestamp",
             "AirTemp",
             "Humidity",
             "Pressure",

@@ -9,7 +9,7 @@ with
             TyresNotChanged as tyres_not_changed,
             TotalLaps as total_laps,
             StartLaps as start_laps,
-            ts as ts,
+            _StreamTimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_tyre_stint_series
     )

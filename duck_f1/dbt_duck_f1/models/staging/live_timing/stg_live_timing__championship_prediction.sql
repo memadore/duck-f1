@@ -2,11 +2,11 @@ with
     raw_championship_prediction as (select * from {{ source('live_timing', 'championship_prediction') }}),
     formatted as (
         select
-            ts as ts,
-            entity as entity,
-            identifier as identifier,
-            metric as metric,
-            value as value,
+            Entity as entity,
+            Identifier as identifier,
+            Metric as metric_name,
+            Value as metric_value,
+            _StreamTimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_championship_prediction
     )

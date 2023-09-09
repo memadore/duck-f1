@@ -91,7 +91,7 @@ class AudioStreamsProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["audio_streams"]
 
     @staticmethod
-    def _row_processor(ts: str, streams: List[dict]) -> List[dict]:
+    def _row_processor(stream_ts: str, streams: List[dict]) -> List[dict]:
         out = []
         for i in streams:
             out.append(
@@ -104,7 +104,7 @@ class AudioStreamsProcessor(AbstractLiveTimingProcessor):
                 }
             )
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
@@ -115,7 +115,7 @@ class AudioStreamsProcessor(AbstractLiveTimingProcessor):
                 ("Uri", pa.string()),
                 ("Path", pa.string()),
                 ("Utc", pa.string()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -123,7 +123,9 @@ class AudioStreamsProcessor(AbstractLiveTimingProcessor):
 
         for i in data:
             processed_data.extend(
-                AudioStreamsProcessor._row_processor(ts=i["ts"], streams=i["Streams"])
+                AudioStreamsProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], streams=i["Streams"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -140,10 +142,10 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
         for channel, value in channel_data.items():
             out.append(
                 {
-                    "capture_ts": capture_ts,
-                    "car_number": car_number,
-                    "channel": channel,
-                    "value": value,
+                    "CaptureTimestamp": capture_ts,
+                    "CarNumber": car_number,
+                    "Channel": channel,
+                    "Value": value,
                 }
             )
         return out
@@ -161,30 +163,34 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
         return out
 
     @staticmethod
-    def _row_processor(ts: str, entries: List[dict]) -> List[dict]:
+    def _row_processor(stream_ts: str, entries: List[dict]) -> List[dict]:
         out = []
         for entry in entries:
             out.extend(CarDataProcessor._entry_transformer(entry))
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: List[dict]) -> pa.Table:
         schema = pa.schema(
             [
-                ("capture_ts", pa.string()),
-                ("car_number", pa.int16()),
-                ("channel", pa.int16()),
+                ("CaptureTimestamp", pa.string()),
+                ("CarNumber", pa.int16()),
+                ("Channel", pa.int16()),
                 # ("value", pa.decimal128(5, 2)),
-                ("value", pa.int16()),
-                ("ts", pa.string()),
+                ("Value", pa.int16()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
         processed_data = []
 
         for i in data:
-            processed_data.extend(CarDataProcessor._row_processor(ts=i["ts"], entries=i["Entries"]))
+            processed_data.extend(
+                CarDataProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], entries=i["Entries"]
+                )
+            )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
         return [LiveTimingAsset(key="car_data", output=table)]
@@ -209,34 +215,34 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
 
             out.append(
                 {
-                    "entity": entity,
-                    "identifier": identifier,
-                    "metric": key,
-                    "value": value,
+                    "Entity": entity,
+                    "Identifier": identifier,
+                    "Metric": key,
+                    "Value": value,
                 }
             )
 
         return out
 
     @staticmethod
-    def _row_processor(ts: str, entity: str, data: dict) -> List[dict]:
+    def _row_processor(stream_ts: str, entity: str, data: dict) -> List[dict]:
         out = []
         for key, value in data.items():
             if len(key) == 0:
                 continue
             out.extend(ChampionshipPredictionProcessor._explode(entity, key, value))
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("entity", pa.string()),
-                ("identifier", pa.string()),
-                ("metric", pa.string()),
-                ("value", pa.decimal128(5, 2)),
-                ("ts", pa.string()),
+                ("Entity", pa.string()),
+                ("Identifier", pa.string()),
+                ("Metric", pa.string()),
+                ("Value", pa.decimal128(5, 2)),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -246,14 +252,14 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
             if "Drivers" in i:
                 processed_data.extend(
                     ChampionshipPredictionProcessor._row_processor(
-                        ts=i["ts"], entity="driver", data=i["Drivers"]
+                        stream_ts=i["_StreamTimestamp"], entity="driver", data=i["Drivers"]
                     )
                 )
 
             if "Teams" in i:
                 processed_data.extend(
                     ChampionshipPredictionProcessor._row_processor(
-                        ts=i["ts"], entity="team", data=i["Teams"]
+                        stream_ts=i["_StreamTimestamp"], entity="team", data=i["Teams"]
                     )
                 )
 
@@ -266,7 +272,7 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["current_tyres"]
 
     @staticmethod
-    def _row_processor(ts: str, tyres: List[dict]) -> List[dict]:
+    def _row_processor(stream_ts: str, tyres: List[dict]) -> List[dict]:
         out = []
         for driver, data in tyres.items():
             if len(driver) == 0:
@@ -280,7 +286,7 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
                 }
             )
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
@@ -289,7 +295,7 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
                 ("Driver", pa.string()),
                 ("Compound", pa.string()),
                 ("New", pa.bool_()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -297,7 +303,9 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
 
         for i in data:
             processed_data.extend(
-                CurrentTyresProcessor._row_processor(ts=i["ts"], tyres=i["Tyres"])
+                CurrentTyresProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], tyres=i["Tyres"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -311,11 +319,11 @@ class DriverListProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
         out = []
-        ts = data.pop("ts")
+        stream_ts = data.pop("_StreamTimestamp")
         for driver, driver_info in data.items():
             out.append(
                 {
-                    "ts": ts,
+                    "_StreamTimestamp": stream_ts,
                     "RacingNumber": driver_info.get("RacingNumber", None),
                     "BroadcastName": driver_info.get("BroadcastName", None),
                     "FullName": driver_info.get("FullName", None),
@@ -335,7 +343,7 @@ class DriverListProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
                 ("RacingNumber", pa.string()),
                 ("BroadcastName", pa.string()),
                 ("FullName", pa.string()),
@@ -363,7 +371,7 @@ class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
         out = []
-        ts = data.pop("ts")
+        ts = data.pop("_StreamTimestamp")
         for key, value in data.items():
             if len(key) == 0:
                 continue
@@ -378,7 +386,7 @@ class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
                     "Catching": value.get("Catching", None),
                     "OvertakeState": value.get("OvertakeState", None),
                     "IsOut": value.get("IsOut", None),
-                    "ts": ts,
+                    "_StreamTimestamp": ts,
                 }
             )
 
@@ -395,7 +403,7 @@ class DriverRaceInfoProcessor(AbstractLiveTimingProcessor):
                 ("Catching", pa.int16()),
                 ("OvertakeState", pa.int16()),
                 ("IsOut", pa.bool_()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -415,7 +423,7 @@ class ExtrapolatedClockProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
                 ("Utc", pa.string()),
                 ("Remaining", pa.string()),
                 ("Extrapolating", pa.bool_()),
@@ -431,7 +439,7 @@ class HeartbeatProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["heartbeat"]
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
-        schema = pa.schema([("ts", pa.string()), ("Utc", pa.string())])
+        schema = pa.schema([("_StreamTimestamp", pa.string()), ("Utc", pa.string())])
 
         table = pa.Table.from_pylist(data).cast(schema)
         return [LiveTimingAsset(key="heartbeat", output=table)]
@@ -468,22 +476,22 @@ class LapCountProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _row_processor(data: dict) -> List[dict]:
         out = []
-        ts = data.pop("ts")
+        stream_ts = data.pop("_StreamTimestamp")
         for key, value in data.items():
             if len(key) == 0:
                 continue
 
-            out.append({"ts": ts, "metric": key, "value": value})
+            out.append({"Metric": key, "Value": value})
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("ts", pa.string()),
-                ("metric", pa.string()),
-                ("value", pa.int16()),
+                ("Metric", pa.string()),
+                ("Value", pa.int16()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -507,18 +515,18 @@ class LapSeriesProcessor(AbstractLiveTimingProcessor):
             case list():
                 out.append(
                     {
-                        "driver_number": int(driver_number),
-                        "lap_number": 0,
-                        "lap_position": int(position_data[0]),
+                        "DriverNumber": int(driver_number),
+                        "LapNumber": 0,
+                        "LapPosition": int(position_data[0]),
                     }
                 )
             case _:
                 for lap, position in position_data.items():
                     out.append(
                         {
-                            "driver_number": int(driver_number),
-                            "lap_number": int(lap),
-                            "lap_position": int(position),
+                            "DriverNumber": int(driver_number),
+                            "LapNumber": int(lap),
+                            "LapPosition": int(position),
                         }
                     )
 
@@ -528,23 +536,23 @@ class LapSeriesProcessor(AbstractLiveTimingProcessor):
     def _row_processor(data: dict) -> List[dict]:
         out = []
 
-        ts = data.pop("ts")
+        stream_ts = data.pop("_StreamTimestamp")
         for driver, value in data.items():
             if len(driver) == 0:
                 continue
 
             out.extend(LapSeriesProcessor._explode(driver, value["LapPosition"]))
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: List[dict]) -> pa.Table:
         schema = pa.schema(
             [
-                ("driver_number", pa.int16()),
-                ("lap_number", pa.int16()),
-                ("lap_position", pa.int16()),
-                ("ts", pa.string()),
+                ("DriverNumber", pa.int16()),
+                ("LapNumber", pa.int16()),
+                ("LapPosition", pa.int16()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -562,7 +570,7 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["pit_lane_time_collection"]
 
     @staticmethod
-    def _row_processor(ts: str, pit_times: dict) -> List[dict]:
+    def _row_processor(stream_ts: str, pit_times: dict) -> List[dict]:
         out = []
         for driver, data in pit_times.items():
             if driver == "_deleted":
@@ -570,7 +578,7 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
 
             out.append({"Driver": driver, "Duration": data["Duration"], "Lap": data["Lap"]})
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: List[dict]) -> pa.Table:
@@ -579,7 +587,7 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
                 ("Driver", pa.string()),
                 ("Duration", pa.string()),
                 ("Lap", pa.int16()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -587,7 +595,9 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
 
         for i in data:
             processed_data.extend(
-                PitLaneTimeCollectionProcessor._row_processor(ts=i["ts"], pit_times=i["PitTimes"])
+                PitLaneTimeCollectionProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], pit_times=i["PitTimes"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -608,12 +618,12 @@ class PositionProcessor(AbstractLiveTimingProcessor):
         return out
 
     @staticmethod
-    def _row_processor(ts: str, positions: List[dict]) -> List[dict]:
+    def _row_processor(stream_ts: str, positions: List[dict]) -> List[dict]:
         out = []
         for i in positions:
             out.extend(PositionProcessor._entry_transformer(i))
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
 
     def _processor(self, data: List[dict]) -> pa.Table:
@@ -625,7 +635,7 @@ class PositionProcessor(AbstractLiveTimingProcessor):
                 ("X", pa.int16()),
                 ("Y", pa.int16()),
                 ("Z", pa.int16()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -633,7 +643,9 @@ class PositionProcessor(AbstractLiveTimingProcessor):
 
         for i in data:
             processed_data.extend(
-                PositionProcessor._row_processor(ts=i["ts"], positions=i["Position"])
+                PositionProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], positions=i["Position"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -658,7 +670,7 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
         return {**header, "MessageData": data}
 
     @staticmethod
-    def _row_processor(ts: str, messages) -> List[dict]:
+    def _row_processor(stream_ts: str, messages) -> List[dict]:
         out = []
 
         match messages:
@@ -671,7 +683,7 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
             case _:
                 return
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
 
         return out
 
@@ -683,7 +695,7 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
                 ("Lap", pa.int16()),
                 ("Category", pa.string()),
                 ("MessageData", pa.string()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -691,7 +703,9 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
 
         for i in data:
             processed_data.extend(
-                RaceControlMessagesProcessor._row_processor(ts=i["ts"], messages=i["Messages"])
+                RaceControlMessagesProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], messages=i["Messages"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -808,7 +822,7 @@ class SessionStatusProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["session_status"]
 
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
-        schema = pa.schema([("ts", pa.string()), ("Status", pa.string())])
+        schema = pa.schema([("_StreamTimestamp", pa.string()), ("Status", pa.string())])
 
         table = pa.Table.from_pylist(data).cast(schema)
         return [LiveTimingAsset(key="session_status", output=table)]
@@ -957,7 +971,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
         return out
 
     @staticmethod
-    def _row_processor(ts: str, lines: dict) -> List[dict]:
+    def _row_processor(stream_ts: str, lines: dict) -> List[dict]:
         output = []
 
         for driver, metrics in lines.items():
@@ -966,7 +980,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
         out = TimingDataProcessor._stack_dicts(output)
 
         for k, v in out.items():  # add ts key
-            out[k] = list(map(lambda item: dict(item, ts=ts), v))
+            out[k] = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), v))
 
         return out
 
@@ -977,7 +991,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("Value", pa.string()),
                     ("Lap", pa.string()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
             "timing_data_interval": pa.schema(
@@ -985,7 +999,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("Value", pa.string()),
                     ("Catching", pa.string()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
             "timing_data_last_lap": pa.schema(
@@ -995,7 +1009,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("OverallFastest", pa.bool_()),
                     ("PersonalFastest", pa.bool_()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
             "timing_data_sector_segments": pa.schema(
@@ -1004,7 +1018,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("SegmentKey", pa.string()),
                     ("Status", pa.int16()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
             "timing_data_sectors": pa.schema(
@@ -1017,7 +1031,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("OverallFastest", pa.bool_()),
                     ("PersonalFastest", pa.bool_()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
             "timing_data_speeds": pa.schema(
@@ -1028,7 +1042,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("OverallFastest", pa.bool_()),
                     ("PersonalFastest", pa.bool_()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
             "timing_data_status": pa.schema(
@@ -1036,7 +1050,7 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                     ("MetricName", pa.string()),
                     ("MetricValue", pa.string()),
                     ("Driver", pa.int16()),
-                    ("ts", pa.string()),
+                    ("_StreamTimestamp", pa.string()),
                 ]
             ),
         }
@@ -1047,7 +1061,11 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
             if "Withheld" in i:  # first empty element
                 continue
 
-            processed_data.append(TimingDataProcessor._row_processor(ts=i["ts"], lines=i["Lines"]))
+            processed_data.append(
+                TimingDataProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], lines=i["Lines"]
+                )
+            )
 
         tables = TimingDataProcessor._stack_dicts(processed_data)
 
@@ -1096,13 +1114,13 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
         return out
 
     @staticmethod
-    def _row_processor(ts: str, lines: dict) -> List[dict]:
+    def _row_processor(stream_ts: str, lines: dict) -> List[dict]:
         out = []
 
         for driver, metrics in lines.items():
             out.extend(TimingStatsProcessor._entry_transformer(driver, metrics))
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
 
         return out
 
@@ -1114,7 +1132,7 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
                 ("MetricKey", pa.string()),
                 ("MetricValue", pa.string()),
                 ("Position", pa.int16()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -1124,7 +1142,11 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
             if "Withheld" in i:  # first empty element
                 continue
 
-            processed_data.extend(TimingStatsProcessor._row_processor(ts=i["ts"], lines=i["Lines"]))
+            processed_data.extend(
+                TimingStatsProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], lines=i["Lines"]
+                )
+            )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
         return [LiveTimingAsset(key="timing_stats", output=table)]
@@ -1137,7 +1159,7 @@ class TlaRcmProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
                 ("Timestamp", pa.string()),
                 ("Message", pa.string()),
             ]
@@ -1154,7 +1176,7 @@ class TrackStatusProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
                 ("Status", pa.string()),
                 ("Message", pa.string()),
             ]
@@ -1192,7 +1214,7 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
         return out
 
     @staticmethod
-    def _row_processor(ts: str, stints: dict) -> List[dict]:
+    def _row_processor(stream_ts: str, stints: dict) -> List[dict]:
         out = []
 
         for driver, stint in stints.items():
@@ -1202,7 +1224,7 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
 
             out.extend(TyreStintSeriesProcessor._entry_transformer(driver, stint))
 
-        out = list(map(lambda item: dict(item, ts=ts), out))
+        out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
 
         return out
 
@@ -1216,7 +1238,7 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
                 ("TyresNotChanged", pa.bool_()),
                 ("TotalLaps", pa.int16()),
                 ("StartLaps", pa.int16()),
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
             ]
         )
 
@@ -1224,7 +1246,9 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
 
         for i in data:
             processed_data.extend(
-                TyreStintSeriesProcessor._row_processor(ts=i["ts"], stints=i["Stints"])
+                TyreStintSeriesProcessor._row_processor(
+                    stream_ts=i["_StreamTimestamp"], stints=i["Stints"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -1238,7 +1262,7 @@ class WeatherDataProcessor(AbstractLiveTimingProcessor):
     def _processor(self, data: dict) -> List[LiveTimingAsset]:
         schema = pa.schema(
             [
-                ("ts", pa.string()),
+                ("_StreamTimestamp", pa.string()),
                 ("AirTemp", pa.decimal128(5, 2)),
                 ("Humidity", pa.decimal128(5, 2)),
                 ("Pressure", pa.decimal128(6, 2)),

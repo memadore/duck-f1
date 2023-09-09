@@ -5,7 +5,7 @@ with
             Value as next_car_interval,
             Catching as is_catching,
             Driver as driver,
-            ts as ts,
+            _StreamTimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_timing_data_interval
     )
