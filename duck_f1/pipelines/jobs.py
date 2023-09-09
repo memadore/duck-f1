@@ -9,4 +9,13 @@ live_timing_job = define_asset_job(
     name="live_timing",
     selection=AssetSelection.key_prefixes("live_timing")
     | AssetSelection.key_prefixes(["duckdb", "live_timing"]),
+    config={
+        "execution": {
+            "config": {
+                "multiprocess": {
+                    "max_concurrent": 4,
+                },
+            }
+        }
+    },
 )
