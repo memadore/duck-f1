@@ -3,4 +3,4 @@ version: 2
 
 models:
   - name: stg_ergast__drivers
-    description: '{{ doc("tbl_ergast__drivers") }}'
+    description: '{{ doc("tbl_stg_ergast__drivers") }}'

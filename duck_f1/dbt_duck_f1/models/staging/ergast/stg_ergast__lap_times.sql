@@ -1,10 +1,10 @@
 with
-    raw_lap_times as (select * from {{ source('ergast', 'lap_times') }}),
+    raw_lap_times as (select * from {{ source("ergast", "lap_times") }}),
     formatted as (
         select
-            raceid as race_id,
-            driverid as driver_id,
-            lap as lap_id,
+            raceid as ergast_race_id,
+            driverid as ergast_driver_id,
+            lap as lap_number,
             position as position,
             time as lap_time_label,
             milliseconds as lap_time_ms

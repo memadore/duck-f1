@@ -3,4 +3,4 @@ version: 2
 
 models:
   - name: stg_ergast__pit_stops
-    description: '{{ doc("tbl_ergast__pit_stops") }}'
+    description: '{{ doc("tbl_stg_ergast__pit_stops") }}'

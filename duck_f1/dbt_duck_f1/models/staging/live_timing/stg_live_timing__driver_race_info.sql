@@ -1,16 +1,18 @@
 with
-    raw_driver_race_info as (select * from {{ source('live_timing', 'driver_race_info') }}),
+    raw_driver_race_info as (
+        select * from {{ source("live_timing", "driver_race_info") }}
+    ),
     formatted as (
         select
-            Driver as driver_number,
-            Position as track_position,
-            Gap as gap,
-            Interval as interval,
-            PitStops as pitstop_count,
-            Catching as is_catching,
-            OvertakeState as overtake_count,
-            IsOut as is_out,
-            _StreamTimestamp as _stream_ts,
+            driver as driver_number,
+            position as track_position,
+            gap as gap,
+            interval as interval,
+            pitstops as pitstop_count,
+            catching as is_catching,
+            overtakestate as overtake_count,
+            isout as is_out,
+            _streamtimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_driver_race_info
     )

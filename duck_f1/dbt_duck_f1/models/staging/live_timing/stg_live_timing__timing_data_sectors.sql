@@ -1,16 +1,18 @@
 with
-    raw_timing_data_sectors as (select * from {{ source('live_timing', 'timing_data_sectors') }}),
+    raw_timing_data_sectors as (
+        select * from {{ source("live_timing", "timing_data_sectors") }}
+    ),
     formatted as (
         select
-            SectorKey as sector_key,
-            Stopped as is_stopped,
-            Value as sector_time,
-            PreviousValue as previous_value,
-            Status as sector_status,
-            OverallFastest as is_overall_fastest,
-            PersonalFastest as is_personal_fastest,
-            Driver as driver,
-            _StreamTimestamp as _stream_ts,
+            sectorkey as sector_key,
+            stopped as is_stopped,
+            value as sector_time,
+            previousvalue as previous_value,
+            status as sector_status,
+            overallfastest as is_overall_fastest,
+            personalfastest as is_personal_fastest,
+            driver as driver,
+            _streamtimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_timing_data_sectors
     )

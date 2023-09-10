@@ -1,11 +1,13 @@
 with
-    raw_timing_data_interval as (select * from {{ source('live_timing', 'timing_data_interval') }}),
+    raw_timing_data_interval as (
+        select * from {{ source("live_timing", "timing_data_interval") }}
+    ),
     formatted as (
         select
-            Value as next_car_interval,
-            Catching as is_catching,
-            Driver as driver,
-            _StreamTimestamp as _stream_ts,
+            value as next_car_interval,
+            catching as is_catching,
+            driver as driver,
+            _streamtimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_timing_data_interval
     )

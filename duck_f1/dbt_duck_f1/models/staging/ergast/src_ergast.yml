@@ -7,30 +7,30 @@ sources:
     schema: ergast
     tables:
       - name: circuits
-        description: '{{ doc("tbl_ergast__circuits") }}'
+        description: '{{ doc("tbl_stg_ergast__circuits") }}'
       - name: constructor_results
-        description: '{{ doc("tbl_ergast__constructor_results") }}'
+        description: '{{ doc("tbl_stg_ergast__constructor_results") }}'
       - name: constructor_standings
-        description: '{{ doc("tbl_ergast__constructor_standings") }}'
+        description: '{{ doc("tbl_stg_ergast__constructor_standings") }}'
       - name: constructors
-        description: '{{ doc("tbl_ergast__constructors") }}'
+        description: '{{ doc("tbl_stg_ergast__constructors") }}'
       - name: driver_standings
-        description: '{{ doc("tbl_ergast__driver_standings") }}'
+        description: '{{ doc("tbl_stg_ergast__driver_standings") }}'
       - name: drivers
-        description: '{{ doc("tbl_ergast__drivers") }}'
+        description: '{{ doc("tbl_stg_ergast__drivers") }}'
       - name: lap_times
-        description: '{{ doc("tbl_ergast__lap_times") }}'
+        description: '{{ doc("tbl_stg_ergast__lap_times") }}'
       - name: pit_stops
-        description: '{{ doc("tbl_ergast__pit_stops") }}'
+        description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
       - name: qualifying
-        description: '{{ doc("tbl_ergast__qualifying") }}'
+        description: '{{ doc("tbl_stg_ergast__qualifying") }}'
       - name: races
-        description: '{{ doc("tbl_ergast__races") }}'
+        description: '{{ doc("tbl_stg_ergast__races") }}'
       - name: results
-        description: '{{ doc("tbl_ergast__results") }}'
+        description: '{{ doc("tbl_stg_ergast__results") }}'
       - name: seasons
-        description: '{{ doc("tbl_ergast__seasons") }}'
+        description: '{{ doc("tbl_stg_ergast__seasons") }}'
       - name: sprint_results
-        description: '{{ doc("tbl_ergast__sprint_results") }}'
+        description: '{{ doc("tbl_stg_ergast__sprint_results") }}'
       - name: status
-        description: '{{ doc("tbl_ergast__status") }}'
+        description: '{{ doc("tbl_stg_ergast__status") }}'

@@ -1,8 +1,9 @@
 with
-    raw_circuits as (select * from {{ source('ergast', 'circuits') }}),
+    raw_circuits as (select * from {{ source("ergast", "circuits") }}),
     formatted as (
         select
-            circuitid as circuit_id,
+            {{ dbt_utils.generate_surrogate_key(["circuitref"]) }} as circuit_id,
+            circuitid as ergast_circuit_id,
             circuitref as circuit_ref,
             name as circuit_name,
             location as circuit_location,

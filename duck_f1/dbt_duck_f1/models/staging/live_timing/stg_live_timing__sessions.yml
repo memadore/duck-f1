@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: stg_live_timing__sessions
-    description: '{{ doc("tbl_live_timing__sessions") }}'
+    description: '{{ doc("tbl_stg_live_timing__sessions") }}'
     columns:
       - name: event_key
         tests:

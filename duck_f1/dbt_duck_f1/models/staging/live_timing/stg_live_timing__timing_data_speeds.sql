@@ -1,14 +1,16 @@
 with
-    raw_timing_data_speeds as (select * from {{ source('live_timing', 'timing_data_speeds') }}),
+    raw_timing_data_speeds as (
+        select * from {{ source("live_timing", "timing_data_speeds") }}
+    ),
     formatted as (
         select
-            SpeedKey as speed_key,
-            Value as speed_value,
-            Status as speed_status,
-            OverallFastest as is_overall_fastest,
-            PersonalFastest as is_personal_fastest,
-            Driver as driver,
-            _StreamTimestamp as _stream_ts,
+            speedkey as speed_key,
+            value as speed_value,
+            status as speed_status,
+            overallfastest as is_overall_fastest,
+            personalfastest as is_personal_fastest,
+            driver as driver,
+            _streamtimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_timing_data_speeds
     )

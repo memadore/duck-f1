@@ -1,10 +1,12 @@
 with
-    raw_constructor_standings as (select * from {{ source('ergast', 'constructor_standings') }}),
+    raw_constructor_standings as (
+        select * from {{ source("ergast", "constructor_standings") }}
+    ),
     formatted as (
         select
-            constructorstandingsid as constructor_standing_id,
-            raceid as race_id,
-            constructorid as constructor_id,
+            constructorstandingsid as ergast_constructor_standing_id,
+            raceid as ergast_race_id,
+            constructorid as ergast_constructor_id,
             points as points,
             position as position,
             positiontext as position_label,

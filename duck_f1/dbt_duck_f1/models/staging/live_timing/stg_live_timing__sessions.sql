@@ -1,5 +1,5 @@
 with
-    raw_sessions as (select * from {{ source('live_timing', 'sessions') }}),
+    raw_sessions as (select * from {{ source("live_timing", "sessions") }}),
     formatted as (
         select
             event_country,

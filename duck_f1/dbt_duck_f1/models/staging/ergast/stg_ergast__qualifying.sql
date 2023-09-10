@@ -1,11 +1,11 @@
 with
-    raw_qualifying as (select * from {{ source('ergast', 'qualifying') }}),
+    raw_qualifying as (select * from {{ source("ergast", "qualifying") }}),
     formatted as (
         select
-            qualifyid as qualifying_id,
-            raceid as race_id,
-            driverid as driver_id,
-            constructorid as constructor_id,
+            qualifyid as ergast_qualifying_id,
+            raceid as ergast_race_id,
+            driverid as ergast_driver_id,
+            constructorid as ergast_constructor_id,
             number as driver_number,
             position as position,
             q1 as q1_time_label,

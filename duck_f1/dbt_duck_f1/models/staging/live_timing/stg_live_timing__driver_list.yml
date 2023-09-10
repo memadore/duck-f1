@@ -3,4 +3,4 @@ version: 2
 
 models:
   - name: stg_live_timing__driver_list
-    description: '{{ doc("tbl_live_timing__driver_list") }}'
+    description: '{{ doc("tbl_stg_live_timing__driver_list") }}'

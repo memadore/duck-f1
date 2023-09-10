@@ -1,9 +1,9 @@
 with
-    raw_index as (select * from {{ source('live_timing', 'index') }}),
+    raw_index as (select * from {{ source("live_timing", "index") }}),
     formatted as (
         select
-            KeyFramePath as key_frame_path,
-            StreamPath as stream_path,
+            keyframepath as key_frame_path,
+            streampath as stream_path,
             {{ live_timing__metadata_raw_columns() }}
         from raw_index
     )

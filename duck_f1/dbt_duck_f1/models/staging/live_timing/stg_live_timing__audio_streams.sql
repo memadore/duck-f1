@@ -1,13 +1,13 @@
 with
-    raw_audio_streams as (select * from {{ source('live_timing', 'audio_streams') }}),
+    raw_audio_streams as (select * from {{ source("live_timing", "audio_streams") }}),
     formatted as (
         select
-            Name as name,
-            Language as language,
-            Uri as uri,
-            Path as path,
-            Utc as event_utc_ts,
-            _StreamTimestamp as _stream_ts,
+            name as name,
+            language as language,
+            uri as uri,
+            path as path,
+            utc as event_utc_ts,
+            _streamtimestamp as _stream_ts,
             {{ live_timing__metadata_raw_columns() }}
         from raw_audio_streams
     )
