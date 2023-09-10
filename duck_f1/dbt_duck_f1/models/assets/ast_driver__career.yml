@@ -1,0 +1,11 @@
+---
+version: 2
+
+models:
+  - name: ast_driver__career
+    description: '{{ doc("tbl_ast_driver__career") }}'
+    columns:
+      - name: driver_id
+        tests:
+          - unique
+          - not_null

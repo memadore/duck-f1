@@ -1,0 +1,11 @@
+---
+version: 2
+
+models:
+  - name: mrt_dim__drivers
+    description: '{{ doc("tbl_mrt_dim__drivers") }}'
+    columns:
+      - name: driver_id
+        tests:
+          - unique
+          - not_null

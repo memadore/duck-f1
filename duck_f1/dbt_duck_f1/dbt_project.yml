@@ -20,3 +20,9 @@ models:
   dbt_duck_f1:
     staging:
       +schema: staging
+    assets:
+      +schema: assets
+    factory:
+      +schema: factory
+    mart:
+      +schema: mart
