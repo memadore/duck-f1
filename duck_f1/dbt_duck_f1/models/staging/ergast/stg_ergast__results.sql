@@ -1,11 +1,33 @@
 with
     raw_results as (select * from {{ source("ergast", "results") }}),
+    foreign_keys as (
+        select *
+        from raw_results r
+        join
+            (
+                select constructor_id, ergast_constructor_id
+                from {{ ref("stg_ergast__constructors") }}
+            ) construc
+            on r.constructorid = construc.ergast_constructor_id
+        join
+            (
+                select driver_id, ergast_driver_id from {{ ref("stg_ergast__drivers") }}
+            ) driver
+            on r.driverid = driver.ergast_driver_id
+        join
+            (select race_id, ergast_race_id from {{ ref("stg_ergast__races") }}) race
+            on r.raceid = race.ergast_race_id
+        join
+            (
+                select status_id, ergast_status_id from {{ ref("stg_ergast__status") }}
+            ) status
+            on r.statusid = status.ergast_status_id
+    ),
     formatted as (
         select
-            resultid as ergast_result_id,
-            raceid as ergast_race_id,
-            driverid as ergast_driver_id,
-            constructorid as ergast_constructor_id,
+            race_id,
+            driver_id,
+            constructor_id,
             number as driver_number,
             grid as grid_position,
             position as position,
@@ -19,8 +41,8 @@ with
             rank as rank,
             fastestlaptime as fastest_lap_time,
             fastestlapspeed as fastest_lap_speed,
-            statusid as status_id
-        from raw_results
+            status_id
+        from foreign_keys
     )
 select *
 from formatted

@@ -12,15 +12,13 @@ with
         from {{ ref("stg_ergast__driver_standings") }} standing
         join
             {{ ref("stg_ergast__drivers") }} driver
-            on driver.ergast_driver_id = standing.ergast_driver_id
-        join
-            {{ ref("stg_ergast__races") }} race
-            on race.ergast_race_id = standing.ergast_race_id
+            on driver.driver_id = standing.driver_id
+        join {{ ref("stg_ergast__races") }} race on race.race_id = standing.race_id
         join
             {{ ref("stg_ergast__results") }} result
             on (
-                result.ergast_race_id = standing.ergast_race_id
-                and result.ergast_driver_id = standing.ergast_driver_id
+                result.race_id = standing.race_id
+                and result.driver_id = standing.driver_id
             )
         window
             season as (partition by driver.driver_id, year, standing.race_id),

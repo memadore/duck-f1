@@ -41,5 +41,5 @@ select
     r.min_points,
     r.total_points
 from {{ ref("stg_ergast__drivers") }} d
-inner join results r on d.ergast_driver_id = r.driver_id
+inner join results r on d.driver_id = r.driver_id
 order by win_count desc

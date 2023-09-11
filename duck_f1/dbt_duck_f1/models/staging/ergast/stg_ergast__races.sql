@@ -1,22 +1,22 @@
 with
     raw_races as (select * from {{ source("ergast", "races") }}),
-    external_ids as (
+    foreign_keys as (
         select *
-        from raw_races r
+        from raw_races race
         join
             (
                 select circuit_id, ergast_circuit_id
                 from {{ ref("stg_ergast__circuits") }}
-            ) c
-            on r.circuitid = c.ergast_circuit_id
+            ) circuit
+            on race.circuitid = circuit.ergast_circuit_id
     ),
     formatted as (
         select
             {{ dbt_utils.generate_surrogate_key(["date", "name"]) }} as race_id,
+            circuit_id,
             raceid as ergast_race_id,
             year as year,
             round as round,
-            circuit_id,
             name as name,
             date as date,
             time as event_time,
@@ -31,7 +31,7 @@ with
             quali_time as quali_time,
             sprint_date as sprint_date,
             sprint_time as sprint_time
-        from external_ids
+        from foreign_keys
     )
 select *
 from formatted

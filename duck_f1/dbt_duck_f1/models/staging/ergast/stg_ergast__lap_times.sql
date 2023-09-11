@@ -1,14 +1,26 @@
 with
     raw_lap_times as (select * from {{ source("ergast", "lap_times") }}),
+    foreign_keys as (
+        select *
+        from raw_lap_times lp
+        join
+            (
+                select driver_id, ergast_driver_id from {{ ref("stg_ergast__drivers") }}
+            ) driver
+            on lp.driverid = driver.ergast_driver_id
+        join
+            (select race_id, ergast_race_id from {{ ref("stg_ergast__races") }}) race
+            on lp.raceid = race.ergast_race_id
+    ),
     formatted as (
         select
-            raceid as ergast_race_id,
-            driverid as ergast_driver_id,
+            driver_id,
+            race_id,
             lap as lap_number,
             position as position,
             time as lap_time_label,
             milliseconds as lap_time_ms
-        from raw_lap_times
+        from foreign_keys
     )
 select *
 from formatted

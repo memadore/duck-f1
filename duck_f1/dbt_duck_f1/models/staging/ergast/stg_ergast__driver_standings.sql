@@ -1,15 +1,26 @@
 with
     raw_driver_standings as (select * from {{ source("ergast", "driver_standings") }}),
+    foreign_keys as (
+        select *
+        from raw_driver_standings ds
+        join
+            (
+                select driver_id, ergast_driver_id from {{ ref("stg_ergast__drivers") }}
+            ) driver
+            on ds.driverid = driver.ergast_driver_id
+        join
+            (select race_id, ergast_race_id from {{ ref("stg_ergast__races") }}) race
+            on ds.raceid = race.ergast_race_id
+    ),
     formatted as (
         select
-            driverstandingsid as ergast_driver_standings_id,
-            raceid as ergast_race_id,
-            driverid as ergast_driver_id,
+            driver_id,
+            race_id,
             points as points,
             position as position,
             positiontext as position_label,
             wins as win_count
-        from raw_driver_standings
+        from foreign_keys
     )
 select *
 from formatted
