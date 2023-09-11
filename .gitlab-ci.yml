@@ -17,7 +17,7 @@
   run_dagster_jobs:
     - poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
     - poetry run dagster job backfill -d duck_f1 -m pipelines -j live_timing --partitions "2020/11/29/race" --noprompt
-    - sleep 120
+    - sleep 180
 
 stages:
   - test
@@ -67,6 +67,7 @@ build:
     - mkdir /tmp/.dagster
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/dbt_duck_f1
+    - poetry run dbt deps
   script:
     - poetry run dbt build
 
@@ -84,8 +85,9 @@ pages:
     - mkdir /tmp/.dagster
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/dbt_duck_f1
-  script:
+    - poetry run dbt deps
     - poetry run dbt build
+  script:
     - poetry run dbt docs generate
   artifacts:
     paths:
