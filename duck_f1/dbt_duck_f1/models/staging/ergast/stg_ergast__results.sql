@@ -29,7 +29,7 @@ with
             driver_id,
             constructor_id,
             number as driver_number,
-            grid as grid_position,
+            case when grid > 0 then grid end as grid_position,
             position as position,
             positiontext as positiontext,
             positionorder::integer as position_order,

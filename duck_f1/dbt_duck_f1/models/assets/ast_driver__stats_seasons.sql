@@ -2,6 +2,7 @@ with
     results as (
         select
             driver_id as driver_id,
+            race.year as season,
             round(avg(grid_position)::numeric, 2)::text as avg_grid_position,
             min(
                 case when grid_position > 0 then grid_position end
@@ -19,16 +20,15 @@ with
             sum(points) as total_points
         from {{ ref("stg_ergast__results") }} as result
         join {{ ref("stg_ergast__races") }} as race on race.race_id = result.race_id
-        group by driver_id
+        group by driver_id, race.year
     )
 select
-    {{
-        dbt_utils.star(
-            from=ref("stg_ergast__drivers"),
-            except=["ergast_driver_id", "driver_reference"],
-            relation_alias="d",
-        )
-    }},
+    d.driver_id,
+    d.driver_code,
+    d.last_name,
+    d.first_name,
+    d.full_name,
+    r.season,
     r.avg_grid_position,
     r.win_count,
     r.latest_win_date,
@@ -42,4 +42,4 @@ select
     r.total_points
 from {{ ref("stg_ergast__drivers") }} d
 inner join results r on d.driver_id = r.driver_id
-order by win_count desc
+order by last_name, first_name, season

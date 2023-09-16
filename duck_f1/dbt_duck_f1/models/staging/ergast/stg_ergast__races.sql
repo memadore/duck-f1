@@ -20,6 +20,12 @@ with
             name as name,
             date as date,
             time as event_time,
+            concat(
+                date,
+                ' ',
+                case when time like '\N' then '00:00:00' else time end,
+                ' GMT'
+            )::timestamptz as race_time_gmt,
             url as url,
             fp1_date as fp1_date,
             fp1_time as fp1_time,
@@ -35,3 +41,4 @@ with
     )
 select *
 from formatted
+order by year desc

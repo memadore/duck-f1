@@ -2,8 +2,8 @@
 version: 2
 
 models:
-  - name: ast_driver__career
-    description: '{{ doc("tbl_ast_driver__career") }}'
+  - name: ast_driver__stats_career
+    description: '{{ doc("tbl_ast_driver__stats_career") }}'
     columns:
       - name: driver_id
         tests:
