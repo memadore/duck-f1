@@ -138,16 +138,18 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
 
     @staticmethod
     def _explode(capture_ts: str, car_number: str, channel_data: dict):
-        out = []
-        for channel, value in channel_data.items():
-            out.append(
-                {
-                    "CaptureTimestamp": capture_ts,
-                    "CarNumber": car_number,
-                    "Channel": channel,
-                    "Value": value,
-                }
-            )
+        out = [
+            {
+                "CaptureTimestamp": capture_ts,
+                "CarNumber": car_number,
+                "EngineRpm": channel_data.get("0", None),
+                "CarSpeed": channel_data.get("2", None),
+                "EngineGear": channel_data.get("3", None),
+                "ThrottlePosition": channel_data.get("4", None),
+                "BrakePosition": channel_data.get("5", None),
+                "DrsStatus": channel_data.get("45", None),
+            }
+        ]
         return out
 
     @staticmethod
@@ -176,9 +178,12 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
             [
                 ("CaptureTimestamp", pa.string()),
                 ("CarNumber", pa.int16()),
-                ("Channel", pa.int16()),
-                # ("value", pa.decimal128(5, 2)),
-                ("Value", pa.int16()),
+                ("EngineRpm", pa.int16()),
+                ("CarSpeed", pa.int16()),
+                ("EngineGear", pa.int16()),
+                ("ThrottlePosition", pa.int16()),
+                ("BrakePosition", pa.int16()),
+                ("DrsStatus", pa.int16()),
                 ("_StreamTimestamp", pa.string()),
             ]
         )

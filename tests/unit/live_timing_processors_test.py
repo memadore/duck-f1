@@ -102,15 +102,19 @@ class TestLiveTimingCarDataProcessor(unittest.TestCase):
         for row in self.data:
             rows += len(row["Entries"])
 
-        self.assertEqual(shape, (rows * 20 * 6, 5))  # 20 drivers, 6 channels
+        self.assertEqual(shape, (rows * 20, 9))  # 20 drivers, 6 channels
 
     def test_live_timing_car_data_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = [
             "CaptureTimestamp",
             "CarNumber",
-            "Channel",
-            "Value",
+            "EngineRpm",
+            "CarSpeed",
+            "EngineGear",
+            "ThrottlePosition",
+            "BrakePosition",
+            "DrsStatus",
             "_StreamTimestamp",
         ]
         self.assertCountEqual(columns, expected_columns)
