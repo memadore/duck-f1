@@ -74,10 +74,6 @@ Session status timeline
 Sessions detail
 {% enddocs %}
 ---
-{% docs tbl_stg_live_timing__timing_stats %}
-Timing Statistics for personal best laps, sector times and sector speeds.
-{% enddocs %}
----
 {% docs tbl_stg_live_timing__timing_data_best_lap %}
 Driver best lap
 {% enddocs %}
@@ -104,6 +100,18 @@ Speed traps
 ---
 {% docs tbl_stg_live_timing__timing_data_status %}
 Various status from the telemetry feed
+{% enddocs %}
+---
+{% docs tbl_stg_live_timing__timing_stats_lap_times %}
+Timing Statistics for personal best laps per driver
+{% enddocs %}
+---
+{% docs tbl_stg_live_timing__timing_stats_sectors %}
+Timing Statistics for personal sector times per driver
+{% enddocs %}
+---
+{% docs tbl_stg_live_timing__timing_stats_speeds %}
+Timing Statistics for personal speed traps per driver
 {% enddocs %}
 ---
 {% docs tbl_stg_live_timing__tla_rcm %}

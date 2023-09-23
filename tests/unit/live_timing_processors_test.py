@@ -612,7 +612,7 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
         processor = processors.TimingDataProcessor(MagicMock(), MagicMock())
         cls.outputs = processor._processor(copy.deepcopy(cls.data))
 
-    def test_live_timing_timing_stats_assets(self):
+    def test_live_timing_timing_data_assets(self):
         expected_output_keys = processors.TimingDataProcessor.materializing_assets
 
         output_count = len(self.outputs)
@@ -722,34 +722,45 @@ class TestLiveTimingTimingStatsProcessor(unittest.TestCase):
     def setUpClass(cls):
         cls.data = get_json_data("timing_stats")
         processor = processors.TimingStatsProcessor(MagicMock(), MagicMock())
-        cls.outputs = processor._processor(cls.data)
+        cls.outputs = processor._processor(copy.deepcopy(cls.data))
 
     def test_live_timing_timing_stats_assets(self):
-        count = len(self.outputs)
-        asset = self.outputs[0]
+        expected_output_keys = processors.TimingStatsProcessor.materializing_assets
 
-        self.assertEqual(count, 1)
-        self.assertEqual(asset.key, "timing_stats")
+        output_count = len(self.outputs)
+        output_keys = [i.key for i in self.outputs]
 
-    def test_live_timing_timing_stats_shape(self):
-        shape = self.outputs[0].output.shape
-        rows = 0
-        for row in self.data:
-            for driver, metrics in row["Lines"].items():
-                rows += 0 if "Withheld" in row else len(metrics)
+        self.assertEqual(output_count, len(expected_output_keys))
+        self.assertCountEqual(output_keys, expected_output_keys)
 
-        self.assertEqual(shape, (rows, 6))
+    def test_live_timing_timing_stats_lap_times(self):
+        output = get_output("timing_stats_lap_times", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (1, 5))
 
-    def test_live_timing_timing_stats_columns(self):
-        columns = self.outputs[0].output.column_names
-        expected_columns = [
-            "Driver",
-            "MetricName",
-            "MetricKey",
-            "MetricValue",
-            "Position",
-            "_StreamTimestamp",
-        ]
+    def test_live_timing_timing_stats_lap_times_columns(self):
+        columns = get_output("timing_stats_lap_times", self.outputs).output.column_names
+        expected_columns = ["Value", "Lap", "Position", "Driver", "_StreamTimestamp"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_stats_sectors(self):
+        output = get_output("timing_stats_sectors", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (1, 5))
+
+    def test_live_timing_timing_stats_sectors_columns(self):
+        columns = get_output("timing_stats_sectors", self.outputs).output.column_names
+        expected_columns = ["SectorKey", "Value", "Position", "Driver", "_StreamTimestamp"]
+        self.assertCountEqual(columns, expected_columns)
+
+    def test_live_timing_timing_stats_speeds(self):
+        output = get_output("timing_stats_speeds", self.outputs).output
+        shape = output.shape
+        self.assertEqual(shape, (5, 5))
+
+    def test_live_timing_timing_stats_speeds_columns(self):
+        columns = get_output("timing_stats_speeds", self.outputs).output.column_names
+        expected_columns = ["SpeedTrapKey", "Value", "Position", "Driver", "_StreamTimestamp"]
         self.assertCountEqual(columns, expected_columns)
 
 

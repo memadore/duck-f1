@@ -58,8 +58,12 @@ sources:
         description: '{{ doc("tbl_stg_live_timing__timing_data_speeds") }}'
       - name: timing_data_status
         description: '{{ doc("tbl_stg_live_timing__timing_data_status") }}'
-      - name: timing_stats
-        description: '{{ doc("tbl_stg_live_timing__timing_stats") }}'
+      - name: timing_stats_lap_times
+        description: '{{ doc("tbl_stg_live_timing__timing_stats_lap_times") }}'
+      - name: timing_stats_sectors
+        description: '{{ doc("tbl_stg_live_timing__timing_stats_sectors") }}'
+      - name: timing_stats_speeds
+        description: '{{ doc("tbl_stg_live_timing__timing_stats_speeds") }}'
       - name: tla_rcm
         description: '{{ doc("tbl_stg_live_timing__tla_rcm") }}'
       - name: track_status

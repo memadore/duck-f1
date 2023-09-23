@@ -1,0 +1,6 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__timing_stats_lap_times
+    description: '{{ doc("tbl_stg_live_timing__timing_stats_lap_times") }}'
