@@ -4,7 +4,7 @@ with
         select
             racingnumber as racing_number,
             broadcastname as broadcast_name,
-            fullname as file_name,
+            fullname as full_name,
             tla as driver_abbr,
             line as starting_position,
             teamname as team_name,
