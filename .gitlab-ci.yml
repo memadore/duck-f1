@@ -1,6 +1,6 @@
 ---
 .python-default:
-  image: python:$PYTHON_VERSION-slim
+  image: python:$PYTHON_VERSION-slim-bullseye
   tags:
     - linux
   variables:
