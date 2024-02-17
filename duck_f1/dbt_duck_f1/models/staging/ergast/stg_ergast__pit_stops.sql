@@ -1,4 +1,4 @@
-{# with
+with
     raw_pit_stops as (select * from {{ source("ergast", "pit_stops") }}),
     foreign_keys as (
         select *
@@ -24,5 +24,4 @@
         from foreign_keys
     )
 select *
-from formatted #}
-
+from formatted

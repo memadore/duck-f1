@@ -20,8 +20,8 @@ sources:
         description: '{{ doc("tbl_stg_ergast__drivers") }}'
       - name: lap_times
         description: '{{ doc("tbl_stg_ergast__lap_times") }}'
-      # - name: pit_stops
-      #   description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
+      - name: pit_stops
+        description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
       - name: qualifying
         description: '{{ doc("tbl_stg_ergast__qualifying") }}'
       - name: races

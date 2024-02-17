@@ -1,6 +1,8 @@
-# ---
-# version: 2
+---
+version: 2
 
-# models:
-#   - name: stg_ergast__pit_stops
-#     description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
+models:
+  - name: stg_ergast__pit_stops
+    config:
+      enabled: false
+    description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
