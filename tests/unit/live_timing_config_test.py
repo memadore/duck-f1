@@ -1,6 +1,6 @@
 import unittest
 
-from duck_f1.pipelines.assets.live_timing.partitions import (
+from duck_f1.pipelines.assets.live_timing.sessions import (
     LiveTimingConfig,
     LiveTimingConfigManager,
     LiveTimingDataset,

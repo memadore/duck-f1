@@ -2,7 +2,6 @@ from datetime import datetime
 from typing import List
 
 import yaml
-from dagster import StaticPartitionsDefinition
 from pydantic import BaseModel
 
 
@@ -11,8 +10,8 @@ class LiveTimingDataset(BaseModel):
     table: str
 
 
-class LiveTimingSession(BaseModel):
-    key: str
+class LiveTimingSessionDetail(BaseModel):
+    sha: str
     date: datetime
     name: str
     type: str
@@ -21,13 +20,13 @@ class LiveTimingSession(BaseModel):
 class LiveTimingEvent(BaseModel):
     country: str
     date: datetime
-    key: str
+    sha: str
     gmt_offset: str
     location: str
     name: str
     official_event_name: str
     round_number: int
-    sessions: List[LiveTimingSession]
+    sessions: List[LiveTimingSessionDetail]
 
 
 class LiveTimingConfig(BaseModel):
@@ -35,21 +34,21 @@ class LiveTimingConfig(BaseModel):
     events: List[LiveTimingEvent]
 
 
-class LiveTimingPartitionMetadata(BaseModel):
+class LiveTimingSessionMetadata(BaseModel):
     season_round: int
-    event_key: str
+    event_sha: str
     event_country: str
     event_date: datetime
     event_name: str
-    session_key: str
+    session_sha: str
     session_type: str
     session_date: datetime
 
 
-class LiveTimingPartition(BaseModel):
-    partition_key: str
+class LiveTimingSession(BaseModel):
+    session_key: str
     event_path: str
-    metadata: LiveTimingPartitionMetadata
+    metadata: LiveTimingSessionMetadata
 
 
 class LiveTimingConfigManager:
@@ -76,25 +75,25 @@ class LiveTimingConfigManager:
         return self._config.events
 
 
-class LiveTimingPartitionManager:
+class LiveTimingSessionManager:
     def __init__(self, events: List[LiveTimingEvent]):
-        self._partitions = self._create_partitions(events)
+        self._sessions = self._create_sessions(events)
 
-    def _create_partitions(self, events: List[LiveTimingEvent]) -> List[LiveTimingPartition]:
+    def _create_sessions(self, events: List[LiveTimingEvent]) -> List[LiveTimingSession]:
         out = []
         for event in events:
             for session in event.sessions:
                 out.append(
-                    LiveTimingPartition(
-                        partition_key=self._create_partitions_key(event, session),
+                    LiveTimingSession(
+                        session_key=self._create_session_key(event, session),
                         event_path=self._create_event_path(event, session),
-                        metadata=LiveTimingPartitionMetadata(
+                        metadata=LiveTimingSessionMetadata(
                             season_round=event.round_number,
-                            event_key=event.key,
+                            event_sha=event.sha,
                             event_country=event.country,
                             event_date=event.date,
                             event_name=event.name,
-                            session_key=session.key,
+                            session_sha=session.sha,
                             session_type=session.type,
                             session_date=session.date,
                         ),
@@ -104,24 +103,20 @@ class LiveTimingPartitionManager:
         return out
 
     @property
-    def partitions(self) -> List[LiveTimingPartition]:
-        return self._partitions
+    def sessions(self) -> List[LiveTimingSession]:
+        return self._sessions
 
     @property
-    def partition_keys(self) -> List[str]:
-        out = [i.partition_key for i in self._partitions]
+    def session_keys(self) -> List[str]:
+        out = [i.session_key for i in self._sessions]
         return out
 
-    @property
-    def dagster_partitions(self) -> StaticPartitionsDefinition:
-        return StaticPartitionsDefinition(self.partition_keys)
-
-    def get_partition(self, partition_key: str) -> LiveTimingPartition:
-        partition = next((i for i in self._partitions if i.partition_key == partition_key))
-        return partition
+    def get_session(self, session_key: str) -> LiveTimingSession:
+        session = next((i for i in self._sessions if i.session_key == session_key))
+        return session
 
     @staticmethod
-    def _create_partitions_key(event: LiveTimingEvent, session: LiveTimingSession) -> str:
+    def _create_session_key(event: LiveTimingEvent, session: LiveTimingSession) -> str:
         year = str(event.date.year)
         month = f"{event.date.month:02d}"
         day = f"{event.date.day:02d}"

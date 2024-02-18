@@ -10,20 +10,32 @@ packages = [{include = "duck_f1"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 dagster = "^1.6.5"
-pyarrow = "^14.0.2"
-duckdb = "^0"
+dagster-dbt = "^0.22.5"
 dagster-duckdb = "^0"
 dbt-duckdb = "^1.7.1"
+duckdb = "^0"
 pandas = "^2.2.0"
+pyarrow = "^14.0.2"
 requests = "^2.31.0"
-dagster-dbt = "^0.22.5"
+
+
+[tool.poetry.group.dev]
+optional = true
 
 [tool.poetry.group.dev.dependencies]
+dagster-postgres = "^0.22.5"
 dagster-webserver = "^1.6.5"
 harlequin = "^1.15.0"
 flake8 = "^6.1.0"
 pytest = "^7.4.4"
 coverage = "^7.4.1"
+
+
+[tool.poetry.group.ci]
+optional = true
+
+[tool.poetry.group.ci.dependencies]
+dagster-postgres = "^0.22.5"
 
 [tool.black]
 line-length = 100

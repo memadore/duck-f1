@@ -10,7 +10,7 @@ import pyarrow as pa
 from dagster import AssetOut, OpExecutionContext, Output
 from pydantic import BaseModel
 
-from .partitions import LiveTimingPartitionMetadata
+from .sessions import LiveTimingSessionMetadata
 
 
 class LiveTimingAsset(BaseModel):
@@ -25,7 +25,7 @@ class AbstractLiveTimingProcessor(ABC):
     source_asset: str
     materializing_assets: List[str]
 
-    def __init__(self, context: OpExecutionContext, metadata: LiveTimingPartitionMetadata) -> None:
+    def __init__(self, context: OpExecutionContext, metadata: LiveTimingSessionMetadata) -> None:
         self.context = context
         self.metadata = metadata
 
@@ -455,7 +455,7 @@ class IndexProcessor(AbstractLiveTimingProcessor):
     materializing_assets = ["index"]
 
     @staticmethod
-    def _feed_processor(feeds: [dict]) -> List[dict]:
+    def _feed_processor(feeds: dict) -> List[dict]:
         out = []
         for _, value in feeds.items():
             out.append(value)
@@ -1401,7 +1401,7 @@ class LiveTimingProcessorBuilder:
         return assets
 
     def build(
-        self, table: str, metadata: LiveTimingPartitionMetadata, context: OpExecutionContext
+        self, table: str, metadata: LiveTimingSessionMetadata, context: OpExecutionContext
     ) -> AbstractLiveTimingProcessor:
         processor = self._processors.get(table, None)
         return processor(context, metadata)

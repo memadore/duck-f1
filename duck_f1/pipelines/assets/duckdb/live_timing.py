@@ -4,9 +4,9 @@ import pyarrow as pa
 from dagster import OpExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
 
-from ..live_timing import partition_manager
-from ..live_timing.partitions import LiveTimingConfigManager
+from ..live_timing.live_timing import LiveTimingConfig
 from ..live_timing.processors import LiveTimingProcessorBuilder
+from ..live_timing.sessions import LiveTimingConfigManager
 
 
 @asset(
@@ -47,12 +47,13 @@ def living_timing_tables():
             deps=[SourceAsset(["live_timing", table]), SourceAsset(["duckdb", "migrations"])],
             key_prefix=["duckdb", "ingress", "live_timing"],
             compute_kind="duckdb",
-            partitions_def=partition_manager.dagster_partitions,
             op_tags={"backend": "duckdb"},
         )
-        def duck_db_asset(context: OpExecutionContext, duckdb: DuckDBResource) -> None:
+        def duck_db_asset(
+            context: OpExecutionContext, duckdb: DuckDBResource, config: LiveTimingConfig
+        ) -> None:
             OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./data")
-            pk = context.partition_key
+            pk = config.session_key
             filename = f"{OUTPUT_DIR}/live_timing/{table}/{pk}.parquet"
 
             with duckdb.get_connection() as conn:

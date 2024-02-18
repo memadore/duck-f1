@@ -4,20 +4,23 @@
   tags:
     - linux
   variables:
+    LIVE_TIMING_SESSION: "2020/11/29/race"
     POETRY_VERSION: "1.5.*"
     PYTHON_VERSION: "3.11"
 
 .snippets:
-  install_poetry:
+  poetry_setup:
     - python --version ; pip --version # For debugging
     - pip install poetry==$POETRY_VERSION
     - poetry config virtualenvs.in-project true
     - poetry config installer.max-workers 4
     - poetry --version
+  dagster_setup:
+    - mkdir /tmp/.dagster
+    - cp ./.ci/dagster.yaml /tmp/.dagster/dagster.yaml
   run_dagster_jobs:
     - poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
-    - poetry run dagster job backfill -d duck_f1 -m pipelines -j live_timing --partitions "2020/11/29/race" --noprompt
-    - sleep 180
+    - poetry run dagster job execute -d duck_f1 -m pipelines -j live_timing
 
 stages:
   - test
@@ -29,8 +32,8 @@ python::linting:
   stage: test
   allow_failure: true
   before_script:
-    - !reference [.snippets, install_poetry]
-    - poetry install
+    - !reference [.snippets, poetry_setup]
+    - poetry install --with dev
   script:
     - poetry run flake8 duck_f1 --max-line-length=100
 
@@ -38,8 +41,8 @@ python::tests::unit:
   extends: .python-default
   stage: test
   before_script:
-    - !reference [.snippets, install_poetry]
-    - poetry install
+    - !reference [.snippets, poetry_setup]
+    - poetry install --with dev
     - poetry run dbt deps --project-dir=./duck_f1/transform/
   script:
     - poetry run coverage run -m pytest tests -v --junitxml=report.xml
@@ -57,15 +60,21 @@ python::tests::unit:
 dbt::compile:
   extends: .python-default
   stage: build
+  services:
+    - postgres
   variables:
+    POSTGRES_DB: postgres
+    POSTGRES_USER: username
+    POSTGRES_PASSWORD: password
+    POSTGRES_HOST_AUTH_METHOD: trust
     DAGSTER_HOME: /tmp/.dagster
     ENV: dev
     OUTPUT_DIR: /tmp/data
     DUCK_DB_PATH: /tmp/data/f1.duckdb
   before_script:
-    - !reference [.snippets, install_poetry]
-    - poetry install --without dev
-    - mkdir /tmp/.dagster
+    - !reference [.snippets, poetry_setup]
+    - poetry install --with ci
+    - !reference [.snippets, dagster_setup]
     - poetry run dbt deps --project-dir=./duck_f1/transform
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/transform
@@ -75,18 +84,24 @@ dbt::compile:
 pages:
   extends: .python-default
   stage: deploy
+  services:
+    - postgres
   variables:
+    POSTGRES_DB: postgres
+    POSTGRES_USER: username
+    POSTGRES_PASSWORD: password
+    POSTGRES_HOST_AUTH_METHOD: trust
     DAGSTER_HOME: /tmp/.dagster
     ENV: dev
     OUTPUT_DIR: /tmp/data
     DUCK_DB_PATH: /tmp/data/f1.duckdb
   before_script:
-    - !reference [.snippets, install_poetry]
-    - poetry install --without dev
-    - mkdir /tmp/.dagster
+    - !reference [.snippets, poetry_setup]
+    - poetry install --with ci
+    - !reference [.snippets, dagster_setup]
+    - poetry run dbt deps --project-dir=./duck_f1/transform
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/transform
-    - poetry run dbt deps
     - poetry run dbt build
   script:
     - poetry run dbt docs generate

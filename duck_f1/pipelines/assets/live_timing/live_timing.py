@@ -1,16 +1,21 @@
 import base64
 import io
 import json
+import os
 import zlib
 from functools import partial
 from typing import Callable, List, Union
 
 import pyarrow as pa
 import requests
-from dagster import OpExecutionContext, multi_asset
+from dagster import Config, OpExecutionContext, multi_asset
 
-from .partitions import LiveTimingDataset, LiveTimingPartitionManager
 from .processors import LiveTimingProcessorBuilder
+from .sessions import LiveTimingDataset, LiveTimingSessionManager
+
+
+class LiveTimingConfig(Config):
+    session_key: str = os.getenv("LIVE_TIMING_SESSION")
 
 
 class LiveTimingApi:
@@ -90,7 +95,7 @@ class LiveTimingApi:
 
 
 def live_timing_files(
-    partition_manager: LiveTimingPartitionManager, datasets: List[LiveTimingDataset]
+    sessions_manager: LiveTimingSessionManager, datasets: List[LiveTimingDataset]
 ):
     processor_builder = LiveTimingProcessorBuilder()
 
@@ -101,15 +106,13 @@ def live_timing_files(
             group_name="live_timing",
             compute_kind="python",
             can_subset=True,
-            partitions_def=partition_manager.dagster_partitions,
         )
-        def live_timing_asset(context: OpExecutionContext) -> pa.Table:
+        def live_timing_asset(context: OpExecutionContext, config: LiveTimingConfig) -> pa.Table:
+
             api_client = LiveTimingApi(context)
-
-            partition = partition_manager.get_partition(context.partition_key)
-            processor = processor_builder.build(dataset.table, partition.metadata, context)
-
-            data = api_client.get_dataset(partition.event_path, dataset.file)
+            session = sessions_manager.get_session(config.session_key)
+            processor = processor_builder.build(dataset.table, session.metadata, context)
+            data = api_client.get_dataset(session.event_path, dataset.file)
             assets = processor.run(data)
 
             for i in assets:

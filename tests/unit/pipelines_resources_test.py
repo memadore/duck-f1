@@ -7,6 +7,7 @@ import pyarrow as pa
 from dagster import (
     AssetKey,
     PythonObjectDagsterType,
+    StepExecutionContext,
     build_input_context,
     build_output_context,
 )
@@ -68,6 +69,7 @@ class TestArrowParquetIOManagerInput(unittest.TestCase):
             asset_key=AssetKey(path=["test", "data"]),
             dagster_type=PythonObjectDagsterType(pa.Table),
         )
+
         cls.io_manager.handle_output(context, cls.data_table)
 
     @classmethod
@@ -75,7 +77,7 @@ class TestArrowParquetIOManagerInput(unittest.TestCase):
         if os.path.exists("./tmp/test/data.parquet"):
             shutil.rmtree("./tmp")
 
-    def test_arrow_parquet_io_manager_output(self) -> None:
+    def test_arrow_parquet_io_manager_input(self) -> None:
         context = build_input_context(
             name="test_b",
             asset_key=AssetKey(path=["test", "data"]),
