@@ -1,0 +1,120 @@
+---
+version: 2
+
+sources:
+  - name: ing__ergast
+    database: f1
+    schema: ingress
+    tables:
+      - name: ergast__circuits
+        description: '{{ doc("tbl_stg_ergast__circuits") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - circuits
+      - name: ergast__constructor_results
+        description: '{{ doc("tbl_stg_ergast__constructor_results") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - constructor_results
+      - name: ergast__constructor_standings
+        description: '{{ doc("tbl_stg_ergast__constructor_standings") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - constructor_standings
+      - name: ergast__constructors
+        description: '{{ doc("tbl_stg_ergast__constructors") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - constructors
+      - name: ergast__driver_standings
+        description: '{{ doc("tbl_stg_ergast__driver_standings") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - driver_standings
+      - name: ergast__drivers
+        description: '{{ doc("tbl_stg_ergast__drivers") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - drivers
+      - name: ergast__lap_times
+        description: '{{ doc("tbl_stg_ergast__lap_times") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - lap_times
+      - name: ergast__pit_stops
+        description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - pit_stops
+      - name: ergast__qualifying
+        description: '{{ doc("tbl_stg_ergast__qualifying") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - qualifying
+      - name: ergast__races
+        description: '{{ doc("tbl_stg_ergast__races") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - races
+      - name: ergast__results
+        description: '{{ doc("tbl_stg_ergast__results") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - results
+      - name: ergast__seasons
+        description: '{{ doc("tbl_stg_ergast__seasons") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - seasons
+      - name: ergast__sprint_results
+        description: '{{ doc("tbl_stg_ergast__sprint_results") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - sprint_results
+      - name: ergast__status
+        description: '{{ doc("tbl_stg_ergast__status") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - ergast
+              - status

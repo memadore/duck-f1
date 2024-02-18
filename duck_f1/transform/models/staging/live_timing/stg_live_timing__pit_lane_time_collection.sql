@@ -1,0 +1,16 @@
+with
+    raw_pit_lane_time_collection as (
+        select *
+        from {{ source("ing__live_timing", "live_timing__pit_lane_time_collection") }}
+    ),
+    formatted as (
+        select
+            driver as driver,
+            duration as pit_lane_time_duration,
+            lap as lap_number,
+            _streamtimestamp as _stream_ts,
+            {{ live_timing__metadata_raw_columns() }}
+        from raw_pit_lane_time_collection
+    )
+select *
+from formatted

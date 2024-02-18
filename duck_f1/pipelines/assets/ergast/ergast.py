@@ -27,7 +27,6 @@ ergast_assets = dict([(i["table"], AssetOut(**json_asset_config)) for i in CONFI
 def ergast_tables(context: OpExecutionContext) -> io.BytesIO:
     with urllib.request.urlopen(CONFIG["url"]) as dl_file:
         with zipfile.ZipFile(io.BytesIO(dl_file.read())) as archive:
-            context.log.info(archive.filelist)
             for t in CONFIG["tables"]:
                 with archive.open(t["file"]) as file:
                     table = csv.read_csv(file)

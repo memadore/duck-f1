@@ -1,0 +1,16 @@
+---
+version: 2
+
+models:
+  - name: ast_driver__stats_seasons
+    description: '{{ doc("tbl_ast_driver__stats_seasons") }}'
+    meta:
+      dagster:
+        asset_key:
+          - assets
+          - drivers
+          - stats_seasons
+    columns:
+      - name: driver_id
+        tests:
+          - not_null

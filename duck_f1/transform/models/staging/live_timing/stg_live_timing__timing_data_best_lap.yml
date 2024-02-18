@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__timing_data_best_lap
+    description: '{{ doc("tbl_stg_live_timing__timing_data_best_lap") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - timing_data_best_lap

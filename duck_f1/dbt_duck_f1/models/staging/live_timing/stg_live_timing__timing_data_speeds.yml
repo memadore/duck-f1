@@ -1,6 +1,0 @@
----
-version: 2
-
-models:
-  - name: stg_live_timing__timing_data_speeds
-    description: '{{ doc("tbl_stg_live_timing__timing_data_speeds") }}'

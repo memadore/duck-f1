@@ -1,6 +1,0 @@
----
-version: 2
-
-models:
-  - name: stg_live_timing__lap_count
-    description: '{{ doc("tbl_stg_live_timing__lap_count") }}'

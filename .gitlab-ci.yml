@@ -21,10 +21,10 @@
 
 stages:
   - test
-  - dbt
+  - build
   - deploy
 
-linting:
+python::linting:
   extends: .python-default
   stage: test
   allow_failure: true
@@ -34,12 +34,13 @@ linting:
   script:
     - poetry run flake8 duck_f1 --max-line-length=100
 
-tests::unit:
+python::tests::unit:
   extends: .python-default
   stage: test
   before_script:
     - !reference [.snippets, install_poetry]
     - poetry install
+    - poetry run dbt deps --project-dir=./duck_f1/transform/
   script:
     - poetry run coverage run -m pytest tests -v --junitxml=report.xml
     - poetry run coverage xml
@@ -53,9 +54,9 @@ tests::unit:
         path: coverage.xml
       junit: report.xml
 
-build:
+dbt::compile:
   extends: .python-default
-  stage: dbt
+  stage: build
   variables:
     DAGSTER_HOME: /tmp/.dagster
     ENV: dev
@@ -65,11 +66,11 @@ build:
     - !reference [.snippets, install_poetry]
     - poetry install --without dev
     - mkdir /tmp/.dagster
+    - poetry run dbt deps --project-dir=./duck_f1/transform
     - !reference [.snippets, run_dagster_jobs]
-    - cd duck_f1/dbt_duck_f1
-    - poetry run dbt deps
+    - cd duck_f1/transform
   script:
-    - poetry run dbt build
+    - poetry run dbt compile
 
 pages:
   extends: .python-default
@@ -84,14 +85,14 @@ pages:
     - poetry install --without dev
     - mkdir /tmp/.dagster
     - !reference [.snippets, run_dagster_jobs]
-    - cd duck_f1/dbt_duck_f1
+    - cd duck_f1/transform
     - poetry run dbt deps
     - poetry run dbt build
   script:
     - poetry run dbt docs generate
   artifacts:
     paths:
-      - duck_f1/dbt_duck_f1/target
-  publish: duck_f1/dbt_duck_f1/target
+      - duck_f1/transform/target
+  publish: duck_f1/transform/target
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

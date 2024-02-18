@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__pit_lane_time_collection
+    description: '{{ doc("tbl_stg_live_timing__pit_lane_time_collection") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - pit_lane_time_collection

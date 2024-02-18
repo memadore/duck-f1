@@ -1,0 +1,17 @@
+---
+version: 2
+
+models:
+  - name: mart__dim_drivers
+    description: '{{ doc("tbl_mart__dim_drivers") }}'
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - dim
+          - drivers
+    columns:
+      - name: driver_id
+        tests:
+          - unique
+          - not_null

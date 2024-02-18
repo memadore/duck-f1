@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__race_control_messages
+    description: '{{ doc("tbl_stg_live_timing__race_control_messages") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - race_control_messages

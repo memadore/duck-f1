@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__track_status
+    description: '{{ doc("tbl_stg_live_timing__track_status") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - track_status

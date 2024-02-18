@@ -1,0 +1,11 @@
+---
+version: 2
+models:
+  - name: fty_driver__season_race_results
+    description: '{{ doc("tbl_fty_driver__season_race_results") }}'
+    meta:
+      dagster:
+        asset_key:
+          - factory
+          - driver
+          - season_race_results

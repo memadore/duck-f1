@@ -1,0 +1,20 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__sessions
+    description: '{{ doc("tbl_stg_live_timing__sessions") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - sessions
+    columns:
+      - name: event_key
+        tests:
+          - not_null
+      - name: session_key
+        tests:
+          - unique
+          - not_null

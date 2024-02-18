@@ -1,0 +1,272 @@
+---
+version: 2
+
+sources:
+  - name: ing__live_timing
+    database: f1
+    schema: ingress
+    tables:
+      - name: live_timing__archive_status
+        description: '{{ doc("tbl_stg_live_timing__archive_status") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - archive_status
+      - name: live_timing__audio_streams
+        description: '{{ doc("tbl_stg_live_timing__audio_streams") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - audio_streams
+      - name: live_timing__car_data
+        description: '{{ doc("tbl_stg_live_timing__car_data") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - car_data
+      - name: live_timing__championship_prediction
+        description: '{{ doc("tbl_stg_live_timing__championship_prediction") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - championship_prediction
+      - name: live_timing__current_tyres
+        description: '{{ doc("tbl_stg_live_timing__current_tyres") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - current_tyres
+      - name: live_timing__driver_list
+        description: '{{ doc("tbl_stg_live_timing__driver_list") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - driver_list
+      - name: live_timing__driver_race_info
+        description: '{{ doc("tbl_stg_live_timing__driver_race_info") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - driver_race_info
+      - name: live_timing__extrapolated_clock
+        description: '{{ doc("tbl_stg_live_timing__extrapolated_clock") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - extrapolated_clock
+      - name: live_timing__heartbeat
+        description: '{{ doc("tbl_stg_live_timing__heartbeat") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - heartbeat
+      - name: live_timing__index
+        description: '{{ doc("tbl_stg_live_timing__index") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - index
+      - name: live_timing__lap_count
+        description: '{{ doc("tbl_stg_live_timing__lap_count") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - lap_count
+      - name: live_timing__lap_series
+        description: '{{ doc("tbl_stg_live_timing__lap_series") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - lap_series
+      - name: live_timing__pit_lane_time_collection
+        description: '{{ doc("tbl_stg_live_timing__pit_lane_time_collection") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - pit_lane_time_collection
+      - name: live_timing__position
+        description: '{{ doc("tbl_stg_live_timing__position") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - position
+      - name: live_timing__race_control_messages
+        description: '{{ doc("tbl_stg_live_timing__race_control_messages") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - race_control_messages
+      - name: live_timing__session_data
+        description: '{{ doc("tbl_stg_live_timing__session_data") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - session_data
+      - name: live_timing__session_info
+        description: '{{ doc("tbl_stg_live_timing__session_info") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - session_info
+      - name: live_timing__session_status
+        description: '{{ doc("tbl_stg_live_timing__session_status") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - session_status
+      - name: live_timing__sessions
+        description: '{{ doc("tbl_stg_live_timing__sessions") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - sessions
+      - name: live_timing__timing_data_best_lap
+        description: '{{ doc("tbl_stg_live_timing__timing_data_best_lap") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_best_lap
+      - name: live_timing__timing_data_interval
+        description: '{{ doc("tbl_stg_live_timing__timing_data_interval") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_interval
+      - name: live_timing__timing_data_last_lap
+        description: '{{ doc("tbl_stg_live_timing__timing_data_last_lap") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_last_lap
+      - name: live_timing__timing_data_sector_segments
+        description: '{{ doc("tbl_stg_live_timing__timing_data_sector_segments") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_sector_segments
+      - name: live_timing__timing_data_sectors
+        description: '{{ doc("tbl_stg_live_timing__timing_data_sectors") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_sectors
+      - name: live_timing__timing_data_speeds
+        description: '{{ doc("tbl_stg_live_timing__timing_data_speeds") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_speeds
+      - name: live_timing__timing_data_status
+        description: '{{ doc("tbl_stg_live_timing__timing_data_status") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_data_status
+      - name: live_timing__timing_stats_lap_times
+        description: '{{ doc("tbl_stg_live_timing__timing_stats_lap_times") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_stats_lap_times
+      - name: live_timing__timing_stats_sectors
+        description: '{{ doc("tbl_stg_live_timing__timing_stats_sectors") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_stats_sectors
+      - name: live_timing__timing_stats_speeds
+        description: '{{ doc("tbl_stg_live_timing__timing_stats_speeds") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - timing_stats_speeds
+      - name: live_timing__tla_rcm
+        description: '{{ doc("tbl_stg_live_timing__tla_rcm") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - tla_rcm
+      - name: live_timing__track_status
+        description: '{{ doc("tbl_stg_live_timing__track_status") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - track_status
+      - name: live_timing__tyre_stint_series
+        description: '{{ doc("tbl_stg_live_timing__tyre_stint_series") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - tyre_stint_series
+      - name: live_timing__weather_data
+        description: '{{ doc("tbl_stg_live_timing__weather_data") }}'
+        meta:
+          dagster:
+            asset_key:
+              - ingress
+              - live_timing
+              - weather_data

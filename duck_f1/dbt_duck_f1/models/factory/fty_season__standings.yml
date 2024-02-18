@@ -1,6 +1,0 @@
----
-version: 2
-
-models:
-  - name: fty_season__standings
-    description: '{{ doc("tbl_fty_season__standings") }}'

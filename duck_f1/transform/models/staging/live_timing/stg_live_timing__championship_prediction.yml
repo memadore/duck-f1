@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__championship_prediction
+    description: '{{ doc("tbl_stg_live_timing__championship_prediction") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - championship_prediction

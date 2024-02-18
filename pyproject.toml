@@ -16,6 +16,7 @@ dagster-duckdb = "^0"
 dbt-duckdb = "^1.7.1"
 pandas = "^2.2.0"
 requests = "^2.31.0"
+dagster-dbt = "^0.22.5"
 
 [tool.poetry.group.dev.dependencies]
 dagster-webserver = "^1.6.5"

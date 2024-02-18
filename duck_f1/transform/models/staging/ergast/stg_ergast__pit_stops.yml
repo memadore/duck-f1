@@ -1,0 +1,14 @@
+---
+version: 2
+
+models:
+  - name: stg_ergast__pit_stops
+    config:
+      enabled: false
+    description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - pit_stops

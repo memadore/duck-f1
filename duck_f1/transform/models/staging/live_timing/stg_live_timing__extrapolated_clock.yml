@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__extrapolated_clock
+    description: '{{ doc("tbl_stg_live_timing__extrapolated_clock") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - extrapolated_clock

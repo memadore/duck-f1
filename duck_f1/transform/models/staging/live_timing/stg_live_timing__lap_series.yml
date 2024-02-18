@@ -1,0 +1,12 @@
+---
+version: 2
+
+models:
+  - name: stg_live_timing__lap_series
+    description: '{{ doc("tbl_stg_live_timing__lap_series") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - lap_series

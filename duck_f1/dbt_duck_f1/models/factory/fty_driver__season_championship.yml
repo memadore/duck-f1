@@ -1,6 +1,0 @@
----
-version: 2
-
-models:
-  - name: fty_driver__season_championship
-    description: '{{ doc("tbl_fty_driver__season_championship") }}'

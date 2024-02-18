@@ -12,18 +12,8 @@ from ..live_timing.processors import LiveTimingProcessorBuilder
 @asset(
     group_name="duckdb",
     compute_kind="duckdb",
-    key_prefix=["duckdb", "live_timing"],
-)
-def schema(duckdb: DuckDBResource) -> None:
-    with duckdb.get_connection() as conn:
-        conn.execute("CREATE SCHEMA IF NOT EXISTS live_timing;")
-
-
-@asset(
-    group_name="duckdb",
-    compute_kind="duckdb",
-    deps=[schema],
-    key_prefix=["duckdb", "live_timing"],
+    deps=[SourceAsset(["duckdb", "migrations"])],
+    key_prefix=["duckdb", "ingress", "live_timing"],
 )
 def sessions(duckdb: DuckDBResource) -> None:
     config_manager = LiveTimingConfigManager("./config/live_timing.yaml")
@@ -41,8 +31,8 @@ def sessions(duckdb: DuckDBResource) -> None:
         conn.register("tmp_table", table)
         conn.execute(
             """
-                    CREATE OR REPLACE TABLE live_timing.sessions AS
-                    SELECT * FROM tmp_table
+                    CREATE OR REPLACE TABLE ingress.live_timing__sessions AS
+                    SELECT * FROM tmp_table;
             """
         )
 
@@ -54,8 +44,8 @@ def living_timing_tables():
         @asset(
             name=table,
             group_name="duckdb",
-            deps=[SourceAsset(["live_timing", table]), schema],
-            key_prefix=["duckdb", "live_timing"],
+            deps=[SourceAsset(["live_timing", table]), SourceAsset(["duckdb", "migrations"])],
+            key_prefix=["duckdb", "ingress", "live_timing"],
             compute_kind="duckdb",
             partitions_def=partition_manager.dagster_partitions,
             op_tags={"backend": "duckdb"},
@@ -66,29 +56,28 @@ def living_timing_tables():
             filename = f"{OUTPUT_DIR}/live_timing/{table}/{pk}.parquet"
 
             with duckdb.get_connection() as conn:
-                db_tables = conn.sql("USE live_timing; SHOW TABLES;")
+                db_tables = conn.sql("USE ingress; SHOW TABLES;")
                 if db_tables is None:
                     db_tables = []
                 else:
                     db_tables = ["".join(i) for i in db_tables.fetchall()]
 
-                context.log.info(db_tables)
-
-                if f"{table}" in db_tables:
+                if f"live_timing__{table}" in db_tables:
                     context.log.info("Table exists. Appending new data.")
                     conn.execute(
                         f"""
-                        DELETE FROM live_timing.{table} WHERE filename='{filename}';
-                        INSERT INTO live_timing.{table}
-                        SELECT * FROM read_parquet('{filename}', filename=true)
+                        DELETE FROM ingress.live_timing__{table}
+                            WHERE filename='{filename}';
+                        INSERT INTO ingress.live_timing__{table}
+                        SELECT * FROM read_parquet('{filename}', filename=true);
                         """
                     )
                 else:
                     context.log.info("Table not found. Creating new table and inserting data.")
                     conn.execute(
                         f"""
-                        CREATE TABLE live_timing.{table} AS
-                        SELECT * FROM read_parquet('{filename}', filename=true)
+                        CREATE TABLE ingress.live_timing__{table} AS
+                        SELECT * FROM read_parquet('{filename}', filename=true);
                         """
                     )
 

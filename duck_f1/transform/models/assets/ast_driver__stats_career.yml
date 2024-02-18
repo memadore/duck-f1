@@ -1,0 +1,17 @@
+---
+version: 2
+
+models:
+  - name: ast_driver__stats_career
+    description: '{{ doc("tbl_ast_driver__stats_career") }}'
+    meta:
+      dagster:
+        asset_key:
+          - assets
+          - drivers
+          - stats_career
+    columns:
+      - name: driver_id
+        tests:
+          - unique
+          - not_null

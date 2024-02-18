@@ -1,7 +1,7 @@
 include .env
 export
 
-dev: dagster-reset py-clean dagster-dev-server
+dev: dagster-reset py-clean dbt-compile dagster-dev-server
 
 dagster-dev-server:
 	poetry run dagster dev -w workspace.yaml -p 3001
@@ -12,8 +12,12 @@ dagster-reset:
 	cp .devcontainer/config/dagster.yaml ${HOME}/.dagster
 
 dbt-build:
-	cd ./duck_f1/dbt_duck_f1; \
-	poetry run dbt build
+	cd ./duck_f1/transform; \
+	poetry run dbt build;
+
+dbt-compile:
+	cd ./duck_f1/transform; \
+	poetry run dbt compile;
 
 job-ergast:
 	poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
