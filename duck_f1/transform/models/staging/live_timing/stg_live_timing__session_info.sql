@@ -4,7 +4,7 @@ with
     ),
     formatted as (
         select
-            meetingkey as session_key,
+            meetingkey as session_sha,
             meetingname as session_name,
             meetinglocation as session_location,
             meetingcountrykey as country_key,
@@ -13,7 +13,7 @@ with
             meetingcircuitkey as circuit_key,
             meetingcircuitshortname as circuit_short_name,
             archivestatusstatus as archive_status,
-            key as session_keym,
+            key as session_key,
             type as session_type,
             name as session_name,
             startdate as session_start_date,

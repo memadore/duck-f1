@@ -11,10 +11,10 @@ models:
           - live_timing
           - sessions
     columns:
-      - name: event_key
+      - name: event_sha
         tests:
           - not_null
-      - name: session_key
+      - name: session_sha
         tests:
           - unique
           - not_null

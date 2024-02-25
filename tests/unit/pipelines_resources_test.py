@@ -7,7 +7,6 @@ import pyarrow as pa
 from dagster import (
     AssetKey,
     PythonObjectDagsterType,
-    StepExecutionContext,
     build_input_context,
     build_output_context,
 )
