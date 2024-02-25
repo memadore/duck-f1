@@ -43,7 +43,7 @@ class AbstractLiveTimingProcessor(ABC):
 
     def _add_metadata(self, table: pa.Table) -> pa.Table:
         columns = self.metadata.dict()
-        self.context.log.info("Metadata: %s", columns)
+        # self.context.log.info("Metadata: %s", columns)
         table_len = table.num_rows
         for col, value in columns.items():
             match value:

@@ -71,9 +71,7 @@ class LiveTimingApi:
 
     def _api_request(self, path: str) -> io.BytesIO:
         url = "/".join([self.BASE_URL, path])
-
-        self.context.log.info("Making request to: %s", url)
-
+        # self.context.log.info("Making request to: %s", url)
         response = requests.get(url, timeout=10)
 
         if response.status_code != 200:

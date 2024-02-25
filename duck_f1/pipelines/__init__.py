@@ -8,6 +8,6 @@ from .resources import RESOURCES
 
 ENV = os.environ.get("DAGSTER_DEPLOYMENT", "local")
 
-defs = Definitions(
+definitions = Definitions(
     assets=all_assets, jobs=[dbt_build_job, ergast_job, live_timing_job], resources=RESOURCES
 )

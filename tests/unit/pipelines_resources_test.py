@@ -51,7 +51,6 @@ class TestArrowParquetIOManagerOutput(unittest.TestCase):
         self.assertTrue("table_size_label" in context._user_generated_metadata)
         self.assertTrue("col_count" in context._user_generated_metadata)
         self.assertTrue("row_count" in context._user_generated_metadata)
-        self.assertTrue("preview" in context._user_generated_metadata)
 
 
 class TestArrowParquetIOManagerInput(unittest.TestCase):

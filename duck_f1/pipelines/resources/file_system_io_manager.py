@@ -1,9 +1,8 @@
-import os
 from typing import Union
 
 import pyarrow as pa
 import pyarrow.parquet as pq
-from dagster import InputContext, MetadataValue, OutputContext, UPathIOManager
+from dagster import InputContext, OutputContext, UPathIOManager
 from upath import UPath
 
 
@@ -33,10 +32,10 @@ class ArrowParquetIOManager(UPathIOManager):
             "row_count": obj.num_rows,
         }
 
-        if os.getenv("ENV", "prod") == "dev":
-            output_metadata["preview"] = MetadataValue.md(
-                obj.slice(length=5).to_pandas().to_markdown(index=False)
-            )
+        # if os.getenv("ENV", "prod") == "dev":
+        #     output_metadata["preview"] = MetadataValue.md(
+        #         obj.slice(length=5).to_pandas().to_markdown(index=False)
+        #     )
 
         context.add_output_metadata(output_metadata)
 

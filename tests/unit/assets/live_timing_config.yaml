@@ -33,3 +33,33 @@ events:
         name: Race
         type: race
     weekend_format: conventional
+  - country: Bahrain
+    date: 2019-03-31 20:10:00
+    gmt_offset: +03:00
+    location: Sakhir
+    name: Bahrain Grand Prix
+    official_event_name: FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2019
+    round_number: 2
+    sessions:
+      - date: 2019-03-29 14:00:00
+        name: Practice 1
+        sha: 79ca4465
+        type: practice_1
+      - date: 2019-03-29 18:00:00
+        name: Practice 2
+        sha: d6ee7fc4
+        type: practice_2
+      - date: 2019-03-30 15:00:00
+        name: Practice 3
+        sha: b65e7884
+        type: practice_3
+      - date: 2019-03-30 18:00:00
+        name: Qualifying
+        sha: 3a28989e
+        type: qualifying
+      - date: 2019-03-31 18:10:00
+        name: Race
+        sha: c773e1aa
+        type: race
+    sha: 4bb2bbff
+    weekend_format: conventional

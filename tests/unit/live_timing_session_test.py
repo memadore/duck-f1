@@ -49,8 +49,61 @@ class TestLiveTimingConfigManager(unittest.TestCase):
         self.assertTrue(
             all(isinstance(i, LiveTimingSession) for i in self._sessions_manager.sessions)
         )
-        self.assertEqual(len(self._sessions_manager.sessions), 5)
+        self.assertEqual(len(self._sessions_manager.sessions), 10)
 
     def test_live_timing_sessions_keys(self):
         self.assertTrue(all(isinstance(i, str) for i in self._sessions_manager.session_keys))
-        self.assertEqual(len(self._sessions_manager.session_keys), 5)
+        self.assertEqual(len(self._sessions_manager.session_keys), 10)
+
+    def test_live_timing_sessions_filter(self):
+        # seasons
+        season_filter = self._sessions_manager.filter_sessions(season=[2018])
+        self.assertEqual(len(season_filter), 5)
+
+        season_filter_array = self._sessions_manager.filter_sessions(season=[2018, 2019])
+        self.assertEqual(len(season_filter_array), 10)
+
+        # event_shas
+        event_sha_filter = self._sessions_manager.filter_sessions(event_sha=["d7abca72"])
+        self.assertEqual(len(event_sha_filter), 5)
+
+        event_sha_filter_array = self._sessions_manager.filter_sessions(
+            event_sha=["d7abca72", "4bb2bbff"]
+        )
+        self.assertEqual(len(event_sha_filter_array), 10)
+
+        # event_locations
+        event_location_filter = self._sessions_manager.filter_sessions(event_location=["Melbourne"])
+        self.assertEqual(len(event_location_filter), 5)
+
+        event_location_filter_array = self._sessions_manager.filter_sessions(
+            event_location=["Melbourne", "Sakhir"]
+        )
+        self.assertEqual(len(event_location_filter_array), 10)
+
+        # event_countries
+        event_country_filter = self._sessions_manager.filter_sessions(event_country=["Australia"])
+        self.assertEqual(len(event_country_filter), 5)
+
+        event_country_filter_array = self._sessions_manager.filter_sessions(
+            event_country=["Australia", "Bahrain"]
+        )
+        self.assertEqual(len(event_country_filter_array), 10)
+
+        # session_shas
+        session_sha_filter = self._sessions_manager.filter_sessions(session_sha=["79ca4465"])
+        self.assertEqual(len(session_sha_filter), 1)
+
+        session_sha_filter_array = self._sessions_manager.filter_sessions(
+            session_sha=["79ca4465", "d6ee7fc4"]
+        )
+        self.assertEqual(len(session_sha_filter_array), 2)
+
+        # session_types
+        session_type_filter = self._sessions_manager.filter_sessions(session_type=["race"])
+        self.assertEqual(len(session_type_filter), 2)
+
+        session_type_filter_array = self._sessions_manager.filter_sessions(
+            session_type=["qualifying", "race"]
+        )
+        self.assertEqual(len(session_type_filter_array), 4)

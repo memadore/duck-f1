@@ -17,13 +17,4 @@ ergast_job = define_asset_job(
 live_timing_job = define_asset_job(
     name="live_timing",
     selection=AssetSelection.key_prefixes(["duckdb", "ingress", "live_timing"]).upstream(),
-    config={
-        "execution": {
-            "config": {
-                "multiprocess": {
-                    "max_concurrent": 4,
-                },
-            }
-        }
-    },
 )

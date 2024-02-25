@@ -24,4 +24,4 @@ class TestLiveTimingConfig(unittest.TestCase):
 
     def test_live_timing_configuration_events(self):
         self.assertTrue(all(isinstance(i, LiveTimingEvent) for i in self.config_manager.events))
-        self.assertEqual(len(self.config_manager.events), 1)
+        self.assertEqual(len(self.config_manager.events), 2)

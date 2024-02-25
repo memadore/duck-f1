@@ -5,6 +5,16 @@ import yaml
 from pydantic import BaseModel
 
 
+class DateRange(BaseModel):
+    start_date: datetime
+    end_date: datetime
+
+
+class RoundRange(BaseModel):
+    start_round: int
+    end_round: int
+
+
 class LiveTimingDataset(BaseModel):
     file: str
     table: str
@@ -38,6 +48,7 @@ class LiveTimingSessionMetadata(BaseModel):
     season_round: int
     event_sha: str
     event_country: str
+    event_location: str
     event_date: datetime
     event_name: str
     session_sha: str
@@ -91,6 +102,7 @@ class LiveTimingSessionManager:
                             season_round=event.round_number,
                             event_sha=event.sha,
                             event_country=event.country,
+                            event_location=event.location,
                             event_date=event.date,
                             event_name=event.name,
                             session_sha=session.sha,
@@ -114,6 +126,53 @@ class LiveTimingSessionManager:
     def get_session(self, session_key: str) -> LiveTimingSession:
         session = next((i for i in self._sessions if i.session_key == session_key))
         return session
+
+    def filter_sessions(
+        self,
+        season: List[int] = None,
+        event_sha: List[str] = None,
+        # event_date: Union[datetime, DateRange] = None,
+        event_location: List[str] = None,
+        event_country: List[str] = None,
+        # round_number: Union[int, RoundRange] = None,
+        session_sha: List[str] = None,
+        # session_date: Union[datetime, DateRange] = None,
+        session_type: List[str] = None,
+    ) -> List[LiveTimingSession]:
+        _subset = self._sessions
+        _filters = {
+            "season": season,
+            "event_sha": event_sha,
+            # "event_date": event_date,
+            "event_location": event_location,
+            "event_country": event_country,
+            # "round_number": round_number,
+            "session_sha": session_sha,
+            # "session_date": session_date,
+            "session_type": session_type,
+        }
+        for k, v in _filters.items():
+            if v is None:
+                continue
+
+            match k:
+                case "season":
+                    _subset = self._filter_by_season(_subset, season)
+                case _:
+                    v = [i.strip().lower() for i in v]
+                    _subset = [i for i in _subset if getattr(i.metadata, k).strip().lower() in v]
+
+        return _subset
+
+    @staticmethod
+    def _filter_by_season(
+        sessions: List[LiveTimingSession], seasons: List[int]
+    ) -> List[LiveTimingSession]:
+        _subset = []
+        for i in seasons:
+            _subset.extend([j for j in sessions if j.metadata.event_date.year == i])
+
+        return _subset
 
     @staticmethod
     def _create_session_key(event: LiveTimingEvent, session: LiveTimingSession) -> str:
