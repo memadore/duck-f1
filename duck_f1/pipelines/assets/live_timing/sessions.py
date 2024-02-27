@@ -152,7 +152,7 @@ class LiveTimingSessionManager:
             "session_type": session_type,
         }
         for k, v in _filters.items():
-            if v is None:
+            if v is None or len(v) == 0:
                 continue
 
             match k:

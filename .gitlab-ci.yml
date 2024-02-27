@@ -19,8 +19,7 @@
     - mkdir /tmp/.dagster
     - cp ./.ci/dagster.yaml /tmp/.dagster/dagster.yaml
   run_dagster_jobs:
-    - poetry run dagster job execute -d duck_f1 -m pipelines -j ergast
-    - poetry run dagster job execute -d duck_f1 -m pipelines -j live_timing
+    - poetry run duck-f1 -o /tmp/data run --session-sha eb2f7f20
 
 stages:
   - test
@@ -40,10 +39,17 @@ python::linting:
 python::tests::unit:
   extends: .python-default
   stage: test
+  variables:
+    DAGSTER_DBT_PARSE_PROJECT_ON_LOAD: "0"
   before_script:
     - !reference [.snippets, poetry_setup]
     - poetry install --with dev
-    - poetry run dbt deps --project-dir=./duck_f1/transform/
+    - poetry run dbt deps --project-dir duck_f1/transform
+    - |
+      poetry run dbt parse \
+        --project-dir duck_f1/transform \
+        --profiles-dir duck_f1/transform \
+        --vars '{db_dir: "/tmp/data", db_name: "f1"}'
   script:
     - poetry run coverage run -m pytest tests -v --junitxml=report.xml
     - poetry run coverage xml
@@ -68,18 +74,24 @@ dbt::compile:
     POSTGRES_PASSWORD: password
     POSTGRES_HOST_AUTH_METHOD: trust
     DAGSTER_HOME: /tmp/.dagster
-    ENV: dev
+    DAGSTER_DBT_PARSE_PROJECT_ON_LOAD: "0"
     OUTPUT_DIR: /tmp/data
-    DUCK_DB_PATH: /tmp/data/f1.duckdb
   before_script:
     - !reference [.snippets, poetry_setup]
     - poetry install --with ci
     - !reference [.snippets, dagster_setup]
     - poetry run dbt deps --project-dir=./duck_f1/transform
+    - |
+      poetry run dbt parse \
+        --project-dir duck_f1/transform \
+        --profiles-dir duck_f1/transform \
+        --vars '{db_dir: "/tmp/data", db_name: "f1"}'
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/transform
   script:
-    - poetry run dbt compile
+    - |
+      poetry run dbt compile \
+        --vars '{db_dir: "/tmp/data", db_name: "f1"}'
 
 pages:
   extends: .python-default
@@ -92,7 +104,6 @@ pages:
     POSTGRES_PASSWORD: password
     POSTGRES_HOST_AUTH_METHOD: trust
     DAGSTER_HOME: /tmp/.dagster
-    ENV: dev
     OUTPUT_DIR: /tmp/data
     DUCK_DB_PATH: /tmp/data/f1.duckdb
   before_script:
@@ -102,7 +113,9 @@ pages:
     - poetry run dbt deps --project-dir=./duck_f1/transform
     - !reference [.snippets, run_dagster_jobs]
     - cd duck_f1/transform
-    - poetry run dbt build
+    - |
+      poetry run dbt build \
+        --vars '{db_dir: "/tmp/data", db_name: "f1"}'
   script:
     - poetry run dbt docs generate
   artifacts:

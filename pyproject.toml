@@ -7,6 +7,9 @@ license = "GPL-3.0-or-later"
 readme = "README.md"
 packages = [{include = "duck_f1"}]
 
+[tool.poetry.scripts]
+duck-f1 = "duck_f1.cli:cli"
+
 [tool.poetry.dependencies]
 python = "^3.11"
 dagster = "^1.6.5"

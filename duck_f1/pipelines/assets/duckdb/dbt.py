@@ -1,3 +1,4 @@
+import json
 from typing import Any, Mapping, Optional
 
 from dagster import AssetExecutionContext, AssetKey
@@ -9,6 +10,7 @@ from dagster_dbt import (
 )
 
 from ...constants import DBT_MANIFEST_PATH
+from ...resources import FileSystemResource
 
 
 class CustomDagsterDbtTranslator(DagsterDbtTranslator):
@@ -28,8 +30,15 @@ dagster_dbt_translator = CustomDagsterDbtTranslator(
     manifest=DBT_MANIFEST_PATH,
     dagster_dbt_translator=dagster_dbt_translator,
 )
-def duckdb_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
+def duckdb_dbt_assets(
+    context: AssetExecutionContext, dbt: DbtCliResource, fs_config: FileSystemResource
+):
     context.log.info("dbt manifest path: %s", DBT_MANIFEST_PATH)
-    dbt_build_args = ["build"]
+    var = {"db_dir": fs_config.output_path, "db_name": fs_config.db_name}
+    dbt_build_args = [
+        "build",
+        "--vars",
+        json.dumps(var),
+    ]
     context.log.info("Build args: %s", dbt_build_args)
     yield from dbt.cli(dbt_build_args, context=context).stream()

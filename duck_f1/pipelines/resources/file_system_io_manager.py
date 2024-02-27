@@ -32,11 +32,6 @@ class ArrowParquetIOManager(UPathIOManager):
             "row_count": obj.num_rows,
         }
 
-        # if os.getenv("ENV", "prod") == "dev":
-        #     output_metadata["preview"] = MetadataValue.md(
-        #         obj.slice(length=5).to_pandas().to_markdown(index=False)
-        #     )
-
         context.add_output_metadata(output_metadata)
 
     def load_from_path(self, context: InputContext, path: UPath) -> pa.Table:

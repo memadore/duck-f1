@@ -1,8 +1,8 @@
-import os
-
 import yaml
-from dagster import OpExecutionContext, SourceAsset, asset
+from dagster import AssetExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
+
+from ...resources import FileSystemResource
 
 with open("./config/ergast.yaml", "r", encoding="UTF-8") as stream:
     CONFIG = yaml.safe_load(stream)
@@ -17,14 +17,15 @@ def ergast_tables():
             key_prefix=["duckdb", "ingress", "ergast"],
             compute_kind="duckdb",
         )
-        def duck_db_asset(context: OpExecutionContext, duckdb: DuckDBResource) -> None:
-            OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./data")
+        def duck_db_asset(
+            context: AssetExecutionContext, duckdb: DuckDBResource, fs_config: FileSystemResource
+        ) -> None:
 
             with duckdb.get_connection() as conn:
                 conn.execute(
                     f"""
                     CREATE OR REPLACE TABLE ingress.ergast__{table} AS
-                    SELECT * FROM read_parquet('{OUTPUT_DIR}/ergast/{table}.parquet');
+                    SELECT * FROM read_parquet('{fs_config.output_path}/ergast/{table}.parquet');
                     """
                 )
 

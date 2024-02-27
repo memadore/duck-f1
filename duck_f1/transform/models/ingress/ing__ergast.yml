@@ -3,7 +3,7 @@ version: 2
 
 sources:
   - name: ing__ergast
-    database: f1
+    database: "{{ var('db_name') }}"
     schema: ingress
     tables:
       - name: ergast__circuits

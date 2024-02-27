@@ -16,6 +16,10 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+vars:
+  db_dir: data
+  db_name: f1
+
 models:
   dbt_duck_f1:
     staging:

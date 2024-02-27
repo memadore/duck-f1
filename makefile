@@ -17,7 +17,10 @@ dbt-build:
 
 dbt-compile:
 	cd ./duck_f1/transform; \
-	poetry run dbt compile;
+	poetry run dbt compile --vars '{db_dir: "../../data", db_name: f1}';
+
+duck-f1-weekend:
+	poetry run duck-f1 -o dist/data run --event-sha a3cf4bf0
 
 job-ergast:
 	poetry run dagster job execute -d duck_f1 -m pipelines -j ergast

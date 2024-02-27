@@ -36,7 +36,6 @@ class TestArrowParquetIOManagerOutput(unittest.TestCase):
         if os.path.exists("./tmp/test/data.parquet"):
             shutil.rmtree("./tmp")
 
-    @mock.patch.dict(os.environ, {"ENV": "dev"})
     def test_arrow_parquet_io_manager_output(self) -> None:
         context = build_output_context(
             name="test",
