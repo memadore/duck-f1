@@ -2,6 +2,7 @@ from datetime import datetime
 from typing import List
 
 import yaml
+from dagster import StaticPartitionsDefinition
 from pydantic import BaseModel
 
 
@@ -122,6 +123,10 @@ class LiveTimingSessionManager:
     def session_keys(self) -> List[str]:
         out = [i.session_key for i in self._sessions]
         return out
+
+    @property
+    def dagster_partitions(self) -> StaticPartitionsDefinition:
+        return StaticPartitionsDefinition(self.session_keys)
 
     def get_session(self, session_key: str) -> LiveTimingSession:
         session = next((i for i in self._sessions if i.session_key == session_key))

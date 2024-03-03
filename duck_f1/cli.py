@@ -58,11 +58,8 @@ def run(ctx, season, event_sha, event_location, event_country, session_sha, sess
         output_dir=ctx.obj["output_dir"], db_name=ctx.obj["db_name"]
     )
 
-    ops = definitions.get_job_def("live_timing").all_node_defs
-
     for i in track(target_sessions, f"Downloading {len(target_sessions)} sessions datasets ..."):
         config = {
-            "ops": {j.name: {"config": {"session_key": i.session_key}} for j in ops},
             "execution": {
                 "config": {
                     "multiprocess": {
@@ -76,7 +73,10 @@ def run(ctx, season, event_sha, event_location, event_country, session_sha, sess
         }
 
         definitions.get_job_def("live_timing").execute_in_process(
-            run_config=config, instance=dagster_instance, resources=init_resources(resource_config)
+            run_config=config,
+            instance=dagster_instance,
+            resources=init_resources(resource_config),
+            partition_key=i.session_key,
         )
 
     for i in track(range(1), "Downloading ergast datasets ......."):

@@ -1,21 +1,16 @@
 import base64
 import io
 import json
-import os
 import zlib
 from functools import partial
 from typing import Callable, List, Union
 
 import pyarrow as pa
 import requests
-from dagster import Config, OpExecutionContext, multi_asset
+from dagster import OpExecutionContext, multi_asset
 
 from .processors import LiveTimingProcessorBuilder
 from .sessions import LiveTimingDataset, LiveTimingSessionManager
-
-
-class LiveTimingConfig(Config):
-    session_key: str = os.getenv("LIVE_TIMING_SESSION")
 
 
 class LiveTimingApi:
@@ -104,11 +99,12 @@ def live_timing_files(
             group_name="live_timing",
             compute_kind="python",
             can_subset=True,
+            partitions_def=sessions_manager.dagster_partitions,
         )
-        def live_timing_asset(context: OpExecutionContext, config: LiveTimingConfig) -> pa.Table:
+        def live_timing_asset(context: OpExecutionContext) -> pa.Table:
 
             api_client = LiveTimingApi(context)
-            session = sessions_manager.get_session(config.session_key)
+            session = sessions_manager.get_session(context.partition_key)
             processor = processor_builder.build(dataset.table, session.metadata, context)
             data = api_client.get_dataset(session.event_path, dataset.file)
             assets = processor.run(data)

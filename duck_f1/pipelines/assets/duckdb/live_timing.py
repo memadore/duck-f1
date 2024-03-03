@@ -3,7 +3,7 @@ from dagster import AssetExecutionContext, SourceAsset, asset
 from dagster_duckdb import DuckDBResource
 
 from ...resources import FileSystemResource
-from ..live_timing.live_timing import LiveTimingConfig
+from ..live_timing import sessions_manager
 from ..live_timing.processors import LiveTimingProcessorBuilder
 from ..live_timing.sessions import LiveTimingConfigManager
 
@@ -46,14 +46,14 @@ def living_timing_tables():
             deps=[SourceAsset(["live_timing", table]), SourceAsset(["duckdb", "migrations"])],
             key_prefix=["duckdb", "ingress", "live_timing"],
             compute_kind="duckdb",
+            partitions_def=sessions_manager.dagster_partitions,
         )
         def duck_db_asset(
             context: AssetExecutionContext,
             duckdb: DuckDBResource,
             fs_config: FileSystemResource,
-            config: LiveTimingConfig,
         ) -> None:
-            pk = config.session_key
+            pk = context.partition_key
             filename = f"{fs_config.output_path}/live_timing/{table}/{pk}.parquet"
 
             with duckdb.get_connection() as conn:
