@@ -1,5 +1,3 @@
-from typing import Union
-
 import pyarrow as pa
 import pyarrow.parquet as pq
 from dagster import InputContext, OutputContext, UPathIOManager
@@ -8,17 +6,6 @@ from upath import UPath
 
 class ArrowParquetIOManager(UPathIOManager):
     extension: str = ".parquet"
-
-    def get_asset_relative_path(self, context: Union[InputContext, OutputContext]) -> "UPath":
-
-        if context._step_context is None:
-            return UPath(*context.asset_key.path)
-
-        step_config = context.step_context.op_config
-        if "session_key" in step_config.keys():
-            return UPath(*context.asset_key.path) / step_config["session_key"]
-        else:
-            return UPath(*context.asset_key.path)
 
     def dump_to_path(self, context: OutputContext, obj: pa.Table, path: UPath):
 
