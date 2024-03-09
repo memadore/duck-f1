@@ -1,12 +1,15 @@
 import unittest
 from datetime import datetime
+from pathlib import Path
 
-from duck_f1.pipelines.assets.live_timing.sessions import (
-    LiveTimingConfigManager,
+from duck_f1.pipelines.assets.live_timing import (
+    LiveTimingAssetManager,
+    LiveTimingSessionManager,
+)
+from duck_f1.pipelines.assets.live_timing.config import (
     LiveTimingEvent,
     LiveTimingSession,
     LiveTimingSessionDetail,
-    LiveTimingSessionManager,
 )
 
 
@@ -38,72 +41,73 @@ class TestLiveTimingKeyGenerators(unittest.TestCase):
 
 
 class TestLiveTimingConfigManager(unittest.TestCase):
-    CONFIG_PATH = "./tests/unit/assets/live_timing_config.yaml"
 
     @classmethod
     def setUpClass(cls):
-        cls._config_manager = LiveTimingConfigManager(cls.CONFIG_PATH)
-        cls._sessions_manager = LiveTimingSessionManager(cls._config_manager.events)
+
+        test_config_path = (Path(__file__).parent / "assets" / "live_timing_config.yaml").resolve()
+        asset_manager = LiveTimingAssetManager(test_config_path)
+        cls.session_manager = asset_manager.session_manager
 
     def test_live_timing_configuration_init(self):
         self.assertTrue(
-            all(isinstance(i, LiveTimingSession) for i in self._sessions_manager.sessions)
+            all(isinstance(i, LiveTimingSession) for i in self.session_manager.sessions)
         )
-        self.assertEqual(len(self._sessions_manager.sessions), 10)
+        self.assertEqual(len(self.session_manager.sessions), 10)
 
     def test_live_timing_sessions_keys(self):
-        self.assertTrue(all(isinstance(i, str) for i in self._sessions_manager.session_keys))
-        self.assertEqual(len(self._sessions_manager.session_keys), 10)
+        self.assertTrue(all(isinstance(i, str) for i in self.session_manager.session_keys))
+        self.assertEqual(len(self.session_manager.session_keys), 10)
 
     def test_live_timing_sessions_filter(self):
         # seasons
-        season_filter = self._sessions_manager.filter_sessions(season=[2018])
+        season_filter = self.session_manager.filter_sessions(season=[2018])
         self.assertEqual(len(season_filter), 5)
 
-        season_filter_array = self._sessions_manager.filter_sessions(season=[2018, 2019])
+        season_filter_array = self.session_manager.filter_sessions(season=[2018, 2019])
         self.assertEqual(len(season_filter_array), 10)
 
         # event_shas
-        event_sha_filter = self._sessions_manager.filter_sessions(event_sha=["d7abca72"])
+        event_sha_filter = self.session_manager.filter_sessions(event_sha=["d7abca72"])
         self.assertEqual(len(event_sha_filter), 5)
 
-        event_sha_filter_array = self._sessions_manager.filter_sessions(
+        event_sha_filter_array = self.session_manager.filter_sessions(
             event_sha=["d7abca72", "4bb2bbff"]
         )
         self.assertEqual(len(event_sha_filter_array), 10)
 
         # event_locations
-        event_location_filter = self._sessions_manager.filter_sessions(event_location=["Melbourne"])
+        event_location_filter = self.session_manager.filter_sessions(event_location=["Melbourne"])
         self.assertEqual(len(event_location_filter), 5)
 
-        event_location_filter_array = self._sessions_manager.filter_sessions(
+        event_location_filter_array = self.session_manager.filter_sessions(
             event_location=["Melbourne", "Sakhir"]
         )
         self.assertEqual(len(event_location_filter_array), 10)
 
         # event_countries
-        event_country_filter = self._sessions_manager.filter_sessions(event_country=["Australia"])
+        event_country_filter = self.session_manager.filter_sessions(event_country=["Australia"])
         self.assertEqual(len(event_country_filter), 5)
 
-        event_country_filter_array = self._sessions_manager.filter_sessions(
+        event_country_filter_array = self.session_manager.filter_sessions(
             event_country=["Australia", "Bahrain"]
         )
         self.assertEqual(len(event_country_filter_array), 10)
 
         # session_shas
-        session_sha_filter = self._sessions_manager.filter_sessions(session_sha=["79ca4465"])
+        session_sha_filter = self.session_manager.filter_sessions(session_sha=["79ca4465"])
         self.assertEqual(len(session_sha_filter), 1)
 
-        session_sha_filter_array = self._sessions_manager.filter_sessions(
+        session_sha_filter_array = self.session_manager.filter_sessions(
             session_sha=["79ca4465", "d6ee7fc4"]
         )
         self.assertEqual(len(session_sha_filter_array), 2)
 
         # session_types
-        session_type_filter = self._sessions_manager.filter_sessions(session_type=["race"])
+        session_type_filter = self.session_manager.filter_sessions(session_type=["race"])
         self.assertEqual(len(session_type_filter), 2)
 
-        session_type_filter_array = self._sessions_manager.filter_sessions(
+        session_type_filter_array = self.session_manager.filter_sessions(
             session_type=["qualifying", "race"]
         )
         self.assertEqual(len(session_type_filter_array), 4)

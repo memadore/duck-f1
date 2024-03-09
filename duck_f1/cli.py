@@ -3,7 +3,7 @@ from dagster import DagsterInstance
 from rich.progress import track
 
 from .pipelines import definitions
-from .pipelines.assets.live_timing import sessions_manager
+from .pipelines.assets import live_timing_asset_manager
 from .pipelines.resources import FileSystemResource, init_resources
 
 
@@ -41,7 +41,7 @@ def run(ctx, season, event_sha, event_location, event_country, session_sha, sess
     """
     Build the duckdb warehouse
     """
-    target_sessions = sessions_manager.filter_sessions(
+    target_sessions = live_timing_asset_manager.session_manager.filter_sessions(
         season=[*season],
         event_sha=[*event_sha],
         event_location=[*event_location],

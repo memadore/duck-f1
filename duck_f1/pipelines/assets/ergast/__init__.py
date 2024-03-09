@@ -5,8 +5,8 @@ import yaml
 from dagster import AssetOut, AssetsDefinition
 
 from .config import ErgastAsset, ErgastConfig
-from .duckdb import duckdb_asset_factory
-from .parquet import ergast_asset_factory
+from .duckdb import duckdb_parquet_asset_factory
+from .parquet import parquet_asset_factory
 
 
 class ErgastAssetsManager:
@@ -31,15 +31,15 @@ class ErgastAssetsManager:
     def url(self) -> str:
         return self._config.url
 
-    def get_parquet_assets(self) -> List[AssetsDefinition]:
+    def create_parquet_assets(self) -> List[AssetsDefinition]:
         return [
-            ergast_asset_factory(
+            parquet_asset_factory(
                 multi_asset_out=self._multi_asset_outs, ergast_assets=self.assets, url=self.url
             )
         ]
 
-    def get_duckdb_assets(self) -> List[AssetsDefinition]:
-        return [duckdb_asset_factory(i) for i in self.assets]
+    def create_duckdb_assets(self) -> List[AssetsDefinition]:
+        return [duckdb_parquet_asset_factory(i) for i in self.assets]
 
     def _create_multi_asset_outs(self) -> Dict[str, AssetOut]:
         default_config = {

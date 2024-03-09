@@ -10,7 +10,7 @@ import pyarrow as pa
 from dagster import AssetOut, OpExecutionContext, Output
 from pydantic import BaseModel
 
-from .sessions import LiveTimingSessionMetadata
+from .config import LiveTimingSessionMetadata
 
 
 class LiveTimingAsset(BaseModel):

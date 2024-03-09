@@ -2,7 +2,7 @@ import unittest
 from functools import partial
 from unittest.mock import MagicMock
 
-from duck_f1.pipelines.assets.live_timing.live_timing import LiveTimingApi
+from duck_f1.pipelines.assets.live_timing.api import LiveTimingApi
 
 
 class TestLiveTimingApiFileBuilder(unittest.TestCase):

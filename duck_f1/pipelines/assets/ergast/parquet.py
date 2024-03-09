@@ -9,7 +9,7 @@ from pyarrow import Table, csv
 from .config import ErgastAsset
 
 
-def ergast_asset_factory(
+def parquet_asset_factory(
     multi_asset_out: Dict[str, AssetOut], ergast_assets: List[ErgastAsset], url: str
 ):
     @multi_asset(

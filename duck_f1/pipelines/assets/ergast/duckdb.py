@@ -5,7 +5,7 @@ from ...resources import FileSystemResource
 from .config import ErgastAsset
 
 
-def duckdb_asset_factory(ergast_asset: ErgastAsset):
+def duckdb_parquet_asset_factory(ergast_asset: ErgastAsset):
     @asset(
         name=ergast_asset.asset_name,
         group_name="duckdb",

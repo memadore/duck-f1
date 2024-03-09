@@ -5,12 +5,8 @@ import zlib
 from functools import partial
 from typing import Callable, List, Union
 
-import pyarrow as pa
 import requests
-from dagster import OpExecutionContext, multi_asset
-
-from .processors import LiveTimingProcessorBuilder
-from .sessions import LiveTimingDataset, LiveTimingSessionManager
+from dagster import OpExecutionContext
 
 
 class LiveTimingApi:
@@ -85,45 +81,3 @@ class LiveTimingApi:
             return
 
         return file_processor(response)
-
-
-def live_timing_files(
-    sessions_manager: LiveTimingSessionManager, datasets: List[LiveTimingDataset]
-):
-    processor_builder = LiveTimingProcessorBuilder()
-
-    def parquet_file_factory(dataset: LiveTimingDataset, output_assets):
-        @multi_asset(
-            outs=output_assets,
-            name=dataset.table,
-            group_name="live_timing",
-            compute_kind="python",
-            can_subset=True,
-            partitions_def=sessions_manager.dagster_partitions,
-        )
-        def live_timing_asset(context: OpExecutionContext) -> pa.Table:
-
-            api_client = LiveTimingApi(context)
-            session = sessions_manager.get_session(context.partition_key)
-            processor = processor_builder.build(dataset.table, session.metadata, context)
-            data = api_client.get_dataset(session.event_path, dataset.file)
-            assets = processor.run(data)
-
-            for i in assets:
-                yield i
-
-        return live_timing_asset
-
-    out = []
-    for dataset in datasets:
-        if dataset.table in processor_builder.processors:
-            asset_config = {
-                "key_prefix": ["live_timing"],
-                "is_required": False,
-                "io_manager_key": "pyarrow_parquet_io_manager",
-            }
-
-            output_assets = processor_builder.assets_definition(dataset.table, **asset_config)
-            out.append(parquet_file_factory(dataset, output_assets))
-
-    return out

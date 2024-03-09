@@ -5,7 +5,7 @@ from dagster import AssetsDefinition
 from duck_f1.pipelines.assets.ergast import ErgastAssetsManager
 
 
-class TestCmaAssetManager(unittest.TestCase):
+class TestErgastAssetManager(unittest.TestCase):
     def setUp(cls) -> None:
         cls.ergast_assets_manager = ErgastAssetsManager()
 
@@ -27,7 +27,7 @@ class TestCmaAssetManager(unittest.TestCase):
             "ergast__status",
         }
 
-        static_assets = self.ergast_assets_manager.get_parquet_assets()
+        static_assets = self.ergast_assets_manager.create_parquet_assets()
 
         asset_keys = []
         for i in static_assets:
@@ -57,7 +57,7 @@ class TestCmaAssetManager(unittest.TestCase):
             "duckdb__ingress__ergast__status",
         }
 
-        duckdb_assets = self.ergast_assets_manager.get_duckdb_assets()
+        duckdb_assets = self.ergast_assets_manager.create_duckdb_assets()
 
         actual_assets = set([i.key.to_python_identifier() for i in duckdb_assets])
 
