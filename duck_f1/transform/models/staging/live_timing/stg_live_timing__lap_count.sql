@@ -1,13 +1,28 @@
 with
     raw_lap_count as (
-        select * from {{ source("ing__live_timing", "live_timing__lap_count") }}
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__lap_count"
+        ) | trim == "True" %}
+
+            select * from {{ source("ing__live_timing", "live_timing__lap_count") }}
+
+        {% else %}
+
+            select
+                null::integer as metric,
+                null::integer as value,
+                null::integer as _streamtimestamp,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
             metric as metric_lable,
             value as metric_value,
             _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata_raw_columns() }}
+            {{ live_timing__metadata() }}
         from raw_lap_count
     )
 select *

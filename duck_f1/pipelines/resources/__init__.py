@@ -26,7 +26,8 @@ class FileSystemResource(ConfigurableResource):
 def init_resources(fs_config: FileSystemResource) -> dict:
     return {
         "dbt": DbtCliResource(
-            project_dir=os.fspath(DBT_PROJECT_DIR), global_config_flags=["--quiet"]
+            project_dir=os.fspath(DBT_PROJECT_DIR),
+            global_config_flags=["--quiet"],
         ),
         "duckdb": DuckDBResource(database=fs_config.db_path),
         "fs_config": fs_config,

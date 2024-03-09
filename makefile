@@ -13,14 +13,18 @@ dagster-reset:
 
 dbt-build:
 	cd ./duck_f1/transform; \
-	poetry run dbt build;
+	poetry run dbt build --vars '{db_dir: "../../data", db_name: f1}' --target dist;
 
 dbt-compile:
 	cd ./duck_f1/transform; \
-	poetry run dbt compile --vars '{db_dir: "../../data", db_name: f1}';
+	poetry run dbt compile --vars '{db_dir: "../../data", db_name: f1}' --target dist;
+
+dbt-parse:
+	cd ./duck_f1/transform; \
+	poetry run dbt parse --vars '{db_dir: "../../data", db_name: f1}' --target dist;
 
 duck-f1-weekend:
-	poetry run duck-f1 -o dist/data run --event-sha a3cf4bf0
+	poetry run duck-f1 run --event-sha a3cf4bf0
 
 job-ergast:
 	poetry run dagster job execute -d duck_f1 -m pipelines -j ergast

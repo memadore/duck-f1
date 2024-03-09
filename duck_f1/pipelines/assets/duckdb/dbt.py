@@ -35,10 +35,6 @@ def duckdb_dbt_assets(
 ):
     context.log.info("dbt manifest path: %s", DBT_MANIFEST_PATH)
     var = {"db_dir": fs_config.output_path, "db_name": fs_config.db_name}
-    dbt_build_args = [
-        "build",
-        "--vars",
-        json.dumps(var),
-    ]
+    dbt_build_args = ["build", "--vars", json.dumps(var), "--target", "dist"]
     context.log.info("Build args: %s", dbt_build_args)
     yield from dbt.cli(dbt_build_args, context=context).stream()

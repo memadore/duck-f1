@@ -1,7 +1,25 @@
 with
     raw_race_control_messages as (
-        select *
-        from {{ source("ing__live_timing", "live_timing__race_control_messages") }}
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__race_control_messages"
+        ) | trim == "True" %}
+
+            select *
+            from {{ source("ing__live_timing", "live_timing__race_control_messages") }}
+
+        {% else %}
+
+            select
+                null::integer as messageid,
+                null::integer as utc,
+                null::integer as lap,
+                null::integer as category,
+                null::integer as messagedata,
+                null::integer as _streamtimestamp,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
@@ -11,7 +29,7 @@ with
             category as message_category,
             messagedata as message_data,
             _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata_raw_columns() }}
+            {{ live_timing__metadata() }}
         from raw_race_control_messages
     )
 select *

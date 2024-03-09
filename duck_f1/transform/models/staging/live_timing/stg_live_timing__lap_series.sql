@@ -1,14 +1,31 @@
 with
-    raw_lap_count as (
-        select * from {{ source("ing__live_timing", "live_timing__lap_count") }}
+    raw_lap_series as (
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__lap_series"
+        ) | trim == "True" %}
+
+            select * from {{ source("ing__live_timing", "live_timing__lap_series") }}
+
+        {% else %}
+
+            select
+                null::integer as drivernumber,
+                null::integer as lapnumber,
+                null::integer as laposition,
+                null::integer as _streamtimestamp,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
-            metric as metric_lable,
-            value as metric_value,
+            drivernumber as driver_number,
+            lapnumber as lap_number,
+            lapposition as lap_position,
             _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata_raw_columns() }}
-        from raw_lap_count
+            {{ live_timing__metadata() }}
+        from raw_lap_series
     )
 select *
 from formatted

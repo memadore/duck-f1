@@ -1,8 +1,14 @@
 ---
-dbt_duck_f1:
+duck_f1:
+  target: dev
   outputs:
     dev:
       type: duckdb
-      path: "{{ var('db_dir') }}/{{ var('db_name') }}.duckdb"
+      path: ../../data/f1.duckdb
+      schema: ""
       threads: 4
-  target: dev
+    dist:
+      type: duckdb
+      path: "{{ var('db_dir') }}/{{ var('db_name') }}.duckdb"
+      schema: ""
+      threads: 4

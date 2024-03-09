@@ -1,6 +1,34 @@
 with
     raw_session_info as (
-        select * from {{ source("ing__live_timing", "live_timing__session_info") }}
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__session_info"
+        ) | trim == "True" %}
+
+            select * from {{ source("ing__live_timing", "live_timing__session_info") }}
+
+        {% else %}
+
+            select
+                null::integer as meetingkey,
+                null::integer as meetingname,
+                null::integer as meetinglocation,
+                null::integer as meetingcountrykey,
+                null::integer as meetingcountrycode,
+                null::integer as meetingcountryname,
+                null::integer as meetingcircuitkey,
+                null::integer as meetingcircuitshortname,
+                null::integer as archivestatusstatus,
+                null::integer as key,
+                null::integer as type,
+                null::integer as name,
+                null::integer as startdate,
+                null::integer as enddate,
+                null::integer as gmtoffset,
+                null::integer as path,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
@@ -20,7 +48,7 @@ with
             enddate as session_end_data,
             gmtoffset as gmt_offset,
             path as session_path,
-            {{ live_timing__metadata_raw_columns() }}
+            {{ live_timing__metadata() }}
         from raw_session_info
     )
 select *

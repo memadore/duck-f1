@@ -1,6 +1,25 @@
 with
     raw_position as (
-        select * from {{ source("ing__live_timing", "live_timing__position") }}
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__position"
+        ) | trim == "True" %}
+
+            select * from {{ source("ing__live_timing", "live_timing__position") }}
+
+        {% else %}
+
+            select
+                null::integer as timestamp,
+                null::integer as driver,
+                null::integer as status,
+                null::integer as x,
+                null::integer as y,
+                null::integer as z,
+                null::integer as _streamtimestamp,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
@@ -11,7 +30,7 @@ with
             y as y_position,
             z as z_position,
             _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata_raw_columns() }}
+            {{ live_timing__metadata() }}
         from raw_position
     )
 select *

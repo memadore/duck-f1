@@ -1,7 +1,23 @@
 with
-    raw_driver_race_info as (
-        select *
-        from {{ source("ing__live_timing", "live_timing__extrapolated_clock") }}
+    raw_extrapolated_clock as (
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__extrapolated_clock"
+        ) | trim == "True" %}
+
+            select *
+            from {{ source("ing__live_timing", "live_timing__extrapolated_clock") }}
+
+        {% else %}
+
+            select
+                null::integer as utc,
+                null::integer as remaining,
+                null::integer as extrapolating,
+                null::integer as _streamtimestamp,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
@@ -9,8 +25,8 @@ with
             remaining as remaining_session_time,
             extrapolating as is_extrapolated,
             _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata_raw_columns() }}
-        from raw_driver_race_info
+            {{ live_timing__metadata() }}
+        from raw_extrapolated_clock
     )
 select *
 from formatted

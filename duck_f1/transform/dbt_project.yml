@@ -1,9 +1,9 @@
 ---
-name: "dbt_duck_f1"
+name: "duck_f1"
 version: "1.0.0"
 config-version: 2
 
-profile: "dbt_duck_f1"
+profile: "duck_f1"
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -21,7 +21,7 @@ vars:
   db_name: f1
 
 models:
-  dbt_duck_f1:
+  duck_f1:
     staging:
       +schema: staging
     assets:

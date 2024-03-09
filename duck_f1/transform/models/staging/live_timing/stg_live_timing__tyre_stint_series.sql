@@ -1,6 +1,27 @@
 with
     raw_tyre_stint_series as (
-        select * from {{ source("ing__live_timing", "live_timing__tyre_stint_series") }}
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__tyre_stint_series"
+        ) | trim == "True" %}
+
+            select *
+            from {{ source("ing__live_timing", "live_timing__tyre_stint_series") }}
+
+        {% else %}
+
+            select
+                null::integer as driver,
+                null::integer as stint,
+                null::integer as compound,
+                null::integer as new,
+                null::integer as tyresnotchanged,
+                null::integer as totallaps,
+                null::integer as startlaps,
+                null::integer as _streamtimestamp,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
@@ -12,7 +33,7 @@ with
             totallaps as total_laps,
             startlaps as start_laps,
             _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata_raw_columns() }}
+            {{ live_timing__metadata() }}
         from raw_tyre_stint_series
     )
 select *

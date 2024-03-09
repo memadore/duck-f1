@@ -895,6 +895,9 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
     def _sectors_transformer(data: dict) -> dict:
         out = {"sectors": [], "sector_segments": []}
 
+        if isinstance(data, list):  # skip if list
+            return out
+
         for sector_key, sector_data in data.items():
             if "Segments" in sector_data:
                 segments = sector_data.pop("Segments")
@@ -1328,6 +1331,9 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
                     stream_ts=i["_StreamTimestamp"], stints=i["Stints"]
                 )
             )
+
+        if len(processed_data) == 0:
+            return [LiveTimingAsset(key="tyre_stint_series", output=schema.empty_table())]
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
         return [LiveTimingAsset(key="tyre_stint_series", output=table)]

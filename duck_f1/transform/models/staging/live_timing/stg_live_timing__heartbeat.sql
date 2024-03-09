@@ -1,13 +1,27 @@
 with
     raw_heartbeat as (
-        select * from {{ source("ing__live_timing", "live_timing__heartbeat") }}
+        {% if check_if_source_exists(
+            "ing__live_timing", "live_timing__heartbeat"
+        ) | trim == "True" %}
+
+            select * from {{ source("ing__live_timing", "live_timing__heartbeat") }}
+
+        {% else %}
+
+            select
+                null::integer as utc,
+                null::integer as interval,
+                {{ live_timing__empty_metadata() }}
+            where false
+
+        {% endif %}
     ),
     formatted as (
         select
             utc::timestamp as utc_ts,
             _streamtimestamp::interval as _stream_ts,
             utc_ts - _stream_ts as start_utc,
-            {{ live_timing__metadata_raw_columns() }}
+            {{ live_timing__metadata() }}
         from raw_heartbeat
     )
 select *

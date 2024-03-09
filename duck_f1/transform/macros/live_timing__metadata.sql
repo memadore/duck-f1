@@ -1,4 +1,4 @@
-{% macro live_timing__metadata_raw_columns() %}
+{% macro live_timing__metadata() %}
     season_round as season_round,
     event_sha as event_sha,
     event_country as event_country,
