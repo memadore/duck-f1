@@ -1,48 +1,40 @@
-[tool.poetry]
+[project]
+authors = [{ name = "Marc-Etienne Madore", email = "marc-etienne@madore.cc" }]
+license = { text = "GPL-3.0-or-later" }
+requires-python = ">=3.9,<3.12"
+dependencies = [
+    "dagster<2.0.0,>=1.6.5",
+    "dagster-dbt<1.0.0,>=0.22.5",
+    "dagster-duckdb<1.0.0,>=0.22.5",
+    "dbt-duckdb<2.0.0,>=1.7.1",
+    "duckdb<1,>=0",
+    "pyarrow<16.0.0,>=15.0.0",
+    "requests<3.0.0,>=2.31.0",
+]
 name = "duck-f1"
 version = "0.1.0"
 description = "Formula 1 historical and telemetry datasets with DuckDB"
-authors = ["Marc-Etienne Madore <memadore@duck.com>"]
-license = "GPL-3.0-or-later"
 readme = "README.md"
-packages = [{include = "duck_f1"}]
 
-[tool.poetry.scripts]
+[project.scripts]
 duck-f1 = "duck_f1.cli:cli"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-dagster = "^1.6.5"
-dagster-dbt = "^0.22.5"
-dagster-duckdb = "^0"
-dbt-duckdb = "^1.7.1"
-duckdb = "^0"
-pandas = "^2.2.0"
-pyarrow = "^14.0.2"
-requests = "^2.31.0"
-
-
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-dagster-postgres = "^0.22.5"
-dagster-webserver = "^1.6.5"
-harlequin = "^1.15.0"
-flake8 = "^6.1.0"
-pytest = "^7.4.4"
-coverage = "^7.4.1"
-
-
-[tool.poetry.group.ci]
-optional = true
-
-[tool.poetry.group.ci.dependencies]
-dagster-postgres = "^0.22.5"
 
 [tool.black]
 line-length = 100
 
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "dagster-webserver<2.0.0,>=1.6.5",
+    "harlequin<2.0.0,>=1.15.0",
+    "flake8<7.0.0,>=6.1.0",
+    "pytest<8.0.0,>=7.4.4",
+    "coverage<8.0.0,>=7.4.1",
+]
+
+[tool.pdm.build]
+includes = ["duck_f1"]
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
