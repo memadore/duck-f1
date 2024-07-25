@@ -12,16 +12,20 @@ dagster-reset:
 	cp .devcontainer/config/dagster.yaml ${HOME}/.dagster
 
 dbt-build:
-	cd ./duck_f1/transform; \
-	pdm run dbt build --vars '{db_dir: "../../data", db_name: f1}' --target dist;
+	cd ./src/duck_f1/transform; \
+	pdm run dbt build --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
 
 dbt-compile:
-	cd ./duck_f1/transform; \
-	pdm run dbt compile --vars '{db_dir: "../../data", db_name: f1}' --target dist;
+	cd ./src/duck_f1/transform; \
+	pdm run dbt compile --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
+
+dbt-deps:
+	cd ./src/duck_f1/transform; \
+	pdm run dbt deps
 
 dbt-parse:
-	cd ./duck_f1/transform; \
-	pdm run dbt parse --vars '{db_dir: "../../data", db_name: f1}' --target dist;
+	cd ./src/duck_f1/transform; \
+	pdm run dbt parse --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
 
 duck-f1-weekend:
 	pdm run duck-f1 run --event-sha a3cf4bf0

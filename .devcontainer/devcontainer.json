@@ -1,0 +1,30 @@
+{
+	"name": "Debian",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"remoteEnv": {
+		"PYENV_ROOT": "/home/vscode/.pyenv",
+		"PATH": "/home/vscode/.pyenv/shims:/home/vscode/.pyenv/bin:/home/vscode/.local/bin:${containerEnv:PATH}"
+	},
+	"postCreateCommand": "bash ./.devcontainer/scripts/post_create.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"redhat.vscode-yaml",
+				"charliermarsh.ruff",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"eamodio.gitlens"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				}
+			}
+		}
+	}
+}

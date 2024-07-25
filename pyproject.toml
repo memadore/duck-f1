@@ -3,7 +3,7 @@ authors = [{ name = "Marc-Etienne Madore", email = "marc-etienne@madore.cc" }]
 license = { text = "GPL-3.0-or-later" }
 requires-python = ">=3.9,<3.12"
 dependencies = [
-    "dagster<2.0.0,>=1.6.5",
+    "dagster<1.7.0,>=1.6.5",
     "dagster-dbt<1.0.0,>=0.22.5",
     "dagster-duckdb<1.0.0,>=0.22.5",
     "dbt-duckdb<2.0.0,>=1.7.1",
@@ -31,9 +31,6 @@ dev = [
     "pytest<8.0.0,>=7.4.4",
     "coverage<8.0.0,>=7.4.1",
 ]
-
-[tool.pdm.build]
-includes = ["duck_f1"]
 
 [build-system]
 requires = ["pdm-backend"]
