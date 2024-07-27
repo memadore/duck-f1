@@ -11,7 +11,7 @@ with
             forename as first_name,
             surname as last_name,
             concat_ws(' ', forename, surname) as full_name,
-            strptime(dob, '%Y-%m-%d') as date_of_birth,
+            dob as date_of_birth,
             datesub('y', date_of_birth, today())::integer as age_years,
             datesub('d', date_of_birth, today())::integer as age_days,
             nationality as nationality,
