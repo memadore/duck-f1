@@ -24,7 +24,6 @@ def parquet_asset_factory(
         partitions_def=session_partitions,
     )
     def live_timing_asset(context: AssetExecutionContext) -> Table:
-
         api_client = LiveTimingApi(context)
         session = session_mapper(context.partition_key)
         processor = processor_builder.build(dataset.table, session.metadata, context)

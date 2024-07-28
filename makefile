@@ -37,11 +37,12 @@ job-live-timing:
 	pdm run dagster job execute -d duck_f1 -m pipelines -j live_timing
 
 py-clean:
-	find ./duck_f1/ -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
+	find ./src/duck_f1/ -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 	find ./tests/ -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
-	rm -f .coverage
+	rm -f .coverage coverage.xml report.xml
 	rm -rf .pytest_cache
+	rm -rf .ruff_cache
+	rm -rf .pdm_build
 
 py-tests:
 	pdm run coverage run -m pytest tests -v --junitxml=report.xml && pdm run coverage xml
-

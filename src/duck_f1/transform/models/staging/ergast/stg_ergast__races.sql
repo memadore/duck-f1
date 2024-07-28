@@ -1,44 +1,43 @@
 with
-    raw_races as (select * from {{ source("ing__ergast", "ergast__races") }}),
-    foreign_keys as (
-        select *
-        from raw_races race
-        join
-            (
-                select circuit_id, ergast_circuit_id
-                from {{ ref("stg_ergast__circuits") }}
-            ) circuit
-            on race.circuitid = circuit.ergast_circuit_id
-    ),
-    formatted as (
-        select
-            {{ dbt_utils.generate_surrogate_key(["date", "name"]) }} as race_id,
-            circuit_id,
-            raceid as ergast_race_id,
-            year as year,
-            round as round,
-            name as name,
-            date as date,
-            time as event_time,
-            concat(
-                date,
-                ' ',
-                case when time like '\N' then '00:00:00' else time end,
-                ' GMT'
-            )::timestamptz as race_time_gmt,
-            url as url,
-            fp1_date as fp1_date,
-            fp1_time as fp1_time,
-            fp2_date as fp2_date,
-            fp2_time as fp2_time,
-            fp3_date as fp3_date,
-            fp3_time as fp3_time,
-            quali_date as quali_date,
-            quali_time as quali_time,
-            sprint_date as sprint_date,
-            sprint_time as sprint_time
-        from foreign_keys
-    )
+raw_races as (select * from {{ source("ing__ergast", "ergast__races") }}),
+
+circuit_ids as (
+    select
+        circuit_id,
+        ergast_circuit_id
+    from {{ ref("stg_ergast__circuits") }}
+),
+
+formatted as (
+    select
+        {{ dbt_utils.generate_surrogate_key(["race.date", "race.name"]) }} as race_id,
+        circuit.circuit_id,
+        race.raceid as ergast_race_id,
+        race.year,
+        race.round,
+        race.name,
+        race.date,
+        race.time as event_time,
+        cast(concat(
+            race.date,
+            ' ',
+            case when race.time like '\N' then '00:00:00' else race.time end,
+            ' GMT'
+        ) as timestamptz) as race_time_gmt,
+        race.url,
+        race.fp1_date,
+        race.fp1_time,
+        race.fp2_date,
+        race.fp2_time,
+        race.fp3_date,
+        race.fp3_time,
+        race.quali_date,
+        race.quali_time,
+        race.sprint_date,
+        race.sprint_time
+    from raw_races as race
+    inner join circuit_ids as circuit on race.circuitid = circuit.ergast_circuit_id
+)
+
 select *
 from formatted
-order by year desc

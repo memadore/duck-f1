@@ -25,7 +25,9 @@ class AbstractLiveTimingProcessor(ABC):
     source_asset: str
     materializing_assets: List[str]
 
-    def __init__(self, context: OpExecutionContext, metadata: LiveTimingSessionMetadata) -> None:
+    def __init__(
+        self, context: OpExecutionContext, metadata: LiveTimingSessionMetadata
+    ) -> None:
         self.context = context
         self.metadata = metadata
 
@@ -57,7 +59,9 @@ class AbstractLiveTimingProcessor(ABC):
                     column_type = pa.string()
                     column_value = str(value)
 
-            table = table.append_column(col, pa.array([column_value] * table_len, column_type))
+            table = table.append_column(
+                col, pa.array([column_value] * table_len, column_type)
+            )
 
         return table
 
@@ -158,7 +162,9 @@ class CarDataProcessor(AbstractLiveTimingProcessor):
         capture_ts = entry["Utc"]
         for car_number, car_data in entry["Cars"].items():
             records = CarDataProcessor._explode(
-                capture_ts=capture_ts, car_number=car_number, channel_data=car_data["Channels"]
+                capture_ts=capture_ts,
+                car_number=car_number,
+                channel_data=car_data["Channels"],
             )
             out.extend(records)
 
@@ -257,7 +263,9 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
             if "Drivers" in i:
                 processed_data.extend(
                     ChampionshipPredictionProcessor._row_processor(
-                        stream_ts=i["_StreamTimestamp"], entity="driver", data=i["Drivers"]
+                        stream_ts=i["_StreamTimestamp"],
+                        entity="driver",
+                        data=i["Drivers"],
                     )
                 )
 
@@ -581,7 +589,9 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
             if driver == "_deleted":
                 continue
 
-            out.append({"Driver": driver, "Duration": data["Duration"], "Lap": data["Lap"]})
+            out.append(
+                {"Driver": driver, "Duration": data["Duration"], "Lap": data["Lap"]}
+            )
 
         out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
         return out
@@ -618,7 +628,9 @@ class PositionProcessor(AbstractLiveTimingProcessor):
         out = []
         capture_ts = entry["Timestamp"]
         for driver_number, position_data in entry["Entries"].items():
-            out.append({"Timestamp": capture_ts, "Driver": driver_number, **position_data})
+            out.append(
+                {"Timestamp": capture_ts, "Driver": driver_number, **position_data}
+            )
 
         return out
 
@@ -684,7 +696,11 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
                     out.append(RaceControlMessagesProcessor._entry_transformer(None, i))
             case dict():
                 for message_id, data in messages.items():
-                    out.append(RaceControlMessagesProcessor._entry_transformer(message_id, data))
+                    out.append(
+                        RaceControlMessagesProcessor._entry_transformer(
+                            message_id, data
+                        )
+                    )
             case _:
                 return
 
@@ -728,7 +744,9 @@ class SessionDataProcessor(AbstractLiveTimingProcessor):
             measure = {"Key": key, "Utc": i.pop("Utc")}
 
             for metric_name, metric_value in i.items():
-                measure.update({"MetricName": metric_name, "MetricValue": str(metric_value)})
+                measure.update(
+                    {"MetricName": metric_name, "MetricValue": str(metric_value)}
+                )
 
             out.append(measure)
 
@@ -752,7 +770,9 @@ class SessionDataProcessor(AbstractLiveTimingProcessor):
             )
 
             processed_data.extend(
-                SessionDataProcessor._row_processor(key="StatusSeries", data=i["StatusSeries"])
+                SessionDataProcessor._row_processor(
+                    key="StatusSeries", data=i["StatusSeries"]
+                )
             )
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
@@ -903,7 +923,9 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                 segments = sector_data.pop("Segments")
                 if not isinstance(segments, list):  # skip if list
                     out["sector_segments"].extend(
-                        TimingDataProcessor._sector_segments_transformer(sector_key, segments)
+                        TimingDataProcessor._sector_segments_transformer(
+                            sector_key, segments
+                        )
                     )
 
             out["sectors"].append(
@@ -965,9 +987,13 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
                 case "Sectors":
                     transformer_output = TimingDataProcessor._sectors_transformer(data)
                     out["timing_data_sectors"].extend(transformer_output["sectors"])
-                    out["timing_data_sector_segments"].extend(transformer_output["sector_segments"])
+                    out["timing_data_sector_segments"].extend(
+                        transformer_output["sector_segments"]
+                    )
                 case "Speeds":
-                    out["timing_data_speeds"].extend(TimingDataProcessor._speeds_transformer(data))
+                    out["timing_data_speeds"].extend(
+                        TimingDataProcessor._speeds_transformer(data)
+                    )
                 case _:
                     out["timing_data_status"].append(
                         TimingDataProcessor._status_transformer(metric, data)
@@ -1090,7 +1116,11 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
 
 class TimingStatsProcessor(AbstractLiveTimingProcessor):
     source_asset = "timing_stats"
-    materializing_assets = ["timing_stats_lap_times", "timing_stats_sectors", "timing_stats_speeds"]
+    materializing_assets = [
+        "timing_stats_lap_times",
+        "timing_stats_sectors",
+        "timing_stats_speeds",
+    ]
 
     @staticmethod
     def _stack_dicts(data: List[dict]) -> dict:
@@ -1277,7 +1307,9 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
         for stint, data in driver_stints.items():
             new = data["New"].lower() in ("true") if "New" in data else None
             tyres_not_changed = (
-                bool(int(data["TyresNotChanged"])) if "TyresNotChanged" in data else None
+                bool(int(data["TyresNotChanged"]))
+                if "TyresNotChanged" in data
+                else None
             )
 
             out.append(
@@ -1333,7 +1365,9 @@ class TyreStintSeriesProcessor(AbstractLiveTimingProcessor):
             )
 
         if len(processed_data) == 0:
-            return [LiveTimingAsset(key="tyre_stint_series", output=schema.empty_table())]
+            return [
+                LiveTimingAsset(key="tyre_stint_series", output=schema.empty_table())
+            ]
 
         table = pa.Table.from_pylist(processed_data).cast(schema)
         return [LiveTimingAsset(key="tyre_stint_series", output=table)]
@@ -1407,7 +1441,10 @@ class LiveTimingProcessorBuilder:
         return assets
 
     def build(
-        self, table: str, metadata: LiveTimingSessionMetadata, context: OpExecutionContext
+        self,
+        table: str,
+        metadata: LiveTimingSessionMetadata,
+        context: OpExecutionContext,
     ) -> AbstractLiveTimingProcessor:
         processor = self._processors.get(table, None)
         return processor(context, metadata)

@@ -31,7 +31,7 @@ Sync between the timing clock and the UTC time
 {% enddocs %}
 ---
 {% docs tbl_stg_live_timing__heartbeat %}
-Live timing heartbeat 
+Live timing heartbeat
 {% enddocs %}
 ---
 {% docs tbl_stg_live_timing__index %}

@@ -1,12 +1,12 @@
 with
-    raw_audio_streams as (
+raw_audio_streams as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__audio_streams"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__audio_streams") }}
+        select * from {{ source("ing__live_timing", "live_timing__audio_streams") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null:integer as name,
@@ -19,17 +19,19 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            name,
-            language,
-            uri,
-            path,
-            utc as event_utc_ts,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_audio_streams
-    )
+),
+
+formatted as (
+    select
+        name,
+        language,
+        uri,
+        path,
+        utc as event_utc_ts,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_audio_streams
+)
+
 select *
 from formatted

@@ -1,12 +1,12 @@
 with
-    raw_tla_rcm as (
+raw_tla_rcm as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__tla_rcm"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__tla_rcm") }}
+        select * from {{ source("ing__live_timing", "live_timing__tla_rcm") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as timestamp,
@@ -16,14 +16,16 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            timestamp as event_local_ts,
-            message as race_control_message,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_tla_rcm
-    )
+),
+
+formatted as (
+    select
+        timestamp as event_local_ts,
+        message as race_control_message,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_tla_rcm
+)
+
 select *
 from formatted

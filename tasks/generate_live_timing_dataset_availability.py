@@ -65,7 +65,9 @@ with open("./dist/doc/live_timing_datasets.md", "w", encoding="utf-8") as file:
             event_df.reset_index(inplace=True)
 
             cols = list(event_df.columns)
-            renamed_cols = dict([(i, i.replace("_", " ").lower().title()) for i in cols])
+            renamed_cols = dict(
+                [(i, i.replace("_", " ").lower().title()) for i in cols]
+            )
             event_df.rename(columns=renamed_cols, inplace=True)
 
             file.write(event_df.to_markdown(index=False))

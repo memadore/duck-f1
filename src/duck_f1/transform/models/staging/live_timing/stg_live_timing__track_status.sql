@@ -1,12 +1,12 @@
 with
-    raw_track_status as (
+raw_track_status as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__track_status"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__track_status") }}
+        select * from {{ source("ing__live_timing", "live_timing__track_status") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as status,
@@ -16,14 +16,16 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            status as status_id,
-            message as status_message,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_track_status
-    )
+),
+
+formatted as (
+    select
+        status as status_id,
+        message as status_message,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_track_status
+)
+
 select *
 from formatted

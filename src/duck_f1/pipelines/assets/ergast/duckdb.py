@@ -17,9 +17,10 @@ def duckdb_parquet_asset_factory(ergast_asset: ErgastAsset):
         compute_kind="duckdb",
     )
     def _duck_db_asset(
-        context: AssetExecutionContext, duckdb: DuckDBResource, fs_config: FileSystemResource
+        context: AssetExecutionContext,
+        duckdb: DuckDBResource,
+        fs_config: FileSystemResource,
     ) -> None:
-
         table = ergast_asset.asset_name
         base_path = fs_config.output_path
 

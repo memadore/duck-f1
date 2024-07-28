@@ -8,7 +8,6 @@ class ArrowParquetIOManager(UPathIOManager):
     extension: str = ".parquet"
 
     def dump_to_path(self, context: OutputContext, obj: pa.Table, path: UPath):
-
         with path.open("wb") as file:
             pq.write_table(obj, file)
 

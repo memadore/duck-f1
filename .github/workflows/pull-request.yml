@@ -1,3 +1,4 @@
+---
 name: Pull Request Validation
 on:
   pull_request:
@@ -21,7 +22,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          pdm install -d
+          pdm install --prod
           pdm run dbt deps --project-dir src/duck_f1/transform
       - name: Parse dbt project
         run: |
@@ -35,6 +36,7 @@ jobs:
     runs-on: k8s-arc
     needs:
       - dbt-parse
+      - yaml-lint
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -48,7 +50,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install python dependencies
         run: |
-          pdm install -d\
+          pdm install --prod
       - name: Prepare dbt project
         run: |
           pdm run dbt deps --project-dir src/duck_f1/transform
@@ -84,7 +86,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install python dependencies
         run: |
-          pdm install -d\
+          pdm install --prod
       - name: Prepare dbt project
         run: |
           pdm run dbt deps --project-dir src/duck_f1/transform
@@ -102,7 +104,7 @@ jobs:
             --profiles-dir src/duck_f1/transform \
             --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
             --target dist
-  # MARK: - Python
+  # MARK: - python
   python-linting:
     name: python::linting
     runs-on: k8s-arc
@@ -119,13 +121,45 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          pdm install -d
+          pdm install --group lint
       - name: Run tests
         run: |
-          pdm run flake8 src/duck_f1 --max-line-length=100
+          pdm run ruff format --check src/duck_f1/pipelines
   python-tests:
     runs-on: k8s-arc
     name: python::unit-tests
+    needs:
+      - dbt-parse
+      - python-linting
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: |
+          pdm install --group test
+          pdm run dbt deps --project-dir src/duck_f1/transform
+          pdm run dbt parse \
+            --project-dir src/duck_f1/transform \
+            --profiles-dir src/duck_f1/transform \
+            --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
+            --target dist
+      - name: Run tests
+        run: |
+          pdm run coverage run -m pytest tests -v --junitxml=report.xml
+          pdm run coverage xml
+          pdm run coverage report --show-missing --precision=2
+  # MARK: - python
+  sql-linting:
+    name: sql::linting
+    runs-on: k8s-arc
     needs:
       - dbt-parse
     steps:
@@ -141,15 +175,26 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          pdm install -d
+          pdm install --group lint
+          mkdir data
           pdm run dbt deps --project-dir src/duck_f1/transform
-          pdm run dbt parse \
-            --project-dir src/duck_f1/transform \
-            --profiles-dir src/duck_f1/transform \
-            --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
-            --target dist
+          pdm run duck-f1 run --session-sha eb2f7f20
       - name: Run tests
         run: |
-          pdm run coverage run -m pytest tests -v --junitxml=report.xml
-          pdm run coverage xml
-          pdm run coverage report --show-missing --precision=2
+          pdm run sqlfluff lint src/duck_f1/transform/models
+  # MARK: - yaml
+  yaml-lint:
+    runs-on: k8s-arc
+    name: yaml::lint
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ">=1.18.0"
+      - name: Install yamlfmt
+        run: go install github.com/google/yamlfmt/cmd/yamlfmt@v0.13.0
+      - name: Run yamlfmt
+        run: |
+          yamlfmt -lint .

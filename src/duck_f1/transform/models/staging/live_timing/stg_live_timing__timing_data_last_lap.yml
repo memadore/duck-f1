@@ -1,6 +1,5 @@
 ---
 version: 2
-
 models:
   - name: stg_live_timing__timing_data_last_lap
     description: '{{ doc("tbl_stg_live_timing__timing_data_last_lap") }}'

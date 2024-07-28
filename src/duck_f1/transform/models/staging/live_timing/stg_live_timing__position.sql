@@ -1,12 +1,12 @@
 with
-    raw_position as (
+raw_position as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__position"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__position") }}
+        select * from {{ source("ing__live_timing", "live_timing__position") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as timestamp,
@@ -20,18 +20,20 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            timestamp as event_utc_ts,
-            driver as driver,
-            status as status,
-            x as x_position,
-            y as y_position,
-            z as z_position,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_position
-    )
+),
+
+formatted as (
+    select
+        timestamp as event_utc_ts,
+        driver,
+        status,
+        x as x_position,
+        y as y_position,
+        z as z_position,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_position
+)
+
 select *
 from formatted

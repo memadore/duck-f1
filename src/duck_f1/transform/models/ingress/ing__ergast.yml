@@ -1,6 +1,5 @@
 ---
 version: 2
-
 sources:
   - name: ing__ergast
     database: "{{ var('db_name') }}"

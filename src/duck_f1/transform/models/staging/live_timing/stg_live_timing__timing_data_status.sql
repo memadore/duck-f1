@@ -1,13 +1,13 @@
 with
-    raw_timing_data_status as (
+raw_timing_data_status as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__timing_data_status"
         ) | trim == "True" %}
 
-            select *
-            from {{ source("ing__live_timing", "live_timing__timing_data_status") }}
+        select *
+        from {{ source("ing__live_timing", "live_timing__timing_data_status") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as driver,
@@ -18,15 +18,17 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            driver as driver,
-            metricname as metric_name,
-            metricvalue as metric_value,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_timing_data_status
-    )
+),
+
+formatted as (
+    select
+        driver,
+        metricname as metric_name,
+        metricvalue as metric_value,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_timing_data_status
+)
+
 select *
 from formatted

@@ -2,24 +2,19 @@
 name: "duck_f1"
 version: "1.0.0"
 config-version: 2
-
 profile: "duck_f1"
-
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
-
 clean-targets:
   - "target"
   - "dbt_packages"
-
 vars:
   db_dir: data
   db_name: f1
-
 models:
   duck_f1:
     staging:

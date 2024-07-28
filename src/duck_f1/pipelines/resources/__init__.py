@@ -31,5 +31,7 @@ def init_resources(fs_config: FileSystemResource) -> dict:
         ),
         "duckdb": DuckDBResource(database=fs_config.db_path),
         "fs_config": fs_config,
-        "pyarrow_parquet_io_manager": ArrowParquetIOManager(base_path=UPath(fs_config.output_path)),
+        "pyarrow_parquet_io_manager": ArrowParquetIOManager(
+            base_path=UPath(fs_config.output_path)
+        ),
     }

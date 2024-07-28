@@ -1,12 +1,12 @@
 with
-    raw_weather_data as (
+raw_weather_data as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__weather_data"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__weather_data") }}
+        select * from {{ source("ing__live_timing", "live_timing__weather_data") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as airtemp,
@@ -22,20 +22,22 @@ with
 
         {% endif %}
 
-    ),
-    formatted as (
-        select
-            airtemp as air_temperature,
-            humidity as relative_humidity,
-            pressure as air_pressure,
-            rainfall as rain_accumulation,
-            tracktemp as track_temperature,
-            winddirection as wind_direction,
-            windspeed as wind_speed,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__stream_ts_to_ms("_stream_ts") }},
-            {{ live_timing__metadata() }}
-        from raw_weather_data
-    )
+),
+
+formatted as (
+    select
+        airtemp as air_temperature,
+        humidity as relative_humidity,
+        pressure as air_pressure,
+        rainfall as rain_accumulation,
+        tracktemp as track_temperature,
+        winddirection as wind_direction,
+        windspeed as wind_speed,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__stream_ts_to_ms("_stream_ts") }},
+        {{ live_timing__metadata() }}
+    from raw_weather_data
+)
+
 select *
 from formatted

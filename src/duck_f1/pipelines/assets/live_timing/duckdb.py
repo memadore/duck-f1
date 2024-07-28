@@ -14,7 +14,10 @@ def duckdb_parquet_asset_factory(
     @asset(
         name=asset_name,
         group_name="duckdb",
-        deps=[SourceAsset(["live_timing", asset_name]), SourceAsset(["duckdb", "migrations"])],
+        deps=[
+            SourceAsset(["live_timing", asset_name]),
+            SourceAsset(["duckdb", "migrations"]),
+        ],
         key_prefix=["duckdb", "ingress", "live_timing"],
         compute_kind="duckdb",
         partitions_def=session_partitions,
@@ -45,7 +48,9 @@ def duckdb_parquet_asset_factory(
                         """
                 )
             else:
-                context.log.info("Table not found. Creating new table and inserting data.")
+                context.log.info(
+                    "Table not found. Creating new table and inserting data."
+                )
                 conn.execute(
                     f"""
                         CREATE TABLE ingress.live_timing__{asset_name} AS
@@ -69,7 +74,9 @@ def duckdb_live_timing_sessions(events: List[LiveTimingEvent]):
         for event in events:
             for session in event.sessions:
                 event_data = {f"event_{k}": v for k, v in event.model_dump().items()}
-                session_data = {f"session_{k}": v for k, v in session.model_dump().items()}
+                session_data = {
+                    f"session_{k}": v for k, v in session.model_dump().items()
+                }
                 out.append({**event_data, **session_data})
 
         table = pa.Table.from_pylist(out)

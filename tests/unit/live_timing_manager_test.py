@@ -55,12 +55,12 @@ class TestLiveTimingAssetManager(unittest.TestCase):
 
         self.assertTrue(all(isinstance(i, AssetsDefinition) for i in parquet_assets))
         self.assertEqual(
-            len(parquet_assets), len(self.live_timing_assets_manager.processor_builder.processors)
+            len(parquet_assets),
+            len(self.live_timing_assets_manager.processor_builder.processors),
         )
         self.assertEqual(actual_assets, expected_assets)
 
     def test_get_live_timing_duck_db_assets(self):
-
         expected_assets = {
             "duckdb__ingress__live_timing__archive_status",
             "duckdb__ingress__live_timing__audio_streams",

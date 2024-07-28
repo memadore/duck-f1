@@ -1,14 +1,14 @@
 with
-    raw_championship_prediction as (
+raw_championship_prediction as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__championship_prediction"
         ) | trim == "True" %}
 
-            select *
-            from
-                {{ source("ing__live_timing", "live_timing__championship_prediction") }}
+        select *
+        from
+            {{ source("ing__live_timing", "live_timing__championship_prediction") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as entity,
@@ -20,16 +20,18 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            entity as entity,
-            identifier as identifier,
-            metric as metric_name,
-            value as metric_value,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_championship_prediction
-    )
+),
+
+formatted as (
+    select
+        entity,
+        identifier,
+        metric as metric_name,
+        value as metric_value,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_championship_prediction
+)
+
 select *
 from formatted

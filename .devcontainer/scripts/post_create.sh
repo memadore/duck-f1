@@ -16,4 +16,9 @@ python3 -m ensurepip --upgrade
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 
-pipx install pdm
+pipx install \
+    pdm \
+    pre-commit \
+
+make py-clean
+pdm install -G:all

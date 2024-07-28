@@ -1,6 +1,5 @@
 ---
 version: 2
-
 models:
   - name: stg_live_timing__race_control_messages
     description: '{{ doc("tbl_stg_live_timing__race_control_messages") }}'
