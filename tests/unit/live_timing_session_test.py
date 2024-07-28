@@ -15,7 +15,10 @@ from duck_f1.pipelines.assets.live_timing.config import (
 
 class TestLiveTimingKeyGenerators(unittest.TestCase):
     SESSION = LiveTimingSessionDetail(
-        sha="684e2b65", date=datetime(2018, 3, 6, 12), name="Practice 1", type="Practice_1"
+        sha="684e2b65",
+        date=datetime(2018, 3, 6, 12),
+        name="Practice 1",
+        type="Practice_1",
     )
     EVENT = LiveTimingEvent(
         sha="d7abca72",
@@ -41,11 +44,11 @@ class TestLiveTimingKeyGenerators(unittest.TestCase):
 
 
 class TestLiveTimingConfigManager(unittest.TestCase):
-
     @classmethod
     def setUpClass(cls):
-
-        test_config_path = (Path(__file__).parent / "assets" / "live_timing_config.yaml").resolve()
+        test_config_path = (
+            Path(__file__).parent / "assets" / "live_timing_config.yaml"
+        ).resolve()
         asset_manager = LiveTimingAssetManager(test_config_path)
         cls.session_manager = asset_manager.session_manager
 
@@ -56,7 +59,9 @@ class TestLiveTimingConfigManager(unittest.TestCase):
         self.assertEqual(len(self.session_manager.sessions), 10)
 
     def test_live_timing_sessions_keys(self):
-        self.assertTrue(all(isinstance(i, str) for i in self.session_manager.session_keys))
+        self.assertTrue(
+            all(isinstance(i, str) for i in self.session_manager.session_keys)
+        )
         self.assertEqual(len(self.session_manager.session_keys), 10)
 
     def test_live_timing_sessions_filter(self):
@@ -77,7 +82,9 @@ class TestLiveTimingConfigManager(unittest.TestCase):
         self.assertEqual(len(event_sha_filter_array), 10)
 
         # event_locations
-        event_location_filter = self.session_manager.filter_sessions(event_location=["Melbourne"])
+        event_location_filter = self.session_manager.filter_sessions(
+            event_location=["Melbourne"]
+        )
         self.assertEqual(len(event_location_filter), 5)
 
         event_location_filter_array = self.session_manager.filter_sessions(
@@ -86,7 +93,9 @@ class TestLiveTimingConfigManager(unittest.TestCase):
         self.assertEqual(len(event_location_filter_array), 10)
 
         # event_countries
-        event_country_filter = self.session_manager.filter_sessions(event_country=["Australia"])
+        event_country_filter = self.session_manager.filter_sessions(
+            event_country=["Australia"]
+        )
         self.assertEqual(len(event_country_filter), 5)
 
         event_country_filter_array = self.session_manager.filter_sessions(
@@ -95,7 +104,9 @@ class TestLiveTimingConfigManager(unittest.TestCase):
         self.assertEqual(len(event_country_filter_array), 10)
 
         # session_shas
-        session_sha_filter = self.session_manager.filter_sessions(session_sha=["79ca4465"])
+        session_sha_filter = self.session_manager.filter_sessions(
+            session_sha=["79ca4465"]
+        )
         self.assertEqual(len(session_sha_filter), 1)
 
         session_sha_filter_array = self.session_manager.filter_sessions(
@@ -104,7 +115,9 @@ class TestLiveTimingConfigManager(unittest.TestCase):
         self.assertEqual(len(session_sha_filter_array), 2)
 
         # session_types
-        session_type_filter = self.session_manager.filter_sessions(session_type=["race"])
+        session_type_filter = self.session_manager.filter_sessions(
+            session_type=["race"]
+        )
         self.assertEqual(len(session_type_filter), 2)
 
         session_type_filter_array = self.session_manager.filter_sessions(

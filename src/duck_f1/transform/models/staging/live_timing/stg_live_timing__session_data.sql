@@ -1,12 +1,12 @@
 with
-    raw_session_data as (
+raw_session_data as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__session_data"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__session_data") }}
+        select * from {{ source("ing__live_timing", "live_timing__session_data") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as key,
@@ -17,15 +17,17 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            key as serie_key,
-            utc as utc_ts,
-            metricname as metric_name,
-            metricvalue as metric_value,
-            {{ live_timing__metadata() }}
-        from raw_session_data
-    )
+),
+
+formatted as (
+    select
+        key as serie_key,
+        utc as utc_ts,
+        metricname as metric_name,
+        metricvalue as metric_value,
+        {{ live_timing__metadata() }}
+    from raw_session_data
+)
+
 select *
 from formatted

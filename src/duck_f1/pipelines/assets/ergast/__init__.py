@@ -34,7 +34,9 @@ class ErgastAssetsManager:
     def create_parquet_assets(self) -> List[AssetsDefinition]:
         return [
             parquet_asset_factory(
-                multi_asset_out=self._multi_asset_outs, ergast_assets=self.assets, url=self.url
+                multi_asset_out=self._multi_asset_outs,
+                ergast_assets=self.assets,
+                url=self.url,
             )
         ]
 

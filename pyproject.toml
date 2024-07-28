@@ -19,17 +19,18 @@ readme = "README.md"
 [project.scripts]
 duck-f1 = "duck_f1.cli:cli"
 
-[tool.black]
-line-length = 100
-
 [tool.pdm]
 [tool.pdm.dev-dependencies]
 dev = [
     "dagster-webserver<2.0.0,>=1.6.5",
-    "harlequin<2.0.0,>=1.15.0",
-    "flake8<7.0.0,>=6.1.0",
+]
+test = [
     "pytest<8.0.0,>=7.4.4",
     "coverage<8.0.0,>=7.4.1",
+]
+lint = [
+    "sqlfluff-templater-dbt<4.0.0,>=3.1.0",
+    "ruff<1.0.0,>=0.5.5",
 ]
 
 [build-system]

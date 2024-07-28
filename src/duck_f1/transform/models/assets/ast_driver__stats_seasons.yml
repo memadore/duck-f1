@@ -1,6 +1,5 @@
 ---
 version: 2
-
 models:
   - name: ast_driver__stats_seasons
     description: '{{ doc("tbl_ast_driver__stats_seasons") }}'

@@ -20,7 +20,9 @@ class LiveTimingSessionManager:
     def __init__(self, events: List[LiveTimingEvent]):
         self._sessions = self._create_sessions(events)
 
-    def _create_sessions(self, events: List[LiveTimingEvent]) -> List[LiveTimingSession]:
+    def _create_sessions(
+        self, events: List[LiveTimingEvent]
+    ) -> List[LiveTimingSession]:
         out = []
         for event in events:
             for session in event.sessions:
@@ -94,7 +96,11 @@ class LiveTimingSessionManager:
                     _subset = self._filter_by_season(_subset, season)
                 case _:
                     v = [i.strip().lower() for i in v]
-                    _subset = [i for i in _subset if getattr(i.metadata, k).strip().lower() in v]
+                    _subset = [
+                        i
+                        for i in _subset
+                        if getattr(i.metadata, k).strip().lower() in v
+                    ]
 
         return _subset
 

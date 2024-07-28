@@ -32,12 +32,18 @@ def cli(ctx, output_dir, db_name):
     help="Filter by season",
 )
 @click.option("--event-sha", multiple=True, type=str, help="Filter by event sha")
-@click.option("--event-location", multiple=True, type=str, help="Filter by event location")
-@click.option("--event-country", multiple=True, type=str, help="Filter by event country")
+@click.option(
+    "--event-location", multiple=True, type=str, help="Filter by event location"
+)
+@click.option(
+    "--event-country", multiple=True, type=str, help="Filter by event country"
+)
 @click.option("--session-sha", multiple=True, type=str, help="Filter by session sha")
 @click.option("--session-type", multiple=True, type=str, help="Filter by session type")
 @click.pass_context
-def run(ctx, season, event_sha, event_location, event_country, session_sha, session_type):
+def run(
+    ctx, season, event_sha, event_location, event_country, session_sha, session_type
+):
     """
     Build the duckdb warehouse
     """
@@ -58,7 +64,9 @@ def run(ctx, season, event_sha, event_location, event_country, session_sha, sess
         output_dir=ctx.obj["output_dir"], db_name=ctx.obj["db_name"]
     )
 
-    for i in track(target_sessions, f"Downloading {len(target_sessions)} sessions datasets ..."):
+    for i in track(
+        target_sessions, f"Downloading {len(target_sessions)} sessions datasets ..."
+    ):
         config = {
             "execution": {
                 "config": {

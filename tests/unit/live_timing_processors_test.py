@@ -17,7 +17,9 @@ def get_json_data(key: str) -> dict:
     return data
 
 
-def get_output(key: str, outputs: List[processors.LiveTimingAsset]) -> processors.LiveTimingAsset:
+def get_output(
+    key: str, outputs: List[processors.LiveTimingAsset]
+) -> processors.LiveTimingAsset:
     for i in outputs:
         if i.key == key:
             return i
@@ -400,7 +402,12 @@ class TestLiveTimingLapSeriesProcessor(unittest.TestCase):
 
     def test_live_timing_lap_series_columns(self):
         columns = self.outputs[0].output.column_names
-        expected_columns = ["DriverNumber", "LapNumber", "LapPosition", "_StreamTimestamp"]
+        expected_columns = [
+            "DriverNumber",
+            "LapNumber",
+            "LapPosition",
+            "_StreamTimestamp",
+        ]
 
         self.assertCountEqual(columns, expected_columns)
 
@@ -694,8 +701,16 @@ class TestLiveTimingTimingDataProcessor(unittest.TestCase):
         self.assertEqual(shape, (33, 5))
 
     def test_live_timing_timing_data_sector_segments_columns(self):
-        columns = get_output("timing_data_sector_segments", self.outputs).output.column_names
-        expected_columns = ["SectorKey", "SegmentKey", "Status", "Driver", "_StreamTimestamp"]
+        columns = get_output(
+            "timing_data_sector_segments", self.outputs
+        ).output.column_names
+        expected_columns = [
+            "SectorKey",
+            "SegmentKey",
+            "Status",
+            "Driver",
+            "_StreamTimestamp",
+        ]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_data_speeds_shape(self):
@@ -750,7 +765,13 @@ class TestLiveTimingTimingStatsProcessor(unittest.TestCase):
 
     def test_live_timing_timing_stats_sectors_columns(self):
         columns = get_output("timing_stats_sectors", self.outputs).output.column_names
-        expected_columns = ["SectorKey", "Value", "Position", "Driver", "_StreamTimestamp"]
+        expected_columns = [
+            "SectorKey",
+            "Value",
+            "Position",
+            "Driver",
+            "_StreamTimestamp",
+        ]
         self.assertCountEqual(columns, expected_columns)
 
     def test_live_timing_timing_stats_speeds(self):
@@ -760,7 +781,13 @@ class TestLiveTimingTimingStatsProcessor(unittest.TestCase):
 
     def test_live_timing_timing_stats_speeds_columns(self):
         columns = get_output("timing_stats_speeds", self.outputs).output.column_names
-        expected_columns = ["SpeedTrapKey", "Value", "Position", "Driver", "_StreamTimestamp"]
+        expected_columns = [
+            "SpeedTrapKey",
+            "Value",
+            "Position",
+            "Driver",
+            "_StreamTimestamp",
+        ]
         self.assertCountEqual(columns, expected_columns)
 
 

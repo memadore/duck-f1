@@ -11,7 +11,10 @@ class TestLiveTimingApiFileBuilder(unittest.TestCase):
         cls.api_client = LiveTimingApi(MagicMock())
 
     def test_file_processor_builder_json(self):
-        file = {"file_name": "test.json", "expected_functions": self.api_client._json_processor}
+        file = {
+            "file_name": "test.json",
+            "expected_functions": self.api_client._json_processor,
+        }
         processor = self.api_client._file_processor_builder(file["file_name"])
         self.assertEqual(processor, file["expected_functions"])
 

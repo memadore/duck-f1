@@ -1,13 +1,13 @@
 with
-    raw_tyre_stint_series as (
+raw_tyre_stint_series as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__tyre_stint_series"
         ) | trim == "True" %}
 
-            select *
-            from {{ source("ing__live_timing", "live_timing__tyre_stint_series") }}
+        select *
+        from {{ source("ing__live_timing", "live_timing__tyre_stint_series") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as driver,
@@ -22,19 +22,21 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            driver as driver_number,
-            stint as stint_id,
-            compound as tyre_compound,
-            new as is_new,
-            tyresnotchanged as tyres_not_changed,
-            totallaps as total_laps,
-            startlaps as start_laps,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_tyre_stint_series
-    )
+),
+
+formatted as (
+    select
+        driver as driver_number,
+        stint as stint_id,
+        compound as tyre_compound,
+        new as is_new,
+        tyresnotchanged as tyres_not_changed,
+        totallaps as total_laps,
+        startlaps as start_laps,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_tyre_stint_series
+)
+
 select *
 from formatted

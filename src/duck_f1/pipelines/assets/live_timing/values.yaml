@@ -1,3 +1,4 @@
+---
 datasets:
   - file: ArchiveStatus.json
     table: archive_status
@@ -189,7 +190,7 @@ events:
     gmt_offset: +02:00
     location: Barcelona
     name: Spanish Grand Prix
-    official_event_name: "FORMULA 1 GRAN PREMIO DE ESPA\xD1A EMIRATES 2018"
+    official_event_name: "FORMULA 1 GRAN PREMIO DE ESPAÑA EMIRATES 2018"
     round_number: 5
     sessions:
       - date: 2018-05-11 11:00:00
@@ -247,7 +248,7 @@ events:
   - country: Canada
     date: 2018-06-10 16:10:00
     gmt_offset: -04:00
-    location: "Montr\xE9al"
+    location: "Montréal"
     name: Canadian Grand Prix
     official_event_name: FORMULA 1 GRAND PRIX HEINEKEN DU CANADA 2018
     round_number: 7
@@ -309,7 +310,7 @@ events:
     gmt_offset: +02:00
     location: Spielberg
     name: Austrian Grand Prix
-    official_event_name: "FORMULA 1 EYETIME GROSSER PREIS VON \xD6STERREICH 2018"
+    official_event_name: "FORMULA 1 EYETIME GROSSER PREIS VON ÖSTERREICH 2018"
     round_number: 9
     sessions:
       - date: 2018-06-29 11:00:00
@@ -399,7 +400,7 @@ events:
     gmt_offset: +02:00
     location: Budapest
     name: Hungarian Grand Prix
-    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYD\xCDJ 2018"
+    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYDÍJ 2018"
     round_number: 12
     sessions:
       - date: 2018-07-27 11:00:00
@@ -609,7 +610,7 @@ events:
     gmt_offset: -06:00
     location: Mexico City
     name: Mexican Grand Prix
-    official_event_name: "FORMULA 1 GRAN PREMIO DE M\xC9XICO 2018"
+    official_event_name: "FORMULA 1 GRAN PREMIO DE MÉXICO 2018"
     round_number: 19
     sessions:
       - date: 2018-10-26 10:00:00
@@ -637,9 +638,9 @@ events:
   - country: Brazil
     date: 2018-11-11 17:10:00
     gmt_offset: -02:00
-    location: "S\xE3o Paulo"
+    location: "São Paulo"
     name: Brazilian Grand Prix
-    official_event_name: "FORMULA 1 GRANDE PR\xCAMIO HEINEKEN DO BRASIL 2018"
+    official_event_name: "FORMULA 1 GRANDE PRÊMIO HEINEKEN DO BRASIL 2018"
     round_number: 20
     sessions:
       - date: 2018-11-09 11:00:00
@@ -819,7 +820,7 @@ events:
     gmt_offset: +02:00
     location: Barcelona
     name: Spanish Grand Prix
-    official_event_name: "FORMULA 1 EMIRATES GRAN PREMIO DE ESPA\xD1A 2019"
+    official_event_name: "FORMULA 1 EMIRATES GRAN PREMIO DE ESPAÑA 2019"
     round_number: 5
     sessions:
       - date: 2019-05-10 11:00:00
@@ -877,7 +878,7 @@ events:
   - country: Canada
     date: 2019-06-09 16:10:00
     gmt_offset: -04:00
-    location: "Montr\xE9al"
+    location: "Montréal"
     name: Canadian Grand Prix
     official_event_name: FORMULA 1 PIRELLI GRAND PRIX DU CANADA 2019
     round_number: 7
@@ -939,7 +940,7 @@ events:
     gmt_offset: +02:00
     location: Spielberg
     name: Austrian Grand Prix
-    official_event_name: "FORMULA 1 MYWORLD GROSSER PREIS VON \xD6STERREICH 2019"
+    official_event_name: "FORMULA 1 MYWORLD GROSSER PREIS VON ÖSTERREICH 2019"
     round_number: 9
     sessions:
       - date: 2019-06-28 11:00:00
@@ -1029,7 +1030,7 @@ events:
     gmt_offset: +02:00
     location: Budapest
     name: Hungarian Grand Prix
-    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYD\xCDJ 2019"
+    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYDÍJ 2019"
     round_number: 12
     sessions:
       - date: 2019-08-02 11:00:00
@@ -1209,7 +1210,7 @@ events:
     gmt_offset: -06:00
     location: Mexico City
     name: Mexican Grand Prix
-    official_event_name: "FORMULA 1 GRAN PREMIO DE M\xC9XICO 2019"
+    official_event_name: "FORMULA 1 GRAN PREMIO DE MÉXICO 2019"
     round_number: 18
     sessions:
       - date: 2019-10-25 10:00:00
@@ -1267,9 +1268,9 @@ events:
   - country: Brazil
     date: 2019-11-17 16:10:00
     gmt_offset: -03:00
-    location: "S\xE3o Paulo"
+    location: "São Paulo"
     name: Brazilian Grand Prix
-    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xCAMIO DO BRASIL 2019"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PRÊMIO DO BRASIL 2019"
     round_number: 20
     sessions:
       - date: 2019-11-15 11:00:00
@@ -1373,7 +1374,7 @@ events:
     gmt_offset: +02:00
     location: Spielberg
     name: Austrian Grand Prix
-    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON \xD6STERREICH 2020"
+    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2020"
     round_number: 1
     sessions:
       - date: 2020-07-03 11:00:00
@@ -1433,7 +1434,7 @@ events:
     gmt_offset: +02:00
     location: Budapest
     name: Hungarian Grand Prix
-    official_event_name: "FORMULA 1 ARAMCO MAGYAR NAGYD\xCDJ 2020"
+    official_event_name: "FORMULA 1 ARAMCO MAGYAR NAGYDÍJ 2020"
     round_number: 3
     sessions:
       - date: 2020-07-17 11:00:00
@@ -1523,7 +1524,7 @@ events:
     gmt_offset: +02:00
     location: Barcelona
     name: Spanish Grand Prix
-    official_event_name: "FORMULA 1 ARAMCO GRAN PREMIO DE ESPA\xD1A 2020"
+    official_event_name: "FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2020"
     round_number: 6
     sessions:
       - date: 2020-08-14 11:00:00
@@ -1583,7 +1584,7 @@ events:
     gmt_offset: +02:00
     location: Monza
     name: Italian Grand Prix
-    official_event_name: "FORMULA 1 GRAN PREMIO HEINEKEN D\u2019ITALIA 2020"
+    official_event_name: "FORMULA 1 GRAN PREMIO HEINEKEN D’ITALIA 2020"
     round_number: 8
     sessions:
       - date: 2020-09-04 11:00:00
@@ -1671,7 +1672,7 @@ events:
   - country: Germany
     date: 2020-10-11 16:10:00
     gmt_offset: +02:00
-    location: "N\xFCrburgring"
+    location: "Nürburgring"
     name: Eifel Grand Prix
     official_event_name: FORMULA 1 ARAMCO GROSSER PREIS DER EIFEL 2020
     round_number: 11
@@ -1701,9 +1702,9 @@ events:
   - country: Portugal
     date: 2020-10-25 15:10:00
     gmt_offset: +00:00
-    location: "Portim\xE3o"
+    location: "Portimão"
     name: Portuguese Grand Prix
-    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xC9MIO DE PORTUGAL 2020"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PRÉMIO DE PORTUGAL 2020"
     round_number: 12
     sessions:
       - date: 2020-10-23 11:00:00
@@ -1927,8 +1928,7 @@ events:
     gmt_offset: +02:00
     location: Imola
     name: Emilia Romagna Grand Prix
-    official_event_name: FORMULA 1 PIRELLI GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA
-      ROMAGNA 2021
+    official_event_name: FORMULA 1 PIRELLI GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA ROMAGNA 2021
     round_number: 2
     sessions:
       - date: 2021-04-16 11:00:00
@@ -1956,9 +1956,9 @@ events:
   - country: Portugal
     date: 2021-05-02 17:00:00
     gmt_offset: +01:00
-    location: "Portim\xE3o"
+    location: "Portimão"
     name: Portuguese Grand Prix
-    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xC9MIO DE PORTUGAL 2021"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PRÉMIO DE PORTUGAL 2021"
     round_number: 3
     sessions:
       - date: 2021-04-30 11:30:00
@@ -1988,7 +1988,7 @@ events:
     gmt_offset: +02:00
     location: Barcelona
     name: Spanish Grand Prix
-    official_event_name: "FORMULA 1 ARAMCO GRAN PREMIO DE ESPA\xD1A 2021"
+    official_event_name: "FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2021"
     round_number: 4
     sessions:
       - date: 2021-05-07 11:30:00
@@ -2138,7 +2138,7 @@ events:
     gmt_offset: +02:00
     location: Spielberg
     name: Austrian Grand Prix
-    official_event_name: "FORMULA 1 BWT GROSSER PREIS VON \xD6STERREICH 2021"
+    official_event_name: "FORMULA 1 BWT GROSSER PREIS VON ÖSTERREICH 2021"
     round_number: 9
     sessions:
       - date: 2021-07-02 11:30:00
@@ -2198,7 +2198,7 @@ events:
     gmt_offset: +02:00
     location: Budapest
     name: Hungarian Grand Prix
-    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYD\xCDJ 2021"
+    official_event_name: "FORMULA 1 ROLEX MAGYAR NAGYDÍJ 2021"
     round_number: 11
     sessions:
       - date: 2021-07-30 11:30:00
@@ -2288,7 +2288,7 @@ events:
     gmt_offset: +02:00
     location: Monza
     name: Italian Grand Prix
-    official_event_name: "FORMULA 1 HEINEKEN GRAN PREMIO D\u2019ITALIA 2021"
+    official_event_name: "FORMULA 1 HEINEKEN GRAN PREMIO D’ITALIA 2021"
     round_number: 14
     sessions:
       - date: 2021-09-10 14:30:00
@@ -2408,7 +2408,7 @@ events:
     gmt_offset: -06:00
     location: Mexico City
     name: Mexico City Grand Prix
-    official_event_name: "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE M\xC9XICO 2021"
+    official_event_name: "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2021"
     round_number: 18
     sessions:
       - date: 2021-11-05 11:30:00
@@ -2436,9 +2436,9 @@ events:
   - country: Brazil
     date: 2021-11-14 16:00:00
     gmt_offset: -03:00
-    location: "S\xE3o Paulo"
-    name: "S\xE3o Paulo Grand Prix"
-    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xCAMIO DE S\xC3O PAULO 2021"
+    location: "São Paulo"
+    name: "São Paulo Grand Prix"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PRÊMIO DE SÃO PAULO 2021"
     round_number: 19
     sessions:
       - date: 2021-11-12 12:30:00
@@ -2692,8 +2692,7 @@ events:
     gmt_offset: +02:00
     location: Imola
     name: Emilia Romagna Grand Prix
-    official_event_name: FORMULA 1 ROLEX GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA-ROMAGNA
-      2022
+    official_event_name: FORMULA 1 ROLEX GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA-ROMAGNA 2022
     round_number: 4
     sessions:
       - date: 2022-04-22 13:30:00
@@ -2753,7 +2752,7 @@ events:
     gmt_offset: +02:00
     location: Barcelona
     name: Spanish Grand Prix
-    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO DE ESPA\xD1A 2022"
+    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO DE ESPAÑA 2022"
     round_number: 6
     sessions:
       - date: 2022-05-20 14:00:00
@@ -2841,7 +2840,7 @@ events:
   - country: Canada
     date: 2022-06-19 16:00:00
     gmt_offset: -04:00
-    location: "Montr\xE9al"
+    location: "Montréal"
     name: Canadian Grand Prix
     official_event_name: FORMULA 1 AWS GRAND PRIX DU CANADA 2022
     round_number: 9
@@ -2903,7 +2902,7 @@ events:
     gmt_offset: +02:00
     location: Spielberg
     name: Austrian Grand Prix
-    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON \xD6STERREICH 2022"
+    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2022"
     round_number: 11
     sessions:
       - date: 2022-07-08 13:30:00
@@ -2963,7 +2962,7 @@ events:
     gmt_offset: +02:00
     location: Budapest
     name: Hungarian Grand Prix
-    official_event_name: "FORMULA 1 ARAMCO MAGYAR NAGYD\xCDJ 2022"
+    official_event_name: "FORMULA 1 ARAMCO MAGYAR NAGYDÍJ 2022"
     round_number: 13
     sessions:
       - date: 2022-07-29 14:00:00
@@ -3053,7 +3052,7 @@ events:
     gmt_offset: +02:00
     location: Monza
     name: Italian Grand Prix
-    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO D\u2019ITALIA 2022"
+    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2022"
     round_number: 16
     sessions:
       - date: 2022-09-09 14:00:00
@@ -3173,7 +3172,7 @@ events:
     gmt_offset: -06:00
     location: Mexico City
     name: Mexico City Grand Prix
-    official_event_name: "FORMULA 1 HEINEKEN GRAN PREMIO DE LA CIUDAD DE M\xC9XICO 2022"
+    official_event_name: "FORMULA 1 HEINEKEN GRAN PREMIO DE LA CIUDAD DE MÉXICO 2022"
     round_number: 20
     sessions:
       - date: 2022-10-28 13:00:00
@@ -3201,9 +3200,9 @@ events:
   - country: Brazil
     date: 2022-11-13 17:00:00
     gmt_offset: -03:00
-    location: "S\xE3o Paulo"
-    name: "S\xE3o Paulo Grand Prix"
-    official_event_name: "FORMULA 1 HEINEKEN GRANDE PR\xCAMIO DE S\xC3O PAULO 2022"
+    location: "São Paulo"
+    name: "São Paulo Grand Prix"
+    official_event_name: "FORMULA 1 HEINEKEN GRANDE PRÊMIO DE SÃO PAULO 2022"
     round_number: 21
     sessions:
       - date: 2022-11-11 12:30:00
@@ -3465,7 +3464,7 @@ events:
     gmt_offset: +02:00
     location: Barcelona
     name: Spanish Grand Prix
-    official_event_name: "FORMULA 1 AWS GRAN PREMIO DE ESPA\xD1A 2023"
+    official_event_name: "FORMULA 1 AWS GRAN PREMIO DE ESPAÑA 2023"
     round_number: 7
     sessions:
       - date: 2023-06-02 13:30:00
@@ -3493,7 +3492,7 @@ events:
   - country: Canada
     date: 2023-06-18 16:00:00
     gmt_offset: -04:00
-    location: "Montr\xE9al"
+    location: "Montréal"
     name: Canadian Grand Prix
     official_event_name: FORMULA 1 PIRELLI GRAND PRIX DU CANADA 2023
     round_number: 8
@@ -3525,7 +3524,7 @@ events:
     gmt_offset: +02:00
     location: Spielberg
     name: Austrian Grand Prix
-    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON \xD6STERREICH 2023"
+    official_event_name: "FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2023"
     round_number: 9
     sessions:
       - date: 2023-06-30 13:30:00
@@ -3675,7 +3674,7 @@ events:
     gmt_offset: +02:00
     location: Monza
     name: Italian Grand Prix
-    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO D\u2019ITALIA 2023 "
+    official_event_name: "FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2023 "
     round_number: 14
     sessions:
       - date: 2023-09-01 13:30:00
@@ -3825,7 +3824,7 @@ events:
     gmt_offset: -06:00
     location: Mexico City
     name: Mexico City Grand Prix
-    official_event_name: "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE M\xC9XICO 2023"
+    official_event_name: "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2023"
     round_number: 19
     sessions:
       - date: 2023-10-27 12:30:00
@@ -3853,9 +3852,9 @@ events:
   - country: Brazil
     date: 2023-11-05 16:00:00
     gmt_offset: -03:00
-    location: "S\xE3o Paulo"
-    name: "S\xE3o Paulo Grand Prix"
-    official_event_name: "FORMULA 1 ROLEX GRANDE PR\xCAMIO DE S\xC3O PAULO 2023"
+    location: "São Paulo"
+    name: "São Paulo Grand Prix"
+    official_event_name: "FORMULA 1 ROLEX GRANDE PRÊMIO DE SÃO PAULO 2023"
     round_number: 20
     sessions:
       - date: 2023-11-03 11:30:00

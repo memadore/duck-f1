@@ -1,6 +1,5 @@
 ---
 version: 2
-
 models:
   - name: stg_live_timing__current_tyres
     description: '{{ doc("tbl_stg_live_timing__current_tyres") }}'

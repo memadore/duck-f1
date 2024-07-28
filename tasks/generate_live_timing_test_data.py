@@ -15,12 +15,16 @@ for dataset in config_manager.datasets:
     if data is None:
         continue
 
-    with open(f"./dist/json/live_timing_{dataset.table}_full.json", "w", encoding="utf-8") as file:
+    with open(
+        f"./dist/json/live_timing_{dataset.table}_full.json", "w", encoding="utf-8"
+    ) as file:
         # index = min(len(data), 5)
         content = json.dumps(data, indent=2)
         file.write(content)
 
-    with open(f"./dist/json/live_timing_{dataset.table}.json", "w", encoding="utf-8") as file:
+    with open(
+        f"./dist/json/live_timing_{dataset.table}.json", "w", encoding="utf-8"
+    ) as file:
         index = min(len(data), 50)
         content = json.dumps(data[:index], indent=2)
         file.write(content)

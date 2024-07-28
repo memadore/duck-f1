@@ -15,7 +15,8 @@
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"VisualStudioExptTeam.vscodeintellicode",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"innoverio.vscode-dbt-power-user"
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh",

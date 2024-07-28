@@ -1,7 +1,6 @@
 import os
 import shutil
 import unittest
-from unittest import mock
 
 import pyarrow as pa
 from dagster import (

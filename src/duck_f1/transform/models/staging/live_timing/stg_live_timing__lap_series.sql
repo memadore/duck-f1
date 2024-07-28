@@ -1,12 +1,12 @@
 with
-    raw_lap_series as (
+raw_lap_series as (
         {% if check_if_source_exists(
             "ing__live_timing", "live_timing__lap_series"
         ) | trim == "True" %}
 
-            select * from {{ source("ing__live_timing", "live_timing__lap_series") }}
+        select * from {{ source("ing__live_timing", "live_timing__lap_series") }}
 
-        {% else %}
+    {% else %}
 
             select
                 null::integer as drivernumber,
@@ -17,15 +17,17 @@ with
             where false
 
         {% endif %}
-    ),
-    formatted as (
-        select
-            drivernumber as driver_number,
-            lapnumber as lap_number,
-            lapposition as lap_position,
-            _streamtimestamp as _stream_ts,
-            {{ live_timing__metadata() }}
-        from raw_lap_series
-    )
+),
+
+formatted as (
+    select
+        drivernumber as driver_number,
+        lapnumber as lap_number,
+        lapposition as lap_position,
+        _streamtimestamp as _stream_ts,
+        {{ live_timing__metadata() }}
+    from raw_lap_series
+)
+
 select *
 from formatted

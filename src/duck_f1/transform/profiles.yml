@@ -4,7 +4,7 @@ duck_f1:
   outputs:
     dev:
       type: duckdb
-      path: ../../data/f1.duckdb
+      path: ./../../../data/f1.duckdb
       schema: ""
       threads: 4
     dist:

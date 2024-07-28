@@ -1,6 +1,5 @@
 ---
 version: 2
-
 models:
   - name: stg_ergast__seasons
     description: '{{ doc("tbl_stg_ergast__seasons") }}'
