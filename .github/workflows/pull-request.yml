@@ -36,7 +36,7 @@ jobs:
     runs-on: k8s-arc
     needs:
       - dbt-parse
-      - sql-linting
+      - yaml-lint
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -121,7 +121,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          pdm install --prod G lint
+          pdm install --group lint
       - name: Run tests
         run: |
           pdm run ruff format --check src/duck_f1/pipelines
@@ -130,6 +130,7 @@ jobs:
     name: python::unit-tests
     needs:
       - dbt-parse
+      - python-linting
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -143,7 +144,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          pdm install --prod G test
+          pdm install --group test
           pdm run dbt deps --project-dir src/duck_f1/transform
           pdm run dbt parse \
             --project-dir src/duck_f1/transform \
@@ -159,6 +160,8 @@ jobs:
   sql-linting:
     name: sql::linting
     runs-on: k8s-arc
+    needs:
+      - dbt-parse
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -172,8 +175,10 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install dependencies
         run: |
-          pdm install --prod G lint
+          pdm install --group lint
+          mkdir data
           pdm run dbt deps --project-dir src/duck_f1/transform
+          pdm run duck-f1 run --session-sha eb2f7f20
       - name: Run tests
         run: |
           pdm run sqlfluff lint src/duck_f1/transform/models
