@@ -1,8 +1,8 @@
 ---
 version: 2
 models:
-  - name: fty_season__world_champion
-    description: '{{ doc("tbl_fty_season__world_champion") }}'
+  - name: int_season__world_champion
+    description: '{{ doc("tbl_int_season__world_champion") }}'
     meta:
       dagster:
         asset_key:
