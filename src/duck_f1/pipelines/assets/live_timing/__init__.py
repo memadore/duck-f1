@@ -91,16 +91,13 @@ class LiveTimingSessionManager:
             if v is None or len(v) == 0:
                 continue
 
-            match k:
-                case "season":
-                    _subset = self._filter_by_season(_subset, season)
-                case _:
-                    v = [i.strip().lower() for i in v]
-                    _subset = [
-                        i
-                        for i in _subset
-                        if getattr(i.metadata, k).strip().lower() in v
-                    ]
+            if k == "season":
+                _subset = self._filter_by_season(_subset, season)
+            else:
+                v = [i.strip().lower() for i in v]
+                _subset = [
+                    i for i in _subset if getattr(i.metadata, k).strip().lower() in v
+                ]
 
         return _subset
 

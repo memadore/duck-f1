@@ -48,16 +48,15 @@ class AbstractLiveTimingProcessor(ABC):
         # self.context.log.info("Metadata: %s", columns)
         table_len = table.num_rows
         for col, value in columns.items():
-            match value:
-                case int():
-                    column_type = pa.int32()
-                    column_value = value
-                case datetime():
-                    column_type = pa.timestamp("s")
-                    column_value = value
-                case _:
-                    column_type = pa.string()
-                    column_value = str(value)
+            if type(value) is int:
+                column_type = pa.int32()
+                column_value = value
+            elif type(value) is datetime:
+                column_type = pa.timestamp("s")
+                column_value = value
+            else:
+                column_type = pa.string()
+                column_value = str(value)
 
             table = table.append_column(
                 col, pa.array([column_value] * table_len, column_type)
@@ -524,24 +523,23 @@ class LapSeriesProcessor(AbstractLiveTimingProcessor):
     @staticmethod
     def _explode(driver_number: int, position_data) -> List[dict]:
         out = []
-        match position_data:
-            case list():
+        if type(position_data) is list:
+            out.append(
+                {
+                    "DriverNumber": int(driver_number),
+                    "LapNumber": 0,
+                    "LapPosition": int(position_data[0]),
+                }
+            )
+        else:
+            for lap, position in position_data.items():
                 out.append(
                     {
                         "DriverNumber": int(driver_number),
-                        "LapNumber": 0,
-                        "LapPosition": int(position_data[0]),
+                        "LapNumber": int(lap),
+                        "LapPosition": int(position),
                     }
                 )
-            case _:
-                for lap, position in position_data.items():
-                    out.append(
-                        {
-                            "DriverNumber": int(driver_number),
-                            "LapNumber": int(lap),
-                            "LapPosition": int(position),
-                        }
-                    )
 
         return out
 
@@ -690,19 +688,14 @@ class RaceControlMessagesProcessor(AbstractLiveTimingProcessor):
     def _row_processor(stream_ts: str, messages) -> List[dict]:
         out = []
 
-        match messages:
-            case list():
-                for i in messages:
-                    out.append(RaceControlMessagesProcessor._entry_transformer(None, i))
-            case dict():
-                for message_id, data in messages.items():
-                    out.append(
-                        RaceControlMessagesProcessor._entry_transformer(
-                            message_id, data
-                        )
-                    )
-            case _:
-                return
+        if type(messages) is list:
+            for i in messages:
+                out.append(RaceControlMessagesProcessor._entry_transformer(None, i))
+        elif type(messages) is dict:
+            for message_id, data in messages.items():
+                out.append(
+                    RaceControlMessagesProcessor._entry_transformer(message_id, data)
+                )
 
         out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
 
@@ -971,33 +964,37 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
         out = defaultdict(list)
 
         for metric, data in metrics.items():
-            match metric:
-                case "IntervalToPositionAhead":
-                    out["timing_data_interval"].append(
-                        TimingDataProcessor._interval_transformer(data)
-                    )
-                case "BestLapTime":
-                    out["timing_data_best_lap"].append(
-                        TimingDataProcessor._best_lap_transformer(data)
-                    )
-                case "LastLapTime":
-                    out["timing_data_last_lap"].append(
-                        TimingDataProcessor._last_lap_transformer(data)
-                    )
-                case "Sectors":
-                    transformer_output = TimingDataProcessor._sectors_transformer(data)
-                    out["timing_data_sectors"].extend(transformer_output["sectors"])
-                    out["timing_data_sector_segments"].extend(
-                        transformer_output["sector_segments"]
-                    )
-                case "Speeds":
-                    out["timing_data_speeds"].extend(
-                        TimingDataProcessor._speeds_transformer(data)
-                    )
-                case _:
-                    out["timing_data_status"].append(
-                        TimingDataProcessor._status_transformer(metric, data)
-                    )
+            if metric == "IntervalToPositionAhead":
+                out["timing_data_interval"].append(
+                    TimingDataProcessor._interval_transformer(data)
+                )
+
+            elif metric == "BestLapTime":
+                out["timing_data_best_lap"].append(
+                    TimingDataProcessor._best_lap_transformer(data)
+                )
+
+            elif metric == "LastLapTime":
+                out["timing_data_last_lap"].append(
+                    TimingDataProcessor._last_lap_transformer(data)
+                )
+
+            elif metric == "Sectors":
+                transformer_output = TimingDataProcessor._sectors_transformer(data)
+                out["timing_data_sectors"].extend(transformer_output["sectors"])
+                out["timing_data_sector_segments"].extend(
+                    transformer_output["sector_segments"]
+                )
+
+            elif metric == "Speeds":
+                out["timing_data_speeds"].extend(
+                    TimingDataProcessor._speeds_transformer(data)
+                )
+
+            else:
+                out["timing_data_status"].append(
+                    TimingDataProcessor._status_transformer(metric, data)
+                )
 
         for k, v in out.items():  # add driver key
             out[k] = list(map(lambda item: dict(item, Driver=driver), v))
@@ -1174,19 +1171,20 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
         out = defaultdict(list)
 
         for metric, data in metrics.items():
-            match metric:
-                case "PersonalBestLapTime":
-                    out["timing_stats_lap_times"].append(
-                        TimingStatsProcessor._lap_times_transformer(data)
-                    )
-                case "BestSectors":
-                    out["timing_stats_sectors"].extend(
-                        TimingStatsProcessor._sectors_transformer(data)
-                    )
-                case "BestSpeeds":
-                    out["timing_stats_speeds"].extend(
-                        TimingStatsProcessor._speeds_transformer(data)
-                    )
+            if metric == "PersonalBestLapTime":
+                out["timing_stats_lap_times"].append(
+                    TimingStatsProcessor._lap_times_transformer(data)
+                )
+
+            elif metric == "BestSectors":
+                out["timing_stats_sectors"].extend(
+                    TimingStatsProcessor._sectors_transformer(data)
+                )
+
+            elif metric == "BestSpeeds":
+                out["timing_stats_speeds"].extend(
+                    TimingStatsProcessor._speeds_transformer(data)
+                )
 
         for k, v in out.items():  # add driver key
             out[k] = list(map(lambda item: dict(item, Driver=driver), v))

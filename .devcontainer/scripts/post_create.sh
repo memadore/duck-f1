@@ -7,8 +7,8 @@ sudo apt-get install -y \
 
 sudo curl https://pyenv.run | bash \
     && pyenv update \
-    && pyenv install 3.8 3.9 3.10 3.11 3.12 \
-    && pyenv global 3.11 \
+    && pyenv install "3.8" "3.9" "3.10" "3.11" "3.12" \
+    && pyenv global "3.8" "3.9" "3.10" "3.11" "3.12" \
     && pyenv rehash
 
 python3 -m ensurepip --upgrade
