@@ -1,7 +1,7 @@
 [project]
 authors = [{ name = "Marc-Etienne Madore", email = "marc-etienne@madore.cc" }]
 license = { text = "GPL-3.0-or-later" }
-requires-python = ">=3.9,<3.12"
+requires-python = "<3.12,>=3.8"
 dependencies = [
     "dagster<1.7.0,>=1.6.5",
     "dagster-dbt<1.0.0,>=0.22.5",
@@ -27,6 +27,7 @@ dev = [
 test = [
     "pytest<8.0.0,>=7.4.4",
     "coverage<8.0.0,>=7.4.1",
+    "nox>=2024.4.15",
 ]
 lint = [
     "sqlfluff-templater-dbt<4.0.0,>=3.1.0",
