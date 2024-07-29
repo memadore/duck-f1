@@ -29,7 +29,7 @@ world_championships as (
     select
         driver_id,
         count(*) as wc_count
-    from {{ ref("fty_season__world_champion") }}
+    from {{ ref("int_season__world_champion") }}
     group by driver_id
 )
 
@@ -55,8 +55,8 @@ select
     round(result.win_ratio, 2) as win_ratio,
     round(result.podium_ratio, 2) as podium_ratio
 from {{ ref("stg_ergast__drivers") }} as driver
-inner join results as result on driver.driver_id = result.driver_id
-inner join
+left join results as result on driver.driver_id = result.driver_id
+left join
     world_championships as world_championship
     on driver.driver_id = world_championship.driver_id
 order by result.win_count desc
