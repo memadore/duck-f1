@@ -21,7 +21,7 @@ models:
       +schema: staging
     assets:
       +schema: assets
-    factory:
-      +schema: factory
+    intermediate:
+      +schema: intermediate
     mart:
       +schema: mart

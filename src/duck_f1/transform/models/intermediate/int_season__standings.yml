@@ -1,8 +1,8 @@
 ---
 version: 2
 models:
-  - name: fty_season__standings
-    description: '{{ doc("tbl_fty_season__standings") }}'
+  - name: int_season__standings
+    description: '{{ doc("tbl_int_season__standings") }}'
     meta:
       dagster:
         asset_key:

@@ -1,8 +1,8 @@
 ---
 version: 2
 models:
-  - name: fty_driver__season_championship
-    description: '{{ doc("tbl_fty_driver__season_championship") }}'
+  - name: int_driver__season_championship
+    description: '{{ doc("tbl_int_driver__season_championship") }}'
     meta:
       dagster:
         asset_key:
