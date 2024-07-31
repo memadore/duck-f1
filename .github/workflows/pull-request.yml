@@ -108,8 +108,8 @@ jobs:
             --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
             --target dist
   # MARK: - python
-  python-linting:
-    name: python::linting
+  python-lint:
+    name: python::lint
     runs-on: k8s-arc
     steps:
       - name: Checkout repository
@@ -128,12 +128,12 @@ jobs:
       - name: Run tests
         run: |
           pdm run ruff format --check src/duck_f1/pipelines
-  python-tests:
+  python-tests-unit:
     runs-on: k8s-arc
-    name: python::unit-tests
+    name: python::tests::unit
     needs:
       - dbt-parse
-      - python-linting
+      - python-lint
     strategy:
       matrix:
         version: ["3.8", "3.9", "3.10", "3.11"]
@@ -163,8 +163,8 @@ jobs:
           pdm run coverage xml
           pdm run coverage report --show-missing --precision=2
   # MARK: - python
-  sql-linting:
-    name: sql::linting
+  sql-lint:
+    name: sql::lint
     runs-on: k8s-arc
     needs:
       - dbt-parse
