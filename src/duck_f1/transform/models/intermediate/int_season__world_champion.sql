@@ -4,7 +4,7 @@ round_stats as (
         driver.driver_id,
         standing.race_id,
         race.year as season,
-        race.race_time_gmt,
+        race.race_time_utc,
         race.round as race_round,
         standing.position as championship_position,
         standing.points as season_total,

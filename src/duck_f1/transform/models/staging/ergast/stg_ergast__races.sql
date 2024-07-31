@@ -23,7 +23,7 @@ formatted as (
             ' ',
             case when race.time like '\N' then '00:00:00' else race.time end,
             ' GMT'
-        ) as timestamptz) as race_time_gmt,
+        ) as timestamptz) as race_time_utc,
         race.url,
         race.fp1_date,
         race.fp1_time,
