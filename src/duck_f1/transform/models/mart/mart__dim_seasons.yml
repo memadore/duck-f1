@@ -1,0 +1,18 @@
+---
+version: 2
+models:
+  - name: mart__dim_seasons
+    description: '{{ doc("tbl_mart__dim_seasons") }}'
+    config:
+      alias: dim_seasons
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - dim
+          - seasons
+    columns:
+      - name: season_id
+        tests:
+          - unique
+          - not_null
