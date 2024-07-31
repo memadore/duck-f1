@@ -10,8 +10,8 @@ formatted as (
         constructorid as ergast_constructor_id,
         constructorref as constructor_reference,
         name as constructor_name,
-        nationality as position_label,
-        url
+        nationality,
+        url as wikipedia_url
     from raw_constructors
 )
 
