@@ -9,3 +9,7 @@ Dimensional modeling for the constructors
 {% docs tbl_mart__dim_drivers %}
 Dimensional modeling for the drivers
 {% enddocs %}
+
+{% docs tbl_mart__dim_races %}
+Dimensional modeling for the races
+{% enddocs %}
