@@ -1,0 +1,19 @@
+---
+name: Update dependencies
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  update-pdm-dependencies:
+    name: pdm::update-project
+    runs-on: k8s-arc
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Update dependencies
+        uses: pdm-project/update-deps-action@1
+        with:
+          commit-message: "chore(deps): Update pdm.lock"
+          pr-title: "chore(deps): update project dependencies"
+          update-strategy: all
+          save-strategy: minimum
