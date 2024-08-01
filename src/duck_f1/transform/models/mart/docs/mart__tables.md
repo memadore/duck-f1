@@ -17,3 +17,7 @@ Dimensional modeling for the races
 {% docs tbl_mart__dim_seasons %}
 Dimensional modeling for the seasons
 {% enddocs %}
+
+{% docs tbl_mart__dim_status %}
+Dimensional modeling for the driver race status
+{% enddocs %}

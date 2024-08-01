@@ -1,0 +1,18 @@
+---
+version: 2
+models:
+  - name: mart__dim_status
+    description: '{{ doc("tbl_mart__dim_status") }}'
+    config:
+      alias: dim_status
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - dim
+          - status
+    columns:
+      - name: status_id
+        tests:
+          - unique
+          - not_null
