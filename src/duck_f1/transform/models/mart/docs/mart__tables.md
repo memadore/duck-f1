@@ -21,6 +21,10 @@ Dimensional modeling for the seasons
 {% docs tbl_mart__dim_status %}
 Dimensional modeling for the driver race status
 {% enddocs %}
+
+{% docs tbl_mart__fct_race__constructor_classification %}
+Constructor results after each point scoring events
+{% enddocs %}
 ---
 {% docs tbl_mart__fct_race__driver_classification %}
 Driver classification for every race

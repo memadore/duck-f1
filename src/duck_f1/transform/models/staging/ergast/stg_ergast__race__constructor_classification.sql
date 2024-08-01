@@ -22,7 +22,7 @@ formatted as (
         constructor.constructor_id,
         race.race_id,
         constructor_result.points,
-        constructor_result.status
+        if(constructor_result.status = '\N', null, constructor_result.status) as status
     from raw_constructor_results as constructor_result
     inner join
         constructor_ids as constructor

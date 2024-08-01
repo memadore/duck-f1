@@ -2,7 +2,7 @@
 List of circuits
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__constructor_results %}
+{% docs tbl_stg_ergast__race__constructor_classification %}
 Official constructors race results
 {% enddocs %}
 ---
