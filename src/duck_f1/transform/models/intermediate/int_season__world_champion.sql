@@ -9,7 +9,7 @@ round_stats as (
         standing.position as championship_position,
         standing.points as season_total,
         max(race.round) over cummulative_season as last_round
-    from {{ ref("stg_ergast__driver_standings") }} as standing
+    from {{ ref("stg_ergast__standings__drivers") }} as standing
     inner join
         {{ ref("stg_ergast__drivers") }} as driver
         on standing.driver_id = driver.driver_id

@@ -1,11 +1,12 @@
 ---
 version: 2
 models:
-  - name: stg_ergast__constructor_standings
+  - name: stg_ergast__standings__constructors
     description: '{{ doc("tbl_stg_ergast__constructor_standings") }}'
     meta:
       dagster:
         asset_key:
           - staging
           - ergast
-          - constructor_standings
+          - standings
+          - constructors
