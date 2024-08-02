@@ -3,6 +3,8 @@ name: Update dependencies
 on:
   schedule:
     - cron: "0 0 * * *"
+env:
+  PYTHON_VERSION: "3.11"
 jobs:
   update-pdm-dependencies:
     name: pdm::update-project
@@ -10,10 +12,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
       - name: Update dependencies
         uses: pdm-project/update-deps-action@v1
         with:
           commit-message: "chore(deps): Update pdm.lock"
           pr-title: "chore(deps): update project dependencies"
           update-strategy: all
-          save-strategy: minimum
