@@ -1,10 +1,10 @@
 with
 raw_car_data as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__car_data"
+            "src_live_timing", "live_timing__car_data"
         ) | trim == "True" %}
 
-        select * from {{ source("ing__live_timing", "live_timing__car_data") }}
+        select * from {{ source("src_live_timing", "live_timing__car_data") }}
 
     {% else %}
 

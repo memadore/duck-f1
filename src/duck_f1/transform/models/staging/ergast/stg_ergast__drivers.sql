@@ -1,5 +1,5 @@
 with
-raw_drivers as (select * from {{ source("ing__ergast", "ergast__drivers") }}),
+raw_drivers as (select * from {{ source("src_ergast", "ergast__drivers") }}),
 
 formatted as (
     select

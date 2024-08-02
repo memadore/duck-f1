@@ -1,11 +1,11 @@
 with
 raw_extrapolated_clock as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__extrapolated_clock"
+            "src_live_timing", "live_timing__extrapolated_clock"
         ) | trim == "True" %}
 
         select *
-        from {{ source("ing__live_timing", "live_timing__extrapolated_clock") }}
+        from {{ source("src_live_timing", "live_timing__extrapolated_clock") }}
 
     {% else %}
 

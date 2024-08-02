@@ -1,11 +1,11 @@
 with
 raw_tyre_stint_series as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__tyre_stint_series"
+            "src_live_timing", "live_timing__tyre_stint_series"
         ) | trim == "True" %}
 
         select *
-        from {{ source("ing__live_timing", "live_timing__tyre_stint_series") }}
+        from {{ source("src_live_timing", "live_timing__tyre_stint_series") }}
 
     {% else %}
 

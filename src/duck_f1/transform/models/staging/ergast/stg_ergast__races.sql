@@ -1,5 +1,5 @@
 with
-raw_races as (select * from {{ source("ing__ergast", "ergast__races") }}),
+raw_races as (select * from {{ source("src_ergast", "ergast__races") }}),
 
 circuit_ids as (
     select

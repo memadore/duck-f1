@@ -1,5 +1,5 @@
 with
-raw_qualifying as (select * from {{ source("ing__ergast", "ergast__qualifying") }}),
+raw_qualifying as (select * from {{ source("src_ergast", "ergast__qualifying") }}),
 
 constructor_ids as (
     select

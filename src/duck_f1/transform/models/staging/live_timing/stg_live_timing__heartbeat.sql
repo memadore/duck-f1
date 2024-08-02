@@ -1,10 +1,10 @@
 with
 raw_heartbeat as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__heartbeat"
+            "src_live_timing", "live_timing__heartbeat"
         ) | trim == "True" %}
 
-        select * from {{ source("ing__live_timing", "live_timing__heartbeat") }}
+        select * from {{ source("src_live_timing", "live_timing__heartbeat") }}
 
     {% else %}
 

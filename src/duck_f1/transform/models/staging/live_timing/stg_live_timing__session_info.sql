@@ -1,10 +1,10 @@
 with
 raw_session_info as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__session_info"
+            "src_live_timing", "live_timing__session_info"
         ) | trim == "True" %}
 
-        select * from {{ source("ing__live_timing", "live_timing__session_info") }}
+        select * from {{ source("src_live_timing", "live_timing__session_info") }}
 
     {% else %}
 

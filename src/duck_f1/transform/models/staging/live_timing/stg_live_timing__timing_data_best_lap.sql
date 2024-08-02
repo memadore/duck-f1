@@ -1,11 +1,11 @@
 with
 raw_timing_data_best_lap as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__timing_data_best_lap"
+            "src_live_timing", "live_timing__timing_data_best_lap"
         ) | trim == "True" %}
 
         select *
-        from {{ source("ing__live_timing", "live_timing__timing_data_best_lap") }}
+        from {{ source("src_live_timing", "live_timing__timing_data_best_lap") }}
 
     {% else %}
 

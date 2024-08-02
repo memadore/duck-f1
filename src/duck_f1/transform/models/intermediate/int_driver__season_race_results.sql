@@ -15,7 +15,7 @@ round_stats as (
         avg(result.position_order) over cummulative_season as avg_finish_position,
         (result.grid_position - finish_position) as position_gained,
         sum(position_gained) over cummulative_season as total_position_gained
-    from {{ ref("stg_ergast__results") }} as result
+    from {{ ref("stg_ergast__race__drivers_classification") }} as result
     inner join {{ ref("stg_ergast__races") }} as race on result.race_id = race.race_id
     window
         cummulative_season as (

@@ -1,5 +1,5 @@
 with
-raw_lap_times as (select * from {{ source("ing__ergast", "ergast__lap_times") }}),
+raw_lap_times as (select * from {{ source("src_ergast", "ergast__lap_times") }}),
 
 driver_ids as (
     select

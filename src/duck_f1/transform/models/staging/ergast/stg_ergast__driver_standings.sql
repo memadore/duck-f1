@@ -1,6 +1,6 @@
 with
 raw_driver_standings as (
-    select * from {{ source("ing__ergast", "ergast__driver_standings") }}
+    select * from {{ source("src_ergast", "ergast__driver_standings") }}
 ),
 
 driver_ids as (

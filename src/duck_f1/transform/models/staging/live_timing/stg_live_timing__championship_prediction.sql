@@ -1,12 +1,12 @@
 with
 raw_championship_prediction as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__championship_prediction"
+            "src_live_timing", "live_timing__championship_prediction"
         ) | trim == "True" %}
 
         select *
         from
-            {{ source("ing__live_timing", "live_timing__championship_prediction") }}
+            {{ source("src_live_timing", "live_timing__championship_prediction") }}
 
     {% else %}
 
