@@ -37,3 +37,7 @@ Driver fastest lap for a race event
 {% docs tbl_mart__fct_standings__constructors %}
 Season standings for each participating constructors
 {% enddocs %}
+---
+{% docs tbl_mart__fct_standings__drivers %}
+Season standings for each participating drivers
+{% enddocs %}
