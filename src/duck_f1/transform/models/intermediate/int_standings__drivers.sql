@@ -14,7 +14,7 @@ round_stats as (
         + lag(
             championship_position, 1, championship_position
         ) over cummulative_season as positions_gained
-    from {{ ref("stg_ergast__driver_standings") }} as standing
+    from {{ ref("stg_ergast__standings__drivers") }} as standing
     inner join
         {{ ref("stg_ergast__drivers") }} as driver
         on standing.driver_id = driver.driver_id

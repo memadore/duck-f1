@@ -1,0 +1,32 @@
+---
+version: 2
+models:
+  - name: mart__fct_standings__constructors
+    description: '{{ doc("tbl_mart__fct_standings__constructors") }}'
+    config:
+      alias: fct_standings__constructors
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - fact
+          - standings
+          - constructors
+    tests:
+      - unique:
+          column_name: "race_id || '-' || constructor_id"
+          config:
+            severity: warn # TODO: investigate
+    columns:
+      - name: constructor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_constructors')
+              field: constructor_id
+      - name: race_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_races')
+              field: race_id

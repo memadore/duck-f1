@@ -6,6 +6,6 @@ models:
     meta:
       dagster:
         asset_key:
-          - factory
+          - intermediate
           - driver
           - season_championship

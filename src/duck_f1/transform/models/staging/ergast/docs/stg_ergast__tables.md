@@ -14,7 +14,7 @@ Constructor standing after an event
 List of constructors
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__driver_standings %}
+{% docs tbl_stg_ergast__standings__drivers %}
 Driver standing after an event
 {% enddocs %}
 ---
