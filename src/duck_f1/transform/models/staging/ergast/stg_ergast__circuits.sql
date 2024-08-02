@@ -1,5 +1,5 @@
 with
-raw_circuits as (select * from {{ source("ing__ergast", "ergast__circuits") }}),
+raw_circuits as (select * from {{ source("src_ergast", "ergast__circuits") }}),
 
 formatted as (
     select

@@ -1,10 +1,10 @@
 with
 raw_audio_streams as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__audio_streams"
+            "src_live_timing", "live_timing__audio_streams"
         ) | trim == "True" %}
 
-        select * from {{ source("ing__live_timing", "live_timing__audio_streams") }}
+        select * from {{ source("src_live_timing", "live_timing__audio_streams") }}
 
     {% else %}
 

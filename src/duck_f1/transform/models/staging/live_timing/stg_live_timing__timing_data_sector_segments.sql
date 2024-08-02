@@ -1,14 +1,14 @@
 with
 raw_timing_data_sector_segments as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__timing_data_sector_segments"
+            "src_live_timing", "live_timing__timing_data_sector_segments"
         ) | trim == "True" %}
 
         select *
         from
                 {{
                     source(
-                        "ing__live_timing", "live_timing__timing_data_sector_segments"
+                        "src_live_timing", "live_timing__timing_data_sector_segments"
                     )
                 }}
 

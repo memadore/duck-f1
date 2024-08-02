@@ -34,12 +34,16 @@ Completed pit stops during a grand prix session
 Official qualifying results
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__races %}
-Race list, with each session scheduled start
+{% docs tbl_stg_ergast__race__drivers_classification %}
+Official driver race classification
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__results %}
-Official driver race results
+{% docs tbl_stg_ergast__race__drivers_fastest_lap %}
+Official driver fastest lap of the race
+{% enddocs %}
+---
+{% docs tbl_stg_ergast__races %}
+Race list, with each session scheduled start
 {% enddocs %}
 ---
 {% docs tbl_stg_ergast__seasons %}

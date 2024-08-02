@@ -1,6 +1,6 @@
 with
 raw_sessions as (
-    select * from {{ source("ing__live_timing", "live_timing__sessions") }}
+    select * from {{ source("src_live_timing", "live_timing__sessions") }}
 ),
 
 formatted as (

@@ -1,5 +1,5 @@
 with
-raw_status as (select * from {{ source("ing__ergast", "ergast__status") }}),
+raw_status as (select * from {{ source("src_ergast", "ergast__status") }}),
 
 formatted as (
     select

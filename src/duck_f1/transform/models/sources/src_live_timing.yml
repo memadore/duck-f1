@@ -1,7 +1,7 @@
 ---
 version: 2
 sources:
-  - name: ing__live_timing
+  - name: src_live_timing
     database: "{{ var('db_name') }}"
     schema: ingress
     tables:

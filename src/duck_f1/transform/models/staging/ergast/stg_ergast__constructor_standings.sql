@@ -1,6 +1,6 @@
 with
 raw_constructor_standings as (
-    select * from {{ source("ing__ergast", "ergast__constructor_standings") }}
+    select * from {{ source("src_ergast", "ergast__constructor_standings") }}
 ),
 
 constructor_ids as (

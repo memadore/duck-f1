@@ -1,10 +1,10 @@
 with
 raw_position as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__position"
+            "src_live_timing", "live_timing__position"
         ) | trim == "True" %}
 
-        select * from {{ source("ing__live_timing", "live_timing__position") }}
+        select * from {{ source("src_live_timing", "live_timing__position") }}
 
     {% else %}
 

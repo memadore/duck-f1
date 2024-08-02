@@ -1,11 +1,11 @@
 with
 raw_driver_race_info as (
     {% if check_if_source_exists(
-        "ing__live_timing", "live_timing__driver_race_info"
+        "src_live_timing", "live_timing__driver_race_info"
     ) | trim == "True" %}
 
         select *
-        from {{ source("ing__live_timing", "live_timing__driver_race_info") }}
+        from {{ source("src_live_timing", "live_timing__driver_race_info") }}
 
     {% else %}
 

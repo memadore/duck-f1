@@ -1,5 +1,5 @@
 with
-raw_seasons as (select * from {{ source("ing__ergast", "ergast__seasons") }}),
+raw_seasons as (select * from {{ source("src_ergast", "ergast__seasons") }}),
 
 formatted as (
     select

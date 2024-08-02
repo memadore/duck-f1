@@ -1,6 +1,6 @@
 with
 raw_constructor_results as (
-    select * from {{ source("ing__ergast", "ergast__constructor_results") }}
+    select * from {{ source("src_ergast", "ergast__constructor_results") }}
 ),
 
 constructor_ids as (

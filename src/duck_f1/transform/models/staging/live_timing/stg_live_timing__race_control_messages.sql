@@ -1,11 +1,11 @@
 with
 raw_race_control_messages as (
         {% if check_if_source_exists(
-            "ing__live_timing", "live_timing__race_control_messages"
+            "src_live_timing", "live_timing__race_control_messages"
         ) | trim == "True" %}
 
         select *
-        from {{ source("ing__live_timing", "live_timing__race_control_messages") }}
+        from {{ source("src_live_timing", "live_timing__race_control_messages") }}
 
     {% else %}
 

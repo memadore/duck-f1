@@ -1,5 +1,5 @@
 with
-    raw_pit_stops as (select * from {{ source("ing__ergast", "ergast__pit_stops") }}),
+    raw_pit_stops as (select * from {{ source("src_ergast", "ergast__pit_stops") }}),
     foreign_keys as (
         select *
         from raw_pit_stops ps
