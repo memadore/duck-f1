@@ -1,0 +1,34 @@
+---
+version: 2
+models:
+  - name: mart__fct_lap__timings
+    description: '{{ doc("tbl_mart__fct_lap__timings") }}'
+    config:
+      alias: fct_lap__timings
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - fact
+          - lap
+          - timings
+    tests:
+      - unique:
+          column_name: "lap_id || '-' || race_id || '-' || driver_id"
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_drivers')
+              field: driver_id
+      - name: lap_id
+        tests:
+          - not_null
+          - unique
+      - name: race_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_races')
+              field: race_id

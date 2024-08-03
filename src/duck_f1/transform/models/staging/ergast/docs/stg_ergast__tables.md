@@ -22,7 +22,11 @@ Driver standing after an event
 List of drivers
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__lap_times %}
+{% docs tbl_stg_ergast__lap__positions %}
+Lap time for each lap completed during a grand prix session
+{% enddocs %}
+---
+{% docs tbl_stg_ergast__lap__timings %}
 Lap time for each lap completed during a grand prix session
 {% enddocs %}
 ---

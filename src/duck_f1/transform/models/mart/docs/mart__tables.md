@@ -21,7 +21,15 @@ Dimensional modeling for the seasons
 {% docs tbl_mart__dim_status %}
 Dimensional modeling for the driver race status
 {% enddocs %}
-
+---
+{% docs tbl_mart__fct_lap__positions %}
+Driver current position at the end of the lap for a race
+{% enddocs %}
+---
+{% docs tbl_mart__fct_lap__timings %}
+Driver timing data for each lap of a race
+{% enddocs %}
+---
 {% docs tbl_mart__fct_race__constructor_classification %}
 Constructor results after each point scoring events
 {% enddocs %}
