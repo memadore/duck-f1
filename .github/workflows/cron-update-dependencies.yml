@@ -10,16 +10,19 @@ jobs:
   update-pdm-dependencies:
     name: pdm::update-project
     runs-on: k8s-arc
+    permissions:
+      contents: write
     steps:
+      - name: Install packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends git
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-      - name: Install packages
-        run: |
-          sudo apt-get install -y --no-install-recommends git
       - name: Update dependencies
         uses: pdm-project/update-deps-action@v1
         with:
