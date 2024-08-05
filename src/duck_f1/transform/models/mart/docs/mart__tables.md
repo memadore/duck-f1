@@ -30,6 +30,10 @@ Driver current position at the end of the lap for a race
 Driver timing data for each lap of a race
 {% enddocs %}
 ---
+{% docs tbl_mart__fct_qualifying__driver_classification %}
+Driver timing data for each lap of a race
+{% enddocs %}
+---
 {% docs tbl_mart__fct_race__constructor_classification %}
 Constructor results after each point scoring events
 {% enddocs %}

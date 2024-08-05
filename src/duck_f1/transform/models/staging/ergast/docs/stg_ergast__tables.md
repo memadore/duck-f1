@@ -34,7 +34,7 @@ Lap time for each lap completed during a grand prix session
 Completed pit stops during a grand prix session
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__qualifying %}
+{% docs tbl_stg_ergast__qualifying__drivers_classification %}
 Official qualifying results
 {% enddocs %}
 ---

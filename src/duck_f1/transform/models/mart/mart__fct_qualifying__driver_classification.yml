@@ -1,0 +1,36 @@
+---
+version: 2
+models:
+  - name: mart__fct_qualifying__driver_classification
+    description: '{{ doc("tbl_mart__fct_qualifying__driver_classification") }}'
+    config:
+      alias: fct_qualifying__driver_classification
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - fact
+          - qualifying
+          - driver_classification
+    tests:
+      - unique:
+          column_name: "race_id || '-' || constructor_id || '-' || driver_id"
+    columns:
+      - name: constructor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_constructors')
+              field: constructor_id
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_drivers')
+              field: driver_id
+      - name: race_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_races')
+              field: race_id
