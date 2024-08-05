@@ -1,0 +1,12 @@
+---
+version: 2
+models:
+  - name: stg_ergast__qualifying__drivers_classification
+    description: '{{ doc("tbl_stg_ergast__qualifying__drivers_classification") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - qualifying
+          - driver_classification
