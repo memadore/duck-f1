@@ -67,9 +67,13 @@ formatted as (
         result.fastest_lap,
         result.fastest_lap_rank,
         result.fastest_lap_time,
-        result.fastest_lap_time_interval,
         result.fastest_lap_time_gap,
-        result.fastest_lap_speed
+        result.fastest_lap_speed,
+        if(
+            result.fastest_lap_time_interval = to_milliseconds(0),
+            null,
+            result.fastest_lap_time_interval
+        ) as fastest_lap_time_interval
     from results_stats as result
 )
 

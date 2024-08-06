@@ -14,10 +14,6 @@ Constructor standing after an event
 List of constructors
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__standings__drivers %}
-Driver standing after an event
-{% enddocs %}
----
 {% docs tbl_stg_ergast__drivers %}
 List of drivers
 {% enddocs %}
@@ -34,15 +30,15 @@ Lap time for each lap completed during a grand prix session
 Completed pit stops during a grand prix session
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__qualifying__drivers_classification %}
+{% docs tbl_stg_ergast__qualifying__driver_classification %}
 Official qualifying results
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__race__drivers_classification %}
+{% docs tbl_stg_ergast__race__driver_classification %}
 Official driver race classification
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__race__drivers_fastest_lap %}
+{% docs tbl_stg_ergast__race__driver_fastest_lap %}
 Official driver fastest lap of the race
 {% enddocs %}
 ---
@@ -54,7 +50,15 @@ Race list, with each session scheduled start
 Seasons list
 {% enddocs %}
 ---
-{% docs tbl_stg_ergast__sprint_results %}
+{% docs tbl_stg_ergast__standings__drivers %}
+Driver standing after an event
+{% enddocs %}
+---
+{% docs tbl_stg_ergast__sprint__driver_classification %}
+Official sprint race results
+{% enddocs %}
+---
+{% docs tbl_stg_ergast__sprint__driver_fastest_lap %}
 Official sprint race results
 {% enddocs %}
 ---

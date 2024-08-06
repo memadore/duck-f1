@@ -46,6 +46,14 @@ Driver classification for every race
 Driver fastest lap for a race event
 {% enddocs %}
 ---
+{% docs tbl_mart__fct_sprint__driver_classification %}
+Driver classification for every sprint
+{% enddocs %}
+---
+{% docs tbl_mart__fct_sprint__driver_fastest_lap %}
+Driver fastest lap for a sprint event
+{% enddocs %}
+---
 {% docs tbl_mart__fct_standings__constructors %}
 Season standings for each participating constructors
 {% enddocs %}

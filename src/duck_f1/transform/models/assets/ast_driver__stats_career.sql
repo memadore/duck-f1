@@ -20,7 +20,7 @@ results as (
         max(result.points) as max_points,
         min(result.points) as min_points,
         sum(result.points) as total_points
-    from {{ ref("stg_ergast__race__drivers_classification") }} as result
+    from {{ ref("stg_ergast__race__driver_classification") }} as result
     inner join {{ ref("stg_ergast__races") }} as race on result.race_id = race.race_id
     group by result.driver_id
 ),

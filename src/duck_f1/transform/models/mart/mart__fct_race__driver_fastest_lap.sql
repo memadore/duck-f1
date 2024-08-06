@@ -1,2 +1,2 @@
 select *
-from {{ ref("stg_ergast__race__drivers_classification") }}
+from {{ ref("stg_ergast__race__driver_fastest_lap") }}
