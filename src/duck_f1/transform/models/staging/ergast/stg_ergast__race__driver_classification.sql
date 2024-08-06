@@ -39,8 +39,8 @@ results as (
         driver_status.status_id,
         result.points,
         result.laps as laps_completed,
-        if(result.number = '\N', null, result.number::integer) as driver_number,
-        case when result.grid > 0 then result.grid end as grid_position,
+        result.number::integer as driver_number,
+        if(result.grid > 0, result.grid, null) as grid_position,
         if(result.position = '\N', null, result.position::integer) as classification,
         if(result.milliseconds = '\N', null, to_milliseconds(result.milliseconds::integer))
             as race_time,
@@ -54,7 +54,7 @@ results as (
     inner join status_ids as driver_status on result.statusid = driver_status.ergast_status_id
 ),
 
-results_stats as (
+results_windows as (
     select
         *,
         race_time
@@ -83,7 +83,7 @@ formatted as (
         result.race_time_label,
         result.race_time_interval,
         result.race_time_gap
-    from results_stats as result
+    from results_windows as result
 )
 
 select *

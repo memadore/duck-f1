@@ -1,0 +1,12 @@
+---
+version: 2
+models:
+  - name: stg_ergast__sprint__driver_fastest_lap
+    description: '{{ doc("tbl_stg_ergast__sprint__driver_fastest_lap") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - sprint
+          - driver_fastest_lap

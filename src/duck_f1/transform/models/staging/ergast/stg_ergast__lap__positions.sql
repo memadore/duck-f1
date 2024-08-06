@@ -20,7 +20,7 @@ driver_classifications as (
         race_id,
         driver_id,
         grid_position
-    from {{ ref("stg_ergast__race__drivers_classification") }}
+    from {{ ref("stg_ergast__race__driver_classification") }}
 ),
 
 lap_positions as (

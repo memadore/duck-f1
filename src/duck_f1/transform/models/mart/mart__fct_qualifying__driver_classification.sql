@@ -1,2 +1,2 @@
 select *
-from {{ ref("stg_ergast__qualifying__drivers_classification") }}
+from {{ ref("stg_ergast__qualifying__driver_classification") }}
