@@ -1,9 +1,10 @@
 from concurrent.futures import ThreadPoolExecutor
-import pandas as pd
 from unittest.mock import MagicMock
 
-from duck_f1.pipelines.assets.live_timing import config_manager, partition_manager
-from duck_f1.pipelines.assets.live_timing.live_timing import LiveTimingApi
+import pandas as pd
+
+from src.duck_f1.pipelines.assets.live_timing import config_manager, partition_manager
+from src.duck_f1.pipelines.assets.live_timing.api import LiveTimingApi
 
 api_client = LiveTimingApi(MagicMock())
 partitions = partition_manager.partitions

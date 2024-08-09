@@ -8,21 +8,22 @@ driver_ids as (
     from {{ ref("stg_ergast__drivers") }}
 ),
 
-race_ids as (
+session_ids as (
     select
-        race_id,
-        ergast_race_id
-    from {{ ref("stg_ergast__races") }}
+        session_id,
+        _ergast_race_id
+    from {{ ref("stg_sessions") }}
+    where session_type = 'race'
 ),
 
 lap_times as (
     select
-        race.race_id,
+        _session.session_id,
         driver.driver_id,
         lap_time.lap::integer as lap_number,
         {{ dbt_utils.generate_surrogate_key(
             [
-            "race.race_id",
+            "_session.session_id",
             "driver.driver_id",
             "lap_number"
             ]
@@ -30,17 +31,17 @@ lap_times as (
         to_milliseconds(lap_time.milliseconds) as lap_time
     from raw_lap_times as lap_time
     inner join driver_ids as driver on lap_time.driverid = driver.ergast_driver_id
-    inner join race_ids as race on lap_time.raceid = race.ergast_race_id
+    inner join session_ids as _session on lap_time.raceid = _session._ergast_race_id
 ),
 
 lap_time_windows as (
     select
         *,
-        rank() over (partition by race_id order by lap_time) as race_rank,
-        rank() over (partition by race_id, lap_number order by lap_time) as race_lap_rank,
-        rank() over (partition by race_id, driver_id order by lap_time) as race_driver_rank,
+        rank() over (partition by session_id order by lap_time) as race_rank,
+        rank() over (partition by session_id, lap_number order by lap_time) as race_lap_rank,
+        rank() over (partition by session_id, driver_id order by lap_time) as race_driver_rank,
         sum(epoch(lap_time))
-            over (partition by race_id, driver_id order by lap_number)
+            over (partition by session_id, driver_id order by lap_number)
             as driver_race_time_seconds
     from lap_times
 ),
@@ -58,7 +59,7 @@ lap_time_stats as (
 formatted as (
     select
         lap_time.lap_id,
-        lap_time.race_id,
+        lap_time.session_id,
         lap_time.driver_id,
         lap_time.lap_number,
         lap_time.lap_time,
@@ -71,4 +72,4 @@ formatted as (
 
 select *
 from formatted
-order by race_id, lap_number
+order by session_id, lap_number

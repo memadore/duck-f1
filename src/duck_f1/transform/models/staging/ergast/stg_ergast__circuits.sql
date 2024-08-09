@@ -12,7 +12,7 @@ formatted as (
         lat as latitude,
         lng as longitude,
         alt as altitude,
-        url as circuit_url
+        url as wikipedia_url
     from raw_circuits
 )
 

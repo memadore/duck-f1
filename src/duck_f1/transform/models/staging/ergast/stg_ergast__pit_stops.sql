@@ -9,13 +9,13 @@ with
             ) driver
             on ps.driverid = driver.ergast_driver_id
         join
-            (select race_id, ergast_race_id from {{ ref("stg_ergast__races") }}) race
-            on ps.raceid = race.ergast_race_id
+            (select session_id, ergast_race_id from {{ ref("stg_ergast__races") }}) race
+            on ps.raceid = _session._ergast_race_id
     ),
     formatted as (
         select
             driver_id,
-            race_id,
+            session_id,
             stop as stop_count,
             lap as lap_number,
             time as pit_stop_time_label,

@@ -2,9 +2,9 @@ with
 round_stats as (
     select
         driver.driver_id,
-        standing.race_id,
-        race.year as season,
-        race.round as race_round,
+        standing.session_id,
+        _session.year as season,
+        _session.round as race_round,
         standing.position as championship_position,
         standing.win_count,
         standing.points as season_total,
@@ -18,7 +18,9 @@ round_stats as (
     inner join
         {{ ref("stg_ergast__drivers") }} as driver
         on standing.driver_id = driver.driver_id
-    inner join {{ ref("stg_ergast__races") }} as race on standing.race_id = race.race_id
+    inner join
+        {{ ref("stg_ergast__races") }} as _session
+        on standing.session_id = _session.session_id
     window
         cummulative_season as (
             partition by season, standing.driver_id order by season, race_round

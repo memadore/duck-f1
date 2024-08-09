@@ -1,0 +1,10 @@
+---
+version: 2
+models:
+  - name: stg_events
+    description: '{{ doc("tbl_stg_ergast__events") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - events

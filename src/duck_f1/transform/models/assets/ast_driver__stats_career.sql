@@ -11,17 +11,19 @@ results as (
         ) as top_grid_position,
         count(case when result.position_order = 1 then 1 end) as win_count,
         (win_count / event_count) as win_ratio,
-        max(case when result.position_order = 1 then race.date end) as latest_win_date,
+        max(case when result.position_order = 1 then _session.date end) as latest_win_date,
         count(case when result.position_order <= 3 then 1 end) as podium_count,
         (podium_count / event_count) as podium_ratio,
-        max(case when result.position_order <= 3 then race.date end) as latest_podium_date,
+        max(case when result.position_order <= 3 then _session.date end) as latest_podium_date,
         min(result.position_order) as top_finish_position,
         max(result.position_order) as low_finish_position,
         max(result.points) as max_points,
         min(result.points) as min_points,
         sum(result.points) as total_points
     from {{ ref("stg_ergast__race__driver_classification") }} as result
-    inner join {{ ref("stg_ergast__races") }} as race on result.race_id = race.race_id
+    inner join
+        {{ ref("stg_ergast__races") }} as _session
+        on result.session_id = _session.session_id
     group by result.driver_id
 ),
 

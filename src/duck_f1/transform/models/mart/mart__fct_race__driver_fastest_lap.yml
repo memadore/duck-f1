@@ -14,7 +14,7 @@ models:
           - driver_fastest_lap
     tests:
       - unique:
-          column_name: "race_id || '-' || constructor_id || '-' || driver_id"
+          column_name: "session_id || '-' || constructor_id || '-' || driver_id"
           config:
             severity: warn # TODO: investigate
     columns:
@@ -30,9 +30,9 @@ models:
           - relationships:
               to: ref('mart__dim_drivers')
               field: driver_id
-      - name: race_id
+      - name: session_id
         tests:
           - not_null
           - relationships:
               to: ref('mart__dim_races')
-              field: race_id
+              field: session_id
