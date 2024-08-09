@@ -10,17 +10,18 @@ constructor_ids as (
     from {{ ref("stg_ergast__constructors") }}
 ),
 
-race_ids as (
+session_ids as (
     select
-        race_id,
-        ergast_race_id
-    from {{ ref("stg_ergast__races") }}
+        session_id,
+        _ergast_race_id
+    from {{ ref("stg_sessions") }}
+    where session_type = 'race'
 ),
 
 formatted as (
     select
         constructor.constructor_id,
-        race.race_id,
+        _session.session_id,
         constructor_standings.points,
         constructor_standings.position,
         constructor_standings.positiontext as position_label,
@@ -29,7 +30,7 @@ formatted as (
     inner join
         constructor_ids as constructor
         on constructor_standings.constructorid = constructor.ergast_constructor_id
-    inner join race_ids as race on constructor_standings.raceid = race.ergast_race_id
+    inner join session_ids as _session on constructor_standings.raceid = _session._ergast_race_id
 )
 
 select *

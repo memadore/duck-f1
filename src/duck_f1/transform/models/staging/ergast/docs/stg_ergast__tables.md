@@ -18,6 +18,10 @@ List of constructors
 List of drivers
 {% enddocs %}
 ---
+{% docs tbl_stg_ergast__events %}
+List of all Formula 1 events
+{% enddocs %}
+---
 {% docs tbl_stg_ergast__lap__positions %}
 Lap time for each lap completed during a grand prix session
 {% enddocs %}
@@ -48,6 +52,10 @@ Race list, with each session scheduled start
 ---
 {% docs tbl_stg_ergast__seasons %}
 Seasons list
+{% enddocs %}
+---
+{% docs tbl_stg_ergast__sessions %}
+List of all Formula 1 sessions
 {% enddocs %}
 ---
 {% docs tbl_stg_ergast__standings__drivers %}

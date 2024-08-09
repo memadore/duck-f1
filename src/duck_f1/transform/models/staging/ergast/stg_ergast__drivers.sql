@@ -13,10 +13,10 @@ formatted as (
         surname as last_name,
         concat_ws(' ', forename, surname) as full_name,
         dob as date_of_birth,
-        cast(datesub('y', date_of_birth, today()) as integer) as age_years,
-        cast(datesub('d', date_of_birth, today()) as integer) as age_days,
+        datesub('y', date_of_birth, today())::integer as age_years,
+        datesub('d', date_of_birth, today())::integer as age_days,
         nationality,
-        url as wiki_url
+        url as wikipedia_url
     from raw_drivers
 )
 

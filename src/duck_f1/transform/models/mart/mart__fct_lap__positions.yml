@@ -14,7 +14,7 @@ models:
           - positions
     tests:
       - unique:
-          column_name: "lap_id || '-' || race_id || '-' || driver_id"
+          column_name: "lap_id || '-' || session_id || '-' || driver_id"
     columns:
       - name: driver_id
         tests:
@@ -26,9 +26,9 @@ models:
         tests:
           - not_null
           - unique
-      - name: race_id
+      - name: session_id
         tests:
           - not_null
           - relationships:
               to: ref('mart__dim_races')
-              field: race_id
+              field: session_id

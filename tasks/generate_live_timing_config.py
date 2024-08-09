@@ -13,6 +13,7 @@ SEASON_CALENDARS = [
     "https://github.com/theOehrly/f1schedule/raw/master/schedule_2021.json",
     "https://github.com/theOehrly/f1schedule/raw/master/schedule_2022.json",
     "https://github.com/theOehrly/f1schedule/raw/master/schedule_2023.json",
+    "https://github.com/theOehrly/f1schedule/raw/master/schedule_2024.json",
 ]
 
 DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S"
@@ -62,9 +63,13 @@ for url in SEASON_CALENDARS:
 
         events.append(event_data)
 
-with open("./config/live_timing.yaml", "r", encoding="utf-8") as file:
+with open(
+    "./src/duck_f1/pipelines/assets/live_timing/values.yaml", "r", encoding="utf-8"
+) as file:
     file_data = yaml.safe_load(file)
 
-with open("./config/live_timing.yaml", "w", encoding="utf-8") as file:
+with open(
+    "./src/duck_f1/pipelines/assets/live_timing/values.yaml", "w", encoding="utf-8"
+) as file:
     file_data["events"] = events
     yaml.safe_dump(file_data, file)

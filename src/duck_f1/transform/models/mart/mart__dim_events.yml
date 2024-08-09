@@ -1,18 +1,18 @@
 ---
 version: 2
 models:
-  - name: mart__dim_races
+  - name: mart__dim_events
     description: '{{ doc("tbl_mart__dim_races") }}'
     config:
-      alias: dim_races
+      alias: dim_events
     meta:
       dagster:
         asset_key:
           - mart
           - dim
-          - races
+          - events
     columns:
-      - name: session_id
+      - name: event_id
         tests:
           - unique
           - not_null

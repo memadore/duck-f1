@@ -15,17 +15,18 @@ driver_ids as (
     from {{ ref("stg_ergast__drivers") }}
 ),
 
-race_ids as (
+session_ids as (
     select
-        race_id,
-        ergast_race_id
-    from {{ ref("stg_ergast__races") }}
+        session_id,
+        _ergast_race_id
+    from {{ ref("stg_sessions") }}
+    where session_type = 'qualifying'
 ),
 
 qualifying_results as (
     select
         driver.driver_id,
-        race.race_id,
+        _session.session_id,
         constructor.constructor_id,
         qualifying.position,
         if(qualifying.q1 = '\N' or len(qualifying.q1) = 0, null, qualifying.q1) as q1_time_label,
@@ -51,27 +52,27 @@ qualifying_results as (
         constructor_ids as constructor
         on qualifying.constructorid = constructor.ergast_constructor_id
     inner join driver_ids as driver on qualifying.driverid = driver.ergast_driver_id
-    inner join race_ids as race on qualifying.raceid = race.ergast_race_id
+    inner join session_ids as _session on qualifying.raceid = _session._ergast_race_id
 ),
 
 qualifying_windows as (
     select
         *,
-        row_number() over (partition by race_id order by q1_time nulls last) as q1_position,
+        row_number() over (partition by session_id order by q1_time nulls last) as q1_position,
         q1_time
-        - first(q1_time) over (partition by race_id order by q1_time nulls last) as q1_interval,
-        row_number() over (partition by race_id order by q2_time nulls last) as q2_position,
+        - first(q1_time) over (partition by session_id order by q1_time nulls last) as q1_interval,
+        row_number() over (partition by session_id order by q2_time nulls last) as q2_position,
         q2_time
-        - first(q2_time) over (partition by race_id order by q2_time nulls last) as q2_interval,
-        row_number() over (partition by race_id order by q3_time nulls last) as q3_position,
+        - first(q2_time) over (partition by session_id order by q2_time nulls last) as q2_interval,
+        row_number() over (partition by session_id order by q3_time nulls last) as q3_position,
         q3_time
-        - first(q3_time) over (partition by race_id order by q3_time nulls last) as q3_interval
+        - first(q3_time) over (partition by session_id order by q3_time nulls last) as q3_interval
     from qualifying_results
 ),
 
 formatted as (
     select
-        qualifying.race_id,
+        qualifying.session_id,
         qualifying.constructor_id,
         qualifying.driver_id,
         qualifying.position,

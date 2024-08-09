@@ -17,11 +17,12 @@ driver_ids as (
     from {{ ref("stg_ergast__drivers") }}
 ),
 
-race_ids as (
+session_ids as (
     select
-        race_id,
-        ergast_race_id
-    from {{ ref("stg_ergast__races") }}
+        session_id,
+        _ergast_race_id
+    from {{ ref("stg_sessions") }}
+    where session_type = 'sprint'
 ),
 
 status_ids as (
@@ -33,7 +34,7 @@ status_ids as (
 
 sprints as (
     select
-        race.race_id,
+        _session.session_id,
         driver.driver_id,
         constructor.constructor_id,
         sprint.positiontext as position_label,
@@ -52,7 +53,7 @@ sprints as (
         constructor_ids as constructor
         on sprint.constructorid = constructor.ergast_constructor_id
     inner join driver_ids as driver on sprint.driverid = driver.ergast_driver_id
-    inner join race_ids as race on sprint.raceid = race.ergast_race_id
+    inner join session_ids as _session on sprint.raceid = _session._ergast_race_id
     inner join status_ids as driver_status on sprint.statusid = driver_status.ergast_status_id
 ),
 
@@ -61,16 +62,18 @@ sprints_windows as (
         *,
         sprint_time
         - first(sprint_time)
-            over (partition by race_id order by position_order)
+            over (partition by session_id order by position_order)
             as sprint_time_interval,
         sprint_time
-        - lag(sprint_time) over (partition by race_id order by position_order) as sprint_time_gap
+        - lag(sprint_time)
+            over (partition by session_id order by position_order)
+            as sprint_time_gap
     from sprints
 ),
 
 formatted as (
     select
-        sprint.race_id,
+        sprint.session_id,
         sprint.driver_id,
         sprint.constructor_id,
         sprint.driver_number,
