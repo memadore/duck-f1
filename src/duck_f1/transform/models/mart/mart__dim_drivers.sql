@@ -1,12 +1,20 @@
-select
-    {{
-        dbt_utils.star(
-            from=ref("int_drivers"),
-            except=[
-                "_ergast_driver_id",
-                "_live_timing_driver_id",
-                "_full_name_key"
-            ]
-        )
-    }}
-from {{ ref("int_drivers") }}
+with formatted as (
+    select
+        driver_id,
+        first_name,
+        last_name,
+        full_name,
+        driver_code,
+        is_driver_code_generated,
+        car_numbers,
+        date_of_birth,
+        age_years,
+        age_days,
+        age_label,
+        nationality,
+        wikipedia_url
+    from {{ ref("int_drivers") }}
+)
+
+select *
+from formatted
