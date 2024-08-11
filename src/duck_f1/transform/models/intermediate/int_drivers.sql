@@ -28,7 +28,6 @@ live_timing_drivers as (
         null::integer as _ergast_driver_id,
         _live_timing_driver_id,
         _full_name_key,
-        car_numbers,
         first_name,
         last_name,
         full_name,
@@ -39,7 +38,8 @@ live_timing_drivers as (
         null::integer as age_days,
         null::integer as age_label,
         null::integer as nationality,
-        null::integer as wikipedia_url
+        null::integer as wikipedia_url,
+        car_numbers
     from {{ ref("int_live_timing__drivers") }}
     where _full_name_key not in (
         select _full_name_key
