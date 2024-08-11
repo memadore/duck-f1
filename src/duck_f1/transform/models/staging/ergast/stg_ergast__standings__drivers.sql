@@ -6,7 +6,7 @@ raw_driver_standings as (
 driver_ids as (
     select
         driver_id,
-        ergast_driver_id
+        _ergast_driver_id
     from {{ ref("stg_ergast__drivers") }}
 ),
 
@@ -27,7 +27,7 @@ formatted as (
         driver_standing.positiontext as position_label,
         driver_standing.wins as win_count
     from raw_driver_standings as driver_standing
-    inner join driver_ids as driver on driver_standing.driverid = driver.ergast_driver_id
+    inner join driver_ids as driver on driver_standing.driverid = driver._ergast_driver_id
     inner join session_ids as _session on driver_standing.raceid = _session._ergast_race_id
 )
 

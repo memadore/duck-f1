@@ -6,14 +6,14 @@ raw_sprint_results as (
 constructor_ids as (
     select
         constructor_id,
-        ergast_constructor_id
+        _ergast_constructor_id
     from {{ ref("stg_ergast__constructors") }}
 ),
 
 driver_ids as (
     select
         driver_id,
-        ergast_driver_id
+        _ergast_driver_id
     from {{ ref("stg_ergast__drivers") }}
 ),
 
@@ -28,7 +28,7 @@ session_ids as (
 status_ids as (
     select
         status_id,
-        ergast_status_id
+        _ergast_status_id
     from {{ ref("stg_ergast__status") }}
 ),
 
@@ -42,7 +42,7 @@ sprints as (
         driver_status.status_id,
         sprint.points,
         sprint.laps as laps_completed,
-        sprint.number::integer as driver_number,
+        sprint.number::integer as car_number,
         if(sprint.grid > 0, sprint.grid, null) as grid_position,
         if(sprint.position = '\N', null, sprint.position::integer) as classification,
         if(sprint.milliseconds = '\N', null, to_milliseconds(sprint.milliseconds::integer))
@@ -51,10 +51,10 @@ sprints as (
     from raw_sprint_results as sprint
     inner join
         constructor_ids as constructor
-        on sprint.constructorid = constructor.ergast_constructor_id
-    inner join driver_ids as driver on sprint.driverid = driver.ergast_driver_id
+        on sprint.constructorid = constructor._ergast_constructor_id
+    inner join driver_ids as driver on sprint.driverid = driver._ergast_driver_id
     inner join session_ids as _session on sprint.raceid = _session._ergast_race_id
-    inner join status_ids as driver_status on sprint.statusid = driver_status.ergast_status_id
+    inner join status_ids as driver_status on sprint.statusid = driver_status._ergast_status_id
 ),
 
 sprints_windows as (
@@ -76,7 +76,7 @@ formatted as (
         sprint.session_id,
         sprint.driver_id,
         sprint.constructor_id,
-        sprint.driver_number,
+        sprint.car_number,
         sprint.grid_position,
         sprint.classification,
         sprint.position_label,

@@ -21,7 +21,7 @@ raw_current_tyres as (
 
 formatted as (
     select
-        driver as driver_number,
+        driver as car_number,
         compound as tyre_compound,
         new as is_new,
         _streamtimestamp as _stream_ts,

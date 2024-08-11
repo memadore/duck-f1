@@ -4,14 +4,14 @@ raw_results as (select * from {{ source("src_ergast", "ergast__results") }}),
 constructor_ids as (
     select
         constructor_id,
-        ergast_constructor_id
+        _ergast_constructor_id
     from {{ ref("stg_ergast__constructors") }}
 ),
 
 driver_ids as (
     select
         driver_id,
-        ergast_driver_id
+        _ergast_driver_id
     from {{ ref("stg_ergast__drivers") }}
 ),
 
@@ -26,7 +26,7 @@ session_ids as (
 status_ids as (
     select
         status_id,
-        ergast_status_id
+        _ergast_status_id
     from {{ ref("stg_ergast__status") }}
 ),
 
@@ -40,7 +40,7 @@ results as (
         driver_status.status_id,
         result.points,
         result.laps as laps_completed,
-        if(result.number = '\N', null, result.number::integer) as driver_number,
+        if(result.number = '\N', null, result.number::integer) as car_number,
         if(result.grid > 0, result.grid, null) as grid_position,
         if(result.position = '\N', null, result.position::integer) as classification,
         if(result.milliseconds = '\N', null, to_milliseconds(result.milliseconds::integer))
@@ -49,10 +49,10 @@ results as (
     from raw_results as result
     inner join
         constructor_ids as constructor
-        on result.constructorid = constructor.ergast_constructor_id
-    inner join driver_ids as driver on result.driverid = driver.ergast_driver_id
+        on result.constructorid = constructor._ergast_constructor_id
+    inner join driver_ids as driver on result.driverid = driver._ergast_driver_id
     inner join session_ids as _session on result.raceid = _session._ergast_race_id
-    inner join status_ids as driver_status on result.statusid = driver_status.ergast_status_id
+    inner join status_ids as driver_status on result.statusid = driver_status._ergast_status_id
 ),
 
 results_windows as (
@@ -72,7 +72,7 @@ formatted as (
         result.session_id,
         result.driver_id,
         result.constructor_id,
-        result.driver_number,
+        result.car_number,
         result.grid_position,
         result.classification,
         result.position_label,

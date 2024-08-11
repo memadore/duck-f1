@@ -4,7 +4,7 @@ raw_races as (select * from {{ source("src_ergast", "ergast__races") }}),
 circuit_ids as (
     select
         circuit_id,
-        ergast_circuit_id
+        _ergast_circuit_id
     from {{ ref("stg_ergast__circuits") }}
 ),
 
@@ -15,7 +15,7 @@ formatted as (
         {{ dbt_utils.generate_surrogate_key(["race.year", "race.round", "session_type"]) }}
             as session_id,
         circuit.circuit_id,
-        race.raceid as ergast_race_id,
+        race.raceid as _ergast_race_id,
         race.year,
         race.round,
         race.name,
@@ -38,7 +38,7 @@ formatted as (
         if(race.sprint_date = '\N', null, race.sprint_date) as sprint_date,
         if(race.sprint_time = '\N', null, race.sprint_time) as sprint_time
     from raw_races as race
-    inner join circuit_ids as circuit on race.circuitid = circuit.ergast_circuit_id
+    inner join circuit_ids as circuit on race.circuitid = circuit._ergast_circuit_id
 )
 
 select *

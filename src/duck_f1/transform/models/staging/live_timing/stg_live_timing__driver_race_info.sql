@@ -27,7 +27,7 @@ raw_driver_race_info as (
 
 formatted as (
     select
-        race_info.driver as driver_number,
+        race_info.driver as car_number,
         race_info.position as track_position,
         race_info.gap as gap_to_leader,
         race_info.interval,

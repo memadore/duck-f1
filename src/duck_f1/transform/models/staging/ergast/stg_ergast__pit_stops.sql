@@ -5,11 +5,11 @@ with
         from raw_pit_stops ps
         join
             (
-                select driver_id, ergast_driver_id from {{ ref("stg_ergast__drivers") }}
+                select driver_id, _ergast_driver_id from {{ ref("stg_ergast__drivers") }}
             ) driver
-            on ps.driverid = driver.ergast_driver_id
+            on ps.driverid = driver._ergast_driver_id
         join
-            (select session_id, ergast_race_id from {{ ref("stg_ergast__races") }}) race
+            (select session_id, _ergast_race_id from {{ ref("stg_ergast__sessions") }}) race
             on ps.raceid = _session._ergast_race_id
     ),
     formatted as (

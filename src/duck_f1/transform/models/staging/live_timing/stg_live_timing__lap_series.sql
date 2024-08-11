@@ -21,7 +21,7 @@ raw_lap_series as (
 
 formatted as (
     select
-        drivernumber as driver_number,
+        drivernumber as car_number,
         lapnumber as lap_number,
         lapposition as lap_position,
         _streamtimestamp as _stream_ts,

@@ -34,7 +34,7 @@ class LiveTimingConfig(BaseModel):
 
 
 class LiveTimingSessionMetadata(BaseModel):
-    season_round: int
+    event_round_number: int
     event_sha: str
     event_country: str
     event_location: str
