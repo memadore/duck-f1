@@ -26,7 +26,7 @@ formatted as (
         value as lap_time,
         lap,
         position,
-        driver as driver_number,
+        driver as car_number,
         _streamtimestamp as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_timing_stats_lap_times

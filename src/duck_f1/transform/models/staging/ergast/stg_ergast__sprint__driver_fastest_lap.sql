@@ -6,14 +6,14 @@ raw_sprint_results as (
 constructor_ids as (
     select
         constructor_id,
-        ergast_constructor_id
+        _ergast_constructor_id
     from {{ ref("stg_ergast__constructors") }}
 ),
 
 driver_ids as (
     select
         driver_id,
-        ergast_driver_id
+        _ergast_driver_id
     from {{ ref("stg_ergast__drivers") }}
 ),
 
@@ -39,8 +39,8 @@ sprints as (
     from raw_sprint_results as sprint
     inner join
         constructor_ids as constructor
-        on sprint.constructorid = constructor.ergast_constructor_id
-    inner join driver_ids as driver on sprint.driverid = driver.ergast_driver_id
+        on sprint.constructorid = constructor._ergast_constructor_id
+    inner join driver_ids as driver on sprint.driverid = driver._ergast_driver_id
     inner join session_ids as _session on sprint.raceid = _session._ergast_race_id
 ),
 

@@ -4,7 +4,10 @@ raw_driver_list as (
             "src_live_timing", "live_timing__driver_list"
         ) | trim == "True" %}
 
-        select * from {{ source("src_live_timing", "live_timing__driver_list") }}
+        select
+            *,
+            {{ live_timing__metadata() }}
+        from {{ source("src_live_timing", "live_timing__driver_list") }}
 
     {% else %}
 
@@ -27,22 +30,41 @@ raw_driver_list as (
         {% endif %}
 ),
 
-formatted as (
+computed as (
     select
-        racingnumber as racing_number,
-        broadcastname as broadcast_name,
-        fullname as full_name,
-        tla as driver_abbr,
+        session_id,
+        reference as _live_timing_driver_id,
+        racingnumber::integer as car_number,
+        tla as driver_code,
         line as starting_position,
         teamname as team_name,
         teamcolour as team_color,
-        firstname as first_name,
-        lastname as last_name,
-        reference as driver_id,
-        headshoturl as headshort_url,
+        headshoturl as head_shot_url,
         _streamtimestamp as _stream_ts,
-        {{ live_timing__metadata() }}
+        trim(broadcastname) as broadcast_name,
+        trim(fullname) as full_name,
+        trim(broadcast_name[3:]) as _last_name,
+        trim(string_split(full_name, _last_name)[1]) as first_name
     from raw_driver_list
+),
+
+formatted as (
+    select
+        session_id,
+        _live_timing_driver_id,
+        car_number,
+        broadcast_name,
+        first_name,
+        driver_code,
+        starting_position,
+        team_name,
+        team_color,
+        head_shot_url,
+        _stream_ts,
+        _last_name[1] || lower(_last_name[2:]) as last_name,
+        concat(first_name, ' ', last_name) as full_name,
+        lower(strip_accents(concat(first_name, last_name))) as _full_name_key
+    from computed
 )
 
 select *

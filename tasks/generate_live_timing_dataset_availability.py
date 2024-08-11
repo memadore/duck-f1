@@ -25,13 +25,13 @@ for dataset in config_manager.datasets:
             }
         )
 
-OUT = []
+out = []
 
 
 def task(keys):
     print(keys)
     data = api_client.get_dataset(keys["event_key"], keys["dataset"])
-    OUT.append(
+    out.append(
         {
             **keys,
             "availability": "🔴" if data is None else "🟢",
@@ -43,8 +43,9 @@ with ThreadPoolExecutor(max_workers=16) as executor:
     executor.map(task, keys)
 
 
-df = pd.DataFrame(OUT)
+df = pd.DataFrame(out)
 df = df.sort_values(by=["season_year", "event_date", "session_date", "dataset"])
+
 with open("./dist/doc/live_timing_datasets.md", "w", encoding="utf-8") as file:
     file.write("# Live timing datasets availability\n\n")
     seasons = list(df["season_year"].unique())

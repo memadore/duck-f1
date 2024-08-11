@@ -6,7 +6,7 @@ raw_constructor_standings as (
 constructor_ids as (
     select
         constructor_id,
-        ergast_constructor_id
+        _ergast_constructor_id
     from {{ ref("stg_ergast__constructors") }}
 ),
 
@@ -29,7 +29,7 @@ formatted as (
     from raw_constructor_standings as constructor_standings
     inner join
         constructor_ids as constructor
-        on constructor_standings.constructorid = constructor.ergast_constructor_id
+        on constructor_standings.constructorid = constructor._ergast_constructor_id
     inner join session_ids as _session on constructor_standings.raceid = _session._ergast_race_id
 )
 

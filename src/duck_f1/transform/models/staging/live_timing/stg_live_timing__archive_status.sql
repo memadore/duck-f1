@@ -9,7 +9,9 @@ raw_archive_status as (
 
     {% else %}
 
-            select null:integer as status, {{ live_timing__empty_metadata() }}
+            select
+            null:integer as status,
+            {{ live_timing__empty_metadata() }}
             where false
 
         {% endif %}
@@ -17,7 +19,9 @@ raw_archive_status as (
 
 formatted as (
     select
-        status, {{ live_timing__metadata() }} from raw_archive_status
+        status,
+        {{ live_timing__metadata() }}
+    from raw_archive_status
 )
 
 select *

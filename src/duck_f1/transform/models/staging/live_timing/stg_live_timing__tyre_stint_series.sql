@@ -26,7 +26,7 @@ raw_tyre_stint_series as (
 
 formatted as (
     select
-        driver as driver_number,
+        driver as car_number,
         stint as stint_id,
         compound as tyre_compound,
         new as is_new,

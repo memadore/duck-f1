@@ -4,7 +4,7 @@ raw_lap_times as (select * from {{ source("src_ergast", "ergast__lap_times") }})
 driver_ids as (
     select
         driver_id,
-        ergast_driver_id
+        _ergast_driver_id
     from {{ ref("stg_ergast__drivers") }}
 ),
 
@@ -40,7 +40,7 @@ lap_positions as (
         lap_time.position::integer as driver_position,
         (start_position - driver_position) * (-1) as positions_gained_from_start
     from raw_lap_times as lap_time
-    inner join driver_ids as driver on lap_time.driverid = driver.ergast_driver_id
+    inner join driver_ids as driver on lap_time.driverid = driver._ergast_driver_id
     inner join session_ids as _session on lap_time.raceid = _session._ergast_race_id
     left join driver_classifications as driver_classification
         on

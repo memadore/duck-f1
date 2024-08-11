@@ -34,5 +34,5 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_races')
+              to: ref('mart__dim_sessions')
               field: session_id

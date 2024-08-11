@@ -6,6 +6,14 @@ Round by round statistics for each driver about their championship classificatio
 Round by round statistics for the race performance of each driver
 {% enddocs %}
 ---
+{% docs tbl_int_drivers %}
+List of all drivers from ergast and live timing
+{% enddocs %}
+---
+{% docs tbl_int_live_timing__drivers %}
+List drivers that participated in an event session
+{% enddocs %}
+---
 {% docs tbl_int_season__world_champion %}
 Round by round statistics for the race performance of each driver
 {% enddocs %}

@@ -1,20 +1,20 @@
 ---
 version: 2
 models:
-  - name: mart__fct_lap__positions
-    description: '{{ doc("tbl_mart__fct_lap__positions") }}'
+  - name: mart__fct_session__drivers
+    description: '{{ doc("tbl_mart__fct_session__drivers") }}'
     config:
-      alias: fct_lap__positions
+      alias: fct_session__drivers
     meta:
       dagster:
         asset_key:
           - mart
           - fact
-          - lap
-          - positions
+          - session
+          - drivers
     tests:
       - unique:
-          column_name: "lap_id || '-' || session_id || '-' || driver_id"
+          column_name: "session_id || '-' || driver_id"
     columns:
       - name: driver_id
         tests:
@@ -22,10 +22,6 @@ models:
           - relationships:
               to: ref('mart__dim_drivers')
               field: driver_id
-      - name: lap_id
-        tests:
-          - not_null
-          - unique
       - name: session_id
         tests:
           - not_null

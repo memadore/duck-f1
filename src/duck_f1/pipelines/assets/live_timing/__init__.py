@@ -31,7 +31,7 @@ class LiveTimingSessionManager:
                         session_key=self._create_session_key(event, session),
                         event_path=self._create_event_path(event, session),
                         metadata=LiveTimingSessionMetadata(
-                            season_round=event.round_number,
+                            event_round_number=event.round_number,
                             event_sha=event.sha,
                             event_country=event.country,
                             event_location=event.location,

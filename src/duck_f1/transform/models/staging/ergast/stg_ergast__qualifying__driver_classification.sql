@@ -4,14 +4,14 @@ raw_qualifying as (select * from {{ source("src_ergast", "ergast__qualifying") }
 constructor_ids as (
     select
         constructor_id,
-        ergast_constructor_id
+        _ergast_constructor_id
     from {{ ref("stg_ergast__constructors") }}
 ),
 
 driver_ids as (
     select
         driver_id,
-        ergast_driver_id
+        _ergast_driver_id
     from {{ ref("stg_ergast__drivers") }}
 ),
 
@@ -50,8 +50,8 @@ qualifying_results as (
     from raw_qualifying as qualifying
     inner join
         constructor_ids as constructor
-        on qualifying.constructorid = constructor.ergast_constructor_id
-    inner join driver_ids as driver on qualifying.driverid = driver.ergast_driver_id
+        on qualifying.constructorid = constructor._ergast_constructor_id
+    inner join driver_ids as driver on qualifying.driverid = driver._ergast_driver_id
     inner join session_ids as _session on qualifying.raceid = _session._ergast_race_id
 ),
 
