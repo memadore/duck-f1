@@ -22,7 +22,7 @@ formatted as (
     select
         timestamp as event_local_ts,
         message as race_control_message,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_tla_rcm
 )

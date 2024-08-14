@@ -22,16 +22,30 @@ raw_timing_data_last_lap as (
         {% endif %}
 ),
 
-formatted as (
+computed as (
     select
-        value as lap_time,
+        driver as car_number,
+        {{ varchar_lap_time_to_interval("value") }} as lap_time,
         status as lap_time_status,
         overallfastest as is_overall_fastest,
         personalfastest as is_personal_fastest,
-        driver,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_last_lap
+    where
+        value is not null
+        and len(value) > 0
+),
+
+formatted as (
+    select
+        session_id,
+        car_number,
+        lap_time,
+        lap_time_status,
+        is_personal_fastest,
+        _stream_ts
+    from computed
 )
 
 select *

@@ -40,7 +40,7 @@ computed as (
         teamname as team_name,
         teamcolour as team_color,
         headshoturl as head_shot_url,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         trim(broadcastname) as broadcast_name,
         trim(fullname) as full_name,
         trim(broadcast_name[3:]) as _last_name,

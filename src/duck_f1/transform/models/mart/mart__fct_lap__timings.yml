@@ -26,6 +26,9 @@ models:
         tests:
           - not_null
           - unique
+      - name: lap_number
+        tests:
+          - not_null
       - name: session_id
         tests:
           - not_null

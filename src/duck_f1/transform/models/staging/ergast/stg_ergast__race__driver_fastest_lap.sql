@@ -33,7 +33,7 @@ results as (
         if(
             result.fastestlaptime = '\N',
             null,
-            {{ ergast__lap_time_to_interval("result.fastestlaptime") }}
+            {{ varchar_lap_time_to_interval("result.fastestlaptime") }}
         ) as fastest_lap_time,
         if(result.fastestlapspeed = '\N', null, result.fastestlapspeed::numeric)
             as fastest_lap_speed

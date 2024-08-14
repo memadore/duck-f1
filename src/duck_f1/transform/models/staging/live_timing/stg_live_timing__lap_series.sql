@@ -19,14 +19,29 @@ raw_lap_series as (
         {% endif %}
 ),
 
-formatted as (
+renamed as (
     select
         drivernumber as car_number,
         lapnumber as lap_number,
         lapposition as lap_position,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_lap_series
+),
+
+formatted as (
+    select
+        session_id,
+        session_type,
+        car_number,
+        lap_number,
+        lap_position,
+        _stream_ts as lap_end_ts,
+        lag(_stream_ts)
+            over (partition by session_id, car_number order by _stream_ts)
+            as lap_start_ts,
+        lap_end_ts - lap_start_ts as lap_time
+    from renamed
 )
 
 select *

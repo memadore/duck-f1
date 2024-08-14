@@ -21,15 +21,27 @@ raw_timing_stats_lap_times as (
         {% endif %}
 ),
 
-formatted as (
+computed as (
     select
-        value as lap_time,
-        lap,
+        {{ varchar_lap_time_to_interval("value") }} as lap_time,
+        lap as lap_number,
         position,
         driver as car_number,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_timing_stats_lap_times
+    where len(value) > 0
+),
+
+formatted as (
+    select
+        session_id,
+        car_number,
+        lap_number,
+        lap_time,
+        position,
+        _stream_ts
+    from computed
 )
 
 select *

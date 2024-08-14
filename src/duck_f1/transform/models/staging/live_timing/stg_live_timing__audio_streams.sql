@@ -28,7 +28,7 @@ formatted as (
         uri,
         path,
         utc as event_utc_ts,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_audio_streams
 )

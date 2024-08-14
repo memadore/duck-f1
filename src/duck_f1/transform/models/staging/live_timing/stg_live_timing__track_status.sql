@@ -22,7 +22,7 @@ formatted as (
     select
         status as status_id,
         message as status_message,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_track_status
 )

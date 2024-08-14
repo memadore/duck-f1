@@ -25,19 +25,35 @@ raw_timing_data_sectors as (
         {% endif %}
 ),
 
-formatted as (
+computed as (
     select
-        sectorkey as sector_key,
-        stopped as is_stopped,
-        value as sector_time,
-        previousvalue as previous_value,
+        driver as car_number,
+        sectorkey::integer as sector_key,
+        stopped::boolean as is_stopped,
+        to_milliseconds(if(len(value) > 0, value::numeric * 1000, null)) as sector_time,
+        to_milliseconds(if(len(previousvalue) > 0, value::numeric * 1000, null)) as previous_value,
         status as sector_status,
-        overallfastest as is_overall_fastest,
-        personalfastest as is_personal_fastest,
-        driver,
-        _streamtimestamp as _stream_ts,
+        overallfastest::boolean as is_overall_fastest,
+        personalfastest::boolean as is_personal_fastest,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_sectors
+    where sector_time is not null
+),
+
+formatted as (
+    select
+        session_id,
+        car_number,
+        sector_key,
+        sector_time,
+        previous_value,
+        is_overall_fastest,
+        is_personal_fastest,
+        sector_status,
+        is_stopped,
+        _stream_ts
+    from computed
 )
 
 select *
