@@ -33,7 +33,7 @@ formatted as (
         tyresnotchanged as tyres_not_changed,
         totallaps as total_laps,
         startlaps as start_laps,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_tyre_stint_series
 )

@@ -30,7 +30,7 @@ formatted as (
         x as x_position,
         y as y_position,
         z as z_position,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_position
 )

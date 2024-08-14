@@ -33,19 +33,19 @@ qualifying_results as (
         if(
             qualifying.q1 = '\N' or len(qualifying.q1) = 0,
             null,
-            {{ ergast__lap_time_to_interval("qualifying.q1") }}
+            {{ varchar_lap_time_to_interval("qualifying.q1") }}
         ) as q1_time,
         if(qualifying.q2 = '\N' or len(qualifying.q2) = 0, null, qualifying.q2) as q2_time_label,
         if(
             qualifying.q2 = '\N' or len(qualifying.q2) = 0,
             null,
-            {{ ergast__lap_time_to_interval("qualifying.q2") }}
+            {{ varchar_lap_time_to_interval("qualifying.q2") }}
         ) as q2_time,
         if(qualifying.q3 = '\N' or len(qualifying.q3) = 0, null, qualifying.q3) as q3_time_label,
         if(
             qualifying.q3 = '\N' or len(qualifying.q3) = 0,
             null,
-            {{ ergast__lap_time_to_interval("qualifying.q3") }}
+            {{ varchar_lap_time_to_interval("qualifying.q3") }}
         ) as q3_time
     from raw_qualifying as qualifying
     inner join

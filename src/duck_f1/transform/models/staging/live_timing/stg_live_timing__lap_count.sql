@@ -22,7 +22,7 @@ formatted as (
     select
         metric as metric_lable,
         value as metric_value,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_lap_count
 )

@@ -29,7 +29,7 @@ formatted as (
         lap as lap_number,
         category as message_category,
         messagedata as message_data,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_race_control_messages
 )

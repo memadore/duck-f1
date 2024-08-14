@@ -27,7 +27,7 @@ formatted as (
         value as speed,
         position,
         driver,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_timing_stats_speeds
 )

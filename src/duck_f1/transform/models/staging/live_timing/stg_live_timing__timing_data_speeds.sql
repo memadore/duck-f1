@@ -31,7 +31,7 @@ formatted as (
         overallfastest as is_overall_fastest,
         personalfastest as is_personal_fastest,
         driver,
-        _streamtimestamp as _stream_ts,
+        _streamtimestamp::interval as _stream_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_speeds
 )

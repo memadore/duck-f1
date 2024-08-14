@@ -34,7 +34,7 @@ sprints as (
         if(
             sprint.fastestlaptime = '\N',
             null,
-            {{ ergast__lap_time_to_interval("sprint.fastestlaptime") }}
+            {{ varchar_lap_time_to_interval("sprint.fastestlaptime") }}
         ) as fastest_lap_time
     from raw_sprint_results as sprint
     inner join
