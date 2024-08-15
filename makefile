@@ -27,6 +27,10 @@ dbt-parse:
 	cd ./src/duck_f1/transform; \
 	pdm run dbt parse --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
 
+dbt-test:
+	cd ./src/duck_f1/transform; \
+	pdm run dbt test --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
+
 duck-f1-weekend:
 	pdm run duck-f1 run --event-sha a3cf4bf0
 
