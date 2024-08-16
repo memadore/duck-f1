@@ -30,6 +30,10 @@ Pivot of the sector times for each lap
 Registered time for each laps in a session
 {% enddocs %}
 ---
+{% docs tbl_int_live_timing__tyre_stints %}
+Stint tyre information for each drivers
+{% enddocs %}
+---
 {% docs tbl_int_season__world_champion %}
 Round by round statistics for the race performance of each driver
 {% enddocs %}
