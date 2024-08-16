@@ -26,6 +26,10 @@ Dimensional modeling for the driver race status
 Stream of the car position on track
 {% enddocs %}
 ---
+{% docs tbl_mart__fct_car__telemetry %}s
+Telemetry stream for the car rpm, speed, gear, throttle position, brake position and drs status
+{% enddocs %}
+---
 {% docs tbl_mart__fct_lap__timings %}
 Driver timing data for each lap of a race
 {% enddocs %}

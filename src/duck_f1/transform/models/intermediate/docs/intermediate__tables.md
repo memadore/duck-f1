@@ -10,8 +10,12 @@ Round by round statistics for the race performance of each driver
 List of all drivers from ergast and live timing
 {% enddocs %}
 ---
-{% docs tbl_int_live_timing__car__positions%}
+{% docs tbl_int_live_timing__car__positions %}
 Telemetry stream for the car positions
+{% enddocs %}
+---
+{% docs tbl_int_live_timing__car__telemetry %}
+Telemetry stream for the car rpm, speed, gear, throttle position, brake position and drs status
 {% enddocs %}
 ---
 {% docs tbl_int_live_timing__drivers %}
