@@ -28,7 +28,7 @@ formatted as (
         identifier,
         metric as metric_name,
         value as metric_value,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_championship_prediction
 )

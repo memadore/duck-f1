@@ -27,7 +27,7 @@ computed as (
         lap as lap_number,
         position,
         driver as car_number,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_stats_lap_times
     where len(value) > 0
@@ -40,7 +40,7 @@ formatted as (
         lap_number,
         lap_time,
         position,
-        _stream_ts
+        session_ts
     from computed
 )
 

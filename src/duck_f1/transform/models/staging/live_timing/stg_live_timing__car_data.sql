@@ -39,7 +39,7 @@ car_data as (
             else 'unavailable'
         end as drs_status,
         drsstatus as _drs_status_id,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_car_data
 ),
@@ -48,23 +48,23 @@ stream_segments as (
     select
         session_id,
         car_number,
-        _stream_ts,
+        session_ts,
         count(*) as _count
     from car_data
-    group by session_id, car_number, _stream_ts
+    group by session_id, car_number, session_ts
 ),
 
 stream_corrections as (
     select
         *,
-        lead(_stream_ts) over (
+        lead(session_ts) over (
             partition by session_id, car_number
-            order by _stream_ts
+            order by session_ts
         ) as _next_value,
         if(
             _next_value is null,
             to_milliseconds(200),
-            (_next_value - _stream_ts) / _count
+            (_next_value - session_ts) / _count
         ) as _correction_step
     from stream_segments
 ),
@@ -81,20 +81,20 @@ computed as (
         car_data.drs_status,
         car_data._drs_status_id,
         car_data.event_utc_ts,
-        car_data._stream_ts,
+        car_data.session_ts,
         -1 + row_number() over (
-            partition by car_data.session_id, car_data.car_number, car_data._stream_ts
+            partition by car_data.session_id, car_data.car_number, car_data.session_ts
             order by car_data.event_utc_ts
         ) as _correction_factor,
-        car_data._stream_ts
+        car_data.session_ts
         + date_trunc('millisecond', _correction_factor * stream_correction._correction_step)
-            as _corrected_stream_ts
+            as _correctedsession_ts
     from car_data
     left join stream_corrections as stream_correction
         on
             car_data.session_id = stream_correction.session_id
             and car_data.car_number = stream_correction.car_number
-            and car_data._stream_ts = stream_correction._stream_ts
+            and car_data.session_ts = stream_correction.session_ts
 ),
 
 formatted as (
@@ -109,8 +109,8 @@ formatted as (
         drs_status,
         _drs_status_id,
         event_utc_ts,
-        _stream_ts,
-        _corrected_stream_ts
+        session_ts,
+        _correctedsession_ts
     from computed
 )
 

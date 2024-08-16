@@ -40,7 +40,7 @@ computed as (
         teamname as team_name,
         teamcolour as team_color,
         headshoturl as head_shot_url,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         trim(broadcastname) as broadcast_name,
         trim(fullname) as full_name,
         trim(broadcast_name[3:]) as _last_name,
@@ -60,7 +60,7 @@ formatted as (
         team_name,
         team_color,
         head_shot_url,
-        _stream_ts,
+        session_ts,
         _last_name[1] || lower(_last_name[2:]) as last_name,
         concat(first_name, ' ', last_name) as full_name,
         lower(strip_accents(concat(first_name, last_name))) as _full_name_key

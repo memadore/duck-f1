@@ -35,7 +35,7 @@ computed as (
         status as sector_status,
         overallfastest::boolean as is_overall_fastest,
         personalfastest::boolean as is_personal_fastest,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_sectors
     where sector_time is not null
@@ -52,7 +52,7 @@ formatted as (
         is_personal_fastest,
         sector_status,
         is_stopped,
-        _stream_ts
+        session_ts
     from computed
 )
 

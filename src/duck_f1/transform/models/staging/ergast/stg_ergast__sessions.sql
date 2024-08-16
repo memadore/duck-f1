@@ -150,7 +150,7 @@ formatted as (
             session_date is null,
             null,
             concat(session_date, ' ', session_time)
-        )::timestamp as session_timestamp_utc
+        )::timestamp as session_start_utc
     from ergast_sessions
 )
 

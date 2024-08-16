@@ -25,7 +25,7 @@ formatted as (
         driver,
         metricname as metric_name,
         metricvalue as metric_value,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_status
 )

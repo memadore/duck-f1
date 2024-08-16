@@ -25,7 +25,7 @@ formatted as (
         value as lap_time,
         lap as lap_key,
         driver,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_best_lap
 )

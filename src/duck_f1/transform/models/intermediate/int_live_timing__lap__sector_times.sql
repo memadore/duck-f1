@@ -11,15 +11,15 @@ first_second_sectors as (
         lap_series.lap_number,
         sector.sector_key,
         sector.sector_time,
-        sector._stream_ts
+        sector.session_ts
     from raw_timing_data_sectors as sector
     left join {{ ref("stg_live_timing__lap_series") }} as lap_series
         on
             sector.session_id = lap_series.session_id
             and sector.car_number = lap_series.car_number
             and (
-                sector._stream_ts > lap_series.lap_start_ts
-                and sector._stream_ts <= lap_series.lap_end_ts
+                sector.session_ts > lap_series.lap_start_ts
+                and sector.session_ts <= lap_series.lap_end_ts
             )
     where sector.sector_key < 2
 ),
@@ -31,15 +31,15 @@ third_sector as (
         lap_series.lap_number,
         sector.sector_key,
         sector.sector_time,
-        sector._stream_ts
+        sector.session_ts
     from raw_timing_data_sectors as sector
     left join {{ ref("stg_live_timing__lap_series") }} as lap_series
         on
             sector.session_id = lap_series.session_id
             and sector.car_number = lap_series.car_number
             and (
-                sector._stream_ts >= lap_series.lap_end_ts - to_milliseconds(5000)
-                and sector._stream_ts <= lap_series.lap_end_ts + to_milliseconds(5000)
+                sector.session_ts >= lap_series.lap_end_ts - to_milliseconds(5000)
+                and sector.session_ts <= lap_series.lap_end_ts + to_milliseconds(5000)
             )
     where sector.sector_key = 2
 ),

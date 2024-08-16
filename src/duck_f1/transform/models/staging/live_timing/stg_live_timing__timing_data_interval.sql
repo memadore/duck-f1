@@ -25,7 +25,7 @@ formatted as (
         value as next_car_interval,
         catching as is_catching,
         driver,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_interval
 )

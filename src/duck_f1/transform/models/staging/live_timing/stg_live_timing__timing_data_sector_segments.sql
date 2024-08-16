@@ -32,7 +32,7 @@ formatted as (
         segmentkey as segment_key,
         status as sector_status,
         driver,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_sector_segments
 )

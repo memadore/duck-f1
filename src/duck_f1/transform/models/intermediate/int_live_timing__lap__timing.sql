@@ -8,15 +8,15 @@ formatted as (
         lap_time.lap_time,
         lap_time.lap_time_status,
         lap_time.is_personal_fastest,
-        lap_time._stream_ts
+        lap_time.session_ts
     from {{ ref("stg_live_timing__lap_series") }} as lap_series
     left join {{ ref("stg_live_timing__timing_data_last_lap") }} as lap_time
         on
             lap_series.session_id = lap_time.session_id
             and lap_series.car_number = lap_time.car_number
             and (
-                lap_time._stream_ts > (lap_series.lap_end_ts - to_milliseconds(125))
-                and lap_time._stream_ts < (lap_series.lap_end_ts + to_milliseconds(125))
+                lap_time.session_ts > (lap_series.lap_end_ts - to_milliseconds(125))
+                and lap_time.session_ts < (lap_series.lap_end_ts + to_milliseconds(125))
             )
     where lap_series.lap_number > 0
 )

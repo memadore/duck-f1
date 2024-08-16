@@ -24,7 +24,7 @@ formatted as (
         driver as car_number,
         compound as tyre_compound,
         new as is_new,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_current_tyres
 )

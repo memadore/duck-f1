@@ -21,10 +21,10 @@ raw_session_status as (
 formatted as (
     select
         status as session_status,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }},
-        _stream_ts as status_start_ts,
-        lead(_stream_ts) over (partition by session_id order by _stream_ts) as status_end_ts
+        session_ts as status_start_ts,
+        lead(session_ts) over (partition by session_id order by session_ts) as status_end_ts
     from raw_session_status
 )
 
