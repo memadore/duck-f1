@@ -25,7 +25,7 @@ formatted as (
         utc as utc_ts,
         remaining as remaining_session_time,
         extrapolating as is_extrapolated,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_extrapolated_clock
 )

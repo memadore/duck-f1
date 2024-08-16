@@ -35,7 +35,7 @@ formatted as (
         race_info.catching as is_catching,
         race_info.overtakestate as overtake_count,
         race_info.isout as is_out,
-        race_info._streamtimestamp::interval as _stream_ts,
+        race_info._streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_driver_race_info as race_info
 )

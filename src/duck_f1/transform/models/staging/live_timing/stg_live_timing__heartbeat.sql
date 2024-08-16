@@ -20,8 +20,8 @@ raw_heartbeat as (
 formatted as (
     select
         utc::timestamp as utc_ts,
-        _streamtimestamp::interval as _stream_ts,
-        utc_ts - _stream_ts as start_utc,
+        _streamtimestamp::interval as session_ts,
+        utc_ts - session_ts as start_utc,
         {{ live_timing__metadata() }}
     from raw_heartbeat
 )

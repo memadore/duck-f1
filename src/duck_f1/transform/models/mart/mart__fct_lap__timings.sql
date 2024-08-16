@@ -64,11 +64,11 @@ live_timing_sectors as (
             "sector.lap_number"
             ]
         ) }} as lap_id,
-        any_value(if(sector.sector_key = 0, sector.sector_time, null) order by sector._stream_ts)
+        any_value(if(sector.sector_key = 0, sector.sector_time, null) order by sector.session_ts)
             as sector_1_time,
-        any_value(if(sector.sector_key = 1, sector.sector_time, null) order by sector._stream_ts)
+        any_value(if(sector.sector_key = 1, sector.sector_time, null) order by sector.session_ts)
             as sector_2_time,
-        any_value(if(sector.sector_key = 2, sector.sector_time, null) order by sector._stream_ts)
+        any_value(if(sector.sector_key = 2, sector.sector_time, null) order by sector.session_ts)
             as sector_3_time
     from {{ ref("int_live_timing__lap__sector_times") }} as sector
     left join {{ ref("mart__fct_session__drivers") }} as _session

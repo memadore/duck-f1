@@ -30,7 +30,7 @@ formatted as (
         driver,
         duration as pit_lane_time_duration,
         lap as lap_number,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_pit_lane_time_collection
 )

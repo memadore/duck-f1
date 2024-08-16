@@ -58,6 +58,10 @@ Driver fastest lap for a race event
 List of drivers that participated in a session
 {% enddocs %}
 ---
+{% docs tbl_mart__fct_session__weather %}
+Weather conditions during the session
+{% enddocs %}
+---
 {% docs tbl_mart__fct_sprint__driver_classification %}
 Driver classification for every sprint
 {% enddocs %}

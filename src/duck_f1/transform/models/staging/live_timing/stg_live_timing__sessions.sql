@@ -17,7 +17,7 @@ formatted as (
         session_sha as _live_timing_session_sha,
         session_type,
         session_name,
-        session_date as session_timestamp_local
+        session_date as session_start_local
     from raw_sessions
     where event_round_number > 0
 )

@@ -29,7 +29,7 @@ computed as (
         status as lap_time_status,
         overallfastest as is_overall_fastest,
         personalfastest as is_personal_fastest,
-        _streamtimestamp::interval as _stream_ts,
+        _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_last_lap
     where
@@ -44,7 +44,7 @@ formatted as (
         lap_time,
         lap_time_status,
         is_personal_fastest,
-        _stream_ts
+        session_ts
     from computed
 )
 
