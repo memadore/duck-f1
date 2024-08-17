@@ -23,17 +23,31 @@ raw_timing_data_speeds as (
         {% endif %}
 ),
 
-formatted as (
+computed as (
     select
+        driver as car_number,
         speedkey as speed_key,
-        value as speed_value,
+        if(len(value) > 0, value::integer, null) as speed_value,
         status as speed_status,
-        overallfastest as is_overall_fastest,
-        personalfastest as is_personal_fastest,
-        driver,
+        coalesce(overallfastest::boolean, false) as is_overall_fastest,
+        coalesce(personalfastest::boolean, false) as is_personal_fastest,
         _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_speeds
+    where speed_value is not null
+),
+
+formatted as (
+    select
+        session_id,
+        car_number,
+        speed_key,
+        speed_value,
+        is_overall_fastest
+            as is_personal_fastest,
+        speed_status,
+        session_ts
+    from computed
 )
 
 select *

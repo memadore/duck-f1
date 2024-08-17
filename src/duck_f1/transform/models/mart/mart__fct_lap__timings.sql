@@ -79,6 +79,34 @@ live_timing_sectors as (
     group by sector.session_id, _session.driver_id, lap_id
 ),
 
+live_timing_speeds as (
+    select
+        speed.session_id,
+        _session.driver_id,
+        {{ dbt_utils.generate_surrogate_key(
+            [
+            "speed.session_id",
+            "_session.driver_id",
+            "speed.lap_number"
+            ]
+        ) }} as lap_id,
+        any_value(if(speed.speed_key = 'I1', speed.speed_value, null) order by speed.session_ts)
+            as sector_1_speed,
+        any_value(if(speed.speed_key = 'I2', speed.speed_value, null) order by speed.session_ts)
+            as sector_2_speed,
+        any_value(if(speed.speed_key = 'FL', speed.speed_value, null) order by speed.session_ts)
+            as finish_line_speed,
+        any_value(if(speed.speed_key = 'ST', speed.speed_value, null) order by speed.session_ts)
+            as speed_trap
+    from {{ ref("int_live_timing__lap__speed_traps") }} as speed
+    left join {{ ref("mart__fct_session__drivers") }} as _session
+        on
+            speed.session_id = _session.session_id
+            and speed.car_number = _session.car_number
+    where speed.lap_number is not null
+    group by speed.session_id, _session.driver_id, lap_id
+),
+
 formatted as (
     select
         lap_time.session_id,
@@ -90,14 +118,24 @@ formatted as (
         lap_time.lap_time_source,
         sector_time.sector_1_time,
         sector_time.sector_2_time,
-        sector_time.sector_3_time
+        sector_time.sector_3_time,
+        speed.sector_1_speed,
+        speed.sector_2_speed,
+        speed.finish_line_speed,
+        speed.speed_trap
     from unique_lap_times as lap_time
     left join live_timing_sectors as sector_time
         on
             lap_time.session_id = sector_time.session_id
             and lap_time.driver_id = sector_time.driver_id
             and lap_time.lap_id = sector_time.lap_id
+    left join live_timing_speeds as speed
+        on
+            lap_time.session_id = speed.session_id
+            and lap_time.driver_id = speed.driver_id
+            and lap_time.lap_id = speed.lap_id
 )
 
 select *
 from formatted
+where lap_time_source = 'live_timing'
