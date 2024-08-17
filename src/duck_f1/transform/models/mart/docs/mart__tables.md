@@ -58,6 +58,10 @@ Driver fastest lap for a race event
 List of drivers that participated in a session
 {% enddocs %}
 ---
+{% docs tbl_mart__fct_session__track_status %}
+Track status during the session
+{% enddocs %}
+---
 {% docs tbl_mart__fct_session__tyre_stints %}
 List of tyre stints during the sessions
 {% enddocs %}

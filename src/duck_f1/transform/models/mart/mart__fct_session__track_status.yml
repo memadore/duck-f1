@@ -1,0 +1,21 @@
+---
+version: 2
+models:
+  - name: mart__fct_session__track_status
+    description: '{{ doc("tbl_mart__fct_session__track_status") }}'
+    config:
+      alias: fct_session__track_status
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - fact
+          - session
+          - track_status
+    columns:
+      - name: session_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_sessions')
+              field: session_id
