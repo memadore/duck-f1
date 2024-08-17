@@ -1,12 +1,14 @@
 ---
 version: 2
 models:
-  - name: ast_driver__stats_seasons
-    description: '{{ doc("tbl_ast_driver__stats_seasons") }}'
+  - name: rpt_driver__stats_seasons
+    description: '{{ doc("tbl_rpt_driver__stats_seasons") }}'
+    config:
+      alias: driver__stats_seasons
     meta:
       dagster:
         asset_key:
-          - assets
+          - reports
           - drivers
           - stats_seasons
     columns:
