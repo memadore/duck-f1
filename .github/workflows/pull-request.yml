@@ -162,7 +162,7 @@ jobs:
           pdm run coverage run -m pytest tests -v --junitxml=report.xml
           pdm run coverage xml
           pdm run coverage report --show-missing --precision=2
-  # MARK: - python
+  # MARK: - sql
   sql-lint:
     name: sql::lint
     runs-on: k8s-arc
