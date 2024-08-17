@@ -31,10 +31,11 @@ computed as (
         sectorkey::integer as sector_key,
         stopped::boolean as is_stopped,
         to_milliseconds(if(len(value) > 0, value::numeric * 1000, null)) as sector_time,
-        to_milliseconds(if(len(previousvalue) > 0, value::numeric * 1000, null)) as previous_value,
+        to_milliseconds(if(len(previousvalue) > 0, previousvalue::numeric * 1000, null))
+            as previous_value,
         status as sector_status,
-        overallfastest::boolean as is_overall_fastest,
-        personalfastest::boolean as is_personal_fastest,
+        coalesce(overallfastest::boolean, false) as is_overall_fastest,
+        coalesce(personalfastest::boolean, false) as is_personal_fastest,
         _streamtimestamp::interval as session_ts,
         {{ live_timing__metadata() }}
     from raw_timing_data_sectors

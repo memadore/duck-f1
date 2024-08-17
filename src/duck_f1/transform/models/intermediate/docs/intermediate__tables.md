@@ -26,6 +26,10 @@ List drivers that participated in an event session
 Pivot of the sector times for each lap
 {% enddocs %}
 ---
+{% docs tbl_int_live_timing__lap__speed_traps %}
+Pivot of the speed traps for each lap
+{% enddocs %}
+---
 {% docs tbl_int_live_timing__lap__timing %}
 Registered time for each laps in a session
 {% enddocs %}
