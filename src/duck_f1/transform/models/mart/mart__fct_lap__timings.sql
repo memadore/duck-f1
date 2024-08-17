@@ -138,4 +138,3 @@ formatted as (
 
 select *
 from formatted
-where lap_time_source = 'live_timing'
