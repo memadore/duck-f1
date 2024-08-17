@@ -1,0 +1,34 @@
+---
+version: 2
+models:
+  - name: mart__fct_session__tyre_stints
+    description: '{{ doc("tbl_mart__fct_session__tyre_stints") }}'
+    config:
+      alias: fct_session__tyre_stints
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - fact
+          - session
+          - tyre_stints
+    tests:
+      - unique:
+          column_name: "session_id || '-' || driver_id || '-' || stint_id"
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_drivers')
+              field: driver_id
+      - name: session_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart__dim_sessions')
+              field: session_id
+      - name: stint_id
+        tests:
+          - not_null
+          - unique

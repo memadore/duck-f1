@@ -1,0 +1,11 @@
+---
+version: 2
+models:
+  - name: int_live_timing__tyre_stints
+    description: '{{ doc("tbl_int_live_timing__tyre_stints") }}'
+    meta:
+      dagster:
+        asset_key:
+          - intermediate
+          - live_timing
+          - tyre_stints
