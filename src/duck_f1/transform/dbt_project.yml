@@ -17,11 +17,11 @@ vars:
   db_name: f1
 models:
   duck_f1:
-    staging:
-      +schema: staging
-    assets:
-      +schema: assets
     intermediate:
       +schema: intermediate
     mart:
       +schema: mart
+    reports:
+      +schema: reports
+    staging:
+      +schema: staging
