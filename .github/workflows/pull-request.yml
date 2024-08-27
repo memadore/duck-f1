@@ -53,7 +53,7 @@ jobs:
           python-version: ${{ matrix.version }}
       - name: Install python dependencies
         run: |
-          pdm install --prod -v
+          pdm install --prod
       - name: Prepare dbt project
         run: |
           pdm run dbt deps --project-dir src/duck_f1/transform
@@ -150,7 +150,7 @@ jobs:
           python-version: ${{ matrix.version  }}
       - name: Install dependencies
         run: |
-          pdm install --group test -v
+          pdm install --group test
           pdm run dbt deps --project-dir src/duck_f1/transform
           pdm run dbt parse \
             --project-dir src/duck_f1/transform \

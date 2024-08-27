@@ -1,5 +1,5 @@
 ---
 load_from:
   - python_package:
-      working_directory: duck_f1
+      working_directory: src/duck_f1
       package_name: pipelines

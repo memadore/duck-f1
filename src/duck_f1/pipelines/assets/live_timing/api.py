@@ -3,7 +3,7 @@ import io
 import json
 import zlib
 from functools import partial
-from typing import Callable, List, Union
+from typing import Callable, List, Tuple, Union
 
 import requests
 from dagster import OpExecutionContext
@@ -60,20 +60,40 @@ class LiveTimingApi:
         file_encoding = ".".join(file_parts[1:])
         return processor[file_encoding]
 
+    def _create_path(self, event_path: str, dataset: str) -> str:
+        path = "/".join(["static", event_path, dataset])
+        return path
+
     def _api_request(self, path: str) -> io.BytesIO:
         url = "/".join([self.BASE_URL, path])
         # self.context.log.info("Making request to: %s", url)
-        response = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=10)
 
-        if response.status_code != 200:
+        if r.status_code != 200:
             self.context.log.warn("File not found")
             return None
 
-        stream = io.BytesIO(response.content)
+        stream = io.BytesIO(r.content)
         return stream
 
+    def check_if_dataset_exists(
+        self, event_path: str, dataset: str
+    ) -> Tuple[bool, int]:
+        """
+        Request the dataset url without downloading the content.
+        """
+        path = self._create_path(event_path, dataset)
+        url = "/".join([self.BASE_URL, path])
+        # r = requests.get(url, stream=True, verify=False)
+        r = requests.head(url)
+        if r.status_code == 200:
+            return (True, r.headers.get("Content-Length"))
+        else:
+            self.context.log.warn(f"HTTP Error {r.status_code} - {r.reason}")
+            return (False, r.headers.get("Content-Length"))
+
     def get_dataset(self, event_path: str, dataset: str) -> Union[dict, None]:
-        path = "/".join(["static", event_path, dataset])
+        path = self._create_path(event_path, dataset)
         file_processor = self._file_processor_builder(dataset)
         response = self._api_request(path)
 
