@@ -32,6 +32,7 @@ jobs:
       - name: Install dependencies
         run: |
           pdm install --group dev
+          pdm run dbt deps --project-dir src/duck_f1/transform
       - name: Check datasets availability
         run: |
           pdm run python tasks/generate_live_timing_dataset_availability.py
