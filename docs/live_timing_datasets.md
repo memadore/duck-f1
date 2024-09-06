@@ -1,6 +1,6 @@
 # Live timing datasets availability
 
-## 2018 Season
+## 2018 season
 
 ### Australian Grand Prix (2018-03-25)
 
@@ -779,7 +779,7 @@
 | WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
-## 2019 Season
+## 2019 season
 
 ### Australian Grand Prix (2019-03-17)
 
@@ -1558,7 +1558,7 @@
 | WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
-## 2020 Season
+## 2020 season
 
 ### Pre-Season Test 1 (2020-02-21)
 
@@ -1757,7 +1757,7 @@
 | CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
@@ -2012,7 +2012,7 @@
 | AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🔴            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | CurrentTyres.jsonStream           | 🔴            | 🔴            | 🟢            | 🟢            | 🟢      |
 | DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
@@ -2263,7 +2263,7 @@
 | WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
-## 2021 Season
+## 2021 season
 
 ### Pre-Season Test (2021-03-14)
 
@@ -2312,26 +2312,26 @@
 | ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🔴            | 🟢            | 🟢            | 🟢            | 🟢      |
 | DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🔴            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🔴            | 🟢            | 🟢            | 🟢            | 🟢      |
 | LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionData.json                  | 🔴            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🔴            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
@@ -3116,7 +3116,7 @@
 | WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
-## 2022 Season
+## 2022 season
 
 ### Pre-Season Track Session (2022-02-25)
 
@@ -3160,7 +3160,7 @@
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   |
 |:----------------------------------|:-------------|:-------------|:-------------|
 | ArchiveStatus.json                | 🟢            | 🟢            | 🟢            |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            |
+| AudioStreams.jsonStream           | 🔴            | 🟢            | 🟢            |
 | CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            |
 | ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            |
 | ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            |
@@ -3196,817 +3196,817 @@
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🔴      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🔴            | 🔴      |
 
 ### Saudi Arabian Grand Prix (2022-03-27)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🔴            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Australian Grand Prix (2022-04-10)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Emilia Romagna Grand Prix (2022-04-24)
 
 | Dataset                           | Practice 1   | Practice 2   | Qualifying   | Race   | Sprint   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------|:---------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🔴        |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
 
 ### Miami Grand Prix (2022-05-08)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Spanish Grand Prix (2022-05-22)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Monaco Grand Prix (2022-05-29)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Azerbaijan Grand Prix (2022-06-12)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Canadian Grand Prix (2022-06-19)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### British Grand Prix (2022-07-03)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Austrian Grand Prix (2022-07-10)
 
 | Dataset                           | Practice 1   | Practice 2   | Qualifying   | Race   | Sprint   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------|:---------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢      | 🔴        |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🔴        |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
 
 ### French Grand Prix (2022-07-24)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Hungarian Grand Prix (2022-07-31)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Belgian Grand Prix (2022-08-28)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Dutch Grand Prix (2022-09-04)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Italian Grand Prix (2022-09-11)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Singapore Grand Prix (2022-10-02)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🔴            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Japanese Grand Prix (2022-10-09)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### United States Grand Prix (2022-10-23)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### Mexico City Grand Prix (2022-10-30)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
 ### São Paulo Grand Prix (2022-11-13)
 
 | Dataset                           | Practice 1   | Practice 2   | Qualifying   | Race   | Sprint   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------|:---------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢      | 🟢        |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢      | 🔴        |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢      | 🟢        |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴      | 🔴        |
 
 ### Abu Dhabi Grand Prix (2022-11-20)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| DriverScore.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
-| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SPFeed.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
-| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
 
-## 2023 Season
+## 2023 season
 
 ### Pre-Season Testing (2023-02-25)
 
@@ -4493,368 +4493,1000 @@
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
 ### Italian Grand Prix (2023-09-03)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
 ### Singapore Grand Prix (2023-09-17)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
 ### Japanese Grand Prix (2023-09-24)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
 ### Qatar Grand Prix (2023-10-08)
 
 | Dataset                           | Practice 1   | Qualifying   | Race   | Sprint   | Sprint Shootout   |
 |:----------------------------------|:-------------|:-------------|:-------|:---------|:------------------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Index.json                        | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Index.json                        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionData.json                  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| SessionData.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
 
 ### United States Grand Prix (2023-10-22)
 
 | Dataset                           | Practice 1   | Qualifying   | Race   | Sprint   | Sprint Shootout   |
 |:----------------------------------|:-------------|:-------------|:-------|:---------|:------------------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Index.json                        | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Index.json                        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢      | 🔴        | 🟢                 |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionData.json                  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| SessionData.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
 
 ### Mexico City Grand Prix (2023-10-29)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
 ### São Paulo Grand Prix (2023-11-05)
 
 | Dataset                           | Practice 1   | Qualifying   | Race   | Sprint   | Sprint Shootout   |
 |:----------------------------------|:-------------|:-------------|:-------|:---------|:------------------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Index.json                        | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| Index.json                        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                 |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢      | 🔴        | 🟢                 |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionData.json                  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                 |
+| SessionData.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                 |
 
 ### Las Vegas Grand Prix (2023-11-18)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 
 ### Abu Dhabi Grand Prix (2023-11-26)
 
 | Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
 |:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
-| ArchiveStatus.json                | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| AudioStreams.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CarData.z.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ContentStreams.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| CurrentTyres.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverList.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
 | DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| ExtrapolatedClock.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Heartbeat.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Index.json                        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| LapSeries.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| PitLaneTimeCollection.jsonStream  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| Position.z.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| RaceControlMessages.jsonStream    | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionData.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionInfo.json                  | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| SessionStatus.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingAppData.jsonStream          | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingData.jsonStream             | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingDataF1.jsonStream           | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TimingStats.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TlaRcm.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TopThree.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TrackStatus.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| TyreStintSeries.jsonStream        | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherData.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
-| WeatherDataSeries.jsonStream      | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+## 2024 season
+
+### Pre-Season Testing (2024-02-23)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   |
+|:----------------------------------|:-------------|:-------------|:-------------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            |
+| Index.json                        | 🟢            | 🟢            | 🟢            |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            |
+| TeamRadio.jsonStream              | 🔴            | 🔴            | 🔴            |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            |
+
+### Bahrain Grand Prix (2024-03-02)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Saudi Arabian Grand Prix (2024-03-09)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Australian Grand Prix (2024-03-24)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Japanese Grand Prix (2024-04-07)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Chinese Grand Prix (2024-04-21)
+
+| Dataset                           | Practice 1   | Qualifying   | Race   | Sprint   | Sprint Qualifying   |
+|:----------------------------------|:-------------|:-------------|:-------|:---------|:--------------------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                   |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Index.json                        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                   |
+| SessionData.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+
+### Miami Grand Prix (2024-05-05)
+
+| Dataset                           | Practice 1   | Qualifying   | Race   | Sprint   | Sprint Qualifying   |
+|:----------------------------------|:-------------|:-------------|:-------|:---------|:--------------------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                   |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Index.json                        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| LapCount.jsonStream               | 🔴            | 🟢            | 🟢      | 🟢        | 🔴                   |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                   |
+| SessionData.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+
+### Emilia Romagna Grand Prix (2024-05-19)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Monaco Grand Prix (2024-05-26)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Canadian Grand Prix (2024-06-09)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Spanish Grand Prix (2024-06-23)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🟢            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Austrian Grand Prix (2024-06-30)
+
+| Dataset                           | Practice 1   | Qualifying   | Race   | Sprint   | Sprint Qualifying   |
+|:----------------------------------|:-------------|:-------------|:-------|:---------|:--------------------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                   |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| Index.json                        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🟢      | 🟢        | 🔴                   |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢      | 🔴        | 🟢                   |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴      | 🔴        | 🔴                   |
+| SessionData.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢      | 🟢        | 🟢                   |
+
+### British Grand Prix (2024-07-07)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Hungarian Grand Prix (2024-07-21)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Belgian Grand Prix (2024-07-28)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Dutch Grand Prix (2024-08-25)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
+### Italian Grand Prix (2024-09-01)
+
+| Dataset                           | Practice 1   | Practice 2   | Practice 3   | Qualifying   | Race   |
+|:----------------------------------|:-------------|:-------------|:-------------|:-------------|:-------|
+| ArchiveStatus.json                | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| AudioStreams.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CarData.z.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| ChampionshipPrediction.jsonStream | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| ContentStreams.jsonStream         | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| CurrentTyres.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverList.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| DriverRaceInfo.jsonStream         | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| DriverScore.jsonStream            | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| ExtrapolatedClock.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Heartbeat.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Index.json                        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| LapCount.jsonStream               | 🔴            | 🔴            | 🔴            | 🔴            | 🟢      |
+| LapSeries.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| PitLaneTimeCollection.jsonStream  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| Position.z.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| RaceControlMessages.jsonStream    | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SPFeed.jsonStream                 | 🔴            | 🔴            | 🔴            | 🔴            | 🔴      |
+| SessionData.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionInfo.json                  | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| SessionStatus.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TeamRadio.jsonStream              | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingAppData.jsonStream          | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingData.jsonStream             | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingDataF1.jsonStream           | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TimingStats.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TlaRcm.jsonStream                 | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TopThree.jsonStream               | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TrackStatus.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+| WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
