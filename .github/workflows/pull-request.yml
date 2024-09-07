@@ -8,15 +8,11 @@ jobs:
   # MARK: - dbt
   codegen-dbt-sources:
     name: dbt::codegen-properties
-    runs-on: k8s-arc
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     if: ${{ ! startsWith(github.head_ref, 'dependabot/') }}
     steps:
-      - name: Install packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends git
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}

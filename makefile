@@ -6,7 +6,7 @@ dev: dagster-reset py-clean dbt-compile dagster-dev-server
 dagster-dev-server:
 	pdm run dagster dev -w workspace.yaml -p 3001
 
-dagster-reset:
+dagster-reset:semantic-release -vv --noop version --print
 	rm -rf ${HOME}/.dagster
 	mkdir -p ${HOME}/.dagster
 	cp .devcontainer/config/dagster.yaml ${HOME}/.dagster
