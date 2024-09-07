@@ -13,6 +13,10 @@ jobs:
       contents: write
     if: ${{ ! startsWith(github.head_ref, 'dependabot/') }}
     steps:
+      - name: Install packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends git
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
@@ -77,6 +81,7 @@ jobs:
     name: dbt::compile
     runs-on: k8s-arc
     needs:
+      - codegen-dbt-sources
       - dbt-parse
       - yaml-lint
     strategy:
@@ -174,6 +179,7 @@ jobs:
     runs-on: k8s-arc
     name: python::tests::unit
     needs:
+      - codegen-dbt-sources
       - dbt-parse
       - python-lint
     strategy:
