@@ -9,3 +9,10 @@ models:
           - staging
           - live_timing
           - timing_stats_lap_times
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_number
+      - name: lap_time
+      - name: position
+      - name: session_ts

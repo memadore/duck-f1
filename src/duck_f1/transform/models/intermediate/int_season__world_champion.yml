@@ -9,3 +9,6 @@ models:
           - intermediate
           - season
           - world_champion
+    columns:
+      - name: season
+      - name: driver_id

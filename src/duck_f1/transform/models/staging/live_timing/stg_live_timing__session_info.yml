@@ -9,3 +9,30 @@ models:
           - staging
           - live_timing
           - session_info
+    columns:
+      - name: meeting_key
+      - name: meeting_name
+      - name: meeting_locatio
+      - name: country_key
+      - name: country_code
+      - name: country_name
+      - name: circuit_key
+      - name: circuit_short_name
+      - name: archive_status
+      - name: session_key
+      - name: session_type
+      - name: session_name
+      - name: session_start_date
+      - name: session_end_data
+      - name: gmt_offset
+      - name: session_path
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type_1
+      - name: session_start_local

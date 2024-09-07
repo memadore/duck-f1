@@ -10,3 +10,12 @@ models:
           - live_timing
           - car
           - positions
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_number
+      - name: session_ts
+      - name: car_status
+      - name: x_position
+      - name: y_position
+      - name: z_position

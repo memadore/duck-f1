@@ -1,0 +1,53 @@
+---
+version: 2
+models:
+  - name: mart_fct_sprint__driver_classification
+    description: '{{ doc("tbl_mart_fct_sprint__driver_classification") }}'
+    meta:
+      dagster:
+        asset_key:
+          - mart
+          - fact
+          - sprint
+          - driver_classification
+    tests:
+      - unique:
+          column_name: "session_id || '-' || constructor_id || '-' || driver_id"
+          config:
+            severity: warn # TODO: investigate
+    columns:
+      - name: constructor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart_dim_constructors')
+              field: constructor_id
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart_dim_drivers')
+              field: driver_id
+      - name: session_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart_dim_sessions')
+              field: session_id
+      - name: status_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('mart_dim_status')
+              field: status_id
+      - name: car_number
+      - name: grid_position
+      - name: classification
+      - name: position_label
+      - name: position_order
+      - name: points
+      - name: laps_completed
+      - name: sprint_time
+      - name: sprint_time_label
+      - name: sprint_time_interval
+      - name: sprint_time_gap

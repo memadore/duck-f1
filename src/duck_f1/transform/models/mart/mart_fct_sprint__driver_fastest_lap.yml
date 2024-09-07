@@ -1,16 +1,14 @@
 ---
 version: 2
 models:
-  - name: mart__fct_race__driver_fastest_lap
-    description: '{{ doc("tbl_mart__fct_race__driver_fastest_lap") }}'
-    config:
-      alias: fct_race__driver_fastest_lap
+  - name: mart_fct_sprint__driver_fastest_lap
+    description: '{{ doc("tbl_mart_fct_sprint__driver_fastest_lap") }}'
     meta:
       dagster:
         asset_key:
           - mart
           - fact
-          - race
+          - sprint
           - driver_fastest_lap
     tests:
       - unique:
@@ -22,17 +20,22 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_constructors')
+              to: ref('mart_dim_constructors')
               field: constructor_id
       - name: driver_id
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_drivers')
+              to: ref('mart_dim_drivers')
               field: driver_id
       - name: session_id
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_sessions')
+              to: ref('mart_dim_sessions')
               field: session_id
+      - name: fastest_lap
+      - name: fastest_lap_rank
+      - name: fastest_lap_time
+      - name: fastest_lap_time_gap
+      - name: fastest_lap_time_interval

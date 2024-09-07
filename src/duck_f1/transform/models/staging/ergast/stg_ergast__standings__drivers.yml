@@ -10,3 +10,10 @@ models:
           - ergast
           - standings
           - driver
+    columns:
+      - name: driver_id
+      - name: session_id
+      - name: points
+      - name: position
+      - name: position_label
+      - name: win_count

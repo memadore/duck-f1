@@ -6,6 +6,48 @@ env:
   PYTHON_VERSION: "3.11"
 jobs:
   # MARK: - dbt
+  codegen-dbt-sources:
+    name: dbt::codegen-properties
+    runs-on: k8s-arc
+    permissions:
+      contents: write
+    if: ${{ ! startsWith(github.head_ref, 'dependabot/') }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: |
+          pdm install --prod
+          pdm run dbt deps --project-dir src/duck_f1/transform
+      - name: Seed data
+        run: pdm run duck-f1 -o /tmp/data run --session-sha eb2f7f20
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ">=1.18.0"
+      - name: Install yamlfmt
+        run: |
+          go install github.com/google/yamlfmt/cmd/yamlfmt@v0.13.0
+      - name: Generate dbt sources from analytics events definitions
+        run: |
+          pdm add dbt-coves
+          pdm run dbt-coves generate properties --update-strategy update --no-prompt
+      - name: Run yamlfmt
+        run: |
+          yamlfmt ./src/duck_f1/transform/models
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        id: auto-commit-action
+        with:
+          commit_message: "chore(codegen): apply code generation changes"
+          commit_user_name: memadore
+          commit_user_email: memadore@users.noreply.github.com
   dbt-parse:
     name: dbt::parse
     runs-on: k8s-arc

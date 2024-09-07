@@ -35,7 +35,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           commit-message: "chore(deps): update dependencies"
-          title: Update dependencies
+          title: "chore(deps): update project dependencies"
           body: |
             - Dependency updates
 
@@ -43,3 +43,10 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-pull-request
           branch: update-dependencies
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          committer: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          labels: |
+            chore
+            dependencies
+          assignees: memadore
+          reviewers: memadore

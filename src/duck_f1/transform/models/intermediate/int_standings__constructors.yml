@@ -9,3 +9,13 @@ models:
           - intermediate
           - standings
           - constructors
+    columns:
+      - name: constructor_id
+      - name: session_id
+      - name: season
+      - name: race_round
+      - name: championship_position
+      - name: win_count
+      - name: season_total
+      - name: round_points
+      - name: positions_gained

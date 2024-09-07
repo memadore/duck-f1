@@ -10,3 +10,12 @@ models:
           - ergast
           - sprint
           - driver_fastest_lap
+    columns:
+      - name: session_id
+      - name: driver_id
+      - name: constructor_id
+      - name: fastest_lap
+      - name: fastest_lap_rank
+      - name: fastest_lap_time
+      - name: fastest_lap_time_gap
+      - name: fastest_lap_time_interval

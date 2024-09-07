@@ -41,7 +41,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           commit-message: "docs: update live timing dataset availability"
-          title: Update docs
+          title: "docs: update live timing dataset availability"
           body: |
             - Update live timing dataset availability
 
@@ -49,6 +49,12 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-pull-request
           branch: update-live-timing-availability
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          committer: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          labels: |
+            docs
+          assignees: memadore
+          reviewers: memadore
   seed-dataset-availability-full-refresh:
     name: seed::dataset-availability::full-refresh
     runs-on: k8s-arc
@@ -81,7 +87,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           commit-message: "docs: update live timing dataset availability"
-          title: Update docs
+          title: "docs: update live timing dataset availability"
           body: |
             - Update live timing dataset availability
 
@@ -89,3 +95,9 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-pull-request
           branch: update-live-timing-availability
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          committer: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          labels: |
+            docs
+          assignees: memadore
+          reviewers: memadore

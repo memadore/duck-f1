@@ -1,10 +1,8 @@
 ---
 version: 2
 models:
-  - name: mart__fct_race__driver_classification
-    description: '{{ doc("tbl_mart__fct_race__driver_classification") }}'
-    config:
-      alias: fct_race__driver_classification
+  - name: mart_fct_race__driver_classification
+    description: '{{ doc("tbl_mart_fct_race__driver_classification") }}'
     meta:
       dagster:
         asset_key:
@@ -22,23 +20,34 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_constructors')
+              to: ref('mart_dim_constructors')
               field: constructor_id
       - name: driver_id
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_drivers')
+              to: ref('mart_dim_drivers')
               field: driver_id
       - name: session_id
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_sessions')
+              to: ref('mart_dim_sessions')
               field: session_id
       - name: status_id
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_status')
+              to: ref('mart_dim_status')
               field: status_id
+      - name: car_number
+      - name: grid_position
+      - name: classification
+      - name: position_label
+      - name: position_order
+      - name: points
+      - name: laps_completed
+      - name: race_time
+      - name: race_time_label
+      - name: race_time_interval
+      - name: race_time_gap

@@ -9,3 +9,18 @@ models:
           - intermediate
           - driver
           - season_race_results
+    columns:
+      - name: driver_id
+      - name: session_id
+      - name: race_year
+      - name: race_round
+      - name: grid_position
+      - name: finish_position
+      - name: best_grid_position
+      - name: worst_grid_position
+      - name: avg_grid_position
+      - name: best_finish_position
+      - name: worst_finish_position
+      - name: avg_finish_position
+      - name: position_gained
+      - name: total_position_gained

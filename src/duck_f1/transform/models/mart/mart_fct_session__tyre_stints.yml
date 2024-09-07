@@ -1,10 +1,8 @@
 ---
 version: 2
 models:
-  - name: mart__fct_session__tyre_stints
-    description: '{{ doc("tbl_mart__fct_session__tyre_stints") }}'
-    config:
-      alias: fct_session__tyre_stints
+  - name: mart_fct_session__tyre_stints
+    description: '{{ doc("tbl_mart_fct_session__tyre_stints") }}'
     meta:
       dagster:
         asset_key:
@@ -20,15 +18,25 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_drivers')
+              to: ref('mart_dim_drivers')
               field: driver_id
       - name: session_id
         tests:
           - not_null
           - relationships:
-              to: ref('mart__dim_sessions')
+              to: ref('mart_dim_sessions')
               field: session_id
       - name: stint_id
         tests:
           - not_null
           - unique
+      - name: stint_sequence
+      - name: stint_start_ts
+      - name: stint_start_lap_number
+      - name: tyre_age_start
+      - name: tyre_compound
+      - name: is_new
+      - name: stint_end_ts
+      - name: stint_end_lap_number
+      - name: tyre_age_end
+      - name: lap_count

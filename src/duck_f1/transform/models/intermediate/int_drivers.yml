@@ -8,3 +8,20 @@ models:
         asset_key:
           - intermediate
           - drivers
+    columns:
+      - name: driver_id
+      - name: ergast_driver_id
+      - name: live_timing_driver_id
+      - name: full_name_key
+      - name: first_name
+      - name: last_name
+      - name: full_name
+      - name: driver_code
+      - name: is_driver_code_generated
+      - name: date_of_birth
+      - name: age_years
+      - name: age_days
+      - name: age_label
+      - name: nationality
+      - name: wikipedia_url
+      - name: car_numbers

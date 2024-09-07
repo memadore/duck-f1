@@ -9,3 +9,8 @@ models:
           - staging
           - ergast
           - constructor_results
+    columns:
+      - name: constructor_id
+      - name: session_id
+      - name: points
+      - name: status

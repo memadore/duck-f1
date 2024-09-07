@@ -10,3 +10,10 @@ models:
           - live_timing
           - lap
           - speed_traps
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_number
+      - name: speed_key
+      - name: speed_value
+      - name: session_ts

@@ -9,3 +9,13 @@ models:
           - staging
           - live_timing
           - position
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: car_status
+      - name: x_position
+      - name: y_position
+      - name: z_position
+      - name: event_utc_ts
+      - name: session_ts
+      - name: correctedsession_ts

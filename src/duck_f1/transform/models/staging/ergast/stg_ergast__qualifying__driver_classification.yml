@@ -10,3 +10,20 @@ models:
           - ergast
           - qualifying
           - driver_classification
+    columns:
+      - name: session_id
+      - name: constructor_id
+      - name: driver_id
+      - name: position
+      - name: q1_time
+      - name: q1_time_label
+      - name: q1_interval
+      - name: q2_time
+      - name: q2_time_label
+      - name: q2_interval
+      - name: q3_time
+      - name: q3_time_label
+      - name: q3_interval
+      - name: q1_position
+      - name: q2_position
+      - name: q3_position

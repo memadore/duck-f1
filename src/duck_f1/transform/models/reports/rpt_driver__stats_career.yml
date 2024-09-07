@@ -3,8 +3,6 @@ version: 2
 models:
   - name: rpt_driver__stats_career
     description: '{{ doc("tbl_rpt_driver__stats_career") }}'
-    config:
-      alias: driver__stats_career
     meta:
       dagster:
         asset_key:
@@ -16,3 +14,22 @@ models:
         tests:
           - unique
           - not_null
+      - name: driver_code
+      - name: first_name
+      - name: last_name
+      - name: full_name
+      - name: event_count
+      - name: avg_grid_position
+      - name: win_count
+      - name: latest_win_date
+      - name: podium_count
+      - name: avg_finish_position
+      - name: top_finish_position
+      - name: low_finish_position
+      - name: avg_points
+      - name: max_points
+      - name: min_points
+      - name: total_points
+      - name: wc_count
+      - name: win_ratio
+      - name: podium_ratio
