@@ -70,7 +70,7 @@ class LiveTimingApi:
         r = requests.get(url, timeout=10)
 
         if r.status_code != 200:
-            self.context.log.warn("File not found")
+            self.context.log.warn("%s: File not found", r.status_code)
             return None
 
         stream = io.BytesIO(r.content)

@@ -1,3 +1,5 @@
+import json
+import os
 from typing import Dict
 
 from dagster import AssetExecutionContext, AssetOut, PartitionsDefinition, multi_asset
@@ -28,7 +30,18 @@ def parquet_asset_factory(
         session = session_mapper(context.partition_key)
         processor = processor_builder.build(dataset.table, session.metadata, context)
         data = api_client.get_dataset(session.event_path, dataset.file)
-        assets = processor.run(data)
+
+        try:
+            assets = processor.run(data)
+        except Exception as e:
+            context.log.error(e)
+
+            if os.getenv("dev", "prod") != "dev":
+                path = f"logs/{context.partition_key}"
+                os.makedirs(path, exist_ok=True)
+                file_path = f"{path}/{dataset.table}.json"
+                with open(file_path, "w") as f:
+                    f.write(json.dumps(data))
 
         for i in assets:
             yield i

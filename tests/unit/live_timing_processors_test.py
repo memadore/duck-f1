@@ -561,13 +561,14 @@ class TestLiveTimingSessionInfoProcessor(unittest.TestCase):
 
     def test_live_timing_session_info_shape(self):
         shape = self.outputs[0].output.shape
-        self.assertEqual(shape, (1, 17))
+        self.assertEqual(shape, (1, 18))
 
     def test_live_timing_session_info_columns(self):
         columns = self.outputs[0].output.column_names
         expected_columns = [
             "MeetingKey",
             "MeetingName",
+            "MeetingOfficialName",
             "MeetingLocation",
             "MeetingCountryKey",
             "MeetingCountryCode",

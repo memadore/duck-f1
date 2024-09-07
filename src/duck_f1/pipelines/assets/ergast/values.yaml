@@ -15,8 +15,8 @@ assets:
     asset_name: drivers
   - file: lap_times.csv
     asset_name: lap_times
-  # - file: pit_stops.csv
-  #   asset_name: pit_stops
+  - file: pit_stops.csv
+    asset_name: pit_stops
   - file: qualifying.csv
     asset_name: qualifying
   - file: races.csv

@@ -258,24 +258,32 @@ class ChampionshipPredictionProcessor(AbstractLiveTimingProcessor):
 
         processed_data = []
 
-        for i in data:
-            if "Drivers" in i:
-                processed_data.extend(
-                    ChampionshipPredictionProcessor._row_processor(
-                        stream_ts=i["_StreamTimestamp"],
-                        entity="driver",
-                        data=i["Drivers"],
-                    )
-                )
+        if len(data) == 1:
+            # first row is empty
+            table = schema.empty_table()
 
-            if "Teams" in i:
-                processed_data.extend(
-                    ChampionshipPredictionProcessor._row_processor(
-                        stream_ts=i["_StreamTimestamp"], entity="team", data=i["Teams"]
+        else:
+            for i in data:
+                if "Drivers" in i:
+                    processed_data.extend(
+                        ChampionshipPredictionProcessor._row_processor(
+                            stream_ts=i["_StreamTimestamp"],
+                            entity="driver",
+                            data=i["Drivers"],
+                        )
                     )
-                )
 
-        table = pa.Table.from_pylist(processed_data).cast(schema)
+                if "Teams" in i:
+                    processed_data.extend(
+                        ChampionshipPredictionProcessor._row_processor(
+                            stream_ts=i["_StreamTimestamp"],
+                            entity="team",
+                            data=i["Teams"],
+                        )
+                    )
+
+            table = pa.Table.from_pylist(processed_data).cast(schema)
+
         return [LiveTimingAsset(key="championship_prediction", output=table)]
 
 
@@ -287,7 +295,10 @@ class CurrentTyresProcessor(AbstractLiveTimingProcessor):
     def _row_processor(stream_ts: str, tyres: List[dict]) -> List[dict]:
         out = []
         for driver, data in tyres.items():
-            if len(driver) == 0:
+            if len(driver) == 0 or len(driver) > 2:
+                continue
+
+            if driver == "_deleted":
                 continue
 
             out.append(
@@ -549,7 +560,7 @@ class LapSeriesProcessor(AbstractLiveTimingProcessor):
 
         stream_ts = data.pop("_StreamTimestamp")
         for driver, value in data.items():
-            if len(driver) == 0:
+            if len(driver) == 0 or len(driver) > 2:
                 continue
 
             out.extend(LapSeriesProcessor._explode(driver, value["LapPosition"]))
@@ -588,7 +599,11 @@ class PitLaneTimeCollectionProcessor(AbstractLiveTimingProcessor):
                 continue
 
             out.append(
-                {"Driver": driver, "Duration": data["Duration"], "Lap": data["Lap"]}
+                {
+                    "Driver": driver,
+                    "Duration": data.get("Duration"),
+                    "Lap": data.get("Lap") if len(data.get("Lap", "")) > 0 else None,
+                }
             )
 
         out = list(map(lambda item: dict(item, _StreamTimestamp=stream_ts), out))
@@ -647,9 +662,9 @@ class PositionProcessor(AbstractLiveTimingProcessor):
                 ("Timestamp", pa.string()),
                 ("Driver", pa.string()),
                 ("Status", pa.string()),
-                ("X", pa.int16()),
-                ("Y", pa.int16()),
-                ("Z", pa.int16()),
+                ("X", pa.int32()),
+                ("Y", pa.int32()),
+                ("Z", pa.int32()),
                 ("_StreamTimestamp", pa.string()),
             ]
         )
@@ -780,6 +795,7 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
         out = {
             "MeetingKey": None,
             "MeetingName": None,
+            "MeetingOfficialName": None,
             "MeetingLocation": None,
             "MeetingCountryKey": None,
             "MeetingCountryCode": None,
@@ -811,6 +827,7 @@ class SessionInfoProcessor(AbstractLiveTimingProcessor):
             [
                 ("MeetingKey", pa.string()),
                 ("MeetingName", pa.string()),
+                ("MeetingOfficialName", pa.string()),
                 ("MeetingLocation", pa.string()),
                 ("MeetingCountryKey", pa.string()),
                 ("MeetingCountryCode", pa.string()),
@@ -1006,6 +1023,9 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
         output = []
 
         for driver, metrics in lines.items():
+            if len(driver) == 0 or len(driver) > 2:
+                continue
+
             output.append(TimingDataProcessor._entry_transformer(int(driver), metrics))
 
         out = TimingDataProcessor._stack_dicts(output)
@@ -1092,6 +1112,9 @@ class TimingDataProcessor(AbstractLiveTimingProcessor):
             if "Withheld" in i:  # first empty element
                 continue
 
+            if "Lines" not in i:
+                continue
+
             processed_data.append(
                 TimingDataProcessor._row_processor(
                     stream_ts=i["_StreamTimestamp"], lines=i["Lines"]
@@ -1176,7 +1199,7 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
                     TimingStatsProcessor._lap_times_transformer(data)
                 )
 
-            elif metric == "BestSectors":
+            elif (metric == "BestSectors") and (type(data) is dict):
                 out["timing_stats_sectors"].extend(
                     TimingStatsProcessor._sectors_transformer(data)
                 )
@@ -1196,6 +1219,9 @@ class TimingStatsProcessor(AbstractLiveTimingProcessor):
         output = []
 
         for driver, metrics in lines.items():
+            if len(driver) == 0 or len(driver) > 2:
+                continue
+
             output.append(TimingStatsProcessor._entry_transformer(int(driver), metrics))
 
         out = TimingStatsProcessor._stack_dicts(output)
