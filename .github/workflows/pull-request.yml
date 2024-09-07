@@ -42,8 +42,13 @@ jobs:
       - name: Generate dbt sources from analytics events definitions
         run: |
           pdm add dbt-coves
-          cd ./src/duck_f1/transform && \
-            pdm run dbt-coves generate properties --update-strategy update --no-prompt
+          pdm run dbt-coves generate properties \
+            --project-dir src/duck_f1/transform \
+            --profiles-dir src/duck_f1/transform \
+            --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
+            --target dist \
+            --update-strategy update \
+            --no-prompt
       - name: Run yamlfmt
         run: |
           yamlfmt ./src/duck_f1/transform/models
