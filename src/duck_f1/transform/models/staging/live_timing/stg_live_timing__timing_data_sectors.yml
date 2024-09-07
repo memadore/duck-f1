@@ -9,3 +9,14 @@ models:
           - staging
           - live_timing
           - timing_data_sectors
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: sector_key
+      - name: sector_time
+      - name: previous_value
+      - name: is_overall_fastest
+      - name: is_personal_fastest
+      - name: sector_status
+      - name: is_stopped
+      - name: session_ts

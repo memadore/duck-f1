@@ -10,3 +10,10 @@ models:
           - ergast
           - standings
           - constructors
+    columns:
+      - name: constructor_id
+      - name: session_id
+      - name: points
+      - name: position
+      - name: position_label
+      - name: win_count

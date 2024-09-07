@@ -10,3 +10,11 @@ models:
           - ergast
           - lap
           - positions
+    columns:
+      - name: lap_id
+      - name: session_id
+      - name: driver_id
+      - name: lap_number
+      - name: driver_position
+      - name: positions_gained_from_start
+      - name: positions_gained_this_lap

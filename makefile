@@ -6,18 +6,22 @@ dev: dagster-reset py-clean dbt-compile dagster-dev-server
 dagster-dev-server:
 	pdm run dagster dev -w workspace.yaml -p 3001
 
-dagster-reset:
+dagster-reset:semantic-release -vv --noop version --print
 	rm -rf ${HOME}/.dagster
 	mkdir -p ${HOME}/.dagster
 	cp .devcontainer/config/dagster.yaml ${HOME}/.dagster
 
 dbt-build:
 	cd ./src/duck_f1/transform; \
-	pdm run dbt build --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
+	pdm run dbt build;
+
+dbt-codegen:
+	cd ./src/duck_f1/transform; \
+	dbt-coves generate properties --update-strategy update --no-prompt
 
 dbt-compile:
 	cd ./src/duck_f1/transform; \
-	pdm run dbt compile --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
+	pdm run dbt compile;
 
 dbt-deps:
 	cd ./src/duck_f1/transform; \
@@ -25,11 +29,15 @@ dbt-deps:
 
 dbt-parse:
 	cd ./src/duck_f1/transform; \
-	pdm run dbt parse --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
+	pdm run dbt parse;
+
+dbt-run:
+	cd ./src/duck_f1/transform; \
+	pdm run dbt run;
 
 dbt-test:
 	cd ./src/duck_f1/transform; \
-	pdm run dbt test --vars '{db_dir: "../../../data", db_name: f1}' --target dist;
+	pdm run dbt test;
 
 duck-f1-weekend:
 	pdm run duck-f1 run --event-sha a3cf4bf0

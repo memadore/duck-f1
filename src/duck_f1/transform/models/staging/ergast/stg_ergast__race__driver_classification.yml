@@ -10,3 +10,19 @@ models:
           - ergast
           - race
           - driver_classification
+    columns:
+      - name: session_id
+      - name: driver_id
+      - name: constructor_id
+      - name: car_number
+      - name: grid_position
+      - name: classification
+      - name: position_label
+      - name: position_order
+      - name: status_id
+      - name: points
+      - name: laps_completed
+      - name: race_time
+      - name: race_time_label
+      - name: race_time_interval
+      - name: race_time_gap

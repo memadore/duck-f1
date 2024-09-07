@@ -10,3 +10,13 @@ models:
           - ergast
           - lap
           - timings
+    columns:
+      - name: lap_id
+      - name: session_id
+      - name: driver_id
+      - name: lap_number
+      - name: lap_time
+      - name: is_race_fastest_lap
+      - name: is_current_lap_fastest_lap
+      - name: is_driver_race_fastest_lap
+      - name: driver_race_time

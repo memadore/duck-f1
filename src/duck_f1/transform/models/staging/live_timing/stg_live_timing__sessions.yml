@@ -9,3 +9,10 @@ models:
           - staging
           - live_timing
           - sessions
+    columns:
+      - name: event_id
+      - name: session_id
+      - name: live_timing_session_sha
+      - name: session_type
+      - name: session_name
+      - name: session_start_local

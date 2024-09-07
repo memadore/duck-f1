@@ -9,3 +9,11 @@ models:
           - intermediate
           - live_timing
           - drivers
+    columns:
+      - name: live_timing_driver_id
+      - name: full_name_key
+      - name: first_name
+      - name: last_name
+      - name: full_name
+      - name: driver_code
+      - name: car_numbers

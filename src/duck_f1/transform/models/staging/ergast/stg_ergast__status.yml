@@ -9,3 +9,7 @@ models:
           - staging
           - ergast
           - status
+    columns:
+      - name: status_id
+      - name: ergast_status_id
+      - name: status

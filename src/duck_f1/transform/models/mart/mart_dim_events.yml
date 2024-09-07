@@ -1,18 +1,20 @@
 ---
 version: 2
 models:
-  - name: stg_events
-    description: '{{ doc("tbl_stg_ergast__events") }}'
+  - name: mart_dim_events
+    description: '{{ doc("tbl_mart_dim_races") }}'
     meta:
       dagster:
         asset_key:
-          - staging
+          - mart
+          - dim
           - events
     columns:
       - name: event_id
+        tests:
+          - unique
+          - not_null
       - name: circuit_id
-      - name: ergast_race_id
-      - name: live_timing_event_sha
       - name: season
       - name: round
       - name: event_country

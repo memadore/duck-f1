@@ -9,3 +9,16 @@ models:
           - staging
           - live_timing
           - car_data
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: engine_rpm
+      - name: car_speed
+      - name: engine_gear
+      - name: throttle_position
+      - name: brake_position
+      - name: drs_status
+      - name: drs_status_id
+      - name: event_utc_ts
+      - name: session_ts
+      - name: correctedsession_ts

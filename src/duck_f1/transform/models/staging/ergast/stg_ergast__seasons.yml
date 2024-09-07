@@ -9,3 +9,7 @@ models:
           - staging
           - ergast
           - seasons
+    columns:
+      - name: year
+      - name: wikipedia_url
+      - name: season_id

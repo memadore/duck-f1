@@ -7,6 +7,11 @@ duck_f1:
       path: ./../../../data/f1.duckdb
       schema: ""
       threads: 4
+    ci:
+      type: duckdb
+      path: /tmp/data/f1.duckdb
+      schema: ""
+      threads: 4
     dist:
       type: duckdb
       path: "{{ var('db_dir') }}/{{ var('db_name') }}.duckdb"

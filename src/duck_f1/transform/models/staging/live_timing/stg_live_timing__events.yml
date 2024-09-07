@@ -9,3 +9,12 @@ models:
           - staging
           - live_timing
           - events
+    columns:
+      - name: event_id
+      - name: live_timing_event_sha
+      - name: season
+      - name: round
+      - name: event_name
+      - name: event_official_name
+      - name: event_country
+      - name: event_location

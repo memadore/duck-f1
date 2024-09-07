@@ -3,8 +3,6 @@ version: 2
 models:
   - name: rpt_driver__stats_seasons
     description: '{{ doc("tbl_rpt_driver__stats_seasons") }}'
-    config:
-      alias: driver__stats_seasons
     meta:
       dagster:
         asset_key:
@@ -15,3 +13,19 @@ models:
       - name: driver_id
         tests:
           - not_null
+      - name: driver_code
+      - name: last_name
+      - name: first_name
+      - name: full_name
+      - name: season
+      - name: avg_grid_position
+      - name: win_count
+      - name: latest_win_date
+      - name: podium_count
+      - name: avg_finish_position
+      - name: top_finish_position
+      - name: low_finish_position
+      - name: avg_points
+      - name: max_points
+      - name: min_points
+      - name: total_points

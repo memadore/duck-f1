@@ -9,3 +9,23 @@ models:
           - staging
           - live_timing
           - driver_race_info
+    columns:
+      - name: car_number
+      - name: track_position
+      - name: gap_to_leader
+      - name: interval
+      - name: pitstop_count
+      - name: is_catching
+      - name: overtake_count
+      - name: is_out
+      - name: session_ts
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type
+      - name: session_start_local

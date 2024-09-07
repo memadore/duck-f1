@@ -17,7 +17,7 @@ formatted as (
         car_position.y_position,
         car_position.z_position
     from {{ ref("int_live_timing__car__positions") }} as car_position
-    left join {{ ref("mart__fct_session__drivers") }} as _session
+    left join {{ ref("mart_fct_session__drivers") }} as _session
         on
             car_position.session_id = _session.session_id
             and car_position.car_number = _session.car_number

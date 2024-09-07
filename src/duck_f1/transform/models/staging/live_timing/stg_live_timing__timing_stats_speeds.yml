@@ -9,3 +9,19 @@ models:
           - staging
           - live_timing
           - timing_stats_speeds
+    columns:
+      - name: speed_trap_key
+      - name: speed
+      - name: position
+      - name: driver
+      - name: session_ts
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type
+      - name: session_start_local

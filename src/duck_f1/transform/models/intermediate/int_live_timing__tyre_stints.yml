@@ -9,3 +9,16 @@ models:
           - intermediate
           - live_timing
           - tyre_stints
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: stint_sequence
+      - name: stint_start_ts
+      - name: stint_start_lap_number
+      - name: tyre_age_start
+      - name: tyre_compound
+      - name: is_new
+      - name: stint_end_ts
+      - name: stint_end_lap_number
+      - name: tyre_age_end
+      - name: lap_count

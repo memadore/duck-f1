@@ -9,3 +9,11 @@ models:
           - staging
           - live_timing
           - track_status
+    columns:
+      - name: session_id
+      - name: track_status_id
+      - name: status_message
+      - name: session_ts
+      - name: status_start_ts
+      - name: status_end_ts
+      - name: status_duration

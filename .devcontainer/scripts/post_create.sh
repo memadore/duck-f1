@@ -19,6 +19,10 @@ python3 -m pipx ensurepath
 pipx install \
     pdm \
     pre-commit \
+    dbt-coves \
+    python-semantic-release
+
+pipx inject dbt-coves dbt-duckdb
 
 make py-clean
 pdm install -G:all

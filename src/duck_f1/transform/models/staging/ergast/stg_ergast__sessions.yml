@@ -9,3 +9,10 @@ models:
           - staging
           - ergast
           - sessions
+    columns:
+      - name: event_id
+      - name: session_id
+      - name: ergast_race_id
+      - name: session_type
+      - name: session_name
+      - name: session_start_utc

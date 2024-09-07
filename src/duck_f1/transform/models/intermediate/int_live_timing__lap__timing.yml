@@ -10,3 +10,12 @@ models:
           - live_timing
           - lap
           - timing
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_number
+      - name: estimated_lap_time
+      - name: lap_time
+      - name: lap_time_status
+      - name: is_personal_fastest
+      - name: session_ts

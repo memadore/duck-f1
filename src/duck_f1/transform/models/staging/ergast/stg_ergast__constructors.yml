@@ -9,3 +9,10 @@ models:
           - staging
           - ergast
           - constructors
+    columns:
+      - name: constructor_id
+      - name: ergast_constructor_id
+      - name: constructor_reference
+      - name: constructor_name
+      - name: nationality
+      - name: wikipedia_url

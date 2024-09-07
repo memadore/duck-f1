@@ -10,3 +10,19 @@ models:
           - ergast
           - sprint
           - driver_classification
+    columns:
+      - name: session_id
+      - name: driver_id
+      - name: constructor_id
+      - name: car_number
+      - name: grid_position
+      - name: classification
+      - name: position_label
+      - name: position_order
+      - name: status_id
+      - name: points
+      - name: laps_completed
+      - name: sprint_time
+      - name: sprint_time_label
+      - name: sprint_time_interval
+      - name: sprint_time_gap

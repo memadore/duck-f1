@@ -19,7 +19,7 @@ select
     tyre_stint.tyre_age_end,
     tyre_stint.lap_count
 from {{ ref("int_live_timing__tyre_stints") }} as tyre_stint
-left join {{ ref("mart__fct_session__drivers") }} as _session
+left join {{ ref("mart_fct_session__drivers") }} as _session
     on
         tyre_stint.session_id = _session.session_id
         and tyre_stint.car_number = _session.car_number

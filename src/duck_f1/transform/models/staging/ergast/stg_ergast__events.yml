@@ -9,3 +9,11 @@ models:
           - staging
           - ergast
           - events
+    columns:
+      - name: event_id
+      - name: circuit_id
+      - name: ergast_race_id
+      - name: season
+      - name: round
+      - name: event_name
+      - name: wikipedia_url

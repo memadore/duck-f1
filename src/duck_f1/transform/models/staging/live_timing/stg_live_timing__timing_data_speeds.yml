@@ -9,3 +9,11 @@ models:
           - staging
           - live_timing
           - timing_data_speeds
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: speed_key
+      - name: speed_value
+      - name: is_personal_fastest
+      - name: speed_status
+      - name: session_ts

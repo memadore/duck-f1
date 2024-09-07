@@ -9,3 +9,10 @@ models:
           - staging
           - live_timing
           - timing_data_last_lap
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_time
+      - name: lap_time_status
+      - name: is_personal_fastest
+      - name: session_ts

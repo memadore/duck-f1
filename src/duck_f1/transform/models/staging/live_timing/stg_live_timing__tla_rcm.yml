@@ -9,3 +9,17 @@ models:
           - staging
           - live_timing
           - tla_rcm
+    columns:
+      - name: event_local_ts
+      - name: race_control_message
+      - name: session_ts
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type
+      - name: session_start_local
