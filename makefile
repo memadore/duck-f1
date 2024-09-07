@@ -15,9 +15,9 @@ dbt-build:
 	cd ./src/duck_f1/transform; \
 	pdm run dbt build;
 
-# dbt-codegen:
-# 	cd ./src/duck_f1/transform; \
-# 	pdm run dbt-coves generate properties --update-strategy update --no-prompt;
+dbt-codegen:
+	cd ./src/duck_f1/transform; \
+	dbt-coves generate properties --update-strategy update --no-prompt
 
 dbt-compile:
 	cd ./src/duck_f1/transform; \

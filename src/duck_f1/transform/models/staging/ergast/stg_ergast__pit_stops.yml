@@ -9,4 +9,11 @@ models:
           - staging
           - ergast
           - pit_stops
-    columns: []
+    columns:
+      - name: driver_id
+      - name: session_id
+      - name: stop_count
+      - name: lap_number
+      - name: pit_stop_time_label
+      - name: pit_stop_time_label_1
+      - name: pit_stop_time
