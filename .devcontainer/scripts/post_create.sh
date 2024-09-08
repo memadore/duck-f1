@@ -19,8 +19,7 @@ python3 -m pipx ensurepath
 pipx install \
     pdm \
     pre-commit \
-    dbt-coves \
-    python-semantic-release
+    dbt-coves
 
 pipx inject dbt-coves dbt-duckdb
 

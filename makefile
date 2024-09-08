@@ -56,5 +56,10 @@ py-clean:
 	rm -rf .ruff_cache
 	rm -rf .pdm_build
 
+py-publish-test:
+	pdm publish --repository testpypi \
+		--username ${PYPI_TEST_USERNAME} \
+		--password ${PYPI_TEST_PASSWORD}
+
 py-tests:
 	pdm run coverage run -m pytest tests -v --junitxml=report.xml && pdm run coverage xml

@@ -16,7 +16,8 @@
 				"ms-python.vscode-pylance",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"eamodio.gitlens",
-				"innoverio.vscode-dbt-power-user"
+				"innoverio.vscode-dbt-power-user",
+				"tamasfe.even-better-toml"
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh",
