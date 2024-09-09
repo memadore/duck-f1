@@ -20,7 +20,8 @@ class CliConfig:
 
 
 def get_dataset_availability(
-    start_date: datetime = None, end_date: datetime = None
+    start_date: datetime = None,
+    end_date: datetime = None,
 ) -> pd.DataFrame:
     api_client = LiveTimingApi(MagicMock())
     live_timing_asset_manager = LiveTimingAssetManager()
@@ -70,7 +71,7 @@ def get_dataset_availability(
                 {
                     **i,
                     "available": exists,
-                    "content_length": content_length,
+                    "content_length": 0 if content_length is None else content_length,
                 }
             )
 
@@ -120,7 +121,7 @@ def save_csv_file(data: pd.DataFrame, output_file: Path):
     data.to_csv(output_file, date_format="%Y-%m-%dT%H:%M:%S", header=True, index=False)
 
 
-def get_most_recent_session(input_file: Path) -> Optional[datetime]:
+def get_seed_data(input_file: Path) -> Optional[pd.DataFrame]:
     if not input_file.is_file():
         logging.warn(
             "Seed file not found with path %s", input_file.resolve().as_posix()
@@ -128,7 +129,21 @@ def get_most_recent_session(input_file: Path) -> Optional[datetime]:
         return
 
     df = pd.read_csv(input_file)
+
+    df["content_length"].fillna(0, inplace=True)
+    df["content_length"] = pd.to_numeric(df["content_length"], downcast="integer")
+
+    df["event_date"] = pd.to_datetime(df["event_date"], format="%Y-%m-%dT%H:%M:%S")
     df["session_date"] = pd.to_datetime(df["session_date"], format="%Y-%m-%dT%H:%M:%S")
+
+    return df
+
+
+def get_most_recent_session(input_file: Path) -> Optional[datetime]:
+    df = get_seed_data(input_file)
+    if df is None:
+        return
+
     return df["session_date"].max()
 
 
@@ -168,7 +183,15 @@ def main(
     elif full_refresh:
         start_date = None
 
-    data = get_dataset_availability(start_date, end_date)
+    df = get_seed_data(config.csv_output_path)
+    df = pd.DataFrame() if df is None else df
+
+    diff = get_dataset_availability(start_date, end_date)
+
+    data = pd.concat([df, diff], ignore_index=True)
+    data.drop_duplicates(
+        subset=["event_sha", "session_sha", "dataset"], inplace=True, ignore_index=True
+    )
 
     save_markdown_file(data.copy(), config.markdown_output_path)
     save_csv_file(data.copy(), config.csv_output_path)
