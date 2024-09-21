@@ -27,6 +27,10 @@ dbt-deps:
 	cd ./src/duck_f1/transform; \
 	pdm run dbt deps
 
+dbt-docs:
+	cd ./src/duck_f1/transform; \
+	pdm run dbt docs generate --static
+
 dbt-parse:
 	cd ./src/duck_f1/transform; \
 	pdm run dbt parse;
