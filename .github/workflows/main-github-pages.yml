@@ -52,7 +52,7 @@ jobs:
             --project-dir src/duck_f1/transform \
             --profiles-dir src/duck_f1/transform \
             --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
-            --target dist
+            --target dist \
             --static
           mkdir -p ./docs/dev
           cp ./src/duck_f1/transform/target/static_index.html ./docs/dev/index.html
