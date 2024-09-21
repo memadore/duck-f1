@@ -23,6 +23,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: true
       - name: Install dependencies
         run: |
           pdm install --prod
@@ -56,7 +57,7 @@ jobs:
           commit_user_email: memadore@users.noreply.github.com
   dbt-parse:
     name: dbt::parse
-    runs-on: k8s-arc
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -68,6 +69,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: true
       - name: Install dependencies
         run: |
           pdm install --prod
@@ -81,7 +83,7 @@ jobs:
             --target dist
   dbt-compile:
     name: dbt::compile
-    runs-on: k8s-arc
+    runs-on: ubuntu-latest
     needs:
       - codegen-dbt-sources
       - dbt-parse
@@ -100,6 +102,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ matrix.version }}
+          cache: true
       - name: Install python dependencies
         run: |
           pdm install --prod
@@ -122,7 +125,7 @@ jobs:
             --target dist
   dbt-docs:
     name: dbt::docs
-    runs-on: k8s-arc
+    runs-on: ubuntu-latest
     needs:
       - dbt-compile
     steps:
@@ -136,6 +139,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: true
       - name: Install python dependencies
         run: |
           pdm install --prod
@@ -157,9 +161,9 @@ jobs:
             --vars '{db_dir: "/tmp/data", db_name: "f1"}' \
             --target dist
   # MARK: - python
-  python-lint:
-    name: python::lint
-    runs-on: k8s-arc
+  lint-python:
+    name: lint::python
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -171,22 +175,23 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: true
       - name: Install dependencies
         run: |
           pdm install --group lint
       - name: Run tests
         run: |
           pdm run ruff format --check src/duck_f1/pipelines
-  python-tests-unit:
-    runs-on: k8s-arc
-    name: python::tests::unit
+  tests-python-unit:
+    runs-on: ubuntu-latest
+    name: tests::python::unit
     needs:
       - codegen-dbt-sources
       - dbt-parse
-      - python-lint
+      - lint-python
     strategy:
       matrix:
-        version: ["3.8", "3.9", "3.10", "3.11"]
+        version: ["3.9", "3.10", "3.11"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -198,6 +203,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ matrix.version  }}
+          cache: true
       - name: Install dependencies
         run: |
           pdm install --group test
@@ -213,9 +219,9 @@ jobs:
           pdm run coverage xml
           pdm run coverage report --show-missing --precision=2
   # MARK: - sql
-  sql-lint:
-    name: sql::lint
-    runs-on: k8s-arc
+  lint-sql:
+    name: lint::sql
+    runs-on: ubuntu-latest
     needs:
       - dbt-parse
     steps:
@@ -229,6 +235,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: true
       - name: Install dependencies
         run: |
           pdm install --group lint
@@ -240,8 +247,8 @@ jobs:
           pdm run sqlfluff lint src/duck_f1/transform/models
   # MARK: - yaml
   yaml-lint:
-    runs-on: k8s-arc
-    name: yaml::lint
+    runs-on: ubuntu-latest
+    name: lint::yaml
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

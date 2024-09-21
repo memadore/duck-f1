@@ -9,7 +9,7 @@ env:
 jobs:
   update-pdm-dependencies:
     name: pdm::update-project
-    runs-on: k8s-arc
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -27,6 +27,7 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: true
       - name: Update dependencies
         run: |
           pdm update --update-all --save-compatible
