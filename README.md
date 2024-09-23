@@ -7,12 +7,16 @@ Hello, and welcome to DuckF1! It’s a collection of datasets for all things rel
 
 ## Installation
 
-DuckF1 is available on PyPi and support Python 3.9 through version 3.11. It is strongly recommended that you install the duck-f1 cli with `pipx`. It will create its own dedicated environment while making the project available globally.
+DuckF1 is available on PyPi and support Python 3.9 through version 3.11. It is strongly recommended that you install the duck-f1 cli with `pipx`. It will create its own dedicated environment while making the project available globally. The project required the dbt cli with the duckdb module to be installed.
 
 ```bash
+# Install the dbt cli
+pipx install dbt-core
+pipx inject dbt-core dbt-duckdb
+
+# Install the duck-f1 cli
 pipx install duck-f1
 ```
-
 ## Building the database
 
 To get started on generating the database, you can execute the `duck-f1 run` command. By default, it will capture the historical data as well as the telemetry data for the last Grand Prix weekend.
