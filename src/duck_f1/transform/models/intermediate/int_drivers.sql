@@ -42,8 +42,8 @@ live_timing_drivers as (
         car_numbers
     from {{ ref("int_live_timing__drivers") }}
     where _full_name_key not in (
-        select _full_name_key
-        from {{ ref("stg_ergast__drivers") }}
+        select ergast_driver._full_name_key
+        from {{ ref("stg_ergast__drivers") }} as ergast_driver
     )
 ),
 
