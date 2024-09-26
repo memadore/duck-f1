@@ -31,6 +31,6 @@ select
     season.year as season,
     driver.driver_id,
     constructor.constructor_id
-from {{ref("mart_dim_seasons")}} as season
+from {{ ref("mart_dim_seasons") }} as season
 left join driver_championship as driver on season.year = driver.season
 left join constructor_championship as constructor on season.year = constructor.season
