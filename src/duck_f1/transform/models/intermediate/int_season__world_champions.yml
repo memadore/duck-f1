@@ -1,14 +1,15 @@
 ---
 version: 2
 models:
-  - name: int_season__world_champion
-    description: '{{ doc("tbl_int_season__world_champion") }}'
+  - name: int_season__world_champions
+    description: '{{ doc("tbl_int_season__world_champions") }}'
     meta:
       dagster:
         asset_key:
           - intermediate
           - season
-          - world_champion
+          - world_champions
     columns:
       - name: season
       - name: driver_id
+      - name: constructor_id

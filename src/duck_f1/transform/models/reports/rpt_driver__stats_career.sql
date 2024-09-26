@@ -31,7 +31,7 @@ world_championships as (
     select
         driver_id,
         count(*) as wc_count
-    from {{ ref("int_season__world_champion") }}
+    from {{ ref("int_season__world_champions") }}
     group by driver_id
 )
 

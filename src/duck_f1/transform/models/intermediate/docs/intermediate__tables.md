@@ -38,7 +38,7 @@ Registered time for each laps in a session
 Stint tyre information for each drivers
 {% enddocs %}
 ---
-{% docs tbl_int_season__world_champion %}
+{% docs tbl_int_season__world_champions %}
 Round by round statistics for the race performance of each driver
 {% enddocs %}
 ---
