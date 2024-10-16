@@ -55,7 +55,6 @@ jobs:
           labels: |
             docs
           assignees: memadore
-          reviewers: memadore
   seed-dataset-availability-full-refresh:
     name: seed::dataset-availability::full-refresh
     runs-on: ubuntu-latest
@@ -103,4 +102,3 @@ jobs:
           labels: |
             docs
           assignees: memadore
-          reviewers: memadore
