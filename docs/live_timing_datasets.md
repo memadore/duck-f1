@@ -5563,3 +5563,4 @@
 | TyreStintSeries.jsonStream        | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | WeatherData.jsonStream            | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
 | WeatherDataSeries.jsonStream      | 🟢            | 🟢            | 🟢            | 🟢            | 🟢      |
+
