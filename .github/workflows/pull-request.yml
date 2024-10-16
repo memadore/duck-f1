@@ -36,7 +36,7 @@ jobs:
       - name: Install yamlfmt
         run: |
           go install github.com/google/yamlfmt/cmd/yamlfmt@v0.13.0
-      - name: Generate dbt sources from analytics events definitions
+      - name: Generate missing model properties
         run: |
           pipx install dbt-coves
           pipx inject dbt-coves dbt-duckdb
