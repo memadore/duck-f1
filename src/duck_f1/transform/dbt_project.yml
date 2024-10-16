@@ -25,3 +25,5 @@ models:
       +schema: reports
     staging:
       +schema: staging
+seeds:
+  +schema: seeds
