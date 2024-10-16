@@ -1,6 +1,6 @@
 [project]
 name = "duck-f1"
-version = "0.1.0"
+version = "0.2.0"
 description = "Formula 1 historical and telemetry datasets with DuckDB"
 readme = "README.md"
 authors = [{ name = "Marc-Etienne Madore", email = "marc-etienne@madore.cc" }]
