@@ -1,16 +1,19 @@
 with
 ergast_sessions as (
     select
-        event_id,
-        session_id,
-        _ergast_race_id,
+        _session.event_id,
+        _session.session_id,
+        _session._ergast_race_id,
         null::integer as _live_timing_session_sha,
-        session_type,
-        session_name,
-        session_start_utc,
+        _session.session_type,
+        _session.session_name,
+        _session.session_start_utc,
         null::integer as session_start_local
-    from {{ ref("stg_ergast__sessions") }}
-    where session_start_utc < '2018-01-01'::date
+    from {{ ref("stg_ergast__sessions") }} as _session
+    left join
+        {{ ref("stg_ergast__events") }} as _event
+        on _session._ergast_race_id = _event._ergast_race_id
+    where _event.season < 2018
 ),
 
 ergast_live_timing_sessions as (
