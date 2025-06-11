@@ -49,7 +49,7 @@ jobs:
       - name: Run yamlfmt
         run: |
           yamlfmt ./src/duck_f1/transform/models
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v6
         id: auto-commit-action
         with:
           commit_message: "chore(codegen): apply code generation changes"
