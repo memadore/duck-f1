@@ -57,7 +57,7 @@ jobs:
           mkdir -p ./docs/dev
           cp ./src/duck_f1/transform/target/static_index.html ./docs/dev/index.html
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs/dev
       - name: Deploy to GitHub Pages
