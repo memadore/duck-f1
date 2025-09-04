@@ -30,7 +30,7 @@ jobs:
           pdm run dbt deps --project-dir src/duck_f1/transform
       - name: Seed data
         run: pdm run duck-f1 -o /tmp/data run --session-sha eb2f7f20
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: ">=1.18.0"
       - name: Install yamlfmt
@@ -253,7 +253,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ">=1.18.0"
       - name: Install yamlfmt
