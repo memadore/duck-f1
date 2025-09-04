@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Setup PDM
@@ -62,7 +62,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Setup PDM
@@ -95,7 +95,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ matrix.version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.version }}
       - name: Setup PDM
@@ -132,7 +132,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Setup PDM
@@ -168,7 +168,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Setup PDM
@@ -196,7 +196,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ matrix.version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.version  }}
       - name: Setup PDM
@@ -228,7 +228,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Setup Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Setup PDM
