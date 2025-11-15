@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [{ name = "Marc-Etienne Madore", email = "marc-etienne@madore.cc" }]
 requires-python = ">=3.9,<3.12"
 dependencies = [
-    "dagster>=1.6.5,<1.7.0",
+    "dagster>=1.10.16,<1.11.0",
     "dagster-dbt>=0.22.5,<1.0.0",
     "dagster-duckdb>=0.22.5,<1.0.0",
     "dbt-duckdb>=1.7.1,<2.0.0,",
