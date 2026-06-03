@@ -38,7 +38,7 @@ jobs:
         run: |
           pdm run python tasks/generate_live_timing_dataset_availability.py
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.PAT }}
           commit-message: "docs: update live timing dataset availability"
@@ -85,7 +85,7 @@ jobs:
         run: |
           pdm run python tasks/generate_live_timing_dataset_availability.py --full-refresh
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.PAT }}
           commit-message: "docs: update live timing dataset availability"
