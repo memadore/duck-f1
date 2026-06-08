@@ -10,7 +10,7 @@ dependencies = [
     "dagster-dbt>=0.22.5,<1.0.0",
     "dagster-duckdb>=0.22.5,<1.0.0",
     "dbt-duckdb>=1.7.1,<2.0.0,",
-    "duckdb>=0,<1",
+    "duckdb>=1,<2",
     "pyarrow>=15.0.0,<16.0.0",
     "requests>=2.31.0,<3.0.0",
 ]
